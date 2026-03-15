@@ -2,22 +2,23 @@
 
 Site de portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro. Apresenta minha experiência profissional, stack técnica, projetos freelance e canais de contato.
 
-🔗 **[filiperosso.dev → roxouw.github.io](https://roxouw.github.io/)**
+🔗 **[roxouw.github.io](https://roxouw.github.io/)**
 
 ---
 
 ## ✦ Sobre o projeto
 
-Este portfólio foi construído do zero com foco em **performance**, **SEO** e **design premium**. Sem frameworks, sem dependências — apenas código limpo e bem estruturado, com carregamento instantâneo.
+Construído do zero com foco em **performance**, **SEO** e **design premium**. Sem frameworks, sem dependências — código limpo e carregamento instantâneo.
 
 ### Destaques
 
-- Design dark com paleta acinzentada e accent teal
+- Design dark com paleta acinzentada premium e accent teal
 - Animações de entrada com `IntersectionObserver`
 - Cursor customizado (desktop)
-- Menu hambúrguer para mobile
-- SEO completo com Schema.org, Open Graph e Twitter Card
-- 100% responsivo — mobile-first
+- Menu hambúrguer — 100% responsivo e mobile-first
+- SEO completo: Schema.org, Open Graph, Twitter Card, sitemap e canonical
+- Favicon personalizado `FR` + logo OG para preview no WhatsApp e Instagram
+- Verificado e indexado no Google Search Console
 
 ---
 
@@ -37,18 +38,20 @@ Este portfólio foi construído do zero com foco em **performance**, **SEO** e *
 
 ```
 roxouw.github.io/
-├── index.html          # Aplicação principal (single-file)
-├── sitemap.xml         # Sitemap para indexação Google
-├── og-image.png        # Imagem Open Graph (1200×630)
-├── CV_Filipe_Rosso.pdf # Currículo para download
-└── README.md           # Este arquivo
+├── index.html            # Aplicação principal (single-file)
+├── favicon.ico           # Favicon multi-resolução (16/32/48/256px)
+├── favicon.png           # Favicon PNG 512px + Apple Touch Icon
+├── logo.png              # Imagem OG 1200×630 — preview WhatsApp/Instagram
+├── sitemap.xml           # Sitemap para indexação Google
+├── CV_Filipe_Rosso.pdf   # Currículo para download
+└── README.md             # Este arquivo
 ```
 
 ---
 
 ## 🚀 Rodando localmente
 
-Nenhuma instalação necessária. Basta abrir o arquivo direto no navegador:
+Nenhuma instalação necessária:
 
 ```bash
 # Opção 1 — abrir direto
@@ -72,6 +75,16 @@ Site institucional para empresa de móveis planejados. Galeria de projetos, cont
 
 ---
 
+## ⚙️ Configuração Git recomendada
+
+Para evitar erros de push com arquivos maiores:
+
+```bash
+git config --global http.postBuffer 524288000
+```
+
+---
+
 ## 📬 Contato
 
 | Canal | Link |
@@ -85,4 +98,4 @@ Site institucional para empresa de móveis planejados. Galeria de projetos, cont
 
 ## 📄 Licença
 
-Este projeto é de uso pessoal. O código pode ser usado como referência, mas o design e conteúdo pertencem a Filipe Rosso.
+Projeto de uso pessoal. O código pode ser usado como referência, mas o design e conteúdo pertencem a Filipe Rosso.
