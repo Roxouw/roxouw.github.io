@@ -154,8 +154,8 @@
         --teal-dim: var(--teal-dim);
         --teal-11: var(--teal-11);
         --teal-04: var(--teal-04);
-        --teal-20: rgba(45, 212, 200, 0.20);
-        --teal-30: rgba(45, 212, 200, 0.30);
+        --teal-20: rgba(45, 212, 200, 0.2);
+        --teal-30: rgba(45, 212, 200, 0.3);
         --lime: #b8f04a;
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
@@ -1319,14 +1319,16 @@
         height: 12px;
         border-radius: 50%;
         background: var(--muted2);
-        transition: transform 0.3s ease, background 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease;
       }
       .roxouw-toggle input:checked + .roxouw-track {
         background: rgba(139, 0, 139, 0.35);
       }
       .roxouw-toggle input:checked + .roxouw-track .roxouw-thumb {
         transform: translateX(16px);
-        background: #8B008B;
+        background: #8b008b;
       }
       .roxouw-label {
         font-family: var(--font-mono);
@@ -1334,25 +1336,35 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--muted);
-        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
+        transition:
+          color 0.3s ease,
+          font-size 0.3s ease,
+          font-weight 0.3s ease,
+          letter-spacing 0.3s ease;
         white-space: nowrap;
       }
 
       /* INK SPLASH */
       @keyframes inkRipple {
-        0%   { transform: scale(0); opacity: 0.9; }
-        100% { transform: scale(1); opacity: 0; }
+        0% {
+          transform: scale(0);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
       }
 
       /* ROXOUW MODE — override teal + background */
       body.roxouw-mode {
-        --teal: #8B008B;
+        --teal: #8b008b;
         --teal-glow: rgba(139, 0, 139, 0.15);
         --teal-dim: rgba(139, 0, 139, 0.08);
         --teal-11: rgba(139, 0, 139, 0.11);
         --teal-04: rgba(139, 0, 139, 0.04);
-        --teal-20: rgba(139, 0, 139, 0.20);
-        --teal-30: rgba(139, 0, 139, 0.30);
+        --teal-20: rgba(139, 0, 139, 0.2);
+        --teal-30: rgba(139, 0, 139, 0.3);
         --bg: #0e0a0e;
         --bg2: #130a13;
         --surface: #1a0f1a;
@@ -1368,13 +1380,23 @@
         font-weight: 800;
         letter-spacing: -0.02em;
         text-transform: none;
-        color: #8B008B;
+        color: #8b008b;
       }
     </style>
   </head>
   <body>
     <!-- INK EXPLOSION CANVAS -->
-    <canvas id="inkCanvas" style="position:fixed;inset:0;z-index:8999;pointer-events:none;width:100%;height:100%;"></canvas>
+    <canvas
+      id="inkCanvas"
+      style="
+        position: fixed;
+        inset: 0;
+        z-index: 8999;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+      "
+    ></canvas>
     <!-- INTRO OVERLAY -->
     <div id="intro">
       <div class="intro-name" id="introLogo">
@@ -1395,6 +1417,7 @@
       <a href="#projects" onclick="closeMobile()">Projetos</a>
       <a href="/historia.html">História</a>
       <a href="#contact" onclick="closeMobile()">Contato</a>
+      <a href="/sites.html" onclick="closeMobile()">Crie seu Site</a>
     </div>
 
     <nav id="navbar">
@@ -1414,6 +1437,7 @@
         <li><a href="#projects">Projetos</a></li>
         <li><a href="/historia.html">História</a></li>
         <li><a href="#contact">Contato</a></li>
+        <li><a href="/sites.html">Crie seu Site</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu">
         <span></span><span></span><span></span>
@@ -1439,7 +1463,8 @@
           Resultado na tela do cliente.
         </p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+          <a href="/sites.html" class="btn btn-primary">Crie seu Site</a>
+          <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
           <a href="#contact" class="btn btn-ghost">Falar Comigo</a>
         </div>
       </div>
@@ -1711,6 +1736,7 @@
           </p>
         </div>
         <div class="freelance-actions reveal">
+          <a href="/sites.html" class="btn btn-primary">Crie seu site aqui!</a>
           <a
             href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20site"
             target="_blank"
@@ -1730,11 +1756,11 @@
             </svg>
             WhatsApp
           </a>
-          <a
+          <!-- <a
             href="/cdn-cgi/l/email-protection#3c5a5550554c594e534f4f5305057c5b515d5550125f5351"
             class="btn btn-ghost"
             >E-mail</a
-          >
+          > -->
         </div>
       </div>
     </section>
@@ -1811,7 +1837,10 @@
         document.querySelectorAll("a,button").forEach((el) => {
           el.addEventListener("mouseenter", () => {
             cursor.style.transform = "scale(2.5)";
-            ring.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--teal').trim() + "99";
+            ring.style.borderColor =
+              getComputedStyle(document.documentElement)
+                .getPropertyValue("--teal")
+                .trim() + "99";
           });
           el.addEventListener("mouseleave", () => {
             cursor.style.transform = "scale(1)";
@@ -1875,21 +1904,21 @@
         .forEach((el) => observer.observe(el));
 
       // Roxouw Mode toggle + ink explosion
-      const roxouwToggle = document.getElementById('roxouwToggle');
-      const inkCanvas = document.getElementById('inkCanvas');
-      const inkCtx = inkCanvas.getContext('2d');
+      const roxouwToggle = document.getElementById("roxouwToggle");
+      const inkCanvas = document.getElementById("inkCanvas");
+      const inkCtx = inkCanvas.getContext("2d");
 
       function resizeInkCanvas() {
         inkCanvas.width = window.innerWidth;
         inkCanvas.height = window.innerHeight;
       }
       resizeInkCanvas();
-      window.addEventListener('resize', resizeInkCanvas);
+      window.addEventListener("resize", resizeInkCanvas);
 
       function launchInk(color) {
         const W = inkCanvas.width;
         const H = inkCanvas.height;
-        const toggle = document.getElementById('roxouwToggle');
+        const toggle = document.getElementById("roxouwToggle");
         const rect = toggle.getBoundingClientRect();
         const originX = rect.left + rect.width / 2;
         const originY = rect.top + rect.height / 2;
@@ -1898,7 +1927,8 @@
         const COUNT = 22;
 
         for (let i = 0; i < COUNT; i++) {
-          const angle = (Math.PI * 2 / COUNT) * i + (Math.random() - 0.5) * 0.4;
+          const angle =
+            ((Math.PI * 2) / COUNT) * i + (Math.random() - 0.5) * 0.4;
           const speed = 6 + Math.random() * 14;
           const size = 18 + Math.random() * 60;
           drops.push({
@@ -1932,12 +1962,16 @@
           inkCtx.clearRect(0, 0, W, H);
 
           // Draw bursts (expanding rings)
-          bursts.forEach(b => {
+          bursts.forEach((b) => {
             b.r += b.speed;
             if (b.r < b.maxR) {
               inkCtx.beginPath();
               inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-              inkCtx.strokeStyle = color + Math.round(b.alpha * 255).toString(16).padStart(2, '0');
+              inkCtx.strokeStyle =
+                color +
+                Math.round(b.alpha * 255)
+                  .toString(16)
+                  .padStart(2, "0");
               inkCtx.lineWidth = 3;
               inkCtx.stroke();
               b.alpha -= 0.003;
@@ -1946,7 +1980,7 @@
 
           // Draw drops
           let alive = false;
-          drops.forEach(d => {
+          drops.forEach((d) => {
             if (d.alpha <= 0) return;
             alive = true;
             d.x += d.vx;
@@ -1959,13 +1993,29 @@
             inkCtx.save();
             inkCtx.globalAlpha = Math.max(0, d.alpha);
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x, d.y, d.size * 0.55, d.size * 0.72, Math.atan2(d.vy, d.vx), 0, Math.PI * 2);
+            inkCtx.ellipse(
+              d.x,
+              d.y,
+              d.size * 0.55,
+              d.size * 0.72,
+              Math.atan2(d.vy, d.vx),
+              0,
+              Math.PI * 2,
+            );
             inkCtx.fillStyle = color;
             inkCtx.fill();
 
             // splatter tail
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x - d.vx * 1.2, d.y - d.vy * 1.2, d.size * 0.25, d.size * 0.18, 0, 0, Math.PI * 2);
+            inkCtx.ellipse(
+              d.x - d.vx * 1.2,
+              d.y - d.vy * 1.2,
+              d.size * 0.25,
+              d.size * 0.18,
+              0,
+              0,
+              Math.PI * 2,
+            );
             inkCtx.fillStyle = color;
             inkCtx.fill();
             inkCtx.restore();
@@ -1993,10 +2043,10 @@
         drawInk();
       }
 
-      roxouwToggle.addEventListener('change', () => {
+      roxouwToggle.addEventListener("change", () => {
         const isRoxouw = roxouwToggle.checked;
-        document.body.classList.toggle('roxouw-mode', isRoxouw);
-        const inkColor = isRoxouw ? '#8B008B' : '#2dd4c8';
+        document.body.classList.toggle("roxouw-mode", isRoxouw);
+        const inkColor = isRoxouw ? "#8B008B" : "#2dd4c8";
         launchInk(inkColor);
       });
     </script>
