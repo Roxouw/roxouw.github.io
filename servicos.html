@@ -46,7 +46,19 @@
         --muted: #606470;
         --muted2: #8a8f9a;
         --teal: #2dd4c8;
-        --teal-dim: rgba(45, 212, 200, 0.08);
+        --teal-glow: var(--teal-glow);
+        --teal-dim: var(--teal-dim);
+        --teal-11: var(--teal-11);
+        --teal-04: var(--teal-04);
+        --teal-10: var(--teal-10);
+        --teal-03: var(--teal-03);
+        --teal-20: var(--teal-20);
+        --teal-30: var(--teal-30);
+        --teal-40: var(--teal-40);
+        --teal-05: var(--teal-05);
+        --teal-06: var(--teal-06);
+        --teal-12: var(--teal-12);
+        --teal-25: var(--teal-25);
         --lime: #b8f04a;
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
@@ -141,8 +153,8 @@
         height: 65vw;
         background: radial-gradient(
           ellipse at 65% 30%,
-          rgba(45, 212, 200, 0.1) 0%,
-          rgba(45, 212, 200, 0.03) 45%,
+          var(--teal-10) 0%,
+          var(--teal-03) 45%,
           transparent 68%
         );
         pointer-events: none;
@@ -458,7 +470,7 @@
         transform: translateY(0);
       }
       .work-card:hover {
-        border-color: rgba(45, 212, 200, 0.3);
+        border-color: var(--teal-30);
       }
       .work-card::before {
         content: "";
@@ -510,7 +522,7 @@
         font-size: 0.58rem;
         color: var(--teal);
         background: var(--teal-dim);
-        border: 1px solid rgba(45, 212, 200, 0.15);
+        border: 1px solid var(--teal-glow);
         padding: 0.2rem 0.6rem;
         letter-spacing: 0.04em;
       }
@@ -618,6 +630,108 @@
         font-weight: 400;
       }
 
+
+      /* ANNUAL DISCOUNT */
+      .addon-price-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.3rem;
+        flex-shrink: 0;
+      }
+      .addon-price-monthly {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--teal);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: right;
+      }
+      .addon-price-monthly small {
+        display: block;
+        font-size: 0.55rem;
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .addon-price-annual {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted2);
+        white-space: nowrap;
+        text-align: right;
+        line-height: 1.4;
+      }
+      .addon-price-annual .annual-value {
+        color: var(--text);
+        font-weight: 700;
+      }
+      .annual-badge {
+        display: inline-block;
+        font-size: 0.5rem;
+        background: var(--teal-dim);
+        color: var(--teal);
+        border: 1px solid var(--teal-20);
+        padding: 0.1rem 0.4rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: 0.15rem;
+      }
+
+      .addon-item {
+        position: relative;
+      }
+      .addon-popular-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-family: var(--font-mono);
+        font-size: 0.52rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--teal);
+        border: 1px solid var(--teal-20);
+        background: var(--teal-dim);
+        padding: 0.18rem 0.55rem;
+        margin-bottom: 0.35rem;
+        width: fit-content;
+      }
+      .addon-item.popular {
+        border-color: var(--teal-30);
+        background: var(--surface);
+      }
+      .addon-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: 0.55rem;
+      }
+      .addon-tag {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--muted2);
+        border: 1px solid var(--border2);
+        padding: 0.12rem 0.45rem;
+        letter-spacing: 0.04em;
+      }
+      .addon-item.popular .addon-tag {
+        border-color: var(--teal-20);
+        color: var(--muted2);
+      }
+      .maint-tagline {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted2);
+        line-height: 1.7;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid var(--border);
+        border-top: 2px solid var(--teal);
+        background: var(--bg2);
+        margin-top: 1rem;
+      }
+      .maint-tagline strong {
+        color: var(--text);
+        font-weight: 700;
+      }
       /* FAQ */
       #faq {
         background: var(--bg2);
@@ -703,7 +817,7 @@
         pointer-events: none;
         background: radial-gradient(
           ellipse,
-          rgba(45, 212, 200, 0.06) 0%,
+          var(--teal-06) 0%,
           transparent 65%
         );
       }
@@ -883,11 +997,116 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* ── ROXOUW MODE ─────────────────────────────────── */
+      body {
+        transition: background 0.5s ease;
+      }
+      body.roxouw-mode {
+        --teal: #8B008B;
+        --teal-glow: rgba(139, 0, 139, 0.15);
+        --teal-dim: rgba(139, 0, 139, 0.08);
+        --teal-11: rgba(139, 0, 139, 0.11);
+        --teal-04: rgba(139, 0, 139, 0.04);
+        --teal-10: rgba(139, 0, 139, 0.10);
+        --teal-03: rgba(139, 0, 139, 0.03);
+        --teal-20: rgba(139, 0, 139, 0.20);
+        --teal-30: rgba(139, 0, 139, 0.30);
+        --teal-40: rgba(139, 0, 139, 0.40);
+        --teal-05: rgba(139, 0, 139, 0.05);
+        --teal-06: rgba(139, 0, 139, 0.06);
+        --teal-12: rgba(139, 0, 139, 0.12);
+        --teal-25: rgba(139, 0, 139, 0.25);
+        --bg: #0e0a0e;
+        --bg2: #130a13;
+        --surface: #1a0f1a;
+        --border: #2a1a2a;
+        --border2: #3a1f3a;
+      }
+      body.roxouw-mode nav.scrolled {
+        background: rgba(14, 10, 14, 0.94);
+      }
+
+      /* NAV LOGO GROUP */
+      .nav-logo-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      /* ROXOUW TOGGLE */
+      .roxouw-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        cursor: pointer;
+        user-select: none;
+      }
+      .roxouw-toggle input { display: none; }
+      .roxouw-track {
+        position: relative;
+        width: 34px;
+        height: 18px;
+        background: var(--border2);
+        border-radius: 999px;
+        transition: background 0.3s ease;
+        flex-shrink: 0;
+      }
+      .roxouw-thumb {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--muted2);
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .roxouw-toggle input:checked + .roxouw-track {
+        background: rgba(139, 0, 139, 0.35);
+      }
+      .roxouw-toggle input:checked + .roxouw-track .roxouw-thumb {
+        transform: translateX(16px);
+        background: #8B008B;
+      }
+      .roxouw-label {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
+        white-space: nowrap;
+      }
+      body.roxouw-mode .roxouw-label {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        text-transform: none;
+        color: #8B008B;
+      }
+
+      /* Cursor ring uses variable */
+      .cursor-ring {
+        transition: border-color 0.4s ease;
+      }
     </style>
   </head>
   <body>
+    <!-- INK EXPLOSION CANVAS -->
+    <canvas id="inkCanvas" style="position:fixed;inset:0;z-index:8999;pointer-events:none;width:100%;height:100%;"></canvas>
     <nav id="navbar">
-      <a href="/" class="nav-logo">FILIPE<span>.</span></a>
+      <div class="nav-logo-group">
+        <a href="/" class="nav-logo">FILIPE<span>.</span></a>
+        <label class="roxouw-toggle" title="Roxouw Mode">
+          <input type="checkbox" id="roxouwToggle" />
+          <span class="roxouw-track">
+            <span class="roxouw-thumb"></span>
+          </span>
+          <span class="roxouw-label">Roxouw Mode</span>
+        </label>
+      </div>
       <a href="/" class="nav-back">Ver portfólio</a>
     </nav>
 
@@ -924,13 +1143,13 @@
       <div class="packages-grid">
         <!-- BASIC -->
         <div class="pkg">
-          <div class="pkg-name">Basic</div>
+          <div class="pkg-name">Start</div>
           <div class="pkg-desc">
             Ideal para quem precisa de presença digital rápida e profissional.
           </div>
           <div class="pkg-price">
             <span class="currency">a partir de R$</span
-            ><span class="value">400</span>
+            ><span class="value">697</span>
           </div>
           <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
           <div class="pkg-divider"></div>
@@ -946,7 +1165,7 @@
             <li class="no">Páginas adicionais</li>
           </ul>
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Basic"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Start"
             target="_blank"
             class="btn btn-whatsapp"
             style="width: 100%; justify-content: center"
@@ -969,14 +1188,14 @@
         <!-- PRO (DESTAQUE) -->
         <div class="pkg featured">
           <div class="pkg-badge">Mais popular</div>
-          <div class="pkg-name">Pro</div>
+          <div class="pkg-name">Business</div>
           <div class="pkg-desc">
             Para negócios que querem ser encontrados no Google e converter
             visitantes em clientes.
           </div>
           <div class="pkg-price">
             <span class="currency">a partir de R$</span
-            ><span class="value">1.200</span>
+            ><span class="value">1.497</span>
           </div>
           <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
           <div class="pkg-divider"></div>
@@ -992,7 +1211,7 @@
             <li class="no">Sistema de agendamento</li>
           </ul>
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Pro"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Business"
             target="_blank"
             class="btn btn-whatsapp"
             style="width: 100%; justify-content: center"
@@ -1014,14 +1233,14 @@
 
         <!-- PREMIUM -->
         <div class="pkg">
-          <div class="pkg-name">Premium</div>
+          <div class="pkg-name">Authority</div>
           <div class="pkg-desc">
             Solução completa para negócios que precisam de funcionalidades
             avançadas e sistemas.
           </div>
           <div class="pkg-price">
             <span class="currency">a partir de R$</span
-            ><span class="value">2.000</span>
+            ><span class="value">2.997</span>
           </div>
           <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
           <div class="pkg-divider"></div>
@@ -1037,7 +1256,7 @@
             <li>Revisões ilimitadas até aprovação</li>
           </ul>
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Premium"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20pacote%20Authority"
             target="_blank"
             class="btn btn-whatsapp"
             style="width: 100%; justify-content: center"
@@ -1210,7 +1429,7 @@
                   Registro e configuração do .com.br do seu negócio
                 </div>
               </div>
-              <div class="addon-price">+ R$ 80<small>por ano</small></div>
+              <div class="addon-price">+ R$ 120<small>por ano</small></div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -1268,17 +1487,29 @@
                   Até 2 alterações/mês — textos, fotos, horários, telefones
                 </div>
               </div>
-              <div class="addon-price">R$ 90<small>/mês</small></div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 99<small>/mês</small></div>
+                <div class="addon-price-annual">ou <span class="annual-value">R$ 990/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+              </div>
             </div>
-            <div class="addon-item">
+            <div class="addon-item popular">
               <div class="addon-info">
+                <div class="addon-popular-badge">⭐ Mais escolhido</div>
                 <div class="addon-name">Plano Plus</div>
                 <div class="addon-desc">
-                  Até 5 alterações/mês + monitoramento de desempenho + backup
-                  mensal
+                  Até 5 alterações/mês + monitoramento de desempenho + backup mensal
+                </div>
+                <div class="addon-tag-list">
+                  <span class="addon-tag">troca de textos</span>
+                  <span class="addon-tag">troca de fotos</span>
+                  <span class="addon-tag">atualização de horários</span>
+                  <span class="addon-tag">inclusão de novos serviços</span>
                 </div>
               </div>
-              <div class="addon-price">R$ 180<small>/mês</small></div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 189<small>/mês</small></div>
+                <div class="addon-price-annual">ou <span class="annual-value">R$ 1.890/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -1288,7 +1519,10 @@
                   de acessos
                 </div>
               </div>
-              <div class="addon-price">R$ 300<small>/mês</small></div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 299<small>/mês</small></div>
+                <div class="addon-price-annual">ou <span class="annual-value">R$ 2.990/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+              </div>
             </div>
             <div class="addon-item" style="background: var(--surface)">
               <div class="addon-info">
@@ -1303,6 +1537,10 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="maint-tagline">
+            <strong>Seu site pronto é só o começo.</strong><br/>
+            Mantemos ele atualizado, seguro e funcionando para você.
           </div>
         </div>
       </div>
@@ -1446,6 +1684,89 @@
           ".reveal, .pkg, .inc-item, .work-card, .faq-item, .addon-item",
         )
         .forEach((el) => observer.observe(el));
+
+      // Roxouw Mode toggle + ink explosion
+      const roxouwToggle = document.getElementById('roxouwToggle');
+      const inkCanvas = document.getElementById('inkCanvas');
+      const inkCtx = inkCanvas.getContext('2d');
+
+      function resizeInkCanvas() {
+        inkCanvas.width = window.innerWidth;
+        inkCanvas.height = window.innerHeight;
+      }
+      resizeInkCanvas();
+      window.addEventListener('resize', resizeInkCanvas);
+
+      function launchInk(color) {
+        const W = inkCanvas.width, H = inkCanvas.height;
+        const toggle = document.getElementById('roxouwToggle');
+        const rect = toggle.getBoundingClientRect();
+        const originX = rect.left + rect.width / 2;
+        const originY = rect.top + rect.height / 2;
+        const drops = [];
+        for (let i = 0; i < 22; i++) {
+          const angle = (Math.PI * 2 / 22) * i + (Math.random() - 0.5) * 0.4;
+          const speed = 6 + Math.random() * 14;
+          const size = 18 + Math.random() * 60;
+          drops.push({ x: originX, y: originY, vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed, size, alpha: 0.85 + Math.random() * 0.15,
+            decay: 0.013 + Math.random() * 0.01 });
+        }
+        const bursts = [];
+        for (let i = 0; i < 5; i++) {
+          bursts.push({ x: originX, y: originY, r: 0,
+            maxR: W * (0.35 + i * 0.18), alpha: 0.18 - i * 0.03, speed: 28 + i * 12 });
+        }
+        let frame = 0;
+        function drawInk() {
+          inkCtx.clearRect(0, 0, W, H);
+          bursts.forEach(b => {
+            b.r += b.speed;
+            if (b.r < b.maxR) {
+              inkCtx.beginPath();
+              inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+              inkCtx.strokeStyle = color + Math.round(b.alpha * 255).toString(16).padStart(2,'0');
+              inkCtx.lineWidth = 3;
+              inkCtx.stroke();
+              b.alpha -= 0.003;
+            }
+          });
+          let alive = false;
+          drops.forEach(d => {
+            if (d.alpha <= 0) return;
+            alive = true;
+            d.x += d.vx; d.y += d.vy; d.vy += 0.35; d.vx *= 0.97; d.alpha -= d.decay;
+            inkCtx.save();
+            inkCtx.globalAlpha = Math.max(0, d.alpha);
+            inkCtx.beginPath();
+            inkCtx.ellipse(d.x, d.y, d.size * 0.55, d.size * 0.72, Math.atan2(d.vy, d.vx), 0, Math.PI * 2);
+            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.beginPath();
+            inkCtx.ellipse(d.x - d.vx * 1.2, d.y - d.vy * 1.2, d.size * 0.25, d.size * 0.18, 0, 0, Math.PI * 2);
+            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.restore();
+          });
+          frame++;
+          if (alive || frame < 40) { requestAnimationFrame(drawInk); }
+          else {
+            let fadeAlpha = 1;
+            function fadeOut() {
+              fadeAlpha -= 0.06;
+              inkCtx.globalAlpha = fadeAlpha;
+              if (fadeAlpha > 0) requestAnimationFrame(fadeOut);
+              else { inkCtx.clearRect(0,0,W,H); inkCtx.globalAlpha = 1; }
+            }
+            fadeOut();
+          }
+        }
+        drawInk();
+      }
+
+      roxouwToggle.addEventListener('change', () => {
+        const isRoxouw = roxouwToggle.checked;
+        document.body.classList.toggle('roxouw-mode', isRoxouw);
+        launchInk(isRoxouw ? '#8B008B' : '#2dd4c8');
+      });
     </script>
   </body>
 </html>

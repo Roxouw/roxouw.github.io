@@ -150,8 +150,12 @@
         --muted: #606470;
         --muted2: #8a8f9a;
         --teal: #2dd4c8;
-        --teal-glow: rgba(45, 212, 200, 0.15);
-        --teal-dim: rgba(45, 212, 200, 0.08);
+        --teal-glow: var(--teal-glow);
+        --teal-dim: var(--teal-dim);
+        --teal-11: var(--teal-11);
+        --teal-04: var(--teal-04);
+        --teal-20: rgba(45, 212, 200, 0.20);
+        --teal-30: rgba(45, 212, 200, 0.30);
         --lime: #b8f04a;
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
@@ -168,6 +172,7 @@
         font-family: var(--font-display);
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
+        transition: background 0.5s ease;
       }
 
       ::-webkit-scrollbar {
@@ -205,9 +210,10 @@
           display: block;
           width: 30px;
           height: 30px;
-          border: 1px solid rgba(45, 212, 200, 0.35);
+          border: 1px solid var(--teal-glow);
           border-radius: 50%;
           z-index: 9998;
+          transition: border-color 0.4s ease;
         }
       }
 
@@ -231,6 +237,9 @@
         background: rgba(19, 20, 22, 0.94);
         backdrop-filter: blur(24px);
         border-color: var(--border);
+      }
+      body.roxouw-mode nav.scrolled {
+        background: rgba(14, 10, 14, 0.94);
       }
       .nav-logo {
         font-size: 1rem;
@@ -352,8 +361,8 @@
         pointer-events: none;
         background: radial-gradient(
           ellipse at 65% 30%,
-          rgba(45, 212, 200, 0.11) 0%,
-          rgba(45, 212, 200, 0.04) 40%,
+          var(--teal-11) 0%,
+          var(--teal-04) 40%,
           transparent 68%
         );
       }
@@ -707,7 +716,7 @@
         font-family: var(--font-mono);
         font-size: 0.58rem;
         color: var(--teal);
-        border: 1px solid rgba(45, 212, 200, 0.2);
+        border: 1px solid var(--teal-20);
         padding: 0.18rem 0.55rem;
         letter-spacing: 0.04em;
       }
@@ -729,7 +738,7 @@
         background: var(--bg);
       }
       .project-card:hover {
-        border-color: rgba(45, 212, 200, 0.3);
+        border-color: var(--teal-30);
         transform: translateY(-3px);
       }
       .project-card::before {
@@ -809,7 +818,7 @@
         padding: 0.2rem 0.65rem;
         color: var(--teal);
         background: var(--teal-dim);
-        border: 1px solid rgba(45, 212, 200, 0.15);
+        border: 1px solid var(--teal-glow);
         letter-spacing: 0.04em;
       }
       .project-links {
@@ -857,7 +866,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse at 60% 40%,
-          rgba(45, 212, 200, 0.08) 0%,
+          var(--teal-dim) 0%,
           transparent 65%
         );
       }
@@ -870,13 +879,13 @@
             90deg,
             transparent,
             transparent 47px,
-            rgba(45, 212, 200, 0.04) 48px
+            var(--teal-04) 48px
           ),
           repeating-linear-gradient(
             0deg,
             transparent,
             transparent 47px,
-            rgba(45, 212, 200, 0.04) 48px
+            var(--teal-04) 48px
           );
       }
 
@@ -936,7 +945,7 @@
         font-size: 0.95rem;
         color: var(--teal);
         text-decoration: none;
-        border-bottom: 1px solid rgba(45, 212, 200, 0.3);
+        border-bottom: 1px solid var(--teal-30);
         padding-bottom: 3px;
         transition: border-color var(--transition);
         display: inline-block;
@@ -1274,9 +1283,98 @@
           transform: scale(0.9) translateY(20px);
         }
       }
+
+      /* NAV LOGO GROUP */
+      .nav-logo-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      /* ROXOUW TOGGLE */
+      .roxouw-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        cursor: pointer;
+        user-select: none;
+      }
+      .roxouw-toggle input {
+        display: none;
+      }
+      .roxouw-track {
+        position: relative;
+        width: 34px;
+        height: 18px;
+        background: var(--border2);
+        border-radius: 999px;
+        transition: background 0.3s ease;
+        flex-shrink: 0;
+      }
+      .roxouw-thumb {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--muted2);
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .roxouw-toggle input:checked + .roxouw-track {
+        background: rgba(139, 0, 139, 0.35);
+      }
+      .roxouw-toggle input:checked + .roxouw-track .roxouw-thumb {
+        transform: translateX(16px);
+        background: #8B008B;
+      }
+      .roxouw-label {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
+        white-space: nowrap;
+      }
+
+      /* INK SPLASH */
+      @keyframes inkRipple {
+        0%   { transform: scale(0); opacity: 0.9; }
+        100% { transform: scale(1); opacity: 0; }
+      }
+
+      /* ROXOUW MODE — override teal + background */
+      body.roxouw-mode {
+        --teal: #8B008B;
+        --teal-glow: rgba(139, 0, 139, 0.15);
+        --teal-dim: rgba(139, 0, 139, 0.08);
+        --teal-11: rgba(139, 0, 139, 0.11);
+        --teal-04: rgba(139, 0, 139, 0.04);
+        --teal-20: rgba(139, 0, 139, 0.20);
+        --teal-30: rgba(139, 0, 139, 0.30);
+        --bg: #0e0a0e;
+        --bg2: #130a13;
+        --surface: #1a0f1a;
+        --border: #2a1a2a;
+        --border2: #3a1f3a;
+        transition: background 0.5s ease;
+      }
+
+      /* Roxouw label: same font/size/weight as nav-logo when active */
+      body.roxouw-mode .roxouw-label {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        text-transform: none;
+        color: #8B008B;
+      }
     </style>
   </head>
   <body>
+    <!-- INK EXPLOSION CANVAS -->
+    <canvas id="inkCanvas" style="position:fixed;inset:0;z-index:8999;pointer-events:none;width:100%;height:100%;"></canvas>
     <!-- INTRO OVERLAY -->
     <div id="intro">
       <div class="intro-name" id="introLogo">
@@ -1300,7 +1398,16 @@
     </div>
 
     <nav id="navbar">
-      <a href="#hero" class="nav-logo">FILIPE<span>.</span></a>
+      <div class="nav-logo-group">
+        <a href="#hero" class="nav-logo">FILIPE<span>.</span></a>
+        <label class="roxouw-toggle" title="Roxouw Mode">
+          <input type="checkbox" id="roxouwToggle" />
+          <span class="roxouw-track">
+            <span class="roxouw-thumb"></span>
+          </span>
+          <span class="roxouw-label">Roxouw Mode</span>
+        </label>
+      </div>
       <ul class="nav-links">
         <li><a href="#about">Sobre</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -1704,11 +1811,11 @@
         document.querySelectorAll("a,button").forEach((el) => {
           el.addEventListener("mouseenter", () => {
             cursor.style.transform = "scale(2.5)";
-            ring.style.borderColor = "rgba(45,212,200,0.6)";
+            ring.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--teal').trim() + "99";
           });
           el.addEventListener("mouseleave", () => {
             cursor.style.transform = "scale(1)";
-            ring.style.borderColor = "rgba(45,212,200,0.35)";
+            ring.style.borderColor = "";
           });
         });
       }
@@ -1766,6 +1873,132 @@
       document
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
+
+      // Roxouw Mode toggle + ink explosion
+      const roxouwToggle = document.getElementById('roxouwToggle');
+      const inkCanvas = document.getElementById('inkCanvas');
+      const inkCtx = inkCanvas.getContext('2d');
+
+      function resizeInkCanvas() {
+        inkCanvas.width = window.innerWidth;
+        inkCanvas.height = window.innerHeight;
+      }
+      resizeInkCanvas();
+      window.addEventListener('resize', resizeInkCanvas);
+
+      function launchInk(color) {
+        const W = inkCanvas.width;
+        const H = inkCanvas.height;
+        const toggle = document.getElementById('roxouwToggle');
+        const rect = toggle.getBoundingClientRect();
+        const originX = rect.left + rect.width / 2;
+        const originY = rect.top + rect.height / 2;
+
+        const drops = [];
+        const COUNT = 22;
+
+        for (let i = 0; i < COUNT; i++) {
+          const angle = (Math.PI * 2 / COUNT) * i + (Math.random() - 0.5) * 0.4;
+          const speed = 6 + Math.random() * 14;
+          const size = 18 + Math.random() * 60;
+          drops.push({
+            x: originX,
+            y: originY,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            size,
+            alpha: 0.85 + Math.random() * 0.15,
+            decay: 0.013 + Math.random() * 0.01,
+            splat: false,
+          });
+        }
+
+        // Big central burst
+        const bursts = [];
+        for (let i = 0; i < 5; i++) {
+          bursts.push({
+            x: originX,
+            y: originY,
+            r: 0,
+            maxR: W * (0.35 + i * 0.18),
+            alpha: 0.18 - i * 0.03,
+            speed: 28 + i * 12,
+          });
+        }
+
+        let frame = 0;
+
+        function drawInk() {
+          inkCtx.clearRect(0, 0, W, H);
+
+          // Draw bursts (expanding rings)
+          bursts.forEach(b => {
+            b.r += b.speed;
+            if (b.r < b.maxR) {
+              inkCtx.beginPath();
+              inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+              inkCtx.strokeStyle = color + Math.round(b.alpha * 255).toString(16).padStart(2, '0');
+              inkCtx.lineWidth = 3;
+              inkCtx.stroke();
+              b.alpha -= 0.003;
+            }
+          });
+
+          // Draw drops
+          let alive = false;
+          drops.forEach(d => {
+            if (d.alpha <= 0) return;
+            alive = true;
+            d.x += d.vx;
+            d.y += d.vy;
+            d.vy += 0.35; // gravity
+            d.vx *= 0.97;
+            d.alpha -= d.decay;
+
+            // ink blob shape
+            inkCtx.save();
+            inkCtx.globalAlpha = Math.max(0, d.alpha);
+            inkCtx.beginPath();
+            inkCtx.ellipse(d.x, d.y, d.size * 0.55, d.size * 0.72, Math.atan2(d.vy, d.vx), 0, Math.PI * 2);
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
+
+            // splatter tail
+            inkCtx.beginPath();
+            inkCtx.ellipse(d.x - d.vx * 1.2, d.y - d.vy * 1.2, d.size * 0.25, d.size * 0.18, 0, 0, Math.PI * 2);
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
+            inkCtx.restore();
+          });
+
+          frame++;
+          if (alive || frame < 40) {
+            requestAnimationFrame(drawInk);
+          } else {
+            // fade out canvas
+            let fadeAlpha = 1;
+            function fadeOut() {
+              fadeAlpha -= 0.06;
+              inkCtx.globalAlpha = fadeAlpha;
+              if (fadeAlpha > 0) {
+                requestAnimationFrame(fadeOut);
+              } else {
+                inkCtx.clearRect(0, 0, W, H);
+                inkCtx.globalAlpha = 1;
+              }
+            }
+            fadeOut();
+          }
+        }
+        drawInk();
+      }
+
+      roxouwToggle.addEventListener('change', () => {
+        const isRoxouw = roxouwToggle.checked;
+        document.body.classList.toggle('roxouw-mode', isRoxouw);
+        const inkColor = isRoxouw ? '#8B008B' : '#2dd4c8';
+        launchInk(inkColor);
+      });
     </script>
   </body>
 </html>
