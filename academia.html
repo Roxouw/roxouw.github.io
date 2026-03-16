@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-57VS8P14FH");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iron House Academia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #0a0a0a;
+        --bg2: #111111;
+        --bg3: #181818;
+        --red: #e8001d;
+        --red2: #ff1a35;
+        --gold: #c8a84b;
+        --white: #f0ece4;
+        --gray: #555;
+        --light-gray: #999;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--white);
+        font-family: "Barlow", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 5%;
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(232, 0, 29, 0.15);
+      }
+
+      .nav-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        color: var(--white);
+      }
+      .nav-logo span {
+        color: var(--red);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 36px;
+      }
+      nav ul a {
+        color: var(--light-gray);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      nav ul a:hover {
+        color: var(--red);
+      }
+
+      /* ── HERO ── */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 120px 5% 80px;
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 60% at 70% 50%,
+            rgba(232, 0, 29, 0.08) 0%,
+            transparent 70%
+          ),
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(255, 255, 255, 0.015) 60px,
+            rgba(255, 255, 255, 0.015) 61px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 60px,
+            rgba(255, 255, 255, 0.015) 60px,
+            rgba(255, 255, 255, 0.015) 61px
+          );
+      }
+
+      .hero-tag {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .hero-tag::before {
+        content: "";
+        display: block;
+        width: 36px;
+        height: 2px;
+        background: var(--red);
+      }
+
+      .hero h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4rem, 12vw, 10rem);
+        line-height: 0.9;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 .line2 {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(240, 236, 228, 0.25);
+      }
+
+      .hero h1 .accent {
+        color: var(--red);
+      }
+
+      .hero-sub {
+        margin-top: 32px;
+        font-size: 1.05rem;
+        color: var(--light-gray);
+        max-width: 420px;
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
+      .hero-cta {
+        margin-top: 44px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .btn-primary {
+        background: var(--red);
+        color: #fff;
+        padding: 16px 38px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        clip-path: polygon(
+          0 0,
+          calc(100% - 12px) 0,
+          100% 12px,
+          100% 100%,
+          12px 100%,
+          0 calc(100% - 12px)
+        );
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        background: var(--red2);
+        transform: translateY(-2px);
+      }
+
+      .btn-ghost {
+        color: var(--white);
+        border: 1px solid rgba(240, 236, 228, 0.2);
+        padding: 16px 32px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        background: transparent;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--red);
+        color: var(--red);
+      }
+
+      .hero-number {
+        position: absolute;
+        right: 5%;
+        bottom: 10%;
+        text-align: right;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(7rem, 18vw, 18rem);
+        color: rgba(232, 0, 29, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      /* ── PARCEIROS CAROUSEL ── */
+      .parceiros {
+        background: var(--bg2);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 28px 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .parceiros-label {
+        text-align: center;
+        font-size: 0.65rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--gray);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .carousel-track-wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel-track {
+        display: flex;
+        gap: 0;
+        width: max-content;
+        animation: scroll-left 18s linear infinite;
+      }
+
+      .carousel-track:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .parceiro-badge {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 52px;
+        white-space: nowrap;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .parceiro-badge .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+
+      .gympass-icon {
+        background: #00c0a3;
+      }
+      .totalpass-icon {
+        background: #7c3aed;
+      }
+      .sesiesc-icon {
+        background: #e8a800;
+      }
+
+      .parceiro-badge .info strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--white);
+      }
+
+      .parceiro-badge .info span {
+        font-size: 0.72rem;
+        color: var(--light-gray);
+        letter-spacing: 0.5px;
+      }
+
+      .badge-check {
+        width: 22px;
+        height: 22px;
+        background: rgba(46, 204, 113, 0.15);
+        border: 1px solid #2ecc71;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        color: #2ecc71;
+        margin-left: auto;
+      }
+
+      /* fade edges */
+      .carousel-track-wrapper::before,
+      .carousel-track-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .carousel-track-wrapper::before {
+        left: 0;
+        background: linear-gradient(to right, var(--bg2), transparent);
+      }
+      .carousel-track-wrapper::after {
+        right: 0;
+        background: linear-gradient(to left, var(--bg2), transparent);
+      }
+
+      /* ── SECTIONS BASE ── */
+      section {
+        padding: 100px 5%;
+      }
+
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: var(--red);
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .section-label::before {
+        content: "";
+        width: 28px;
+        height: 2px;
+        background: var(--red);
+      }
+
+      .section-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        line-height: 1;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+      }
+
+      /* ── SOBRE ── */
+      #sobre {
+        background: var(--bg);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .sobre-visual {
+        position: relative;
+      }
+
+      .sobre-box {
+        background: var(--bg3);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 48px;
+        position: relative;
+      }
+      .sobre-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--red);
+      }
+
+      .sobre-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.05);
+        margin-top: 1px;
+      }
+
+      .stat {
+        background: var(--bg3);
+        padding: 28px 32px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .stat strong {
+        display: block;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.8rem;
+        color: var(--red);
+        line-height: 1;
+      }
+      .stat span {
+        font-size: 0.78rem;
+        color: var(--light-gray);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .sobre-text p {
+        color: var(--light-gray);
+        line-height: 1.8;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+
+      .pilares {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .pilar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 20px;
+        background: var(--bg3);
+        border-left: 3px solid var(--red);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .pilar-icon {
+        font-size: 1.2rem;
+      }
+
+      /* ── PLANOS ── */
+      #planos {
+        background: var(--bg2);
+      }
+
+      .planos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        background: rgba(255, 255, 255, 0.04);
+        margin-top: 60px;
+      }
+
+      .plano {
+        background: var(--bg3);
+        padding: 44px 36px;
+        position: relative;
+        transition: transform 0.25s;
+      }
+
+      .plano:hover {
+        transform: translateY(-6px);
+        z-index: 2;
+      }
+
+      .plano.destaque {
+        background: var(--bg);
+        border: 1px solid var(--red);
+      }
+
+      .plano-tag {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--red);
+        margin-bottom: 20px;
+      }
+
+      .plano.destaque .plano-tag {
+        color: var(--gold);
+      }
+
+      .plano-nome {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+      }
+
+      .plano-preco {
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+        margin-bottom: 36px;
+      }
+      .plano-preco .cifrao {
+        font-size: 1rem;
+        color: var(--light-gray);
+        margin-bottom: 8px;
+      }
+      .plano-preco .valor {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4rem;
+        line-height: 1;
+        color: var(--white);
+      }
+      .plano.destaque .plano-preco .valor {
+        color: var(--red);
+      }
+      .plano-preco .periodo {
+        font-size: 0.75rem;
+        color: var(--light-gray);
+        margin-bottom: 10px;
+      }
+
+      .plano-items {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+      .plano-items li {
+        font-size: 0.88rem;
+        color: var(--light-gray);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .plano-items li::before {
+        content: "—";
+        color: var(--red);
+        font-weight: 700;
+      }
+      .plano-items li.ok::before {
+        content: "✓";
+        color: #2ecc71;
+      }
+
+      .btn-plano {
+        width: 100%;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--white);
+        transition: all 0.2s;
+        background: transparent;
+      }
+      .btn-plano:hover {
+        border-color: var(--red);
+        color: var(--red);
+      }
+      .plano.destaque .btn-plano {
+        background: var(--red);
+        border-color: var(--red);
+        color: #fff;
+      }
+      .plano.destaque .btn-plano:hover {
+        background: var(--red2);
+      }
+
+      .popular-flag {
+        position: absolute;
+        top: -1px;
+        right: 24px;
+        background: var(--red);
+        color: #fff;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 12px;
+      }
+
+      /* ── MODALIDADES ── */
+      #modalidades {
+        background: var(--bg);
+      }
+
+      .modalidades-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2px;
+        background: rgba(255, 255, 255, 0.04);
+        margin-top: 60px;
+      }
+
+      .modalidade {
+        background: var(--bg3);
+        padding: 36px 28px;
+        transition: background 0.2s;
+      }
+      .modalidade:hover {
+        background: #1f1f1f;
+      }
+
+      .modalidade-icon {
+        font-size: 2.2rem;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .modalidade h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .modalidade p {
+        font-size: 0.8rem;
+        color: var(--light-gray);
+        line-height: 1.6;
+      }
+
+      /* ── ENDEREÇO ── */
+      #endereco {
+        background: var(--bg2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .map-placeholder {
+        background: var(--bg3);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* grid decorativo no mapa */
+      .map-placeholder::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 40px,
+            rgba(255, 255, 255, 0.03) 40px,
+            rgba(255, 255, 255, 0.03) 41px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 40px,
+            rgba(255, 255, 255, 0.03) 40px,
+            rgba(255, 255, 255, 0.03) 41px
+          );
+      }
+
+      .map-pin {
+        font-size: 3.5rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .map-placeholder p {
+        font-size: 0.85rem;
+        color: var(--light-gray);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .map-link {
+        background: var(--red);
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 28px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        transition: background 0.2s;
+      }
+      .map-link:hover {
+        background: var(--red2);
+      }
+
+      .endereco-info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .info-block {
+      }
+
+      .info-block h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 10px;
+      }
+
+      .info-block p,
+      .info-block address {
+        font-style: normal;
+        color: var(--light-gray);
+        font-size: 0.95rem;
+        line-height: 1.8;
+      }
+
+      .horarios-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 24px;
+      }
+
+      .horario-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: var(--light-gray);
+      }
+      .horario-row span:first-child {
+        color: var(--white);
+        font-weight: 600;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: #060606;
+        padding: 48px 5% 36px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .footer-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        color: var(--white);
+      }
+      .footer-logo span {
+        color: var(--red);
+      }
+
+      footer p {
+        font-size: 0.78rem;
+        color: var(--gray);
+        letter-spacing: 0.5px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--light-gray);
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .social-btn:hover {
+        border-color: var(--red);
+        color: var(--red);
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 800px) {
+        nav ul {
+          display: none;
+        }
+        #sobre,
+        #endereco {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .planos-grid {
+          grid-template-columns: 1fr;
+        }
+        .sobre-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* ── ANIMATIONS ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 0.1s;
+      }
+      .delay-2 {
+        transition-delay: 0.2s;
+      }
+      .delay-3 {
+        transition-delay: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">IRON<span>HOUSE</span></div>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#endereco">Endereço</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-tag">Academia de Bairro · Desde 2012</div>
+      <h1>
+        FORGE<br />
+        <span class="line2">YOUR</span><br />
+        <span class="accent">BODY</span>
+      </h1>
+      <p class="hero-sub">
+        Treino de verdade, sem frescura. Equipamentos profissionais, professores
+        dedicados e um ambiente que te faz querer voltar.
+      </p>
+      <div class="hero-cta">
+        <a href="#planos" class="btn-primary">Ver planos</a>
+        <a href="#sobre" class="btn-ghost">Conhecer a academia</a>
+      </div>
+      <div class="hero-number">12</div>
+    </section>
+
+    <!-- PARCEIROS CAROUSEL -->
+    <div class="parceiros">
+      <div class="parceiros-label">Aceitamos os principais convênios</div>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="carousel">
+          <!-- set A -->
+          <div class="parceiro-badge">
+            <div class="icon gympass-icon">💪</div>
+            <div class="info">
+              <strong>GYMPASS</strong>
+              <span>Aceito aqui</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon totalpass-icon">🏋️</div>
+            <div class="info">
+              <strong>TOTALPASS</strong>
+              <span>Aceito aqui</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div
+              class="icon"
+              style="background: #1a1a2e; border: 1px solid #444"
+            >
+              💳
+            </div>
+            <div class="info">
+              <strong>CONVÊNIO EMPRESA</strong>
+              <span>Fale conosco</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon gympass-icon">💪</div>
+            <div class="info">
+              <strong>WELLHUB</strong>
+              <span>Parceiro oficial</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon" style="background: #c0392b">🔥</div>
+            <div class="info">
+              <strong>PLANO MENSAL</strong>
+              <span>Sem fidelidade</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <!-- set B (clone) -->
+          <div class="parceiro-badge">
+            <div class="icon gympass-icon">💪</div>
+            <div class="info">
+              <strong>GYMPASS</strong>
+              <span>Aceito aqui</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon totalpass-icon">🏋️</div>
+            <div class="info">
+              <strong>TOTALPASS</strong>
+              <span>Aceito aqui</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div
+              class="icon"
+              style="background: #1a1a2e; border: 1px solid #444"
+            >
+              💳
+            </div>
+            <div class="info">
+              <strong>CONVÊNIO EMPRESA</strong>
+              <span>Fale conosco</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon gympass-icon">💪</div>
+            <div class="info">
+              <strong>WELLHUB</strong>
+              <span>Parceiro oficial</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+
+          <div class="parceiro-badge">
+            <div class="icon" style="background: #c0392b">🔥</div>
+            <div class="info">
+              <strong>PLANO MENSAL</strong>
+              <span>Sem fidelidade</span>
+            </div>
+            <div class="badge-check">✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="sobre-visual fade-up">
+        <div class="sobre-box">
+          <p
+            style="
+              font-size: 1rem;
+              color: var(--light-gray);
+              line-height: 1.8;
+              font-weight: 300;
+            "
+          >
+            "Nossa missão é simples: criar um espaço onde qualquer pessoa —
+            independente do nível — possa treinar com qualidade, foco e
+            resultados de verdade."
+          </p>
+          <p
+            style="
+              margin-top: 20px;
+              font-size: 0.8rem;
+              color: var(--gray);
+              letter-spacing: 1px;
+            "
+          >
+            — Fundadores da Iron House
+          </p>
+        </div>
+        <div class="sobre-stats">
+          <div class="stat fade-up delay-1">
+            <strong>1.200+</strong>
+            <span>Alunos ativos</span>
+          </div>
+          <div class="stat fade-up delay-2">
+            <strong>12</strong>
+            <span>Anos de história</span>
+          </div>
+          <div class="stat fade-up delay-1">
+            <strong>8</strong>
+            <span>Professores</span>
+          </div>
+          <div class="stat fade-up delay-2">
+            <strong>600m²</strong>
+            <span>De área total</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-text fade-up delay-1">
+        <div class="section-label">Sobre nós</div>
+        <h2 class="section-title">UMA ACADEMIA<br />DE VERDADE</h2>
+        <p>
+          Nascemos no coração do bairro e crescemos com nossa comunidade. Aqui
+          não tem ego, tem resultado. Cada equipamento foi escolhido a dedo,
+          cada professor é apaixonado pelo que faz.
+        </p>
+        <p>
+          Do iniciante ao atleta avançado, temos a estrutura e o suporte que
+          você precisa para evoluir. Ambiente limpo, climatizado e com
+          estacionamento.
+        </p>
+
+        <div class="pilares">
+          <div class="pilar">
+            <span class="pilar-icon">🏆</span> Equipamentos profissionais de
+            última geração
+          </div>
+          <div class="pilar">
+            <span class="pilar-icon">👨‍🏫</span> Professores formados e
+            especializados
+          </div>
+          <div class="pilar">
+            <span class="pilar-icon">❄️</span> Ambiente climatizado e
+            higienizado
+          </div>
+          <div class="pilar">
+            <span class="pilar-icon">🅿️</span> Estacionamento gratuito
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades">
+      <div class="section-label">O que oferecemos</div>
+      <h2 class="section-title fade-up">MODALIDADES</h2>
+      <div class="modalidades-grid">
+        <div class="modalidade fade-up">
+          <span class="modalidade-icon">🏋️</span>
+          <h3>Musculação</h3>
+          <p>
+            Sala equipada com aparelhos de última geração para todos os grupos
+            musculares.
+          </p>
+        </div>
+        <div class="modalidade fade-up delay-1">
+          <span class="modalidade-icon">🥊</span>
+          <h3>Muay Thai</h3>
+          <p>
+            Aulas para iniciantes e avançados com professor especializado e
+            campeão regional.
+          </p>
+        </div>
+        <div class="modalidade fade-up delay-2">
+          <span class="modalidade-icon">🧘</span>
+          <h3>Funcional</h3>
+          <p>
+            Treinos funcionais em grupo com foco em força, resistência e
+            mobilidade.
+          </p>
+        </div>
+        <div class="modalidade fade-up delay-3">
+          <span class="modalidade-icon">🚴</span>
+          <h3>Spinning</h3>
+          <p>
+            Sala de bike com sistema de som imersivo e aulas com DJ ao vivo aos
+            sábados.
+          </p>
+        </div>
+        <div class="modalidade fade-up">
+          <span class="modalidade-icon">🤸</span>
+          <h3>Pilates</h3>
+          <p>
+            Estúdio de pilates com equipamentos completos e atendimento
+            personalizado.
+          </p>
+        </div>
+        <div class="modalidade fade-up delay-1">
+          <span class="modalidade-icon">💪</span>
+          <h3>Personal</h3>
+          <p>
+            Treino personalizado com plano de evolução individual e
+            acompanhamento semanal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos">
+      <div class="section-label">Invista em você</div>
+      <h2 class="section-title fade-up">PLANOS &<br />VALORES</h2>
+
+      <div class="planos-grid">
+        <div class="plano fade-up">
+          <div class="plano-tag">Básico</div>
+          <div class="plano-nome">START</div>
+          <div class="plano-preco">
+            <span class="cifrao">R$</span>
+            <span class="valor">89</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="plano-items">
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física inicial</li>
+            <li>Aulas coletivas</li>
+            <li>Treino personalizado</li>
+          </ul>
+          <a href="#" class="btn-plano">Matricule-se</a>
+        </div>
+
+        <div class="plano destaque fade-up delay-1">
+          <span class="popular-flag">Mais popular</span>
+          <div class="plano-tag">Completo</div>
+          <div class="plano-nome">PRO</div>
+          <div class="plano-preco">
+            <span class="cifrao">R$</span>
+            <span class="valor">149</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="plano-items">
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física inicial</li>
+            <li class="ok">Todas as aulas coletivas</li>
+            <li>Treino personalizado</li>
+          </ul>
+          <a href="#" class="btn-plano">Matricule-se</a>
+        </div>
+
+        <div class="plano fade-up delay-2">
+          <div class="plano-tag">Tudo incluso</div>
+          <div class="plano-nome">ELITE</div>
+          <div class="plano-preco">
+            <span class="cifrao">R$</span>
+            <span class="valor">219</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="plano-items">
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física trimestral</li>
+            <li class="ok">Todas as aulas coletivas</li>
+            <li class="ok">4 sessões de personal/mês</li>
+          </ul>
+          <a href="#" class="btn-plano">Matricule-se</a>
+        </div>
+      </div>
+
+      <p
+        style="
+          text-align: center;
+          margin-top: 28px;
+          font-size: 0.8rem;
+          color: var(--gray);
+          letter-spacing: 0.5px;
+        "
+      >
+        Gympass e TotalPass aceitos · Primeira semana gratuita · Sem taxa de
+        matrícula em planos anuais
+      </p>
+    </section>
+
+    <!-- ENDEREÇO -->
+    <section id="endereco">
+      <div class="fade-up">
+        <div class="section-label">Onde estamos</div>
+        <h2 class="section-title">VENHA NOS<br />VISITAR</h2>
+
+        <div class="endereco-info">
+          <div class="info-block">
+            <h3>Endereço</h3>
+            <address>
+              Rua das Palmeiras, 742 — Bairro São José<br />
+              Cachoeirinha — RS, 94900-000<br />
+              Próximo ao Mercado Central
+            </address>
+          </div>
+
+          <div class="info-block">
+            <h3>Horário de funcionamento</h3>
+            <div class="horarios-grid">
+              <div class="horario-row">
+                <span>Segunda</span><span>06h – 22h</span>
+              </div>
+              <div class="horario-row">
+                <span>Terça</span><span>06h – 22h</span>
+              </div>
+              <div class="horario-row">
+                <span>Quarta</span><span>06h – 22h</span>
+              </div>
+              <div class="horario-row">
+                <span>Quinta</span><span>06h – 22h</span>
+              </div>
+              <div class="horario-row">
+                <span>Sexta</span><span>06h – 21h</span>
+              </div>
+              <div class="horario-row">
+                <span>Sábado</span><span>08h – 14h</span>
+              </div>
+              <div class="horario-row">
+                <span>Domingo</span><span>09h – 12h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h3>Contato</h3>
+            <p>
+              📞 (51) 9 9999-9999<br />
+              📧 contato@ironhouse.com.br<br />
+              📷 @ironhouseacademia
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up delay-1">
+        <div class="map-placeholder">
+          <div class="map-pin">📍</div>
+          <p>Rua das Palmeiras, 742<br />Cachoeirinha — RS</p>
+          <a href="https://maps.google.com" target="_blank" class="map-link"
+            >Abrir no Google Maps</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">IRON<span>HOUSE</span></div>
+      <p>© 2024 Iron House Academia · Todos os direitos reservados</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">📷</a>
+        <a href="#" class="social-btn">👍</a>
+        <a href="#" class="social-btn">💬</a>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+
+      // Clone carousel for seamless loop
+      const track = document.getElementById("carousel");
+      const clone = track.cloneNode(true);
+      clone.id = "carousel-clone";
+      track.parentElement.appendChild(clone);
+    </script>
+  </body>
+</html>

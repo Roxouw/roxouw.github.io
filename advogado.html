@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-57VS8P14FH");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Rafael Monteiro — Advocacia</title>
+    <meta
+      name="description"
+      content="Advocacia especializada em direito civil, trabalhista e previdenciário. Consulta gratuita pelo WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f5f3ef;
+        --surface: #ffffff;
+        --ink: #1a1814;
+        --ink-mid: #4a4540;
+        --ink-light: #8a8480;
+        --gold: #b8976a;
+        --gold-light: #d4b896;
+        --gold-pale: #f0e8dc;
+        --line: rgba(26, 24, 20, 0.1);
+        --wa: #25d366;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 5%;
+        background: rgba(245, 243, 239, 0.9);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .nav-logo span {
+        color: var(--gold);
+      }
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--wa);
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 0.55rem 1.1rem;
+        border-radius: 2px;
+        transition: opacity 0.2s;
+      }
+      .nav-cta:hover {
+        opacity: 0.88;
+      }
+      .nav-cta svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 70px;
+      }
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6rem 5% 6rem 8%;
+        position: relative;
+      }
+      .hero-left::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 15%;
+        bottom: 15%;
+        width: 1px;
+        background: var(--line);
+      }
+      .hero-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 1.4rem;
+        opacity: 0;
+        animation: fadeUp 0.7s 0.1s forwards;
+      }
+      .hero-h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+        margin-bottom: 1.6rem;
+        opacity: 0;
+        animation: fadeUp 0.7s 0.2s forwards;
+      }
+      .hero-h1 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .hero-sub {
+        font-size: 1rem;
+        color: var(--ink-mid);
+        font-weight: 300;
+        max-width: 400px;
+        margin-bottom: 2.4rem;
+        line-height: 1.75;
+        opacity: 0;
+        animation: fadeUp 0.7s 0.3s forwards;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+        opacity: 0;
+        animation: fadeUp 0.7s 0.4s forwards;
+      }
+      .btn-wa {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        background: var(--wa);
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.9rem 1.8rem;
+        border-radius: 2px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+      }
+      .btn-wa:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
+      }
+      .btn-wa svg {
+        width: 20px;
+        height: 20px;
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 0.9rem 1.6rem;
+        border-radius: 2px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .btn-outline:hover {
+        background: var(--gold);
+        color: #fff;
+      }
+      .hero-trust {
+        margin-top: 2.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 0.78rem;
+        color: var(--ink-light);
+        letter-spacing: 0.04em;
+        opacity: 0;
+        animation: fadeUp 0.7s 0.5s forwards;
+      }
+      .hero-trust-dots {
+        display: flex;
+        gap: 3px;
+      }
+      .hero-trust-dots span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold-light);
+      }
+      .hero-trust-dots span:first-child {
+        background: var(--gold);
+      }
+
+      .hero-right {
+        position: relative;
+        background: var(--gold-pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .hero-photo-placeholder {
+        width: 70%;
+        max-width: 360px;
+        aspect-ratio: 3/4;
+        background: linear-gradient(160deg, var(--gold-light) 0%, #c9a97a 100%);
+        border-radius: 2px;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        opacity: 0;
+        animation: fadeLeft 0.8s 0.4s forwards;
+      }
+      .hero-photo-placeholder::before {
+        content: "";
+        position: absolute;
+        inset: -12px -12px auto auto;
+        width: 90px;
+        height: 90px;
+        border: 1px solid var(--gold-light);
+        border-radius: 1px;
+      }
+      .hero-photo-placeholder::after {
+        content: "";
+        position: absolute;
+        inset: auto auto -12px -12px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid var(--gold-light);
+        border-radius: 1px;
+      }
+      .hero-photo-icon {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        gap: 0.5rem;
+      }
+      .hero-photo-icon svg {
+        width: 48px;
+        height: 48px;
+      }
+      .hero-photo-icon p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+      }
+      .hero-badge {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        background: var(--surface);
+        padding: 0.9rem 1.2rem;
+        border-radius: 2px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        border-left: 3px solid var(--gold);
+        opacity: 0;
+        animation: fadeUp 0.6s 0.7s forwards;
+      }
+      .hero-badge strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .hero-badge span {
+        font-size: 0.72rem;
+        color: var(--ink-light);
+        letter-spacing: 0.05em;
+      }
+
+      /* ── STATS ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--surface);
+      }
+      .stat-item {
+        text-align: center;
+        padding: 2.8rem 1rem;
+        border-right: 1px solid var(--line);
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s,
+          transform 0.6s;
+      }
+      .stat-item:last-child {
+        border-right: none;
+      }
+      .stat-item.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .stat-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.78rem;
+        color: var(--ink-light);
+        margin-top: 0.3rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      /* ── AREAS ── */
+      .section {
+        padding: 6rem 8%;
+      }
+      .section-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+      }
+      .section-h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        font-weight: 300;
+        line-height: 1.2;
+        max-width: 520px;
+        margin-bottom: 3.5rem;
+      }
+      .areas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+      .area-card {
+        background: var(--surface);
+        padding: 2.2rem 1.8rem;
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+        transition: background 0.3s;
+      }
+      .area-card::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s;
+      }
+      .area-card:hover {
+        background: var(--gold-pale);
+      }
+      .area-card:hover::before {
+        transform: scaleX(1);
+      }
+      .area-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 1.2rem;
+        color: var(--gold);
+      }
+      .area-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.6rem;
+      }
+      .area-desc {
+        font-size: 0.85rem;
+        color: var(--ink-mid);
+        line-height: 1.65;
+      }
+
+      /* ── HOW ── */
+      .how {
+        background: var(--ink);
+        color: var(--bg);
+        padding: 6rem 8%;
+      }
+      .how .section-tag {
+        color: var(--gold-light);
+      }
+      .how .section-h2 {
+        color: var(--bg);
+        margin-bottom: 4rem;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .step {
+        position: relative;
+      }
+      .step-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: rgba(184, 151, 106, 0.25);
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      .step-title {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: var(--bg);
+      }
+      .step-desc {
+        font-size: 0.85rem;
+        color: rgba(245, 243, 239, 0.55);
+        line-height: 1.65;
+      }
+      .step-arrow {
+        position: absolute;
+        right: -1rem;
+        top: 1.5rem;
+        color: var(--gold);
+        font-size: 1.2rem;
+      }
+      .step:last-child .step-arrow {
+        display: none;
+      }
+
+      /* ── DEPOIMENTOS ── */
+      .depos {
+        padding: 6rem 8%;
+        background: var(--surface);
+      }
+      .depos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .depo {
+        padding: 2rem;
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        position: relative;
+        transition: border-color 0.3s;
+      }
+      .depo:hover {
+        border-color: var(--gold);
+      }
+      .depo-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.5rem;
+        color: var(--gold);
+        line-height: 0.8;
+        margin-bottom: 0.8rem;
+      }
+      .depo-text {
+        font-size: 0.88rem;
+        color: var(--ink-mid);
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+      }
+      .depo-author {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .depo-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--gold-pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.95rem;
+        color: var(--gold);
+        font-weight: 600;
+      }
+      .depo-name {
+        font-size: 0.82rem;
+        font-weight: 500;
+      }
+      .depo-case {
+        font-size: 0.72rem;
+        color: var(--ink-light);
+      }
+      .depo-stars {
+        color: var(--gold);
+        font-size: 0.75rem;
+        margin-bottom: 0.15rem;
+      }
+
+      /* ── CTA CENTRAL ── */
+      .cta-section {
+        padding: 6rem 8%;
+        background: var(--gold-pale);
+        text-align: center;
+      }
+      .cta-section .section-h2 {
+        max-width: 580px;
+        margin: 0 auto 1.2rem;
+      }
+      .cta-sub {
+        font-size: 0.95rem;
+        color: var(--ink-mid);
+        margin-bottom: 2.5rem;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cta-guarantee {
+        margin-top: 1.5rem;
+        font-size: 0.75rem;
+        color: var(--ink-light);
+        letter-spacing: 0.06em;
+      }
+
+      /* ── FAQ ── */
+      .faq {
+        padding: 6rem 8%;
+      }
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        max-width: 820px;
+      }
+      .faq-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--line);
+        cursor: pointer;
+      }
+      .faq-item:nth-child(odd) {
+        padding-right: 3rem;
+      }
+      .faq-item:nth-child(even) {
+        padding-left: 3rem;
+        border-left: 1px solid var(--line);
+      }
+      .faq-q {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.05rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0;
+      }
+      .faq-icon {
+        color: var(--gold);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+      }
+      .faq-a {
+        font-size: 0.85rem;
+        color: var(--ink-mid);
+        line-height: 1.7;
+        margin-top: 0.8rem;
+        display: none;
+      }
+      .faq-item.open .faq-a {
+        display: block;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--ink);
+        color: var(--bg);
+        padding: 3rem 8%;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 2rem;
+      }
+      .footer-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 0.4rem;
+      }
+      .footer-logo span {
+        color: var(--gold-light);
+      }
+      .footer-info {
+        font-size: 0.78rem;
+        color: rgba(245, 243, 239, 0.45);
+        line-height: 1.7;
+      }
+      .footer-oab {
+        font-size: 0.72rem;
+        color: var(--gold-light);
+        letter-spacing: 0.08em;
+        margin-top: 0.3rem;
+      }
+      .footer-wa {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: var(--wa);
+        color: #fff;
+        text-decoration: none;
+        padding: 0.85rem 1.5rem;
+        border-radius: 2px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: opacity 0.2s;
+      }
+      .footer-wa:hover {
+        opacity: 0.88;
+      }
+      .footer-wa svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* ── FLOATING WA ── */
+      .float-wa {
+        position: fixed;
+        bottom: 1.8rem;
+        right: 1.8rem;
+        z-index: 200;
+        background: var(--wa);
+        color: #fff;
+        text-decoration: none;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        animation: pulse 2.5s infinite 1s;
+      }
+      .float-wa:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 32px rgba(37, 211, 102, 0.5);
+      }
+      .float-wa svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      /* ── ANIMATIONS ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeLeft {
+        from {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 6px 32px rgba(37, 211, 102, 0.65);
+        }
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-right {
+          display: none;
+        }
+        .hero-left {
+          padding: 5rem 6% 4rem;
+        }
+        .hero-left::after {
+          display: none;
+        }
+        .areas-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+        }
+        .step-arrow {
+          display: none;
+        }
+        .depos-grid {
+          grid-template-columns: 1fr;
+        }
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+        .faq-item:nth-child(even) {
+          padding-left: 0;
+          border-left: none;
+        }
+        footer {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-wa {
+          margin: 0 auto;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .stat-item {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+      }
+      @media (max-width: 560px) {
+        .areas-grid {
+          grid-template-columns: 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          padding: 1rem 5%;
+        }
+        .nav-cta span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="#">Dr. Rafael <span>Monteiro</span></a>
+      <a
+        class="nav-cta"
+        href="https://wa.me/5551999999999?text=Olá%2C%20gostaria%20de%20uma%20consulta%20gratuita."
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+        <span>Consulta Gratuita</span>
+      </a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="hero-tag">Advocacia Especializada · Desde 2008</p>
+        <h1 class="hero-h1">
+          Seus direitos merecem uma defesa <em>comprometida</em>
+        </h1>
+        <p class="hero-sub">
+          Assessoria jurídica em direito civil, trabalhista e previdenciário.
+          Atendimento humanizado, resultados concretos.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="btn-wa"
+            href="https://wa.me/5551999999999?text=Olá%2C%20gostaria%20de%20uma%20consulta%20gratuita."
+            target="_blank"
+            rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Falar no WhatsApp
+          </a>
+          <a class="btn-outline" href="#areas">Ver especialidades</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-dots">
+            <span></span><span></span><span></span>
+          </div>
+          Mais de 500 clientes atendidos com sucesso
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-photo-placeholder">
+          <div class="hero-photo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <p>Sua Foto Aqui</p>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <strong>+15</strong>
+          <span>ANOS DE EXPERIÊNCIA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Casos resolvidos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">92%</div>
+        <div class="stat-label">Taxa de sucesso</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Anos de atuação</div>
+      </div>
+    </div>
+
+    <!-- ÁREAS -->
+    <section class="section" id="areas">
+      <p class="section-tag">Áreas de Atuação</p>
+      <h2 class="section-h2">
+        Especialidades que protegem você em cada fase da vida
+      </h2>
+      <div class="areas-grid">
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+            />
+          </svg>
+          <div class="area-name">Direito Civil</div>
+          <p class="area-desc">
+            Contratos, responsabilidade civil, indenizações, direito do
+            consumidor e questões patrimoniais em geral.
+          </p>
+        </div>
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
+          </svg>
+          <div class="area-name">Direito Trabalhista</div>
+          <p class="area-desc">
+            Rescisão indevida, horas extras, assédio moral, FGTS, revisão de
+            verbas rescisórias e acordos coletivos.
+          </p>
+        </div>
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"
+            />
+          </svg>
+          <div class="area-name">Direito Previdenciário</div>
+          <p class="area-desc">
+            Aposentadoria por tempo de contribuição, invalidez, pensão por
+            morte, revisão de benefícios do INSS.
+          </p>
+        </div>
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          <div class="area-name">Direito de Família</div>
+          <p class="area-desc">
+            Divórcio, guarda de filhos, pensão alimentícia, inventário e
+            partilha de bens.
+          </p>
+        </div>
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+            />
+          </svg>
+          <div class="area-name">Direito Imobiliário</div>
+          <p class="area-desc">
+            Compra e venda, usucapião, locação, distrato, regularização de
+            imóveis e ações possessórias.
+          </p>
+        </div>
+        <div class="area-card">
+          <svg
+            class="area-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+            />
+          </svg>
+          <div class="area-name">Direito do Consumidor</div>
+          <p class="area-desc">
+            Cobrança indevida, negativação, cancelamento de contrato, vícios de
+            produto e serviço.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how">
+      <p class="section-tag">Como Funciona</p>
+      <h2 class="section-h2">Da consulta à solução em 4 passos simples</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-title">Contato pelo WhatsApp</div>
+          <p class="step-desc">
+            Envie uma mensagem descrevendo sua situação. Resposta em até 2 horas
+            em dias úteis.
+          </p>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-title">Consulta inicial gratuita</div>
+          <p class="step-desc">
+            Análise do seu caso sem custo. Entendemos o problema e apresentamos
+            as possíveis soluções.
+          </p>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-title">Proposta e contrato</div>
+          <p class="step-desc">
+            Honorários transparentes, sem surpresas. Contrato claro com prazo e
+            escopo definidos.
+          </p>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-title">Acompanhamento contínuo</div>
+          <p class="step-desc">
+            Você fica informado de cada etapa do processo via WhatsApp ou
+            e-mail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depos">
+      <p class="section-tag">Avaliações do Google</p>
+      <h2 class="section-h2">O que dizem nossos clientes</h2>
+
+      <!-- Resumo da nota geral -->
+      <div
+        id="google-summary"
+        style="
+          display: none;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+        "
+      >
+        <img
+          src="https://www.google.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+          alt="Google"
+          style="height: 22px; opacity: 0.7"
+        />
+        <div>
+          <span
+            id="google-rating"
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-size: 2rem;
+              font-weight: 500;
+              color: var(--gold);
+            "
+          ></span>
+          <span
+            id="google-stars"
+            style="color: #f4b400; margin-left: 0.3rem"
+          ></span>
+          <span
+            id="google-total"
+            style="
+              font-size: 0.78rem;
+              color: var(--ink-light);
+              margin-left: 0.3rem;
+            "
+          ></span>
+        </div>
+      </div>
+
+      <!-- Estado de loading -->
+      <div id="reviews-loading" class="depos-grid">
+        <div class="depo" style="opacity: 0.4">
+          <div class="depo-quote">"</div>
+          <p
+            class="depo-text"
+            style="
+              background: var(--gold-pale);
+              border-radius: 2px;
+              height: 80px;
+            "
+          ></p>
+          <div class="depo-author" style="margin-top: 1rem">
+            <div class="depo-avatar" style="background: var(--gold-pale)"></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 12px;
+                  width: 60%;
+                  margin-bottom: 6px;
+                "
+              ></div>
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 10px;
+                  width: 40%;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="depo" style="opacity: 0.25">
+          <div class="depo-quote">"</div>
+          <p
+            class="depo-text"
+            style="
+              background: var(--gold-pale);
+              border-radius: 2px;
+              height: 80px;
+            "
+          ></p>
+          <div class="depo-author" style="margin-top: 1rem">
+            <div class="depo-avatar" style="background: var(--gold-pale)"></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 12px;
+                  width: 60%;
+                  margin-bottom: 6px;
+                "
+              ></div>
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 10px;
+                  width: 40%;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="depo" style="opacity: 0.15">
+          <div class="depo-quote">"</div>
+          <p
+            class="depo-text"
+            style="
+              background: var(--gold-pale);
+              border-radius: 2px;
+              height: 80px;
+            "
+          ></p>
+          <div class="depo-author" style="margin-top: 1rem">
+            <div class="depo-avatar" style="background: var(--gold-pale)"></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 12px;
+                  width: 60%;
+                  margin-bottom: 6px;
+                "
+              ></div>
+              <div
+                style="
+                  background: var(--gold-pale);
+                  border-radius: 2px;
+                  height: 10px;
+                  width: 40%;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de reviews (preenchido via JS) -->
+      <div id="reviews-grid" class="depos-grid" style="display: none"></div>
+
+      <!-- Erro / API não configurada -->
+      <div
+        id="reviews-error"
+        style="
+          display: none;
+          text-align: center;
+          padding: 2rem;
+          color: var(--ink-light);
+          font-size: 0.88rem;
+          border: 1px dashed var(--line);
+          border-radius: 2px;
+        "
+      >
+        <p id="reviews-error-msg"></p>
+      </div>
+    </section>
+
+    <!-- CTA CENTRAL -->
+    <section class="cta-section">
+      <p class="section-tag">Consulta Gratuita</p>
+      <h2 class="section-h2">Não deixe seu problema jurídico sem solução</h2>
+      <p class="cta-sub">
+        Fale agora com nossa equipe pelo WhatsApp. Primeira consulta sem custo e
+        sem compromisso.
+      </p>
+      <a
+        class="btn-wa"
+        href="https://wa.me/5551999999999?text=Olá%2C%20gostaria%20de%20uma%20consulta%20gratuita."
+        target="_blank"
+        rel="noopener"
+        style="display: inline-flex; font-size: 1rem; padding: 1rem 2rem"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          style="width: 22px; height: 22px"
+        >
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+        Falar com o Dr. Rafael agora
+      </a>
+      <p class="cta-guarantee">
+        🔒 Sigilo absoluto · Sem compromisso · Resposta em até 2h
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <p class="section-tag">Dúvidas Frequentes</p>
+      <h2 class="section-h2">Perguntas que recebemos todo dia</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">
+            A consulta é realmente gratuita? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Sim. A primeira consulta é gratuita e sem compromisso. Você nos
+            conta o seu caso e nós avaliamos as possibilidades. Só depois
+            apresentamos uma proposta de honorários.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Atendem fora de Porto Alegre? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Sim! Atendemos todo o Rio Grande do Sul e outras regiões do Brasil
+            de forma remota, por videochamada e WhatsApp. A maioria dos serviços
+            não exige presença física.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Qual o prazo para resolver meu caso? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Depende da natureza do caso. Acordos extrajudiciais podem ser
+            resolvidos em semanas. Processos judiciais podem levar meses a anos.
+            Sempre informamos um prazo realista.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Quais são os honorários? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Os valores variam conforme a complexidade. Trabalhamos com
+            honorários fixos, percentual de êxito ou ambos. Tudo detalhado no
+            contrato antes de qualquer compromisso.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Meu caso tem chance de ganhar? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Fazemos uma análise honesta na consulta inicial. Não prometemos
+            vitória certa, mas apresentamos um cenário realista baseado em
+            jurisprudência e nos fatos do seu caso.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Posso parcelar os honorários? <span class="faq-icon">+</span>
+          </div>
+          <p class="faq-a">
+            Em muitos casos sim. Analisamos a situação individualmente e
+            buscamos uma forma de pagamento que caiba no seu orçamento sem
+            comprometer a qualidade do serviço.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <div class="footer-logo">Dr. Rafael <span>Monteiro</span></div>
+        <div class="footer-info">
+          Rua das Acácias, 1240 — Sala 301 — Porto Alegre, RS<br />
+          contato@rafaelmonteiro.adv.br · (51) 99999-9999
+        </div>
+        <div class="footer-oab">
+          OAB/RS 99.999 · © 2024 Rafael Monteiro Advocacia
+        </div>
+      </div>
+      <a
+        class="footer-wa"
+        href="https://wa.me/5551999999999?text=Olá%2C%20gostaria%20de%20uma%20consulta%20gratuita."
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </footer>
+
+    <!-- FLOAT WA -->
+    <a
+      class="float-wa"
+      href="https://wa.me/5551999999999?text=Olá%2C%20gostaria%20de%20uma%20consulta%20gratuita."
+      target="_blank"
+      rel="noopener"
+      title="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      // ─────────────────────────────────────────────────────────────────
+      //  GOOGLE PLACES API — CONFIGURAÇÃO
+      //  1. Acesse: https://console.cloud.google.com
+      //  2. Crie um projeto e ative a "Places API"
+      //  3. Gere uma chave de API em "Credenciais"
+      //  4. Restrinja a chave ao domínio do site (HTTP referrers)
+      //     para evitar uso indevido
+      //  5. Cole a chave em GOOGLE_API_KEY abaixo
+      //  6. Cole o Place ID do escritório em PLACE_ID
+      //     (encontre em: https://developers.google.com/maps/documentation/places/web-service/place-id)
+      // ─────────────────────────────────────────────────────────────────
+
+      const GOOGLE_API_KEY = "SUA_CHAVE_DE_API_AQUI"; // 🔑 Substituir
+      const PLACE_ID = "SEU_PLACE_ID_AQUI"; // 📍 Substituir
+
+      // Quantidade mínima de estrelas para exibir (filtra reviews negativos)
+      const MIN_STARS = 4;
+
+      // ─────────────────────────────────────────────────────────────────
+
+      async function loadGoogleReviews() {
+        const loading = document.getElementById("reviews-loading");
+        const grid = document.getElementById("reviews-grid");
+        const error = document.getElementById("reviews-error");
+        const errMsg = document.getElementById("reviews-error-msg");
+        const summary = document.getElementById("google-summary");
+
+        // Bloqueia se ainda não configurado
+        if (
+          GOOGLE_API_KEY === "SUA_CHAVE_DE_API_AQUI" ||
+          PLACE_ID === "SEU_PLACE_ID_AQUI"
+        ) {
+          loading.style.display = "none";
+          error.style.display = "block";
+          errMsg.innerHTML =
+            "⚙️ <strong>Configure a API:</strong> substitua <code>GOOGLE_API_KEY</code> e <code>PLACE_ID</code> no script desta página.";
+          return;
+        }
+
+        // A Places API não suporta CORS direto do browser em produção.
+        // Use o endpoint via proxy ou carregue via Google Maps JS SDK.
+        // Aqui usamos o Maps JavaScript SDK (Places Library) — mais adequado para sites estáticos.
+        // O script do SDK é carregado dinamicamente abaixo.
+        loadPlacesSDK();
+      }
+
+      function loadPlacesSDK() {
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=places&callback=initPlaces`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+
+      // Callback chamado automaticamente pelo SDK após carregar
+      window.initPlaces = function () {
+        const loading = document.getElementById("reviews-loading");
+        const grid = document.getElementById("reviews-grid");
+        const error = document.getElementById("reviews-error");
+        const errMsg = document.getElementById("reviews-error-msg");
+        const summary = document.getElementById("google-summary");
+
+        // Cria um elemento auxiliar invisível exigido pelo PlacesService
+        const dummy = document.createElement("div");
+        const service = new google.maps.places.PlacesService(dummy);
+
+        service.getDetails(
+          {
+            placeId: PLACE_ID,
+            fields: ["name", "rating", "user_ratings_total", "reviews"],
+          },
+          (place, status) => {
+            loading.style.display = "none";
+
+            if (
+              status !== google.maps.places.PlacesServiceStatus.OK ||
+              !place
+            ) {
+              error.style.display = "block";
+              errMsg.textContent =
+                "⚠️ Não foi possível carregar as avaliações. Verifique se o Place ID está correto e se a chave tem permissão para Places API.";
+              return;
+            }
+
+            // Exibe resumo
+            if (place.rating) {
+              document.getElementById("google-rating").textContent =
+                place.rating.toFixed(1);
+              document.getElementById("google-stars").textContent = starsString(
+                Math.round(place.rating),
+              );
+              document.getElementById("google-total").textContent =
+                `(${place.user_ratings_total} avaliações)`;
+              summary.style.display = "flex";
+            }
+
+            // Filtra e ordena reviews
+            const reviews = (place.reviews || [])
+              .filter((r) => r.rating >= MIN_STARS)
+              .sort((a, b) => b.rating - a.rating)
+              .slice(0, 6); // máximo 6 cards
+
+            if (reviews.length === 0) {
+              error.style.display = "block";
+              errMsg.textContent =
+                "Nenhuma avaliação com 4+ estrelas encontrada ainda.";
+              return;
+            }
+
+            // Renderiza os cards
+            grid.innerHTML = reviews
+              .map((r) => {
+                const initials = r.author_name
+                  .split(" ")
+                  .slice(0, 2)
+                  .map((n) => n[0])
+                  .join("")
+                  .toUpperCase();
+                const date = new Date(r.time * 1000).toLocaleDateString(
+                  "pt-BR",
+                  { month: "long", year: "numeric" },
+                );
+
+                return `
+            <div class="depo">
+              <div class="depo-quote">"</div>
+              <p class="depo-text">${escapeHtml(r.text || "(sem comentário)")}</p>
+              <div class="depo-author">
+                ${
+                  r.profile_photo_url
+                    ? `<img src="${r.profile_photo_url}" alt="${escapeHtml(r.author_name)}"
+                       style="width:36px;height:36px;border-radius:50%;object-fit:cover;" />`
+                    : `<div class="depo-avatar">${initials}</div>`
+                }
+                <div>
+                  <div class="depo-stars">${starsString(r.rating)}</div>
+                  <div class="depo-name">${escapeHtml(r.author_name)}</div>
+                  <div class="depo-case">${date} · via Google</div>
+                </div>
+              </div>
+            </div>`;
+              })
+              .join("");
+
+            grid.style.display = "grid";
+          },
+        );
+      };
+
+      function starsString(n) {
+        return "★".repeat(n) + "☆".repeat(5 - n);
+      }
+
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      // ─────────────────────────────────────────────────────────────────
+      // FAQ toggle
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      // Intersection observer para stats
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.2 },
+      );
+      document
+        .querySelectorAll(".stat-item")
+        .forEach((el) => observer.observe(el));
+
+      // Inicia carregamento das reviews
+      loadGoogleReviews();
+    </script>
+  </body>
+</html>

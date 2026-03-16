@@ -1,0 +1,1404 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-57VS8P14FH");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Carolina Melo | Odontologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --off-white: #f7f6f3;
+        --cream: #ede9e1;
+        --sand: #d4cec4;
+        --warm-gray: #9a9590;
+        --charcoal: #2e2d2b;
+        --blue: #8bbdd9;
+        --blue-light: #c4dff0;
+        --blue-deep: #5a9abf;
+        --blue-fade: rgba(139, 189, 217, 0.12);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--off-white);
+        color: var(--charcoal);
+        overflow-x: hidden;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 5%;
+        background: rgba(247, 246, 243, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(139, 189, 217, 0.2);
+        transition: box-shadow 0.3s;
+      }
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.35rem;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: var(--charcoal);
+      }
+      .logo span {
+        color: var(--blue-deep);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--warm-gray);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--blue-deep);
+      }
+      .nav-cta {
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.65rem 1.5rem;
+        border: 1px solid var(--blue);
+        color: var(--blue-deep);
+        border-radius: 2rem;
+        transition:
+          background 0.25s,
+          color 0.25s;
+      }
+      .nav-cta:hover {
+        background: var(--blue-deep);
+        color: #fff;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 80px;
+        position: relative;
+      }
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6rem 5% 6rem 8%;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--blue-deep);
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+      .hero-tag::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: var(--blue);
+      }
+      h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3rem, 5vw, 4.8rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+        color: var(--charcoal);
+        margin-bottom: 1.75rem;
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--blue-deep);
+      }
+      .hero-sub {
+        font-size: 0.95rem;
+        color: var(--warm-gray);
+        line-height: 1.8;
+        max-width: 420px;
+        margin-bottom: 3rem;
+      }
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2.2rem;
+        background: var(--blue-deep);
+        color: #fff;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 3rem;
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        background: #4a87ad;
+        transform: translateY(-2px);
+      }
+      .btn-ghost {
+        font-size: 0.82rem;
+        color: var(--charcoal);
+        text-decoration: none;
+        font-weight: 400;
+        opacity: 0.6;
+        border-bottom: 1px solid var(--sand);
+        transition: opacity 0.2s;
+      }
+      .btn-ghost:hover {
+        opacity: 1;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 3rem;
+        margin-top: 4rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--cream);
+      }
+      .stat-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--charcoal);
+        line-height: 1;
+      }
+      .stat-num span {
+        color: var(--blue);
+        font-size: 1.6rem;
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        color: var(--warm-gray);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: 0.3rem;
+      }
+
+      .hero-right {
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-img-wrap {
+        position: absolute;
+        inset: 0;
+        background: var(--cream);
+        clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+      .hero-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.88;
+        mix-blend-mode: multiply;
+      }
+      .hero-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 189, 217, 0.25) 0%,
+          rgba(90, 154, 191, 0.15) 100%
+        );
+        clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+      .floating-card {
+        position: absolute;
+        bottom: 10%;
+        left: -5%;
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.2rem 1.6rem;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        z-index: 5;
+        animation: float 5s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .card-icon {
+        width: 42px;
+        height: 42px;
+        background: var(--blue-fade);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--blue-deep);
+      }
+      .card-text p {
+        font-size: 0.7rem;
+        color: var(--warm-gray);
+        margin-bottom: 0.15rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .card-text strong {
+        font-size: 0.9rem;
+        color: var(--charcoal);
+        font-weight: 500;
+      }
+
+      /* ── SECTION GENERIC ── */
+      section {
+        padding: 7rem 8%;
+      }
+      .section-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--blue-deep);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.2rem;
+      }
+      .section-tag::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: var(--blue);
+      }
+      h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+        font-weight: 300;
+        line-height: 1.2;
+        color: var(--charcoal);
+      }
+
+      /* ── SOBRE ── */
+      .sobre {
+        background: var(--off-white);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+      }
+      .sobre-img-col {
+        position: relative;
+      }
+      .sobre-frame {
+        width: 100%;
+        aspect-ratio: 4/5;
+        background: var(--cream);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+      .sobre-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          transparent 60%,
+          rgba(139, 189, 217, 0.2)
+        );
+      }
+      .sobre-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .sobre-frame-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          145deg,
+          var(--cream) 0%,
+          var(--blue-light) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sobre-frame-placeholder svg {
+        width: 80px;
+        opacity: 0.3;
+      }
+      .sobre-badge {
+        position: absolute;
+        top: 2rem;
+        right: -1.5rem;
+        background: var(--blue-deep);
+        color: #fff;
+        border-radius: 12px;
+        padding: 1rem 1.3rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1;
+        text-align: center;
+      }
+      .sobre-badge small {
+        display: block;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.8;
+        margin-top: 0.2rem;
+      }
+      .sobre-text p {
+        font-size: 0.95rem;
+        line-height: 1.9;
+        color: var(--warm-gray);
+        margin: 1.5rem 0 2rem;
+        max-width: 480px;
+      }
+      .credenciais {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 2rem;
+      }
+      .cred-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.88rem;
+        color: var(--charcoal);
+      }
+      .cred-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+        flex-shrink: 0;
+      }
+
+      /* ── SERVIÇOS ── */
+      .servicos {
+        background: var(--cream);
+      }
+      .servicos-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 4rem;
+      }
+      .servicos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .servico-card {
+        background: var(--off-white);
+        border-radius: 4px;
+        padding: 2.5rem 2rem;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        border: 1px solid transparent;
+      }
+      .servico-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+        border-color: var(--blue-light);
+      }
+      .servico-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0;
+        background: var(--blue-deep);
+        transition: height 0.4s;
+      }
+      .servico-card:hover::before {
+        height: 100%;
+      }
+      .serv-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--blue-fade);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        transition: background 0.3s;
+      }
+      .servico-card:hover .serv-icon {
+        background: rgba(139, 189, 217, 0.25);
+      }
+      .serv-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--blue-deep);
+      }
+      .servico-card h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.35rem;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+      }
+      .servico-card p {
+        font-size: 0.85rem;
+        color: var(--warm-gray);
+        line-height: 1.75;
+      }
+      .serv-num {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 2rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 4rem;
+        font-weight: 300;
+        color: var(--sand);
+        line-height: 1;
+        transition: color 0.3s;
+      }
+      .servico-card:hover .serv-num {
+        color: var(--blue-light);
+      }
+
+      /* ── PROCESSO ── */
+      .processo {
+        background: var(--off-white);
+      }
+      .processo h2 {
+        margin-bottom: 4rem;
+        max-width: 500px;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        position: relative;
+      }
+      .steps::before {
+        content: "";
+        position: absolute;
+        top: 28px;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background: var(--blue-light);
+      }
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1.5rem;
+        position: relative;
+      }
+      .step-circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 1.5px solid var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--off-white);
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      .step:hover .step-circle {
+        background: var(--blue);
+        border-color: var(--blue);
+      }
+      .step-circle svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--blue-deep);
+        transition: stroke 0.3s;
+      }
+      .step:hover .step-circle svg {
+        stroke: #fff;
+      }
+      .step h4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.15rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+      .step p {
+        font-size: 0.82rem;
+        color: var(--warm-gray);
+        line-height: 1.65;
+      }
+
+      /* ── DEPOIMENTOS ── */
+      .depoimentos {
+        background: var(--charcoal);
+        color: #fff;
+      }
+      .depoimentos .section-tag {
+        color: var(--blue-light);
+      }
+      .depoimentos .section-tag::before {
+        background: var(--blue);
+      }
+      .depoimentos h2 {
+        color: #fff;
+        margin-bottom: 3.5rem;
+      }
+      .dep-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      .dep-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 4px;
+        padding: 2.5rem;
+        position: relative;
+      }
+      .dep-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.5rem;
+        color: var(--blue);
+        line-height: 0.5;
+        margin-bottom: 1.2rem;
+      }
+      .dep-text {
+        font-size: 0.88rem;
+        line-height: 1.85;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 2rem;
+      }
+      .dep-stars {
+        color: var(--blue);
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
+      .dep-author {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .dep-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--blue-fade);
+        border: 1.5px solid var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        color: var(--blue-light);
+      }
+      .dep-name {
+        font-size: 0.88rem;
+        font-weight: 500;
+      }
+      .dep-role {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      /* ── CTA ── */
+      .cta-section {
+        background: var(--blue-deep);
+        padding: 7rem 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cta-section h2 {
+        color: #fff;
+        font-size: clamp(2rem, 3.5vw, 3.5rem);
+        margin-bottom: 1.2rem;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-section p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        max-width: 420px;
+        margin-bottom: 3rem;
+        line-height: 1.8;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+      }
+      .btn-white {
+        padding: 1rem 2.2rem;
+        background: #fff;
+        color: var(--blue-deep);
+        border-radius: 3rem;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+      .btn-outline-white {
+        padding: 1rem 2.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        border-radius: 3rem;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .btn-outline-white:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── RODAPÉ ── */
+      footer {
+        background: var(--charcoal);
+        padding: 4rem 8% 2.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .footer-logo span {
+        color: var(--blue);
+      }
+      .footer-desc {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.35);
+        line-height: 1.8;
+        max-width: 300px;
+      }
+      .footer-col h5 {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 1.2rem;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 0.65rem;
+      }
+      .footer-col ul li a {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-col ul li a:hover {
+        color: var(--blue-light);
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      /* ── ANIMAÇÕES DE ENTRADA ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .fade-up-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .fade-up-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .fade-up-delay-3 {
+        transition-delay: 0.3s;
+      }
+      .fade-up-delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1024px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .hero-right {
+          height: 50vh;
+        }
+        .hero-img-wrap {
+          clip-path: none;
+        }
+        .hero-img-overlay {
+          clip-path: none;
+        }
+        .floating-card {
+          left: 5%;
+          bottom: -2rem;
+        }
+        .sobre {
+          grid-template-columns: 1fr;
+        }
+        .sobre-badge {
+          right: 2rem;
+        }
+        .servicos-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+        .steps::before {
+          display: none;
+        }
+        .dep-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        nav {
+          padding: 1.2rem 5%;
+        }
+        .nav-links {
+          display: none;
+        }
+        section {
+          padding: 5rem 6%;
+        }
+        .servicos-grid {
+          grid-template-columns: 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .servicos-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .hero-stats {
+          gap: 2rem;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="logo">Dra. Carolina <span>Melo</span></div>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+      </ul>
+      <a href="#agendar" class="nav-cta">Agendar Consulta</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="padding: 0">
+      <div class="hero-left">
+        <div class="hero-tag fade-up">Odontologia estética e saúde bucal</div>
+        <h1 class="fade-up fade-up-delay-1">
+          Seu sorriso,<br />sua <em>melhor</em><br />apresentação.
+        </h1>
+        <p class="hero-sub fade-up fade-up-delay-2">
+          Cuidado personalizado com foco em estética natural, saúde e conforto —
+          porque cada sorriso conta uma história única.
+        </p>
+        <div class="hero-actions fade-up fade-up-delay-3">
+          <a href="#agendar" class="btn-primary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Agendar Consulta
+          </a>
+          <a href="#servicos" class="btn-ghost">Ver serviços</a>
+        </div>
+        <div class="hero-stats fade-up fade-up-delay-4">
+          <div>
+            <div class="stat-num">12<span>+</span></div>
+            <div class="stat-label">Anos de experiência</div>
+          </div>
+          <div>
+            <div class="stat-num">2k<span>+</span></div>
+            <div class="stat-label">Pacientes atendidos</div>
+          </div>
+          <div>
+            <div class="stat-num">98<span>%</span></div>
+            <div class="stat-label">Satisfação</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                145deg,
+                var(--cream) 0%,
+                var(--blue-light) 100%
+              );
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <svg
+              viewBox="0 0 200 200"
+              width="200"
+              style="opacity: 0.2"
+              fill="none"
+              stroke="var(--blue-deep)"
+              stroke-width="1"
+            >
+              <circle cx="100" cy="70" r="45" />
+              <path d="M60 130 Q100 180 140 130" />
+              <path d="M75 130 Q100 160 125 130" />
+            </svg>
+          </div>
+        </div>
+        <div class="hero-img-overlay"></div>
+        <div class="floating-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+              <path d="M8 12l3 3 5-5" />
+            </svg>
+          </div>
+          <div class="card-text">
+            <p>Próxima disponibilidade</p>
+            <strong>Hoje, 14h30</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+      <div class="sobre-img-col fade-up">
+        <div class="sobre-frame">
+          <div class="sobre-frame-placeholder">
+            <svg
+              viewBox="0 0 100 100"
+              fill="none"
+              stroke="var(--blue-deep)"
+              stroke-width="0.8"
+            >
+              <circle cx="50" cy="35" r="20" />
+              <path d="M20 80 Q50 95 80 80 Q80 60 50 55 Q20 60 20 80z" />
+            </svg>
+          </div>
+        </div>
+        <div class="sobre-badge">12<br /><small>anos</small></div>
+      </div>
+      <div class="sobre-text">
+        <div class="section-tag fade-up">Quem sou eu</div>
+        <h2 class="fade-up fade-up-delay-1">
+          Especialista em<br />estética e bem-estar oral
+        </h2>
+        <p class="fade-up fade-up-delay-2">
+          Sou a Dra. Carolina Melo, cirurgiã-dentista formada pela UFRGS com
+          especialização em Odontologia Estética e Implantodontia. Acredito que
+          um sorriso saudável transforma não apenas a aparência, mas também a
+          autoestima e a qualidade de vida.
+        </p>
+        <div class="credenciais fade-up fade-up-delay-3">
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            CFO 12.345 — CRO/RS ativa
+          </div>
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            Especialização em Odontologia Estética — ABO
+          </div>
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            Formação em Implantodontia — UFRGS
+          </div>
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            Membro da Sociedade Brasileira de Odontologia
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+      <div class="servicos-header">
+        <div>
+          <div class="section-tag fade-up">O que ofereço</div>
+          <h2 class="fade-up fade-up-delay-1">
+            Serviços pensados<br />para o seu sorriso
+          </h2>
+        </div>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-card fade-up">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+              />
+              <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4" />
+            </svg>
+          </div>
+          <h3>Clareamento Dental</h3>
+          <p>
+            Tratamento seguro e eficaz para um sorriso até 8 tons mais claro,
+            com resultados duradouros.
+          </p>
+          <div class="serv-num">01</div>
+        </div>
+        <div class="servico-card fade-up fade-up-delay-1">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+          </div>
+          <h3>Facetas de Porcelana</h3>
+          <p>
+            Lâminas ultrafinas que transformam forma, cor e alinhamento,
+            preservando o dente natural.
+          </p>
+          <div class="serv-num">02</div>
+        </div>
+        <div class="servico-card fade-up fade-up-delay-2">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+            </svg>
+          </div>
+          <h3>Implantes Dentários</h3>
+          <p>
+            Reposição de dentes ausentes com implantes de titânio de alta
+            precisão e naturalidade.
+          </p>
+          <div class="serv-num">03</div>
+        </div>
+        <div class="servico-card fade-up fade-up-delay-3">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </div>
+          <h3>Ortodontia Invisível</h3>
+          <p>
+            Alinhadores transparentes discretos e removíveis para correção
+            estética sem interferir no dia a dia.
+          </p>
+          <div class="serv-num">04</div>
+        </div>
+        <div class="servico-card fade-up fade-up-delay-1">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+              />
+            </svg>
+          </div>
+          <h3>Prevenção e Limpeza</h3>
+          <p>
+            Consultas regulares de profilaxia, detartragem e orientação para
+            manutenção da saúde bucal.
+          </p>
+          <div class="serv-num">05</div>
+        </div>
+        <div class="servico-card fade-up fade-up-delay-2">
+          <div class="serv-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Odontopediatria</h3>
+          <p>
+            Atendimento lúdico e cuidadoso para crianças, criando uma relação
+            positiva com o dentista desde cedo.
+          </p>
+          <div class="serv-num">06</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="processo" id="processo">
+      <div class="section-tag fade-up">Como funciona</div>
+      <h2 class="fade-up fade-up-delay-1">
+        Seu caminho para<br />o sorriso perfeito
+      </h2>
+      <div class="steps" style="margin-top: 4rem">
+        <div class="step fade-up">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </div>
+          <h4>Agendamento</h4>
+          <p>
+            Escolha o melhor horário pelo WhatsApp, telefone ou formulário
+            online.
+          </p>
+        </div>
+        <div class="step fade-up fade-up-delay-1">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <h4>Consulta Inicial</h4>
+          <p>
+            Avaliação completa, diagnóstico e elaboração do plano de tratamento
+            personalizado.
+          </p>
+        </div>
+        <div class="step fade-up fade-up-delay-2">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+          <h4>Tratamento</h4>
+          <p>
+            Procedimentos realizados com tecnologia de ponta em ambiente
+            acolhedor e confortável.
+          </p>
+        </div>
+        <div class="step fade-up fade-up-delay-3">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 000-7.78z"
+              />
+            </svg>
+          </div>
+          <h4>Acompanhamento</h4>
+          <p>
+            Suporte contínuo e revisões periódicas para garantir resultados
+            duradouros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos" id="depoimentos">
+      <div class="section-tag fade-up">O que dizem</div>
+      <h2 class="fade-up fade-up-delay-1">
+        Sorrisos que falam<br />por si mesmos
+      </h2>
+      <div class="dep-grid" style="margin-top: 3.5rem">
+        <div class="dep-card fade-up">
+          <div class="dep-quote">"</div>
+          <p class="dep-text">
+            A Dra. Carolina transformou meu sorriso completamente. As facetas
+            ficaram incrivelmente naturais — ninguém acredita que são de
+            porcelana. Me sinto outra pessoa!
+          </p>
+          <div class="dep-stars">★★★★★</div>
+          <div class="dep-author">
+            <div class="dep-avatar">A</div>
+            <div>
+              <div class="dep-name">Ana Paula S.</div>
+              <div class="dep-role">Empresária · Facetas de Porcelana</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card fade-up fade-up-delay-1">
+          <div class="dep-quote">"</div>
+          <p class="dep-text">
+            Fiz o clareamento e os alinhadores ao mesmo tempo. O resultado
+            superou todas as expectativas. Atendimento impecável do começo ao
+            fim. Super recomendo!
+          </p>
+          <div class="dep-stars">★★★★★</div>
+          <div class="dep-author">
+            <div class="dep-avatar">R</div>
+            <div>
+              <div class="dep-name">Rafael M.</div>
+              <div class="dep-role">Engenheiro · Clareamento + Ortodontia</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card fade-up fade-up-delay-2">
+          <div class="dep-quote">"</div>
+          <p class="dep-text">
+            Minha filha tinha medo de dentista e hoje adora vir. A Dra. Carolina
+            tem um jeito especial com as crianças. Cuidado e carinho em cada
+            consulta.
+          </p>
+          <div class="dep-stars">★★★★★</div>
+          <div class="dep-author">
+            <div class="dep-avatar">M</div>
+            <div>
+              <div class="dep-name">Mariana C.</div>
+              <div class="dep-role">Professora · Odontopediatria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="agendar">
+      <div class="section-tag fade-up" style="color: rgba(255, 255, 255, 0.6)">
+        <span
+          style="
+            background: rgba(255, 255, 255, 0.3);
+            display: block;
+            width: 28px;
+            height: 1px;
+          "
+        ></span>
+        Agende agora
+      </div>
+      <h2 class="fade-up fade-up-delay-1">
+        Pronto para<br />transformar seu sorriso?
+      </h2>
+      <p class="fade-up fade-up-delay-2">
+        Sua primeira consulta é de avaliação gratuita. Venha nos conhecer e
+        descubra o tratamento ideal para você.
+      </p>
+      <div class="cta-btns fade-up fade-up-delay-3">
+        <a href="https://wa.me/5551900000000" class="btn-white"
+          >💬 Agendar pelo WhatsApp</a
+        >
+        <a href="tel:+5551900000000" class="btn-outline-white"
+          >📞 (51) 9 0000-0000</a
+        >
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Dra. Carolina <span>Melo</span></div>
+          <p class="footer-desc">
+            Odontologia estética e preventiva com foco na individualidade de
+            cada paciente. Porque um sorriso bonito começa com saúde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Serviços</h5>
+          <ul>
+            <li><a href="#">Clareamento Dental</a></li>
+            <li><a href="#">Facetas de Porcelana</a></li>
+            <li><a href="#">Implantes Dentários</a></li>
+            <li><a href="#">Ortodontia Invisível</a></li>
+            <li><a href="#">Odontopediatria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <ul>
+            <li><a href="#">📍 Rua Exemplo, 123 — Porto Alegre</a></li>
+            <li><a href="#">📞 (51) 9 0000-0000</a></li>
+            <li><a href="#">📧 contato@dracarolina.com.br</a></li>
+            <li><a href="#">🕐 Seg–Sex: 8h–18h</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Dra. Carolina Melo. Todos os direitos reservados.</span>
+        <span>CRO/RS 00000 · CFO 00000</span>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection Observer para animações
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((el) => {
+            if (el.isIntersecting) {
+              el.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+
+      // Nav shadow on scroll
+      window.addEventListener("scroll", () => {
+        document.querySelector("nav").style.boxShadow =
+          window.scrollY > 20 ? "0 2px 30px rgba(0,0,0,0.06)" : "none";
+      });
+    </script>
+  </body>
+</html>
