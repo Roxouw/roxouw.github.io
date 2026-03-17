@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serviços — Filipe Rosso</title>
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -630,7 +630,6 @@
         font-weight: 400;
       }
 
-
       /* ANNUAL DISCOUNT */
       .addon-price-wrap {
         display: flex;
@@ -1003,16 +1002,16 @@
         transition: background 0.5s ease;
       }
       body.roxouw-mode {
-        --teal: #8B008B;
+        --teal: #8b008b;
         --teal-glow: rgba(139, 0, 139, 0.15);
         --teal-dim: rgba(139, 0, 139, 0.08);
         --teal-11: rgba(139, 0, 139, 0.11);
         --teal-04: rgba(139, 0, 139, 0.04);
-        --teal-10: rgba(139, 0, 139, 0.10);
+        --teal-10: rgba(139, 0, 139, 0.1);
         --teal-03: rgba(139, 0, 139, 0.03);
-        --teal-20: rgba(139, 0, 139, 0.20);
-        --teal-30: rgba(139, 0, 139, 0.30);
-        --teal-40: rgba(139, 0, 139, 0.40);
+        --teal-20: rgba(139, 0, 139, 0.2);
+        --teal-30: rgba(139, 0, 139, 0.3);
+        --teal-40: rgba(139, 0, 139, 0.4);
         --teal-05: rgba(139, 0, 139, 0.05);
         --teal-06: rgba(139, 0, 139, 0.06);
         --teal-12: rgba(139, 0, 139, 0.12);
@@ -1042,7 +1041,9 @@
         cursor: pointer;
         user-select: none;
       }
-      .roxouw-toggle input { display: none; }
+      .roxouw-toggle input {
+        display: none;
+      }
       .roxouw-track {
         position: relative;
         width: 34px;
@@ -1060,14 +1061,16 @@
         height: 12px;
         border-radius: 50%;
         background: var(--muted2);
-        transition: transform 0.3s ease, background 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease;
       }
       .roxouw-toggle input:checked + .roxouw-track {
         background: rgba(139, 0, 139, 0.35);
       }
       .roxouw-toggle input:checked + .roxouw-track .roxouw-thumb {
         transform: translateX(16px);
-        background: #8B008B;
+        background: #8b008b;
       }
       .roxouw-label {
         font-family: var(--font-mono);
@@ -1075,7 +1078,11 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--muted);
-        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
+        transition:
+          color 0.3s ease,
+          font-size 0.3s ease,
+          font-weight 0.3s ease,
+          letter-spacing 0.3s ease;
         white-space: nowrap;
       }
       body.roxouw-mode .roxouw-label {
@@ -1084,7 +1091,7 @@
         font-weight: 800;
         letter-spacing: -0.02em;
         text-transform: none;
-        color: #8B008B;
+        color: #8b008b;
       }
 
       /* Cursor ring uses variable */
@@ -1095,7 +1102,17 @@
   </head>
   <body>
     <!-- INK EXPLOSION CANVAS -->
-    <canvas id="inkCanvas" style="position:fixed;inset:0;z-index:8999;pointer-events:none;width:100%;height:100%;"></canvas>
+    <canvas
+      id="inkCanvas"
+      style="
+        position: fixed;
+        inset: 0;
+        z-index: 8999;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+      "
+    ></canvas>
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="/" class="nav-logo">FILIPE<span>.</span></a>
@@ -1489,7 +1506,12 @@
               </div>
               <div class="addon-price-wrap">
                 <div class="addon-price-monthly">R$ 99<small>/mês</small></div>
-                <div class="addon-price-annual">ou <span class="annual-value">R$ 990/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 990/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
               </div>
             </div>
             <div class="addon-item popular">
@@ -1497,7 +1519,8 @@
                 <div class="addon-popular-badge">⭐ Mais escolhido</div>
                 <div class="addon-name">Plano Plus</div>
                 <div class="addon-desc">
-                  Até 5 alterações/mês + monitoramento de desempenho + backup mensal
+                  Até 5 alterações/mês + monitoramento de desempenho + backup
+                  mensal
                 </div>
                 <div class="addon-tag-list">
                   <span class="addon-tag">troca de textos</span>
@@ -1508,7 +1531,12 @@
               </div>
               <div class="addon-price-wrap">
                 <div class="addon-price-monthly">R$ 189<small>/mês</small></div>
-                <div class="addon-price-annual">ou <span class="annual-value">R$ 1.890/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 1.890/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
               </div>
             </div>
             <div class="addon-item">
@@ -1521,7 +1549,12 @@
               </div>
               <div class="addon-price-wrap">
                 <div class="addon-price-monthly">R$ 299<small>/mês</small></div>
-                <div class="addon-price-annual">ou <span class="annual-value">R$ 2.990/ano</span><br/><span class="annual-badge">2 meses grátis</span></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 2.990/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
               </div>
             </div>
             <div class="addon-item" style="background: var(--surface)">
@@ -1539,7 +1572,7 @@
             </div>
           </div>
           <div class="maint-tagline">
-            <strong>Seu site pronto é só o começo.</strong><br/>
+            <strong>Seu site pronto é só o começo.</strong><br />
             Mantemos ele atualizado, seguro e funcionando para você.
           </div>
         </div>
@@ -1686,75 +1719,118 @@
         .forEach((el) => observer.observe(el));
 
       // Roxouw Mode toggle + ink explosion
-      const roxouwToggle = document.getElementById('roxouwToggle');
-      const inkCanvas = document.getElementById('inkCanvas');
-      const inkCtx = inkCanvas.getContext('2d');
+      const roxouwToggle = document.getElementById("roxouwToggle");
+      const inkCanvas = document.getElementById("inkCanvas");
+      const inkCtx = inkCanvas.getContext("2d");
 
       function resizeInkCanvas() {
         inkCanvas.width = window.innerWidth;
         inkCanvas.height = window.innerHeight;
       }
       resizeInkCanvas();
-      window.addEventListener('resize', resizeInkCanvas);
+      window.addEventListener("resize", resizeInkCanvas);
 
       function launchInk(color) {
-        const W = inkCanvas.width, H = inkCanvas.height;
-        const toggle = document.getElementById('roxouwToggle');
+        const W = inkCanvas.width,
+          H = inkCanvas.height;
+        const toggle = document.getElementById("roxouwToggle");
         const rect = toggle.getBoundingClientRect();
         const originX = rect.left + rect.width / 2;
         const originY = rect.top + rect.height / 2;
         const drops = [];
         for (let i = 0; i < 22; i++) {
-          const angle = (Math.PI * 2 / 22) * i + (Math.random() - 0.5) * 0.4;
+          const angle = ((Math.PI * 2) / 22) * i + (Math.random() - 0.5) * 0.4;
           const speed = 6 + Math.random() * 14;
           const size = 18 + Math.random() * 60;
-          drops.push({ x: originX, y: originY, vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed, size, alpha: 0.85 + Math.random() * 0.15,
-            decay: 0.013 + Math.random() * 0.01 });
+          drops.push({
+            x: originX,
+            y: originY,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            size,
+            alpha: 0.85 + Math.random() * 0.15,
+            decay: 0.013 + Math.random() * 0.01,
+          });
         }
         const bursts = [];
         for (let i = 0; i < 5; i++) {
-          bursts.push({ x: originX, y: originY, r: 0,
-            maxR: W * (0.35 + i * 0.18), alpha: 0.18 - i * 0.03, speed: 28 + i * 12 });
+          bursts.push({
+            x: originX,
+            y: originY,
+            r: 0,
+            maxR: W * (0.35 + i * 0.18),
+            alpha: 0.18 - i * 0.03,
+            speed: 28 + i * 12,
+          });
         }
         let frame = 0;
         function drawInk() {
           inkCtx.clearRect(0, 0, W, H);
-          bursts.forEach(b => {
+          bursts.forEach((b) => {
             b.r += b.speed;
             if (b.r < b.maxR) {
               inkCtx.beginPath();
               inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-              inkCtx.strokeStyle = color + Math.round(b.alpha * 255).toString(16).padStart(2,'0');
+              inkCtx.strokeStyle =
+                color +
+                Math.round(b.alpha * 255)
+                  .toString(16)
+                  .padStart(2, "0");
               inkCtx.lineWidth = 3;
               inkCtx.stroke();
               b.alpha -= 0.003;
             }
           });
           let alive = false;
-          drops.forEach(d => {
+          drops.forEach((d) => {
             if (d.alpha <= 0) return;
             alive = true;
-            d.x += d.vx; d.y += d.vy; d.vy += 0.35; d.vx *= 0.97; d.alpha -= d.decay;
+            d.x += d.vx;
+            d.y += d.vy;
+            d.vy += 0.35;
+            d.vx *= 0.97;
+            d.alpha -= d.decay;
             inkCtx.save();
             inkCtx.globalAlpha = Math.max(0, d.alpha);
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x, d.y, d.size * 0.55, d.size * 0.72, Math.atan2(d.vy, d.vx), 0, Math.PI * 2);
-            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.ellipse(
+              d.x,
+              d.y,
+              d.size * 0.55,
+              d.size * 0.72,
+              Math.atan2(d.vy, d.vx),
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x - d.vx * 1.2, d.y - d.vy * 1.2, d.size * 0.25, d.size * 0.18, 0, 0, Math.PI * 2);
-            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.ellipse(
+              d.x - d.vx * 1.2,
+              d.y - d.vy * 1.2,
+              d.size * 0.25,
+              d.size * 0.18,
+              0,
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
             inkCtx.restore();
           });
           frame++;
-          if (alive || frame < 40) { requestAnimationFrame(drawInk); }
-          else {
+          if (alive || frame < 40) {
+            requestAnimationFrame(drawInk);
+          } else {
             let fadeAlpha = 1;
             function fadeOut() {
               fadeAlpha -= 0.06;
               inkCtx.globalAlpha = fadeAlpha;
               if (fadeAlpha > 0) requestAnimationFrame(fadeOut);
-              else { inkCtx.clearRect(0,0,W,H); inkCtx.globalAlpha = 1; }
+              else {
+                inkCtx.clearRect(0, 0, W, H);
+                inkCtx.globalAlpha = 1;
+              }
             }
             fadeOut();
           }
@@ -1762,11 +1838,13 @@
         drawInk();
       }
 
-      roxouwToggle.addEventListener('change', () => {
+      roxouwToggle.addEventListener("change", () => {
         const isRoxouw = roxouwToggle.checked;
-        document.body.classList.toggle('roxouw-mode', isRoxouw);
-        launchInk(isRoxouw ? '#8B008B' : '#2dd4c8');
+        document.body.classList.toggle("roxouw-mode", isRoxouw);
+        launchInk(isRoxouw ? "#8B008B" : "#2dd4c8");
       });
     </script>
+    <script src="/transitions.js"></script>
+    <script src="/mobile-fix.js"></script>
   </body>
 </html>

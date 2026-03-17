@@ -23,13 +23,18 @@
       name="description"
       content="A trajetória de Filipe Rosso na programação — de 2018 até hoje, passando por Banrisul, Stefanini e Qintess."
     />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- Aplica tema salvo antes do render — evita flash ao trocar de página -->
+    <script>
+      if (localStorage.getItem("theme") === "light")
+        document.documentElement.classList.add("light-mode");
+    </script>
     <style>
       *,
       *::before,
@@ -49,23 +54,58 @@
         --muted: #606470;
         --muted2: #8a8f9a;
         --teal: #2dd4c8;
-        --teal-glow: var(--teal-glow);
-        --teal-dim: var(--teal-dim);
-        --teal-11: var(--teal-11);
-        --teal-04: var(--teal-04);
-        --teal-10: var(--teal-10);
-        --teal-03: var(--teal-03);
-        --teal-20: var(--teal-20);
-        --teal-30: var(--teal-30);
-        --teal-40: var(--teal-40);
-        --teal-05: var(--teal-05);
-        --teal-06: var(--teal-06);
-        --teal-12: var(--teal-12);
-        --teal-25: var(--teal-25);
+        --teal-glow: rgba(45, 212, 200, 0.15);
+        --teal-dim: rgba(45, 212, 200, 0.08);
+        --teal-11: rgba(45, 212, 200, 0.11);
+        --teal-04: rgba(45, 212, 200, 0.04);
+        --teal-10: rgba(45, 212, 200, 0.1);
+        --teal-03: rgba(45, 212, 200, 0.03);
+        --teal-20: rgba(45, 212, 200, 0.2);
+        --teal-30: rgba(45, 212, 200, 0.3);
+        --teal-40: rgba(45, 212, 200, 0.4);
+        --teal-05: rgba(45, 212, 200, 0.05);
+        --teal-06: rgba(45, 212, 200, 0.06);
+        --teal-12: rgba(45, 212, 200, 0.12);
+        --teal-25: rgba(45, 212, 200, 0.25);
         --lime: #b8f04a;
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
         --t: 0.25s ease;
+      }
+
+      /* ── LIGHT MODE ──────────────────────────── */
+      body.light-mode,
+      html.light-mode body {
+        --bg: #f4f5f7;
+        --bg2: #eaecf0;
+        --surface: #dde1e8;
+        --border: #c8cdd8;
+        --border2: #b0b7c6;
+        --text: #111318;
+        --muted: #6b7280;
+        --muted2: #4b5563;
+        --teal: #1a4fa0;
+        --teal-glow: rgba(26, 79, 160, 0.15);
+        --teal-dim: rgba(26, 79, 160, 0.08);
+        --teal-11: rgba(26, 79, 160, 0.11);
+        --teal-04: rgba(26, 79, 160, 0.04);
+        --teal-10: rgba(26, 79, 160, 0.1);
+        --teal-03: rgba(26, 79, 160, 0.03);
+        --teal-20: rgba(26, 79, 160, 0.2);
+        --teal-30: rgba(26, 79, 160, 0.3);
+        --teal-40: rgba(26, 79, 160, 0.4);
+        --teal-05: rgba(26, 79, 160, 0.05);
+        --teal-06: rgba(26, 79, 160, 0.06);
+        --teal-12: rgba(26, 79, 160, 0.12);
+        --teal-25: rgba(26, 79, 160, 0.25);
+        --lime: #2563eb;
+      }
+      html.light-mode {
+        background: #f4f5f7;
+      }
+      body.light-mode nav.scrolled,
+      html.light-mode nav.scrolled {
+        background: rgba(244, 245, 247, 0.94);
       }
 
       html {
@@ -78,6 +118,9 @@
         font-family: var(--font-display);
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.5s ease,
+          color 0.5s ease;
       }
 
       ::-webkit-scrollbar {
@@ -892,93 +935,72 @@
         }
       }
 
-      /* ── ROXOUW MODE ─────────────────────────────────── */
-      body {
-        transition: background 0.5s ease;
-      }
-      body.roxouw-mode {
-        --teal: #8B008B;
-        --teal-glow: rgba(139, 0, 139, 0.15);
-        --teal-dim: rgba(139, 0, 139, 0.08);
-        --teal-11: rgba(139, 0, 139, 0.11);
-        --teal-04: rgba(139, 0, 139, 0.04);
-        --teal-10: rgba(139, 0, 139, 0.10);
-        --teal-03: rgba(139, 0, 139, 0.03);
-        --teal-20: rgba(139, 0, 139, 0.20);
-        --teal-30: rgba(139, 0, 139, 0.30);
-        --teal-40: rgba(139, 0, 139, 0.40);
-        --teal-05: rgba(139, 0, 139, 0.05);
-        --teal-06: rgba(139, 0, 139, 0.06);
-        --teal-12: rgba(139, 0, 139, 0.12);
-        --teal-25: rgba(139, 0, 139, 0.25);
-        --bg: #0e0a0e;
-        --bg2: #130a13;
-        --surface: #1a0f1a;
-        --border: #2a1a2a;
-        --border2: #3a1f3a;
-      }
-      body.roxouw-mode nav.scrolled {
-        background: rgba(14, 10, 14, 0.94);
-      }
-
       /* NAV LOGO GROUP */
       .nav-logo-group {
         display: flex;
         align-items: center;
         gap: 1rem;
       }
-
-      /* ROXOUW TOGGLE */
-      .roxouw-toggle {
+      .nav-right {
         display: flex;
         align-items: center;
-        gap: 0.55rem;
-        cursor: pointer;
-        user-select: none;
+        gap: 1.25rem;
       }
-      .roxouw-toggle input { display: none; }
-      .roxouw-track {
-        position: relative;
-        width: 34px;
-        height: 18px;
-        background: var(--border2);
-        border-radius: 999px;
-        transition: background 0.3s ease;
-        flex-shrink: 0;
-      }
-      .roxouw-thumb {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 12px;
-        height: 12px;
+
+      /* ── THEME TOGGLE (sol / lua) ─────────────── */
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border2);
+        color: var(--muted2);
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
-        background: var(--muted2);
-        transition: transform 0.3s ease, background 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition:
+          border-color var(--t),
+          color var(--t),
+          transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
       }
-      .roxouw-toggle input:checked + .roxouw-track {
-        background: rgba(139, 0, 139, 0.35);
+      .theme-toggle:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        transform: rotate(20deg);
       }
-      .roxouw-toggle input:checked + .roxouw-track .roxouw-thumb {
-        transform: translateX(16px);
-        background: #8B008B;
+      .theme-toggle svg {
+        position: absolute;
+        transition:
+          opacity 0.25s ease,
+          transform 0.3s ease;
+        width: 15px;
+        height: 15px;
       }
-      .roxouw-label {
-        font-family: var(--font-mono);
-        font-size: 0.58rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--muted);
-        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
-        white-space: nowrap;
+      .theme-toggle .icon-moon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
-      body.roxouw-mode .roxouw-label {
-        font-family: var(--font-display);
-        font-size: 1rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        text-transform: none;
-        color: #8B008B;
+      .theme-toggle .icon-sun {
+        opacity: 0;
+        transform: scale(0.5) rotate(90deg);
+      }
+      body.light-mode .theme-toggle .icon-moon,
+      html.light-mode .theme-toggle .icon-moon {
+        opacity: 0;
+        transform: scale(0.5) rotate(-90deg);
+      }
+      body.light-mode .theme-toggle .icon-sun,
+      html.light-mode .theme-toggle .icon-sun {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      body.light-mode .theme-toggle,
+      html.light-mode .theme-toggle {
+        color: var(--teal);
       }
 
       /* Cursor ring uses variable */
@@ -989,22 +1011,68 @@
   </head>
   <body>
     <!-- INK EXPLOSION CANVAS -->
-    <canvas id="inkCanvas" style="position:fixed;inset:0;z-index:8999;pointer-events:none;width:100%;height:100%;"></canvas>
+    <canvas
+      id="inkCanvas"
+      style="
+        position: fixed;
+        inset: 0;
+        z-index: 8999;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+      "
+    ></canvas>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
     <nav id="navbar">
       <div class="nav-logo-group">
-        <a href="/" class="nav-logo">FILIPE<span>.</span></a>
-        <label class="roxouw-toggle" title="Roxouw Mode">
-          <input type="checkbox" id="roxouwToggle" />
-          <span class="roxouw-track">
-            <span class="roxouw-thumb"></span>
-          </span>
-          <span class="roxouw-label">Roxouw Mode</span>
-        </label>
+        <a href="#hero" class="nav-logo"
+          >FILIPE <span class="teal-word">ROSSO</span><span>.</span></a
+        >
       </div>
-      <a href="/" class="nav-back">Voltar ao portfólio</a>
+      <div class="nav-right">
+        <a href="/" class="nav-back"><span>Portfólio</span></a>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Alternar tema"
+          title="Alternar tema claro/escuro"
+        >
+          <svg
+            class="icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
     </nav>
 
     <!-- HERO -->
@@ -1405,88 +1473,136 @@
         .querySelectorAll(".milestone, .stat-item, .tech-phase")
         .forEach((el) => observer.observe(el));
 
-      // Roxouw Mode toggle + ink explosion
-      const roxouwToggle = document.getElementById('roxouwToggle');
-      const inkCanvas = document.getElementById('inkCanvas');
-      const inkCtx = inkCanvas.getContext('2d');
-
-      function resizeInkCanvas() {
+      // ── Light / Dark theme toggle + ink splash ──
+      const themeToggle = document.getElementById("themeToggle");
+      const inkCanvas = document.getElementById("inkCanvas");
+      const inkCtx = inkCanvas.getContext("2d");
+      function resizeInk() {
         inkCanvas.width = window.innerWidth;
         inkCanvas.height = window.innerHeight;
       }
-      resizeInkCanvas();
-      window.addEventListener('resize', resizeInkCanvas);
+      resizeInk();
+      window.addEventListener("resize", resizeInk);
 
       function launchInk(color) {
-        const W = inkCanvas.width, H = inkCanvas.height;
-        const toggle = document.getElementById('roxouwToggle');
-        const rect = toggle.getBoundingClientRect();
-        const originX = rect.left + rect.width / 2;
-        const originY = rect.top + rect.height / 2;
+        const W = inkCanvas.width,
+          H = inkCanvas.height;
+        const rect = themeToggle.getBoundingClientRect();
+        const ox = rect.left + rect.width / 2,
+          oy = rect.top + rect.height / 2;
         const drops = [];
         for (let i = 0; i < 22; i++) {
-          const angle = (Math.PI * 2 / 22) * i + (Math.random() - 0.5) * 0.4;
-          const speed = 6 + Math.random() * 14;
-          const size = 18 + Math.random() * 60;
-          drops.push({ x: originX, y: originY, vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed, size, alpha: 0.85 + Math.random() * 0.15,
-            decay: 0.013 + Math.random() * 0.01 });
+          const a = ((Math.PI * 2) / 22) * i + (Math.random() - 0.5) * 0.4;
+          const s = 6 + Math.random() * 14,
+            sz = 18 + Math.random() * 60;
+          drops.push({
+            x: ox,
+            y: oy,
+            vx: Math.cos(a) * s,
+            vy: Math.sin(a) * s,
+            size: sz,
+            alpha: 0.85 + Math.random() * 0.15,
+            decay: 0.013 + Math.random() * 0.01,
+          });
         }
         const bursts = [];
-        for (let i = 0; i < 5; i++) {
-          bursts.push({ x: originX, y: originY, r: 0,
-            maxR: W * (0.35 + i * 0.18), alpha: 0.18 - i * 0.03, speed: 28 + i * 12 });
-        }
+        for (let i = 0; i < 5; i++)
+          bursts.push({
+            x: ox,
+            y: oy,
+            r: 0,
+            maxR: W * (0.35 + i * 0.18),
+            alpha: 0.18 - i * 0.03,
+            speed: 28 + i * 12,
+          });
         let frame = 0;
-        function drawInk() {
+        function draw() {
           inkCtx.clearRect(0, 0, W, H);
-          bursts.forEach(b => {
+          bursts.forEach((b) => {
             b.r += b.speed;
             if (b.r < b.maxR) {
               inkCtx.beginPath();
               inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-              inkCtx.strokeStyle = color + Math.round(b.alpha * 255).toString(16).padStart(2,'0');
+              inkCtx.strokeStyle =
+                color +
+                Math.round(b.alpha * 255)
+                  .toString(16)
+                  .padStart(2, "0");
               inkCtx.lineWidth = 3;
               inkCtx.stroke();
               b.alpha -= 0.003;
             }
           });
           let alive = false;
-          drops.forEach(d => {
+          drops.forEach((d) => {
             if (d.alpha <= 0) return;
             alive = true;
-            d.x += d.vx; d.y += d.vy; d.vy += 0.35; d.vx *= 0.97; d.alpha -= d.decay;
+            d.x += d.vx;
+            d.y += d.vy;
+            d.vy += 0.35;
+            d.vx *= 0.97;
+            d.alpha -= d.decay;
             inkCtx.save();
             inkCtx.globalAlpha = Math.max(0, d.alpha);
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x, d.y, d.size * 0.55, d.size * 0.72, Math.atan2(d.vy, d.vx), 0, Math.PI * 2);
-            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.ellipse(
+              d.x,
+              d.y,
+              d.size * 0.55,
+              d.size * 0.72,
+              Math.atan2(d.vy, d.vx),
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
             inkCtx.beginPath();
-            inkCtx.ellipse(d.x - d.vx * 1.2, d.y - d.vy * 1.2, d.size * 0.25, d.size * 0.18, 0, 0, Math.PI * 2);
-            inkCtx.fillStyle = color; inkCtx.fill();
+            inkCtx.ellipse(
+              d.x - d.vx * 1.2,
+              d.y - d.vy * 1.2,
+              d.size * 0.25,
+              d.size * 0.18,
+              0,
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
             inkCtx.restore();
           });
           frame++;
-          if (alive || frame < 40) { requestAnimationFrame(drawInk); }
-          else {
-            let fadeAlpha = 1;
-            function fadeOut() {
-              fadeAlpha -= 0.06;
-              inkCtx.globalAlpha = fadeAlpha;
-              if (fadeAlpha > 0) requestAnimationFrame(fadeOut);
-              else { inkCtx.clearRect(0,0,W,H); inkCtx.globalAlpha = 1; }
-            }
-            fadeOut();
+          if (alive || frame < 40) {
+            requestAnimationFrame(draw);
+          } else {
+            let fa = 1;
+            (function fo() {
+              fa -= 0.06;
+              inkCtx.globalAlpha = fa;
+              if (fa > 0) requestAnimationFrame(fo);
+              else {
+                inkCtx.clearRect(0, 0, W, H);
+                inkCtx.globalAlpha = 1;
+              }
+            })();
           }
         }
-        drawInk();
+        draw();
       }
 
-      roxouwToggle.addEventListener('change', () => {
-        const isRoxouw = roxouwToggle.checked;
-        document.body.classList.toggle('roxouw-mode', isRoxouw);
-        launchInk(isRoxouw ? '#8B008B' : '#2dd4c8');
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.documentElement.classList.add("light-mode");
+        document.body.classList.add("light-mode");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isLight = document.documentElement.classList.toggle("light-mode");
+        document.body.classList.toggle("light-mode", isLight);
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+        launchInk(isLight ? "#1a4fa0" : "#2dd4c8");
       });
     </script>
+    <script src="/transitions.js"></script>
+    <script src="/mobile-fix.js"></script>
   </body>
 </html>

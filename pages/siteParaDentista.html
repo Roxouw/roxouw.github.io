@@ -1,0 +1,3384 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-57VS8P14FH");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Site Profissional para Dentista e Clínica Odontológica — Filipe Rosso
+    </title>
+    <meta
+      name="description"
+      content="Sites profissionais para dentistas e clínicas odontológicas. Presença digital que transmite confiança, atrai pacientes e aparece no Google. Pronto em até 7 dias."
+    />
+    <meta
+      name="keywords"
+      content="site para dentista, site clínica odontológica, criação de site dentista, site odontologia, presença digital dentista, Cachoeirinha, Rio Grande do Sul"
+    />
+    <meta name="author" content="Filipe Rosso" />
+    <link
+      rel="canonical"
+      href="https://roxouw.github.io/pages/siteParaDentista.html"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Site para Dentista que Atrai Pacientes — Filipe Rosso"
+    />
+    <meta
+      property="og:description"
+      content="Site odontológico profissional pronto em até 7 dias. Transmite confiança, aparece no Google e capta pacientes pelo WhatsApp."
+    />
+    <meta
+      property="og:url"
+      content="https://roxouw.github.io/pages/siteParaDentista.html"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Aplica tema salvo antes do render — evita flash ao trocar de página -->
+    <script>
+      if (localStorage.getItem("theme") === "light")
+        document.documentElement.classList.add("light-mode");
+    </script>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #131416;
+        --bg2: #1a1c1f;
+        --surface: #21242a;
+        --border: #2a2d33;
+        --border2: #353940;
+        --text: #e2e4e8;
+        --muted: #606470;
+        --muted2: #8a8f9a;
+        --teal: #2dd4c8;
+        --teal-glow: rgba(45, 212, 200, 0.15);
+        --teal-dim: rgba(45, 212, 200, 0.08);
+        --teal-10: rgba(45, 212, 200, 0.1);
+        --teal-20: rgba(45, 212, 200, 0.2);
+        --teal-30: rgba(45, 212, 200, 0.3);
+        --teal-03: rgba(45, 212, 200, 0.03);
+        --lime: #b8f04a;
+        --font-display: "Syne", sans-serif;
+        --font-mono: "DM Mono", monospace;
+        --t: 0.25s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-display);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.5s ease,
+          color 0.5s ease;
+      }
+
+      /* ── LIGHT MODE ────────────────────────── */
+      body.light-mode,
+      html.light-mode body {
+        --bg: #f4f5f7;
+        --bg2: #eaecf0;
+        --surface: #dde1e8;
+        --border: #c8cdd8;
+        --border2: #b0b7c6;
+        --text: #111318;
+        --muted: #6b7280;
+        --muted2: #4b5563;
+        --teal: #1a4fa0;
+        --teal-glow: rgba(26, 79, 160, 0.15);
+        --teal-dim: rgba(26, 79, 160, 0.08);
+        --teal-10: rgba(26, 79, 160, 0.1);
+        --teal-20: rgba(26, 79, 160, 0.2);
+        --teal-30: rgba(26, 79, 160, 0.3);
+        --teal-03: rgba(26, 79, 160, 0.03);
+        --lime: #2563eb;
+      }
+      html.light-mode {
+        background: #f4f5f7;
+      }
+      body.light-mode nav.scrolled,
+      html.light-mode nav.scrolled {
+        background: rgba(244, 245, 247, 0.94);
+      }
+
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--teal);
+      }
+
+      /* CURSOR */
+      .cursor,
+      .cursor-ring {
+        display: none;
+        pointer-events: none;
+        position: fixed;
+        z-index: 9999;
+      }
+      @media (pointer: fine) {
+        body {
+          cursor: none;
+        }
+        .cursor {
+          display: block;
+          width: 8px;
+          height: 8px;
+          background: var(--teal);
+          border-radius: 50%;
+          transition: transform 0.15s ease;
+          z-index: 9999;
+        }
+        .cursor-ring {
+          display: block;
+          width: 30px;
+          height: 30px;
+          border: 1px solid var(--teal-30);
+          border-radius: 50%;
+          z-index: 9998;
+          transition: border-color 0.4s ease;
+        }
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 3rem;
+        border-bottom: 1px solid transparent;
+        transition:
+          background var(--t),
+          border-color var(--t);
+      }
+      nav.scrolled {
+        background: rgba(19, 20, 22, 0.94);
+        backdrop-filter: blur(24px);
+        border-color: var(--border);
+      }
+
+      .nav-logo-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .nav-logo {
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        text-decoration: none;
+      }
+      .nav-logo span {
+        color: var(--teal);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .nav-back {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color var(--t);
+      }
+      .nav-back::before {
+        content: "←";
+      }
+      .nav-back:hover {
+        color: var(--teal);
+      }
+
+      /* ── THEME TOGGLE ──────────────────────── */
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border2);
+        color: var(--muted2);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition:
+          border-color var(--t),
+          color var(--t),
+          transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .theme-toggle:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        transform: rotate(20deg);
+      }
+      .theme-toggle svg {
+        position: absolute;
+        transition:
+          opacity 0.25s ease,
+          transform 0.3s ease;
+        width: 15px;
+        height: 15px;
+      }
+      .theme-toggle .icon-moon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      .theme-toggle .icon-sun {
+        opacity: 0;
+        transform: scale(0.5) rotate(90deg);
+      }
+      body.light-mode .theme-toggle .icon-moon,
+      html.light-mode .theme-toggle .icon-moon {
+        opacity: 0;
+        transform: scale(0.5) rotate(-90deg);
+      }
+      body.light-mode .theme-toggle .icon-sun,
+      html.light-mode .theme-toggle .icon-sun {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      body.light-mode .theme-toggle,
+      html.light-mode .theme-toggle {
+        color: var(--teal);
+      }
+
+      /* ══ HERO ════════════════════════════════════ */
+      #hero {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8rem 3rem 6rem;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .hero-glow {
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        height: 80vw;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          var(--teal-10) 0%,
+          var(--teal-03) 45%,
+          transparent 68%
+        );
+      }
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--border) 1px, transparent 1px),
+          linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        background-size: 48px 48px;
+        opacity: 0.25;
+        mask-image: radial-gradient(
+          ellipse 100% 60% at 50% 0%,
+          black 20%,
+          transparent 100%
+        );
+      }
+      .hero-badge {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--teal);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.1s forwards;
+      }
+      .hero-badge::before,
+      .hero-badge::after {
+        content: "";
+        width: 24px;
+        height: 1px;
+        background: var(--teal);
+      }
+      .hero-eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--muted2);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.2s forwards;
+      }
+      .hero-title {
+        font-size: clamp(2.6rem, 6vw, 7.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 1.75rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.35s forwards;
+      }
+      .hero-title .accent {
+        color: var(--teal);
+      }
+      .hero-title .outline {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--border2);
+      }
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.8s forwards;
+      }
+      .hero-trust {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.8s forwards;
+      }
+      .trust-item {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .trust-item::before {
+        content: "✓";
+        color: var(--teal);
+        font-size: 0.7rem;
+      }
+      .trust-divider {
+        width: 1px;
+        height: 14px;
+        background: var(--border2);
+      }
+
+      /* HERO CHECKLIST */
+      .hero-checklist {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: center;
+        margin-bottom: 2.5rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.5s forwards;
+      }
+      .hero-check-item {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--muted2);
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        letter-spacing: 0.04em;
+      }
+      .hero-check-icon {
+        color: var(--teal);
+        font-size: 0.85rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      /* BUTTONS */
+      .btn {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.9rem 2rem;
+        border: 1px solid;
+        text-decoration: none;
+        transition: all var(--t);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: var(--teal);
+        color: var(--bg);
+        border-color: var(--teal);
+        font-weight: 700;
+      }
+      .btn-primary:hover {
+        background: transparent;
+        color: var(--teal);
+      }
+      .btn-whatsapp {
+        background: #25d366;
+        color: #fff;
+        border-color: #25d366;
+      }
+      .btn-whatsapp:hover {
+        background: #128c7e;
+        border-color: #128c7e;
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--muted2);
+        border-color: var(--border2);
+      }
+      .btn-ghost:hover {
+        color: var(--text);
+        border-color: var(--text);
+      }
+      .btn-lg {
+        padding: 1.1rem 2.5rem;
+        font-size: 0.78rem;
+      }
+
+      /* SECTION COMMON */
+      section {
+        padding: 7rem 3rem;
+        position: relative;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--teal);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .eyebrow::before {
+        content: attr(data-num);
+        color: var(--muted);
+      }
+      .sec-title {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+        margin-bottom: 1rem;
+      }
+      .sec-title .accent {
+        color: var(--teal);
+      }
+      .sec-sub {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--muted2);
+        line-height: 1.9;
+        max-width: 520px;
+        margin-bottom: 3.5rem;
+      }
+
+      /* REVEAL */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ══ PROBLEMA ════════════════════════════════ */
+      #problema {
+        background: var(--bg2);
+        text-align: center;
+      }
+      #problema .sec-title {
+        margin-bottom: 0.75rem;
+      }
+      #problema .sec-sub {
+        margin: 0 auto 3.5rem;
+      }
+      .searches-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+        max-width: 900px;
+        margin: 0 auto 3rem;
+      }
+      .search-item {
+        background: var(--bg2);
+        padding: 1.75rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        transition: background var(--t);
+      }
+      .search-item:hover {
+        background: var(--surface);
+      }
+      .search-icon {
+        font-size: 1.75rem;
+      }
+      .search-query {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted2);
+        letter-spacing: 0.06em;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .search-volume {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--teal);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid var(--teal-20);
+        padding: 0.1rem 0.5rem;
+      }
+      .problema-alert {
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid var(--border2);
+        border-left: 3px solid var(--teal);
+        padding: 1.5rem 2rem;
+        background: var(--surface);
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--muted2);
+        line-height: 1.8;
+      }
+      .problema-alert strong {
+        color: var(--text);
+      }
+
+      /* ══ COMO FUNCIONA ═══════════════════════════ */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .step {
+        background: var(--bg);
+        padding: 2.5rem 2rem;
+        position: relative;
+        transition: background var(--t);
+      }
+      .step:hover {
+        background: var(--surface);
+      }
+      .step-num {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--border2);
+        letter-spacing: -0.05em;
+        line-height: 1;
+        margin-bottom: 1.25rem;
+        display: block;
+        transition: color var(--t);
+      }
+      .step:hover .step-num {
+        color: var(--teal);
+      }
+      .step-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .step-desc {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .step-connector {
+        position: absolute;
+        top: 2.5rem;
+        right: -1px;
+        width: 2px;
+        height: 24px;
+        background: linear-gradient(to bottom, var(--teal), transparent);
+        display: none;
+      }
+      .step:not(:last-child) .step-connector {
+        display: block;
+      }
+      .steps-footer {
+        margin-top: 2rem;
+        text-align: center;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .steps-footer span {
+        color: var(--teal);
+      }
+
+      /* ══ EXEMPLOS ════════════════════════════════ */
+      #exemplos {
+        background: var(--bg2);
+      }
+      .examples-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      .example-card {
+        border: 1px solid var(--border);
+        overflow: hidden;
+        transition:
+          border-color var(--t),
+          transform var(--t);
+        background: var(--bg);
+      }
+      .example-card:hover {
+        border-color: var(--teal-30);
+        transform: translateY(-3px);
+      }
+      .example-preview {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface);
+      }
+      .example-preview-inner {
+        width: 85%;
+        height: 80%;
+        border: 1px solid var(--border2);
+        background: var(--bg2);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .mock-nav {
+        height: 18px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        gap: 4px;
+        flex-shrink: 0;
+      }
+      .mock-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+      .mock-hero {
+        flex: 1;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        position: relative;
+        overflow: hidden;
+      }
+      .mock-hero::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -20%;
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        opacity: 0.4;
+      }
+      .mock-title {
+        height: 8px;
+        border-radius: 2px;
+        width: 70%;
+      }
+      .mock-sub {
+        height: 5px;
+        border-radius: 2px;
+        width: 50%;
+        opacity: 0.5;
+        background: var(--border2);
+      }
+      .mock-btn {
+        height: 14px;
+        width: 80px;
+        border-radius: 2px;
+        margin-top: 4px;
+      }
+      .mock-section {
+        height: 30px;
+        background: var(--bg);
+        border-top: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+      .mock-chip {
+        height: 6px;
+        width: 40px;
+        border-radius: 2px;
+        opacity: 0.4;
+        background: var(--border2);
+      }
+      .example-body {
+        padding: 1.5rem;
+      }
+      .example-type {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        color: var(--teal);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      .example-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+      }
+      .example-desc {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .example-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+      }
+      .example-tag {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--muted2);
+        border: 1px solid var(--border2);
+        padding: 0.12rem 0.5rem;
+        letter-spacing: 0.04em;
+      }
+
+      /* Example colors */
+      .ex-adv1 .mock-hero::before {
+        background: #2dd4c8;
+      }
+      .ex-adv1 .mock-title {
+        background: var(--teal);
+      }
+      .ex-adv1 .mock-btn {
+        background: var(--teal);
+      }
+      .ex-adv1 .mock-dot:nth-child(1) {
+        background: #2dd4c8;
+      }
+      .ex-adv2 .mock-hero::before {
+        background: #a78bfa;
+      }
+      .ex-adv2 .mock-title {
+        background: #a78bfa;
+      }
+      .ex-adv2 .mock-btn {
+        background: #a78bfa;
+      }
+      .ex-adv2 .mock-dot:nth-child(1) {
+        background: #a78bfa;
+      }
+      .ex-adv3 .mock-hero::before {
+        background: #f4a261;
+      }
+      .ex-adv3 .mock-title {
+        background: #f4a261;
+      }
+      .ex-adv3 .mock-btn {
+        background: #f4a261;
+      }
+      .ex-adv3 .mock-dot:nth-child(1) {
+        background: #f4a261;
+      }
+      .ex-adv4 .mock-hero::before {
+        background: #34d399;
+      }
+      .ex-adv4 .mock-title {
+        background: #34d399;
+      }
+      .ex-adv4 .mock-btn {
+        background: #34d399;
+      }
+      .ex-adv4 .mock-dot:nth-child(1) {
+        background: #34d399;
+      }
+      .mock-dot:nth-child(2) {
+        background: var(--border2);
+      }
+      .mock-dot:nth-child(3) {
+        background: var(--border2);
+      }
+
+      /* ══ DEPOIMENTOS ═════════════════════════════ */
+      #depoimentos {
+        background: var(--bg2);
+      }
+      .dep-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .dep-card {
+        background: var(--bg2);
+        padding: 2rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: background var(--t);
+      }
+      .dep-card:hover {
+        background: var(--surface);
+      }
+      .dep-stars {
+        color: var(--teal);
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+      }
+      .dep-text {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--muted2);
+        line-height: 1.85;
+        flex: 1;
+        border-left: 2px solid var(--teal-20);
+        padding-left: 1rem;
+      }
+      .dep-text strong {
+        color: var(--teal);
+      }
+      .dep-author {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        margin-top: auto;
+      }
+      .dep-name {
+        font-size: 0.88rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .dep-role {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 768px) {
+        .dep-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ══ PROJETO REAL ════════════════════════════ */
+      .projeto-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .projeto-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--teal);
+        border: 1px solid var(--teal-20);
+        background: var(--teal-dim);
+        padding: 0.25rem 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+      .projeto-badge::before {
+        content: "●";
+        font-size: 0.5rem;
+        animation: pulse 2s ease infinite;
+      }
+      .projeto-title {
+        font-size: clamp(1.6rem, 3vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+      .projeto-title .accent {
+        color: var(--teal);
+      }
+      .projeto-desc {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--muted2);
+        line-height: 1.9;
+        margin-bottom: 1.75rem;
+        max-width: 420px;
+      }
+      .projeto-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 2rem;
+      }
+      .projeto-tag {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        color: var(--muted2);
+        border: 1px solid var(--border2);
+        padding: 0.2rem 0.6rem;
+        letter-spacing: 0.05em;
+      }
+      .projeto-links {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .browser-frame {
+        border: 1px solid var(--border2);
+        background: var(--surface);
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+        transition: box-shadow var(--t);
+      }
+      .browser-frame:hover {
+        box-shadow: 0 16px 56px rgba(0, 0, 0, 0.45);
+      }
+      .browser-bar {
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+        padding: 0.6rem 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .browser-dots {
+        display: flex;
+        gap: 5px;
+      }
+      .browser-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+      }
+      .browser-dot:nth-child(1) {
+        background: #ff5f57;
+      }
+      .browser-dot:nth-child(2) {
+        background: #febc2e;
+      }
+      .browser-dot:nth-child(3) {
+        background: #28c840;
+      }
+      .browser-url {
+        flex: 1;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 0.2rem 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        color: var(--muted2);
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .browser-viewport {
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+        position: relative;
+      }
+      .browser-viewport iframe {
+        width: 160%;
+        height: 160%;
+        border: none;
+        display: block;
+        transform: scale(0.625);
+        transform-origin: top left;
+        pointer-events: none;
+      }
+      /* ── Dentista static mockup ── */
+      .bp-dent {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      .bp-dent-nav {
+        height: 46px;
+        background: #fff;
+        border-bottom: 1px solid rgba(15, 42, 94, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        flex-shrink: 0;
+      }
+      .bp-dent-logo {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #0f2a5e;
+        letter-spacing: 0.01em;
+      }
+      .bp-dent-logo em {
+        font-style: italic;
+        color: #c9a84c;
+      }
+      .bp-dent-nav-links {
+        display: flex;
+        gap: 0.9rem;
+      }
+      .bp-dent-nav-link {
+        font-size: 0.38rem;
+        color: #6b7280;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .bp-dent-cta-nav {
+        background: #0f2a5e;
+        color: #fff;
+        font-size: 0.4rem;
+        font-weight: 600;
+        padding: 0.28rem 0.65rem;
+        border-radius: 2px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .bp-dent-hero {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        position: relative;
+      }
+      .bp-dent-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          circle,
+          rgba(15, 42, 94, 0.07) 1px,
+          transparent 1px
+        );
+        background-size: 18px 18px;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .bp-dent-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.25rem 1.25rem 1rem;
+        position: relative;
+        z-index: 1;
+      }
+      .bp-dent-ey {
+        font-size: 0.35rem;
+        color: #c9a84c;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 0.45rem;
+        font-family: monospace;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .bp-dent-ey::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 1.5px;
+        background: #c9a84c;
+        flex-shrink: 0;
+      }
+      .bp-dent-h1 {
+        font-size: 1.05rem;
+        font-weight: 300;
+        color: #0f2a5e;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+        font-family: Georgia, serif;
+      }
+      .bp-dent-h1 em {
+        font-style: italic;
+        color: #c9a84c;
+      }
+      .bp-dent-h1 strong {
+        font-weight: 600;
+      }
+      .bp-dent-sub {
+        font-size: 0.35rem;
+        color: #6b7280;
+        line-height: 1.65;
+        margin-bottom: 0.7rem;
+        font-family: monospace;
+      }
+      .bp-dent-btns {
+        display: flex;
+        gap: 0.4rem;
+      }
+      .bp-dent-btn-p {
+        background: #0f2a5e;
+        color: #fff;
+        font-size: 0.36rem;
+        font-weight: 600;
+        padding: 0.28rem 0.7rem;
+        border-radius: 2px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .bp-dent-btn-s {
+        border: 1px solid rgba(15, 42, 94, 0.25);
+        color: #0f2a5e;
+        font-size: 0.36rem;
+        padding: 0.28rem 0.6rem;
+        border-radius: 2px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: transparent;
+      }
+      .bp-dent-stats {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(15, 42, 94, 0.08);
+      }
+      .bp-dent-stat-n {
+        display: block;
+        font-size: 0.62rem;
+        font-weight: 600;
+        color: #0f2a5e;
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+      .bp-dent-stat-l {
+        display: block;
+        font-size: 0.3rem;
+        color: #9ca3af;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        font-family: monospace;
+        margin-top: 0.1rem;
+      }
+      .bp-dent-right {
+        background: #0f2a5e;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0.75rem 0.75rem 0;
+      }
+      .bp-dent-right::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        right: -20%;
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        background: radial-gradient(
+          ellipse,
+          rgba(255, 255, 255, 0.05) 0%,
+          transparent 65%
+        );
+      }
+      .bp-dent-right::after {
+        content: "";
+        position: absolute;
+        bottom: -15%;
+        left: -15%;
+        width: 45%;
+        height: 45%;
+        border-radius: 50%;
+        background: radial-gradient(
+          ellipse,
+          rgba(201, 168, 76, 0.1) 0%,
+          transparent 65%
+        );
+      }
+      .bp-dent-silhouette {
+        width: 75%;
+        opacity: 0.2;
+        position: relative;
+        z-index: 1;
+      }
+      .bp-dent-float {
+        position: absolute;
+        top: 1rem;
+        right: -0.5rem;
+        background: #fff;
+        border-radius: 6px;
+        padding: 0.45rem 0.6rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+      .bp-dent-float-icon {
+        font-size: 0.75rem;
+      }
+      .bp-dent-float-val {
+        font-size: 0.55rem;
+        font-weight: 700;
+        color: #0f2a5e;
+        font-family: Georgia, serif;
+        line-height: 1.1;
+      }
+      .bp-dent-float-lbl {
+        font-size: 0.28rem;
+        color: #9ca3af;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        font-family: monospace;
+      }
+      .browser-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(
+          to bottom,
+          transparent 55%,
+          var(--bg2) 100%
+        );
+        padding: 1.25rem;
+      }
+      .browser-overlay a {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--teal);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: gap var(--t);
+      }
+      .browser-overlay a:hover {
+        gap: 0.7rem;
+      }
+      @media (max-width: 900px) {
+        .projeto-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .browser-viewport {
+          height: 280px;
+        }
+      }
+
+      /* ══ PROVA SOCIAL ════════════════════════════ */
+      #prova {
+      }
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+        margin-bottom: 4rem;
+      }
+      .proof-item {
+        background: var(--bg);
+        padding: 2.5rem 2rem;
+        transition: background var(--t);
+      }
+      .proof-item:hover {
+        background: var(--surface);
+      }
+      .proof-num {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--teal);
+        letter-spacing: -0.04em;
+        line-height: 1;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .proof-label {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      .proof-desc {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .proof-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .proof-feat {
+        background: var(--bg2);
+        padding: 1.75rem 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        transition: background var(--t);
+      }
+      .proof-feat:hover {
+        background: var(--surface);
+      }
+      .proof-feat-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .proof-feat-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+      .proof-feat-desc {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      /* ══ PLANOS ══════════════════════════════════ */
+      #planos {
+        background: var(--bg2);
+      }
+      #planos .sec-sub {
+        margin-bottom: 3.5rem;
+      }
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .pkg {
+        background: var(--bg2);
+        padding: 2.5rem 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .pkg.featured {
+        background: var(--surface);
+        border: 2px solid var(--teal);
+        margin: -1px;
+        z-index: 1;
+      }
+      .pkg-badge {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--bg);
+        background: var(--teal);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.75rem;
+        width: fit-content;
+        margin-bottom: 1.25rem;
+      }
+      .pkg-name {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+      }
+      .pkg-desc {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+      .pkg-price {
+        margin-bottom: 0.5rem;
+      }
+      .pkg-price .currency {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted2);
+      }
+      .pkg-price .value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: var(--teal);
+      }
+      .pkg-prazo {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        margin-bottom: 1.5rem;
+      }
+      .pkg-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin-bottom: 1.5rem;
+      }
+      .pkg-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 2rem;
+        flex: 1;
+      }
+      .pkg-features li {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted2);
+        line-height: 1.5;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .pkg-features li::before {
+        content: "→";
+        color: var(--teal);
+        flex-shrink: 0;
+      }
+      .pkg-features li.no {
+        color: var(--muted);
+      }
+      .pkg-features li.no::before {
+        content: "—";
+        color: var(--border2);
+      }
+
+      /* ══ FAQ ═════════════════════════════════════ */
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .faq-item {
+        background: var(--bg);
+        overflow: hidden;
+      }
+      .faq-q {
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        transition: background var(--t);
+      }
+      .faq-q:hover {
+        background: var(--surface);
+      }
+      .faq-q-text {
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .faq-q-icon {
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--border2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--muted2);
+        transition: all var(--t);
+      }
+      .faq-item.open .faq-q-icon {
+        background: var(--teal);
+        color: var(--bg);
+        border-color: var(--teal);
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .faq-item.open .faq-a {
+        max-height: 250px;
+      }
+      .faq-a-inner {
+        padding: 0 2rem 1.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--muted2);
+        line-height: 1.9;
+        border-top: 1px solid var(--border);
+        padding-top: 1.25rem;
+      }
+
+      /* ══ CTA FINAL ═══════════════════════════════ */
+      #cta-final {
+        background: var(--bg2);
+        text-align: center;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 8rem 3rem;
+      }
+      #cta-final .sec-title {
+        font-size: clamp(2.5rem, 5vw, 5.5rem);
+        margin-bottom: 1.25rem;
+      }
+      #cta-final .sec-sub {
+        margin: 0 auto 3rem;
+        font-size: 0.85rem;
+      }
+      .cta-ctas {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cta-note {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        margin-top: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      /* ══ ADDONS / MANUTENÇÃO ══════════════════════ */
+      #addons {
+        background: var(--bg2);
+      }
+      .addons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+      .addons-col-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .addons-col-title span {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--bg);
+        background: var(--teal);
+        padding: 0.2rem 0.6rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .addon-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .addon-item {
+        position: relative;
+        background: var(--bg2);
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        opacity: 0;
+        transform: translateX(-16px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease,
+          background var(--t);
+      }
+      .addon-item.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .addon-item:hover {
+        background: var(--surface);
+      }
+      .addon-item.popular {
+        border-color: var(--teal-30);
+        background: var(--surface);
+      }
+      .addon-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+      .addon-desc {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .addon-price {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--teal);
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-align: right;
+      }
+      .addon-price small {
+        display: block;
+        font-size: 0.55rem;
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .addon-price-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.3rem;
+        flex-shrink: 0;
+      }
+      .addon-price-monthly {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--teal);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: right;
+      }
+      .addon-price-monthly small {
+        display: block;
+        font-size: 0.55rem;
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .addon-price-annual {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted2);
+        white-space: nowrap;
+        text-align: right;
+        line-height: 1.4;
+      }
+      .addon-price-annual .annual-value {
+        color: var(--text);
+        font-weight: 700;
+      }
+      .annual-badge {
+        display: inline-block;
+        font-size: 0.5rem;
+        background: var(--teal-dim);
+        color: var(--teal);
+        border: 1px solid var(--teal-20);
+        padding: 0.1rem 0.4rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: 0.15rem;
+      }
+      .addon-popular-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-family: var(--font-mono);
+        font-size: 0.52rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--teal);
+        border: 1px solid var(--teal-20);
+        background: var(--teal-dim);
+        padding: 0.18rem 0.55rem;
+        margin-bottom: 0.35rem;
+        width: fit-content;
+      }
+      .addon-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: 0.55rem;
+      }
+      .addon-tag {
+        font-family: var(--font-mono);
+        font-size: 0.55rem;
+        color: var(--muted2);
+        border: 1px solid var(--border2);
+        padding: 0.12rem 0.45rem;
+        letter-spacing: 0.04em;
+      }
+      .addon-item.popular .addon-tag {
+        border-color: var(--teal-20);
+      }
+      .maint-tagline {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted2);
+        line-height: 1.7;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid var(--border);
+        border-top: 2px solid var(--teal);
+        background: var(--bg2);
+        margin-top: 1rem;
+      }
+      .maint-tagline strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+      @media (max-width: 768px) {
+        .addons-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      /* WHATSAPP FLOAT */
+      .wa-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 500;
+        background: #25d366;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.85rem 1.4rem;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+        transition: all var(--t);
+        opacity: 0;
+        animation: fadeUp 1s ease 1.2s forwards;
+      }
+      .wa-float:hover {
+        background: #128c7e;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+      }
+      .wa-float svg {
+        flex-shrink: 0;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.75rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .footer-copy {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--muted);
+        letter-spacing: 0.07em;
+      }
+      .footer-note {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .footer-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--teal);
+        border-radius: 50%;
+        animation: pulse 2s ease infinite;
+      }
+
+      /* INK CANVAS */
+      #inkCanvas {
+        position: fixed;
+        inset: 0;
+        z-index: 8999;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* KEYFRAMES */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.4;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.3);
+        }
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        nav {
+          padding: 1.1rem 1.5rem;
+        }
+        .nav-back span {
+          display: none;
+        }
+        #hero {
+          padding: 7rem 1.5rem 5rem;
+        }
+        .hero-trust {
+          gap: 1rem;
+        }
+        .trust-divider {
+          display: none;
+        }
+        section {
+          padding: 5rem 1.5rem;
+        }
+        .searches-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .steps-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .examples-grid {
+          grid-template-columns: 1fr;
+        }
+        .proof-grid {
+          grid-template-columns: 1fr;
+        }
+        .proof-features {
+          grid-template-columns: 1fr;
+        }
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+        .pkg.featured {
+          margin: 0;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          padding: 1.5rem;
+        }
+        .wa-float {
+          bottom: 1.25rem;
+          right: 1.25rem;
+          padding: 0.75rem 1.1rem;
+        }
+        .wa-float .wa-label {
+          display: none;
+        }
+        #cta-final {
+          padding: 5rem 1.5rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-title {
+          font-size: clamp(2.2rem, 10vw, 3rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      id="inkCanvas"
+      style="
+        position: fixed;
+        inset: 0;
+        z-index: 8999;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+      "
+    ></canvas>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-logo-group">
+        <a href="#hero" class="nav-logo"
+          >FILIPE <span class="teal-word">ROSSO</span><span>.</span></a
+        >
+      </div>
+      <div class="nav-right">
+        <a href="/" class="nav-back"><span>Portfólio</span></a>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Alternar tema"
+          title="Alternar tema claro/escuro"
+        >
+          <svg
+            class="icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ══ HERO ════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-grid"></div>
+
+      <div class="hero-badge">
+        Especializado em sites para saúde — Cachoeirinha, RS
+      </div>
+      <div class="hero-eyebrow">
+        Site profissional para dentista e clínica odontológica
+      </div>
+      <h1 class="hero-title">
+        Sua clínica merece<br />
+        um site que <span class="accent">transmite confiança</span><br />
+        e <span class="outline">atrai pacientes.</span>
+      </h1>
+      <div class="hero-checklist">
+        <div class="hero-check-item">
+          <span class="hero-check-icon">✓</span>Design clean e profissional para
+          a área odontológica
+        </div>
+        <div class="hero-check-item">
+          <span class="hero-check-icon">✓</span>Página de especialidades, equipe
+          e perfil do dentista
+        </div>
+        <div class="hero-check-item">
+          <span class="hero-check-icon">✓</span>Otimizado para aparecer no
+          Google da sua cidade
+        </div>
+        <div class="hero-check-item">
+          <span class="hero-check-icon">✓</span>Captação de pacientes e
+          agendamentos pelo WhatsApp
+        </div>
+        <div class="hero-check-item">
+          <span class="hero-check-icon">✓</span>Pronto em até 7 dias, sem
+          burocracia
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a
+          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica"
+          target="_blank"
+          class="btn btn-whatsapp btn-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          Quero meu site odontológico
+        </a>
+        <a href="#planos" class="btn btn-ghost btn-lg">Ver planos e preços</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">Site em até 7 dias</span>
+        <span class="trust-divider"></span>
+        <span class="trust-item">Design odontológico</span>
+        <span class="trust-divider"></span>
+        <span class="trust-item">SEO no Google</span>
+        <span class="trust-divider"></span>
+        <span class="trust-item">WhatsApp integrado</span>
+        <span class="trust-divider"></span>
+        <span class="trust-item">Suporte incluído</span>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ PROBLEMA ══════════════════════════════════ -->
+    <section id="problema">
+      <p class="eyebrow reveal" data-num="01" style="justify-content: center">
+        O problema
+      </p>
+      <h2 class="sec-title reveal">
+        Seus futuros pacientes estão<br /><span class="accent"
+          >pesquisando no Google agora.</span
+        >
+      </h2>
+      <p class="sec-sub reveal">
+        Quem precisa de um dentista busca primeiro no Google. Se a sua clínica
+        não aparece — ou aparece mal — esse paciente vai para o concorrente que
+        investiu em presença digital.
+      </p>
+
+      <div class="searches-grid reveal">
+        <div class="search-item">
+          <span class="search-icon">🦷</span>
+          <div class="search-query">"dentista perto de mim"</div>
+          <div class="search-volume">Alta busca</div>
+        </div>
+        <div class="search-item">
+          <span class="search-icon">🏥</span>
+          <div class="search-query">"clínica odontológica [cidade]"</div>
+          <div class="search-volume">Alta busca</div>
+        </div>
+        <div class="search-item">
+          <span class="search-icon">✨</span>
+          <div class="search-query">"dentista implante [bairro]"</div>
+          <div class="search-volume">Alta busca</div>
+        </div>
+        <div class="search-item">
+          <span class="search-icon">😁</span>
+          <div class="search-query">"clareamento dental [cidade]"</div>
+          <div class="search-volume">Alta busca</div>
+        </div>
+      </div>
+
+      <div class="problema-alert reveal">
+        <strong
+          >Um site odontológico profissional não é custo — é
+          investimento.</strong
+        >
+        Ele trabalha por você 24h por dia, transmite confiança antes mesmo da
+        primeira consulta e entrega pacientes qualificados diretamente no seu
+        WhatsApp.
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
+    <section id="como-funciona">
+      <p class="eyebrow reveal" data-num="02">Como funciona</p>
+      <h2 class="sec-title reveal">
+        Do pedido ao ar<br /><span class="accent">em 4 passos.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Processo simples e sem burocracia. Você continua atendendo seus clientes
+        — a parte técnica fica comigo.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step reveal">
+          <span class="step-num">01</span>
+          <div class="step-title">Escolha um plano</div>
+          <div class="step-desc">
+            Analise os pacotes e escolha o que melhor se encaixa na sua clínica
+            e orçamento.
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">02</span>
+          <div class="step-title">Envie as informações</div>
+          <div class="step-desc">
+            Nome, CRO, especialidades, fotos da clínica e contato. Tudo via
+            WhatsApp, sem formulários complicados.
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">03</span>
+          <div class="step-title">Criamos seu site</div>
+          <div class="step-desc">
+            Design clean e profissional, SEO configurado, WhatsApp integrado.
+            Você aprova antes de publicar.
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">04</span>
+          <div class="step-title">Site no ar</div>
+          <div class="step-desc">
+            Sua clínica publicada, indexada no Google e captando pacientes em
+            até 7 dias.
+          </div>
+        </div>
+      </div>
+      <p class="steps-footer reveal">
+        Tempo médio de entrega: <span>3 a 7 dias úteis.</span>
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ EXEMPLOS ══════════════════════════════════ -->
+    <section id="exemplos">
+      <p class="eyebrow reveal" data-num="03">Modelos</p>
+      <h2 class="sec-title reveal">
+        O que seu site<br /><span class="accent">pode ter.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Cada site odontológico é desenvolvido do zero — nada de template
+        genérico. Aqui estão exemplos de seções e layouts pensados para o
+        universo da odontologia.
+      </p>
+
+      <div class="examples-grid">
+        <div class="example-card reveal">
+          <div class="example-preview ex-adv1">
+            <div class="example-preview-inner">
+              <div class="mock-nav">
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+              </div>
+              <div class="mock-hero">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-sub" style="width: 40%"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+              </div>
+            </div>
+          </div>
+          <div class="example-body">
+            <div class="example-type">Clínica Odontológica</div>
+            <div class="example-name">Clínica Completa</div>
+            <div class="example-desc">
+              Especialidades, equipe, galeria de casos, agendamento online e
+              botão de WhatsApp com mensagem pré-preenchida.
+            </div>
+            <div class="example-tags">
+              <span class="example-tag">Especialidades</span>
+              <span class="example-tag">Perfil CRO</span>
+              <span class="example-tag">WhatsApp</span>
+              <span class="example-tag">SEO local</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-preview ex-adv2">
+            <div class="example-preview-inner">
+              <div class="mock-nav">
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+              </div>
+              <div class="mock-hero">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-sub" style="width: 55%"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+              </div>
+            </div>
+          </div>
+          <div class="example-body">
+            <div class="example-type">Advocacia de Família</div>
+            <div class="example-name">Escritório Família & Sucessões</div>
+            <div class="example-desc">
+              Divórcio, guarda, inventário — seções específicas por
+              especialidade com linguagem acessível ao cliente.
+            </div>
+            <div class="example-tags">
+              <span class="example-tag">Especialidades</span>
+              <span class="example-tag">Avaliação gratuita</span>
+              <span class="example-tag">Consulta online</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-preview ex-adv3">
+            <div class="example-preview-inner">
+              <div class="mock-nav">
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+              </div>
+              <div class="mock-hero">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-sub" style="width: 45%"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+              </div>
+            </div>
+          </div>
+          <div class="example-body">
+            <div class="example-type">Implantodontia</div>
+            <div class="example-name">Clínica de Implantes</div>
+            <div class="example-desc">
+              Implantes e próteses com planejamento 3D, depoimentos de pacientes
+              e formulário de avaliação gratuita.
+            </div>
+            <div class="example-tags">
+              <span class="example-tag">Tecnologia 3D</span>
+              <span class="example-tag">Depoimentos</span>
+              <span class="example-tag">Avaliação grátis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-preview ex-adv4">
+            <div class="example-preview-inner">
+              <div class="mock-nav">
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+              </div>
+              <div class="mock-hero">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-sub" style="width: 35%"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+                <div class="mock-chip"></div>
+              </div>
+            </div>
+          </div>
+          <div class="example-body">
+            <div class="example-type">Dentista Solo</div>
+            <div class="example-name">Consultório Individual</div>
+            <div class="example-desc">
+              Página pessoal com trajetória, CRO, especialidades e agendamento
+              de consulta direto pelo WhatsApp.
+            </div>
+            <div class="example-tags">
+              <span class="example-tag">Perfil pessoal</span>
+              <span class="example-tag">Formação</span>
+              <span class="example-tag">Agendamento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
+    <section id="depoimentos">
+      <p class="eyebrow reveal" data-num="04">Depoimentos</p>
+      <h2 class="sec-title reveal">
+        O que dizem<br /><span class="accent">os clientes.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Dentistas e clínicas que investiram em presença digital e viram os
+        pacientes chegarem.
+      </p>
+
+      <div class="dep-grid">
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            Antes dependia só de indicação. Depois do site, comecei a receber
+            ligações e mensagens de pessoas que me encontraram no Google.
+            <strong
+              >Em menos de 2 meses o investimento já havia se pago.</strong
+            >
+          </p>
+          <div class="dep-author">
+            <span class="dep-name">Dr. Henrique M.</span>
+            <span class="dep-role">Dentista · Porto Alegre, RS</span>
+          </div>
+        </div>
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            O Filipe entendeu que site de clínica precisa transmitir confiança.
+            O resultado ficou exatamente assim — moderno, limpo e profissional.
+            <strong
+              >Meus pacientes elogiam a aparência do site antes mesmo de chegar
+              na clínica.</strong
+            >
+          </p>
+          <div class="dep-author">
+            <span class="dep-name">Dra. Camila V.</span>
+            <span class="dep-role">Ortodontista · Cachoeirinha, RS</span>
+          </div>
+        </div>
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            Processo simples, entrega rápida e resultado acima do esperado.
+            <strong
+              >Hoje minha clínica aparece nas primeiras posições quando alguém
+              pesquisa dentista na minha cidade.</strong
+            >
+          </p>
+          <div class="dep-author">
+            <span class="dep-name">Dr. Rafael S.</span>
+            <span class="dep-role">Implantodontista · Canoas, RS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ PROJETO REAL ══════════════════════════════ -->
+    <section id="projeto-real">
+      <p class="eyebrow reveal" data-num="05" style="margin-bottom: 0.5rem">
+        Projeto entregue
+      </p>
+      <div class="projeto-inner">
+        <!-- Info -->
+        <div class="reveal">
+          <div class="projeto-badge">Site real · Dr. Eduardo Vasques</div>
+          <h2 class="projeto-title">
+            Veja um exemplo<br />
+            <span class="accent">real e entregue.</span>
+          </h2>
+          <p class="projeto-desc">
+            Este é o site desenvolvido para o Dr. Eduardo Vasques, especialista
+            em implantes e estética dental. Design premium em Cormorant
+            Garamond, paleta azul safira e dourado — transmitindo confiança,
+            sofisticação e autoridade clínica.
+          </p>
+          <div class="projeto-tags">
+            <span class="projeto-tag">Cormorant Garamond</span>
+            <span class="projeto-tag">Paleta bege & dourado</span>
+            <span class="projeto-tag">Áreas de atuação</span>
+            <span class="projeto-tag">WhatsApp integrado</span>
+            <span class="projeto-tag">SEO</span>
+            <span class="projeto-tag">Mobile-first</span>
+          </div>
+          <div class="projeto-links">
+            <a href="/dentista.html" target="_blank" class="btn btn-primary">
+              Ver site completo →
+            </a>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Dr.%20Eduardo%20e%20quero%20um%20parecido%20para%20minha%20cl%C3%ADnica"
+              target="_blank"
+              class="btn btn-ghost"
+            >
+              Quero um parecido
+            </a>
+          </div>
+        </div>
+
+        <!-- Browser preview -->
+        <div class="reveal" style="position: relative">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">roxouw.github.io/dentista</div>
+            </div>
+            <div class="browser-viewport">
+              <div class="bp-dent">
+                <!-- Nav -->
+                <div class="bp-dent-nav">
+                  <div class="bp-dent-logo">Dr. Eduardo <em>Vasques</em></div>
+                  <div class="bp-dent-nav-links">
+                    <span class="bp-dent-nav-link">Sobre</span>
+                    <span class="bp-dent-nav-link">Serviços</span>
+                    <span class="bp-dent-nav-link">Planos</span>
+                  </div>
+                  <div class="bp-dent-cta-nav">Agendar avaliação</div>
+                </div>
+                <!-- Hero -->
+                <div class="bp-dent-hero">
+                  <div class="bp-dent-left">
+                    <div class="bp-dent-ey">Odontologia · CRO 67890</div>
+                    <div class="bp-dent-h1">
+                      O sorriso que<br />você <em>sempre</em><br /><strong
+                        >desejou.</strong
+                      >
+                    </div>
+                    <div class="bp-dent-sub">
+                      Implantes, estética e ortodontia com tecnologia de ponta e
+                      cuidado humanizado.
+                    </div>
+                    <div class="bp-dent-btns">
+                      <div class="bp-dent-btn-p">Agendar avaliação</div>
+                      <div class="bp-dent-btn-s">Ver serviços</div>
+                    </div>
+                    <div class="bp-dent-stats">
+                      <div>
+                        <span class="bp-dent-stat-n">12+</span
+                        ><span class="bp-dent-stat-l">Anos de exp.</span>
+                      </div>
+                      <div>
+                        <span class="bp-dent-stat-n">2.800+</span
+                        ><span class="bp-dent-stat-l">Pacientes</span>
+                      </div>
+                      <div>
+                        <span class="bp-dent-stat-n">4.9★</span
+                        ><span class="bp-dent-stat-l">Avaliação</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bp-dent-right">
+                    <div class="bp-dent-float">
+                      <div class="bp-dent-float-icon">🦷</div>
+                      <div class="bp-dent-float-val">+450</div>
+                      <div class="bp-dent-float-lbl">Implantes</div>
+                    </div>
+                    <svg
+                      class="bp-dent-silhouette"
+                      viewBox="0 0 200 280"
+                      fill="none"
+                    >
+                      <ellipse
+                        cx="100"
+                        cy="62"
+                        rx="42"
+                        ry="48"
+                        fill="rgba(255,255,255,.2)"
+                      />
+                      <path
+                        d="M32 280 C32 205 46 178 100 174 C154 178 168 205 168 280Z"
+                        fill="rgba(255,255,255,.15)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="browser-overlay">
+                <a href="/dentista.html" target="_blank">
+                  Abrir site completo →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
+    <section id="prova">
+      <p class="eyebrow reveal" data-num="06">Por que escolher</p>
+      <h2 class="sec-title reveal">
+        Um site odontológico<br /><span class="accent"
+          >que funciona de verdade.</span
+        >
+      </h2>
+      <p class="sec-sub reveal">
+        Cada detalhe pensado para que sua clínica transmita confiança e converta
+        visitantes em pacientes.
+      </p>
+
+      <div class="proof-grid">
+        <div class="proof-item reveal">
+          <span class="proof-num">7</span>
+          <div class="proof-label">Dias para entregar</div>
+          <div class="proof-desc">
+            Do briefing ao site publicado. Sem esperar meses para ter presença
+            digital.
+          </div>
+        </div>
+        <div class="proof-item reveal">
+          <span class="proof-num">100%</span>
+          <div class="proof-label">Mobile-first</div>
+          <div class="proof-desc">
+            A maioria dos clientes pesquisa pelo celular. Seu site funciona
+            perfeitamente em qualquer tela.
+          </div>
+        </div>
+        <div class="proof-item reveal">
+          <span class="proof-num">+10</span>
+          <div class="proof-label">Projetos entregues</div>
+          <div class="proof-desc">
+            Sites modernos, rápidos e otimizados para o Google — para vários
+            segmentos, incluindo odontologia.
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-features">
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">⚖️</span>
+          <div>
+            <div class="proof-feat-title">Design odontológico profissional</div>
+            <div class="proof-feat-desc">
+              Visual sóbrio e elegante que transmite seriedade e autoridade —
+              essencial para a área do Direito.
+            </div>
+          </div>
+        </div>
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">🔍</span>
+          <div>
+            <div class="proof-feat-title">SEO para dentistas</div>
+            <div class="proof-feat-desc">
+              Otimizado para "dentista perto de mim", "clínica odontológica
+              [cidade]" — sua clínica aparece quando o paciente pesquisa.
+            </div>
+          </div>
+        </div>
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">💬</span>
+          <div>
+            <div class="proof-feat-title">Captação pelo WhatsApp</div>
+            <div class="proof-feat-desc">
+              Botão com mensagem pré-preenchida: "Olá, gostaria de agendar uma
+              avaliação!" O paciente chega pronto para marcar.
+            </div>
+          </div>
+        </div>
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">📋</span>
+          <div>
+            <div class="proof-feat-title">Especialidades em destaque</div>
+            <div class="proof-feat-desc">
+              Seções dedicadas para cada especialidade — implantes, ortodontia,
+              estética — em linguagem acessível ao paciente.
+            </div>
+          </div>
+        </div>
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">⚡</span>
+          <div>
+            <div class="proof-feat-title">Carregamento rápido</div>
+            <div class="proof-feat-desc">
+              Sites lentos perdem clientes. Todos os projetos são otimizados
+              para abrir rápido em qualquer conexão.
+            </div>
+          </div>
+        </div>
+        <div class="proof-feat reveal">
+          <span class="proof-feat-icon">🛠️</span>
+          <div>
+            <div class="proof-feat-title">Suporte pós-entrega</div>
+            <div class="proof-feat-desc">
+              Novo procedimento? Mudou de endereço? Atualizou a equipe? Ajuste
+              rápido via WhatsApp sem custo extra.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ PLANOS ════════════════════════════════════ -->
+    <section id="planos">
+      <p class="eyebrow reveal" data-num="07">Planos</p>
+      <h2 class="sec-title reveal">
+        Preço fixo,<br /><span class="accent">sem surpresas.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Você sabe exatamente o que vai receber antes de começar. Sem taxas
+        escondidas, sem cobranças extras.
+      </p>
+
+      <div class="packages-grid">
+        <div class="pkg reveal">
+          <div class="pkg-name">Start</div>
+          <div class="pkg-desc">
+            Para o dentista ou clínica que precisa de presença digital
+            profissional rápida e acessível.
+          </div>
+          <div class="pkg-price">
+            <span class="currency">a partir de R$</span
+            ><span class="value">697</span>
+          </div>
+          <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li>1 página (landing page odontológica)</li>
+            <li>Seção de especialidades e serviços</li>
+            <li>Perfil do dentista com CRO</li>
+            <li>Botão WhatsApp integrado</li>
+            <li>Hospedagem incluída (1 ano)</li>
+            <li>Até 2 revisões</li>
+            <li class="no">Domínio personalizado</li>
+            <li class="no">SEO avançado</li>
+          </ul>
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20plano%20Start%20para%20dentista"
+            target="_blank"
+            class="btn btn-whatsapp"
+            style="width: 100%; justify-content: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Quero esse plano
+          </a>
+        </div>
+
+        <div class="pkg featured reveal">
+          <div class="pkg-badge">Mais popular</div>
+          <div class="pkg-name">Business</div>
+          <div class="pkg-desc">
+            Para clínicas que querem ser encontradas no Google e converter
+            visitas em agendamentos.
+          </div>
+          <div class="pkg-price">
+            <span class="currency">a partir de R$</span
+            ><span class="value">1.497</span>
+          </div>
+          <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li>Até 4 páginas (Home, Sobre, Áreas, Contato)</li>
+            <li>Design odontológico personalizado</li>
+            <li>WhatsApp com mensagem de consulta</li>
+            <li>SEO básico (indexado no Google)</li>
+            <li>Domínio personalizado (.com.br)</li>
+            <li>Hospedagem incluída (1 ano)</li>
+            <li>Preview no WhatsApp e LinkedIn</li>
+            <li>Até 3 revisões</li>
+          </ul>
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20plano%20Business%20para%20dentista"
+            target="_blank"
+            class="btn btn-whatsapp"
+            style="width: 100%; justify-content: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Quero esse plano
+          </a>
+        </div>
+
+        <div class="pkg reveal">
+          <div class="pkg-name">Authority</div>
+          <div class="pkg-desc">
+            Para clínicas que querem dominar o Google local e ter um site
+            completo com todas as funcionalidades.
+          </div>
+          <div class="pkg-price">
+            <span class="currency">a partir de R$</span
+            ><span class="value">2.997</span>
+          </div>
+          <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li>Páginas ilimitadas por especialidade</li>
+            <li>Design exclusivo e premium</li>
+            <li>SEO completo + Google Analytics</li>
+            <li>Domínio personalizado (.com.br)</li>
+            <li>Blog odontológico (artigos que atraem pacientes)</li>
+            <li>Hospedagem incluída (1 ano)</li>
+            <li>Painel para atualizar conteúdo</li>
+            <li>Revisões ilimitadas até aprovação</li>
+          </ul>
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20plano%20Authority%20para%20dentista"
+            target="_blank"
+            class="btn btn-whatsapp"
+            style="width: 100%; justify-content: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Quero esse plano
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- UPGRADES & MANUTENÇÃO -->
+    <section id="addons">
+      <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
+      <h2 class="sec-title reveal">
+        Upgrades e<br /><span class="accent">manutenção mensal.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Adicione funcionalidades específicas para sua clínica ou mantenha tudo
+        atualizado com um plano mensal.
+      </p>
+
+      <div class="addons-grid">
+        <div>
+          <div class="addons-col-title reveal">
+            Upgrades <span>adicional único</span>
+          </div>
+          <div class="addon-list">
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Página por especialidade</div>
+                <div class="addon-desc">
+                  Página dedicada a cada especialidade — Implantes, Ortodontia,
+                  Estética, Clareamento etc. — com SEO específico
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 200<small>por página</small></div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Domínio personalizado</div>
+                <div class="addon-desc">
+                  Registro e configuração do .com.br da sua clínica — ex:
+                  clinicavasques.com.br ou dredwardovasques.com.br
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 120<small>por ano</small></div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Botão WhatsApp flutuante</div>
+                <div class="addon-desc">
+                  Ícone fixo na tela com mensagem: "Olá, gostaria de agendar uma
+                  avaliação!" — já preenchida para o paciente
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 150<small>único</small></div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Blog odontológico</div>
+                <div class="addon-desc">
+                  Artigos que atraem pacientes via Google — "implante dental
+                  vale a pena", "clareamento caseiro x profissional" etc.
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 300<small>único</small></div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Google Analytics</div>
+                <div class="addon-desc">
+                  Painel para ver quantas pessoas visitam seu site, de onde vêm
+                  e quais páginas mais acessam
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 100<small>único</small></div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Formulário de avaliação gratuita</div>
+                <div class="addon-desc">
+                  Formulário de captação: o paciente informa o que precisa e
+                  chega ao seu WhatsApp já qualificado
+                </div>
+              </div>
+              <div class="addon-price">+ R$ 180<small>único</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="addons-col-title reveal">
+            Manutenção <span>recorrente</span>
+          </div>
+          <div class="addon-list">
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Plano Essencial</div>
+                <div class="addon-desc">
+                  Até 2 alterações/mês — textos, telefone, endereço, áreas de
+                  atuação
+                </div>
+              </div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 99<small>/mês</small></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 990/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="addon-item popular">
+              <div class="addon-info">
+                <div class="addon-popular-badge">⭐ Mais escolhido</div>
+                <div class="addon-name">Plano Plus</div>
+                <div class="addon-desc">
+                  Até 5 alterações/mês + monitoramento de desempenho + backup
+                  mensal
+                </div>
+                <div class="addon-tag-list">
+                  <span class="addon-tag">troca de textos</span>
+                  <span class="addon-tag">atualização de especialidades</span>
+                  <span class="addon-tag">publicação de artigos</span>
+                  <span class="addon-tag">fotos e galeria</span>
+                </div>
+              </div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 189<small>/mês</small></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 1.890/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-info">
+                <div class="addon-name">Plano Full</div>
+                <div class="addon-desc">
+                  Alterações ilimitadas + suporte prioritário + relatório mensal
+                  de acessos
+                </div>
+              </div>
+              <div class="addon-price-wrap">
+                <div class="addon-price-monthly">R$ 299<small>/mês</small></div>
+                <div class="addon-price-annual">
+                  ou <span class="annual-value">R$ 2.990/ano</span><br /><span
+                    class="annual-badge"
+                    >2 meses grátis</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="addon-item" style="background: var(--surface)">
+              <div class="addon-info">
+                <div class="addon-name" style="color: var(--teal)">
+                  Por que contratar manutenção?
+                </div>
+                <div class="addon-desc">
+                  Sites sem atualização perdem posição no Google. Com
+                  manutenção, sua clínica fica sempre relevante — e você não
+                  precisa me acionar toda vez que adicionar um serviço,
+                  atualizar fotos ou mudar o horário de atendimento.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="maint-tagline">
+            <strong>Seu site pronto é só o começo.</strong><br />
+            Mantemos ele atualizado, seguro e funcionando para você captar
+            clientes todos os dias.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ FAQ ═══════════════════════════════════════ -->
+    <section id="faq">
+      <p class="eyebrow reveal" data-num="09">Dúvidas</p>
+      <h2 class="sec-title reveal">
+        Perguntas antes<br /><span class="accent">de decidir.</span>
+      </h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text"
+              >O site segue as normas do CFO para publicidade
+              odontológica?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Sim. O site é desenvolvido dentro das diretrizes do Conselho
+              Federal de Odontologia (CFO), sem promessas de resultados
+              específicos ou linguagem proibida pelo código de ética. O foco é
+              informar, transmitir confiança e facilitar o agendamento — dentro
+              das normas.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              O prazo varia conforme o plano: Start em até 7 dias, Business em
+              até 14 dias e Authority em até 30 dias. O cronograma começa após o
+              envio das informações da sua clínica.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text">Meu site vai aparecer no Google?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Sim. Todos os planos incluem configuração básica de SEO para
+              indexação no Google. O plano Authority inclui SEO completo com
+              palavras-chave específicas do Direito e da sua cidade — como
+              "dentista perto de mim".
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text">Preciso entender de tecnologia?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Não. Você me passa as informações da sua clínica via WhatsApp —
+              nome, CRO, especialidades, fotos — e eu cuido de todo o resto:
+              design, programação, publicação e SEO. Simples assim.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text">Posso atualizar o conteúdo depois?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Sim. O plano Authority inclui painel de edição. Para os demais,
+              ofereço manutenção mensal (Essencial R$99, Plus R$189, Full R$299)
+              onde realizo as alterações por você com agilidade.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <span class="faq-q-text">Como funciona o pagamento?</span
+            ><span class="faq-q-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              50% na assinatura do contrato e 50% na entrega do site aprovado.
+              Aceito Pix, transferência ou cartão. Sem taxas escondidas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ══ CTA FINAL ═════════════════════════════════ -->
+    <section id="cta-final">
+      <p class="eyebrow reveal" style="justify-content: center">
+        Pronto para começar?
+      </p>
+      <h2 class="sec-title reveal">
+        Sua clínica captando<br />
+        <span class="accent">pacientes em 7 dias.</span>
+      </h2>
+      <p class="sec-sub reveal">
+        Não perca mais pacientes para clínicas que já têm presença digital.<br />
+        Fale agora e receba um orçamento gratuito no WhatsApp.
+      </p>
+      <div class="cta-ctas reveal">
+        <a
+          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica"
+          target="_blank"
+          class="btn btn-whatsapp btn-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          Quero meu site odontológico
+        </a>
+        <a href="#planos" class="btn btn-ghost btn-lg">Ver todos os planos</a>
+      </div>
+      <p class="cta-note reveal">
+        Orçamento gratuito · Resposta em até 1h · Sem compromisso
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-copy">© 2026 Filipe Rosso — Desenvolvimento Web</span>
+      <span class="footer-note">
+        <span class="footer-dot"></span>
+        Disponível para novos projetos
+      </span>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica"
+      target="_blank"
+      class="wa-float"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+      <span class="wa-label">Falar no WhatsApp</span>
+    </a>
+
+    <script>
+      // Cursor
+      const cursor = document.getElementById("cursor");
+      const ring = document.getElementById("cursorRing");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      if (window.matchMedia("(pointer:fine)").matches) {
+        document.addEventListener("mousemove", (e) => {
+          mx = e.clientX;
+          my = e.clientY;
+          cursor.style.left = mx - 4 + "px";
+          cursor.style.top = my - 4 + "px";
+        });
+        (function animRing() {
+          rx += (mx - rx - 15) * 0.12;
+          ry += (my - ry - 15) * 0.12;
+          ring.style.left = rx + "px";
+          ring.style.top = ry + "px";
+          requestAnimationFrame(animRing);
+        })();
+        document.querySelectorAll("a,button").forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cursor.style.transform = "scale(2.5)";
+            ring.style.borderColor =
+              getComputedStyle(document.documentElement)
+                .getPropertyValue("--teal")
+                .trim() + "99";
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.style.transform = "scale(1)";
+            ring.style.borderColor = "";
+          });
+        });
+      }
+
+      // Navbar scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 50),
+      );
+
+      // Reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 70);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document
+        .querySelectorAll(".reveal, .addon-item")
+        .forEach((el) => observer.observe(el));
+
+      // FAQ
+      document.querySelectorAll(".faq-q").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      // ── Light / Dark theme toggle + ink splash ──
+      const themeToggle = document.getElementById("themeToggle");
+      const inkCanvas = document.getElementById("inkCanvas");
+      const inkCtx = inkCanvas.getContext("2d");
+      function resizeInk() {
+        inkCanvas.width = window.innerWidth;
+        inkCanvas.height = window.innerHeight;
+      }
+      resizeInk();
+      window.addEventListener("resize", resizeInk);
+
+      function launchInk(color) {
+        const W = inkCanvas.width,
+          H = inkCanvas.height;
+        const rect = themeToggle.getBoundingClientRect();
+        const ox = rect.left + rect.width / 2,
+          oy = rect.top + rect.height / 2;
+        const drops = [];
+        for (let i = 0; i < 22; i++) {
+          const a = ((Math.PI * 2) / 22) * i + (Math.random() - 0.5) * 0.4;
+          const s = 6 + Math.random() * 14,
+            sz = 18 + Math.random() * 60;
+          drops.push({
+            x: ox,
+            y: oy,
+            vx: Math.cos(a) * s,
+            vy: Math.sin(a) * s,
+            size: sz,
+            alpha: 0.85 + Math.random() * 0.15,
+            decay: 0.013 + Math.random() * 0.01,
+          });
+        }
+        const bursts = [];
+        for (let i = 0; i < 5; i++)
+          bursts.push({
+            x: ox,
+            y: oy,
+            r: 0,
+            maxR: W * (0.35 + i * 0.18),
+            alpha: 0.18 - i * 0.03,
+            speed: 28 + i * 12,
+          });
+        let frame = 0;
+        function draw() {
+          inkCtx.clearRect(0, 0, W, H);
+          bursts.forEach((b) => {
+            b.r += b.speed;
+            if (b.r < b.maxR) {
+              inkCtx.beginPath();
+              inkCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+              inkCtx.strokeStyle =
+                color +
+                Math.round(b.alpha * 255)
+                  .toString(16)
+                  .padStart(2, "0");
+              inkCtx.lineWidth = 3;
+              inkCtx.stroke();
+              b.alpha -= 0.003;
+            }
+          });
+          let alive = false;
+          drops.forEach((d) => {
+            if (d.alpha <= 0) return;
+            alive = true;
+            d.x += d.vx;
+            d.y += d.vy;
+            d.vy += 0.35;
+            d.vx *= 0.97;
+            d.alpha -= d.decay;
+            inkCtx.save();
+            inkCtx.globalAlpha = Math.max(0, d.alpha);
+            inkCtx.beginPath();
+            inkCtx.ellipse(
+              d.x,
+              d.y,
+              d.size * 0.55,
+              d.size * 0.72,
+              Math.atan2(d.vy, d.vx),
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
+            inkCtx.beginPath();
+            inkCtx.ellipse(
+              d.x - d.vx * 1.2,
+              d.y - d.vy * 1.2,
+              d.size * 0.25,
+              d.size * 0.18,
+              0,
+              0,
+              Math.PI * 2,
+            );
+            inkCtx.fillStyle = color;
+            inkCtx.fill();
+            inkCtx.restore();
+          });
+          frame++;
+          if (alive || frame < 40) {
+            requestAnimationFrame(draw);
+          } else {
+            let fa = 1;
+            (function fo() {
+              fa -= 0.06;
+              inkCtx.globalAlpha = fa;
+              if (fa > 0) requestAnimationFrame(fo);
+              else {
+                inkCtx.clearRect(0, 0, W, H);
+                inkCtx.globalAlpha = 1;
+              }
+            })();
+          }
+        }
+        draw();
+      }
+
+      // Aplica tema salvo + sincroniza body e html
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.documentElement.classList.add("light-mode");
+        document.body.classList.add("light-mode");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isLight = document.documentElement.classList.toggle("light-mode");
+        document.body.classList.toggle("light-mode", isLight);
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+        launchInk(isLight ? "#1a4fa0" : "#2dd4c8");
+      });
+    </script>
+    <script src="/transitions.js"></script>
+    <script src="/mobile-fix.js"></script>
+  </body>
+</html>
