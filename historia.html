@@ -23,6 +23,7 @@
       name="description"
       content="A trajetória de Filipe Rosso na programação — de 2018 até hoje, passando por Banrisul, Stefanini e Qintess."
     />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -194,23 +195,33 @@
       .nav-logo span {
         color: var(--teal);
       }
+      .logo-rosso {
+        color: var(--teal);
+      }
       .nav-back {
         font-family: var(--font-mono);
         font-size: 0.68rem;
-        color: var(--muted);
+        color: var(--text);
         text-decoration: none;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        transition: color var(--t);
+        gap: 0.4rem;
+        transition:
+          color var(--t),
+          background var(--t),
+          border-color var(--t);
+        padding: 0.35rem 0.75rem;
+        border: 1px solid var(--border2);
+        border-radius: 2px;
+        background: var(--surface);
+        white-space: nowrap;
       }
       .nav-back:hover {
         color: var(--teal);
-      }
-      .nav-back::before {
-        content: "←";
+        border-color: var(--teal);
+        background: var(--teal-dim);
       }
 
       /* ── HERO ── */
@@ -1028,11 +1039,11 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE <span class="teal-word">ROSSO</span><span>.</span></a
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span>.</span></a
         >
       </div>
       <div class="nav-right">
-        <a href="/" class="nav-back"><span>Portfólio</span></a>
+        <a href="/" class="nav-back"><span class="material-symbols-outlined">arrow_back</span> Voltar</a>
         <button
           class="theme-toggle"
           id="themeToggle"

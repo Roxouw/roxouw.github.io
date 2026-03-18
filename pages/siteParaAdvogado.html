@@ -214,6 +214,9 @@
       .nav-logo span {
         color: var(--teal);
       }
+      .logo-rosso {
+        color: var(--teal);
+      }
       .nav-right {
         display: flex;
         align-items: center;
@@ -222,20 +225,27 @@
       .nav-back {
         font-family: var(--font-mono);
         font-size: 0.68rem;
-        color: var(--muted);
+        color: var(--text);
         text-decoration: none;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        transition: color var(--t);
-      }
-      .nav-back::before {
-        content: "←";
+        gap: 0.4rem;
+        transition:
+          color var(--t),
+          background var(--t),
+          border-color var(--t);
+        padding: 0.35rem 0.75rem;
+        border: 1px solid var(--border2);
+        border-radius: 2px;
+        background: var(--surface);
+        white-space: nowrap;
       }
       .nav-back:hover {
         color: var(--teal);
+        border-color: var(--teal);
+        background: var(--teal-dim);
       }
 
       /* ── THEME TOGGLE ──────────────────────── */
@@ -1684,8 +1694,20 @@
         nav {
           padding: 1.1rem 1.5rem;
         }
-        .nav-back span {
-          display: none;
+        .nav-logo {
+          font-size: 0.78rem;
+          line-height: 1.1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .logo-rosso {
+          display: block;
+        }
+        .nav-back {
+          font-size: 0.6rem;
+          padding: 0.28rem 0.55rem;
+          letter-spacing: 0.04em;
         }
         #hero {
           padding: 7rem 1.5rem 5rem;
@@ -1767,11 +1789,18 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE <span class="teal-word">ROSSO</span><span>.</span></a
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span>.</span></a
         >
       </div>
       <div class="nav-right">
-        <a href="/" class="nav-back"><span>Portfólio</span></a>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back"
+        />
+        <a href="/" class="nav-back"
+          ><span class="material-symbols-outlined">arrow_back</span> Voltar</a
+        >
+
         <button
           class="theme-toggle"
           id="themeToggle"
