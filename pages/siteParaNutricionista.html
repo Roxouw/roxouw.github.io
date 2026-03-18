@@ -90,6 +90,8 @@
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
         --t: 0.25s ease;
+        --cursor: white;
+        --cursor-glow: rgba(255, 252, 252, 0.15);
       }
 
       html {
@@ -126,6 +128,8 @@
         --teal-30: rgba(26, 79, 160, 0.3);
         --teal-03: rgba(26, 79, 160, 0.03);
         --lime: #2563eb;
+        --cursor: black;
+        --cursor-glow: rgba(1, 1, 1, 0.15);
       }
       html.light-mode {
         background: #f4f5f7;
@@ -161,7 +165,7 @@
           display: block;
           width: 8px;
           height: 8px;
-          background: var(--teal);
+          background: var(--cursor);
           border-radius: 50%;
           transition: transform 0.15s ease;
           z-index: 9999;
@@ -170,7 +174,7 @@
           display: block;
           width: 30px;
           height: 30px;
-          border: 1px solid var(--teal-30);
+          border: 1px solid var(--cursor-glow);
           border-radius: 50%;
           z-index: 9998;
           transition: border-color 0.4s ease;
@@ -562,7 +566,6 @@
 
       /* ══ PROBLEMA ════════════════════════════════ */
       #problema {
-        background: var(--bg2);
         text-align: center;
       }
       #problema .sec-title {
@@ -696,7 +699,6 @@
 
       /* ══ EXEMPLOS ════════════════════════════════ */
       #exemplos {
-        background: var(--bg2);
       }
       .examples-grid {
         display: grid;
@@ -900,7 +902,6 @@
 
       /* ══ DEPOIMENTOS ═════════════════════════════ */
       #depoimentos {
-        background: var(--bg2);
       }
       .dep-grid {
         display: grid;
@@ -955,7 +956,6 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-      
 
       /* ══ PROJETO REAL ════════════════════════════ */
       .projeto-inner {
@@ -1313,7 +1313,6 @@
       .browser-overlay a:hover {
         gap: 0.7rem;
       }
-      
 
       /* ══ PROVA SOCIAL ════════════════════════════ */
       #prova {
@@ -1391,7 +1390,6 @@
 
       /* ══ PLANOS ══════════════════════════════════ */
       #planos {
-        background: var(--bg2);
       }
       #planos .sec-sub {
         margin-bottom: 3.5rem;
@@ -1566,7 +1564,6 @@
 
       /* ══ CTA FINAL ═══════════════════════════════ */
       #cta-final {
-        background: var(--bg2);
         text-align: center;
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
@@ -1597,7 +1594,6 @@
 
       /* ══ ADDONS / MANUTENÇÃO ══════════════════════ */
       #addons {
-        background: var(--bg2);
       }
       .addons-grid {
         display: grid;
@@ -1773,7 +1769,6 @@
         color: var(--text);
         font-weight: 700;
       }
-      
 
       /* WHATSAPP FLOAT */
       .wa-float {
@@ -1928,6 +1923,64 @@
       }
 
       /* ── MOBILE (≤ 768px) ──────────────────────────── */
+      /* ── TABLET (769px – 1024px) ─────────────────────────── */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        nav {
+          padding: 1.1rem 2rem;
+        }
+        #hero {
+          padding: 7rem 2rem 5.5rem;
+        }
+        .hero-title {
+          font-size: clamp(2.4rem, 5.5vw, 5rem);
+        }
+        section {
+          padding: 5.5rem 2rem;
+        }
+        .searches-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .steps-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .examples-grid {
+          grid-template-columns: 1fr;
+        }
+        .proof-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .proof-features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+        .pkg.featured {
+          margin: 0;
+        }
+        .projeto-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .browser-viewport {
+          height: 300px;
+        }
+        .addons-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        footer {
+          padding: 1.75rem 2rem;
+        }
+        #cta-final {
+          padding: 6rem 2rem;
+        }
+        .dep-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* ── MOBILE (≤ 768px) ─────────────────────────────────── */
       @media (max-width: 768px) {
         nav {
           padding: 1rem 1.25rem;
@@ -1951,7 +2004,6 @@
         .nav-right {
           gap: 0.65rem;
         }
-
         #hero {
           padding: 6.5rem 1.25rem 4.5rem;
         }
@@ -1990,10 +2042,6 @@
         .trust-divider {
           display: none;
         }
-        .trust-item {
-          font-size: 0.58rem;
-        }
-
         section {
           padding: 4rem 1.25rem;
         }
@@ -2004,15 +2052,13 @@
           font-size: 0.72rem;
           margin-bottom: 2.5rem;
         }
-
         .searches-grid {
           grid-template-columns: repeat(2, 1fr);
         }
         .problema-alert {
-          padding: 1.25rem 1.25rem;
+          padding: 1.25rem;
           font-size: 0.72rem;
         }
-
         .steps-grid {
           grid-template-columns: 1fr 1fr;
         }
@@ -2022,18 +2068,15 @@
         .step-num {
           font-size: 2.5rem;
         }
-
         .examples-grid {
           grid-template-columns: 1fr;
         }
         .example-body {
           padding: 1.25rem;
         }
-
         .dep-grid {
           grid-template-columns: 1fr;
         }
-
         .projeto-inner {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -2052,7 +2095,6 @@
           justify-content: center;
           text-align: center;
         }
-
         .proof-grid {
           grid-template-columns: 1fr;
         }
@@ -2065,7 +2107,6 @@
         .proof-feat {
           padding: 1.25rem 1rem;
         }
-
         .packages-grid {
           grid-template-columns: 1fr;
         }
@@ -2078,7 +2119,6 @@
         .pkg-price .value {
           font-size: 2rem;
         }
-
         .addons-grid {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -2091,9 +2131,8 @@
         .addon-price-wrap {
           align-items: flex-start;
         }
-
         .faq-q {
-          padding: 1.25rem 1.25rem;
+          padding: 1.25rem;
         }
         .faq-q-text {
           font-size: 0.82rem;
@@ -2102,7 +2141,6 @@
           padding: 0 1.25rem 1.25rem;
           padding-top: 1rem;
         }
-
         #cta-final {
           padding: 4.5rem 1.25rem;
         }
@@ -2118,14 +2156,12 @@
           justify-content: center;
           text-align: center;
         }
-
         footer {
           flex-direction: column;
           text-align: center;
           padding: 1.25rem;
           gap: 0.75rem;
         }
-
         .wa-float {
           bottom: 1.25rem;
           right: 1.25rem;
@@ -2136,7 +2172,7 @@
         }
       }
 
-      /* ── MOBILE PEQUENO (≤ 480px) ──────────────────── */
+      /* ── MOBILE PEQUENO (≤ 480px) ─────────────────────────── */
       @media (max-width: 480px) {
         nav {
           padding: 0.9rem 1rem;
@@ -2152,9 +2188,6 @@
         }
         section {
           padding: 3.5rem 1rem;
-        }
-        .searches-grid {
-          grid-template-columns: 1fr 1fr;
         }
         .steps-grid {
           grid-template-columns: 1fr;
@@ -2178,6 +2211,558 @@
         footer {
           padding: 1rem;
         }
+      }
+      /* ══════════════════════════════════════════════════════════════
+         SEÇÕES COLORIDAS — alternância accent / dark
+      ══════════════════════════════════════════════════════════════ */
+
+      /* --- BASE ACCENT (fundo teal/navy vibrante) --- */
+      section.sec-accent {
+        background: var(--teal);
+        position: relative;
+        overflow: hidden;
+      }
+      section.sec-accent::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          -55deg,
+          transparent,
+          transparent 32px,
+          rgba(0, 0, 0, 0.032) 33px
+        );
+        pointer-events: none;
+      }
+
+      /* --- TEXTOS GERAIS NA ACCENT --- */
+      section.sec-accent .eyebrow {
+        color: rgba(19, 20, 22, 0.52);
+      }
+      section.sec-accent .eyebrow::before {
+        color: rgba(19, 20, 22, 0.32);
+      }
+      section.sec-accent .sec-title {
+        color: var(--bg);
+      }
+      section.sec-accent .sec-sub {
+        color: rgba(19, 20, 22, 0.65);
+      }
+
+      /* --- SEARCH / BUSCAS --- */
+      section.sec-accent .searches-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .search-item {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .search-item:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .search-query {
+        color: rgba(19, 20, 22, 0.72);
+      }
+      section.sec-accent .search-volume {
+        color: var(--bg);
+        border-color: rgba(0, 0, 0, 0.22);
+      }
+
+      /* --- ALERTA --- */
+      section.sec-accent .problema-alert {
+        background: rgba(0, 0, 0, 0.08);
+        border-color: rgba(0, 0, 0, 0.12);
+        border-left-color: var(--bg);
+        color: rgba(19, 20, 22, 0.7);
+      }
+      section.sec-accent .problema-alert strong {
+        color: var(--bg);
+      }
+
+      /* --- STEPS (como funciona) --- */
+      section.sec-accent .steps-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .step {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .step:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .step-num {
+        color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .step:hover .step-num {
+        color: var(--bg);
+      }
+      section.sec-accent .step-title {
+        color: var(--bg);
+      }
+      section.sec-accent .step-desc {
+        color: rgba(19, 20, 22, 0.62);
+      }
+      section.sec-accent .steps-footer {
+        color: rgba(19, 20, 22, 0.5);
+      }
+      section.sec-accent .steps-footer span {
+        color: var(--bg);
+      }
+
+      /* --- EXEMPLOS --- */
+      section.sec-accent .examples-grid {
+      }
+      section.sec-accent .example-card {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.12);
+      }
+      section.sec-accent .example-card:hover {
+        background: rgba(0, 0, 0, 0.13);
+        border-color: rgba(0, 0, 0, 0.26);
+      }
+      section.sec-accent .example-type {
+        color: rgba(19, 20, 22, 0.55);
+      }
+      section.sec-accent .example-name {
+        color: var(--bg);
+      }
+      section.sec-accent .example-desc {
+        color: rgba(19, 20, 22, 0.6);
+      }
+      section.sec-accent .example-tag {
+        color: rgba(19, 20, 22, 0.65);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+
+      /* --- DEPOIMENTOS --- */
+      section.sec-accent .dep-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .dep-card {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .dep-card:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .dep-stars {
+        color: var(--bg);
+      }
+      section.sec-accent .dep-text {
+        color: rgba(19, 20, 22, 0.68);
+        border-left-color: rgba(0, 0, 0, 0.2);
+      }
+      section.sec-accent .dep-text strong {
+        color: var(--bg);
+      }
+      section.sec-accent .dep-name {
+        color: var(--bg);
+      }
+      section.sec-accent .dep-role {
+        color: rgba(19, 20, 22, 0.5);
+      }
+
+      /* --- PROJETO REAL --- */
+      section.sec-accent .projeto-badge {
+        border-color: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--bg);
+      }
+      section.sec-accent .projeto-title {
+        color: var(--bg);
+      }
+      section.sec-accent .projeto-title .accent {
+        color: rgba(19, 20, 22, 0.5);
+      }
+      section.sec-accent .projeto-desc {
+        color: rgba(19, 20, 22, 0.65);
+      }
+      section.sec-accent .projeto-tag {
+        border-color: rgba(0, 0, 0, 0.2);
+        color: rgba(19, 20, 22, 0.65);
+      }
+      section.sec-accent .browser-frame {
+        border-color: rgba(0, 0, 0, 0.2);
+      }
+      section.sec-accent .browser-bar {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+      section.sec-accent .browser-url {
+        background: rgba(0, 0, 0, 0.08);
+        border-color: rgba(0, 0, 0, 0.15);
+        color: rgba(19, 20, 22, 0.6);
+      }
+      section.sec-accent .browser-overlay {
+        background: linear-gradient(
+          to bottom,
+          transparent 55%,
+          var(--teal) 100%
+        );
+      }
+      section.sec-accent .browser-overlay a {
+        color: var(--bg);
+      }
+
+      /* --- PROVA SOCIAL --- */
+      section.sec-accent .proof-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .proof-item {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .proof-item:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .proof-num {
+        color: var(--bg);
+      }
+      section.sec-accent .proof-label {
+        color: var(--bg);
+      }
+      section.sec-accent .proof-desc {
+        color: rgba(19, 20, 22, 0.6);
+      }
+      section.sec-accent .proof-features {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .proof-feat {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .proof-feat:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .proof-feat-title {
+        color: var(--bg);
+      }
+      section.sec-accent .proof-feat-desc {
+        color: rgba(19, 20, 22, 0.6);
+      }
+
+      /* --- PLANOS --- */
+      section.sec-accent .packages-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .pkg {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .pkg.featured {
+        background: rgba(0, 0, 0, 0.15);
+        border-color: var(--bg);
+      }
+      section.sec-accent .pkg-badge {
+        background: var(--bg);
+        color: var(--teal);
+      }
+      section.sec-accent .pkg-name {
+        color: var(--bg);
+      }
+      section.sec-accent .pkg-desc {
+        color: rgba(19, 20, 22, 0.6);
+      }
+      section.sec-accent .pkg-price .value {
+        color: var(--bg);
+      }
+      section.sec-accent .pkg-price .currency {
+        color: rgba(19, 20, 22, 0.5);
+      }
+      section.sec-accent .pkg-prazo {
+        color: rgba(19, 20, 22, 0.5);
+      }
+      section.sec-accent .pkg-divider {
+        border-color: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .pkg-features li {
+        color: rgba(19, 20, 22, 0.7);
+      }
+      section.sec-accent .pkg-features li::before {
+        color: var(--bg);
+      }
+      section.sec-accent .pkg-features li.no {
+        color: rgba(19, 20, 22, 0.38);
+      }
+      section.sec-accent .pkg-features li.no::before {
+        color: rgba(0, 0, 0, 0.22);
+      }
+
+      /* --- ADDONS --- */
+      section.sec-accent .addons-col-title {
+        color: var(--bg);
+      }
+      section.sec-accent .addons-col-title span {
+        background: var(--bg);
+        color: var(--teal);
+      }
+      section.sec-accent .addon-list {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .addon-item {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .addon-item:hover {
+        background: rgba(0, 0, 0, 0.14);
+      }
+      section.sec-accent .addon-item.popular {
+        background: rgba(0, 0, 0, 0.12);
+      }
+      section.sec-accent .addon-name {
+        color: var(--bg);
+      }
+      section.sec-accent .addon-desc {
+        color: rgba(19, 20, 22, 0.6);
+      }
+      section.sec-accent .addon-price-monthly {
+        color: var(--bg);
+      }
+      section.sec-accent .addon-price-annual {
+        color: rgba(19, 20, 22, 0.55);
+      }
+      section.sec-accent .addon-price-annual .annual-value {
+        color: var(--bg);
+      }
+      section.sec-accent .annual-badge {
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--bg);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .addon-popular-badge {
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--bg);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .addon-tag {
+        color: rgba(19, 20, 22, 0.65);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .maint-tagline {
+        background: rgba(0, 0, 0, 0.06);
+        border-color: rgba(0, 0, 0, 0.1);
+        border-top-color: var(--bg);
+        color: rgba(19, 20, 22, 0.65);
+      }
+      section.sec-accent .maint-tagline strong {
+        color: var(--bg);
+      }
+
+      /* --- FAQ --- */
+      section.sec-accent .faq-list {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .faq-item {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .faq-q:hover {
+        background: rgba(0, 0, 0, 0.12);
+      }
+      section.sec-accent .faq-q-text {
+        color: var(--bg);
+      }
+      section.sec-accent .faq-q-icon {
+        border-color: rgba(0, 0, 0, 0.22);
+        color: rgba(19, 20, 22, 0.55);
+      }
+      section.sec-accent .faq-item.open .faq-q-icon {
+        background: var(--bg);
+        color: var(--teal);
+        border-color: var(--bg);
+      }
+      section.sec-accent .faq-a-inner {
+        color: rgba(19, 20, 22, 0.65);
+        border-top-color: rgba(0, 0, 0, 0.12);
+      }
+
+      /* --- CTA FINAL --- */
+      section.sec-accent .cta-note {
+        color: rgba(19, 20, 22, 0.5);
+      }
+
+      /* --- BOTÕES INVERTIDOS DENTRO DA ACCENT --- */
+      section.sec-accent .btn-ghost {
+        color: var(--bg);
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+      section.sec-accent .btn-ghost:hover {
+        color: var(--bg);
+        border-color: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.07);
+      }
+      section.sec-accent .btn-primary {
+        background: var(--bg);
+        color: var(--teal);
+        border-color: var(--bg);
+      }
+      section.sec-accent .btn-primary:hover {
+        background: transparent;
+        color: var(--bg);
+        border-color: var(--bg);
+      }
+
+      /* ─── LIGHT MODE: accent usa navy (#1a4fa0), textos brancos ─── */
+      html.light-mode section.sec-accent .sec-title,
+      html.light-mode section.sec-accent .step-title,
+      html.light-mode section.sec-accent .example-name,
+      html.light-mode section.sec-accent .dep-name,
+      html.light-mode section.sec-accent .dep-stars,
+      html.light-mode section.sec-accent .dep-text strong,
+      html.light-mode section.sec-accent .proof-num,
+      html.light-mode section.sec-accent .proof-label,
+      html.light-mode section.sec-accent .proof-feat-title,
+      html.light-mode section.sec-accent .pkg-name,
+      html.light-mode section.sec-accent .pkg-price .value,
+      html.light-mode section.sec-accent .addon-name,
+      html.light-mode section.sec-accent .addons-col-title,
+      html.light-mode section.sec-accent .faq-q-text,
+      html.light-mode section.sec-accent .projeto-title,
+      html.light-mode section.sec-accent .problema-alert strong {
+        color: #fff;
+      }
+
+      html.light-mode section.sec-accent .sec-sub,
+      html.light-mode section.sec-accent .step-desc,
+      html.light-mode section.sec-accent .steps-footer,
+      html.light-mode section.sec-accent .example-desc,
+      html.light-mode section.sec-accent .dep-text,
+      html.light-mode section.sec-accent .dep-role,
+      html.light-mode section.sec-accent .proof-desc,
+      html.light-mode section.sec-accent .proof-feat-desc,
+      html.light-mode section.sec-accent .pkg-desc,
+      html.light-mode section.sec-accent .pkg-features li,
+      html.light-mode section.sec-accent .pkg-prazo,
+      html.light-mode section.sec-accent .addon-desc,
+      html.light-mode section.sec-accent .faq-a-inner,
+      html.light-mode section.sec-accent .projeto-desc,
+      html.light-mode section.sec-accent .problema-alert {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      html.light-mode section.sec-accent .eyebrow {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      html.light-mode section.sec-accent .step-num {
+        color: rgba(255, 255, 255, 0.18);
+      }
+      html.light-mode section.sec-accent .step:hover .step-num,
+      html.light-mode section.sec-accent .steps-footer span {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .pkg-features li::before {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .pkg-features li.no {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      html.light-mode section.sec-accent .pkg-features li.no::before {
+        color: rgba(255, 255, 255, 0.25);
+      }
+      html.light-mode section.sec-accent .pkg-badge {
+        background: #fff;
+        color: var(--teal);
+      }
+      html.light-mode section.sec-accent .addons-col-title span {
+        background: #fff;
+        color: var(--teal);
+      }
+      html.light-mode section.sec-accent .addon-price-monthly {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .addon-price-annual .annual-value {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .annual-badge,
+      html.light-mode section.sec-accent .addon-popular-badge {
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      html.light-mode section.sec-accent .addon-tag {
+        color: rgba(255, 255, 255, 0.65);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      html.light-mode section.sec-accent .maint-tagline {
+        color: rgba(255, 255, 255, 0.65);
+        border-top-color: #fff;
+      }
+      html.light-mode section.sec-accent .maint-tagline strong {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .faq-q-icon {
+        border-color: rgba(255, 255, 255, 0.25);
+        color: rgba(255, 255, 255, 0.55);
+      }
+      html.light-mode section.sec-accent .faq-item.open .faq-q-icon {
+        background: #fff;
+        color: var(--teal);
+        border-color: #fff;
+      }
+      html.light-mode section.sec-accent .faq-a-inner {
+        border-top-color: rgba(255, 255, 255, 0.15);
+      }
+      html.light-mode section.sec-accent .cta-note {
+        color: rgba(255, 255, 255, 0.52);
+      }
+      html.light-mode section.sec-accent .btn-ghost {
+        color: rgba(255, 255, 255, 0.88);
+        border-color: rgba(255, 255, 255, 0.32);
+      }
+      html.light-mode section.sec-accent .btn-ghost:hover {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+      html.light-mode section.sec-accent .btn-primary {
+        background: #fff;
+        color: var(--teal);
+        border-color: #fff;
+      }
+      html.light-mode section.sec-accent .btn-primary:hover {
+        background: transparent;
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .browser-overlay {
+        background: linear-gradient(
+          to bottom,
+          transparent 55%,
+          var(--teal) 100%
+        );
+      }
+      html.light-mode section.sec-accent .browser-overlay a {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .projeto-badge {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      html.light-mode section.sec-accent .projeto-tag {
+        color: rgba(255, 255, 255, 0.65);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      html.light-mode section.sec-accent .search-query {
+        color: rgba(255, 255, 255, 0.72);
+      }
+      html.light-mode section.sec-accent .search-volume {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+      html.light-mode section.sec-accent .problema-alert {
+        border-left-color: #fff;
+      }
+
+      /* --- DIVISOR ENTRE ACCENT E DARK --- */
+      hr.divider-accent {
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      html.light-mode hr.divider-accent {
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      /* --- SEÇÃO DARK (alternada) --- */
+      section.sec-dark {
+        background: var(--bg2);
       }
     </style>
   </head>
@@ -2328,7 +2913,7 @@
     <hr class="divider" />
 
     <!-- ══ PROBLEMA ══════════════════════════════════ -->
-    <section id="problema">
+    <section id="problema" class="sec-accent">
       <p class="eyebrow reveal" data-num="01" style="justify-content: center">
         O problema
       </p>
@@ -2380,7 +2965,7 @@
     <hr class="divider" />
 
     <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
-    <section id="como-funciona">
+    <section id="como-funciona" class="sec-dark">
       <p class="eyebrow reveal" data-num="02">Como funciona</p>
       <h2 class="sec-title reveal">
         Do pedido ao ar<br /><span class="accent">em 4 passos.</span>
@@ -2435,7 +3020,7 @@
     <hr class="divider" />
 
     <!-- ══ EXEMPLOS ══════════════════════════════════ -->
-    <section id="exemplos">
+    <section id="exemplos" class="sec-accent">
       <p class="eyebrow reveal" data-num="03">Modelos</p>
       <h2 class="sec-title reveal">
         O que seu site<br /><span class="accent">pode ter.</span>
@@ -2597,7 +3182,7 @@
     <hr class="divider" />
 
     <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
-    <section id="depoimentos">
+    <section id="depoimentos" class="sec-dark">
       <p class="eyebrow reveal" data-num="04">Depoimentos</p>
       <h2 class="sec-title reveal">
         O que dizem<br /><span class="accent">os clientes.</span>
@@ -2661,7 +3246,7 @@
     <hr class="divider" />
 
     <!-- ══ PROJETO REAL ══════════════════════════════ -->
-    <section id="projeto-real">
+    <section id="projeto-real" class="sec-accent">
       <p class="eyebrow reveal" data-num="05" style="margin-bottom: 0.5rem">
         Projeto entregue
       </p>
@@ -2807,7 +3392,7 @@
     <hr class="divider" />
 
     <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
-    <section id="prova">
+    <section id="prova" class="sec-dark">
       <p class="eyebrow reveal" data-num="06">Por que escolher</p>
       <h2 class="sec-title reveal">
         Um site de nutrição<br /><span class="accent"
@@ -2914,7 +3499,7 @@
     <hr class="divider" />
 
     <!-- ══ PLANOS ════════════════════════════════════ -->
-    <section id="planos">
+    <section id="planos" class="sec-accent">
       <p class="eyebrow reveal" data-num="07">Planos</p>
       <h2 class="sec-title reveal">
         Preço fixo,<br /><span class="accent">sem surpresas.</span>
@@ -3060,7 +3645,7 @@
     <hr class="divider" />
 
     <!-- UPGRADES & MANUTENÇÃO -->
-    <section id="addons">
+    <section id="addons" class="sec-dark">
       <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
       <h2 class="sec-title reveal">
         Upgrades e<br /><span class="accent">manutenção mensal.</span>
@@ -3231,7 +3816,7 @@
     <hr class="divider" />
 
     <!-- ══ FAQ ═══════════════════════════════════════ -->
-    <section id="faq">
+    <section id="faq" class="sec-accent">
       <p class="eyebrow reveal" data-num="09">Dúvidas</p>
       <h2 class="sec-title reveal">
         Perguntas antes<br /><span class="accent">de decidir.</span>
@@ -3324,7 +3909,7 @@
     <hr class="divider" />
 
     <!-- ══ CTA FINAL ═════════════════════════════════ -->
-    <section id="cta-final">
+    <section id="cta-final" class="sec-accent">
       <p class="eyebrow reveal" style="justify-content: center">
         Pronto para começar?
       </p>

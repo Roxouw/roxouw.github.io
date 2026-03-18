@@ -23,7 +23,7 @@
        SEO PRIMÁRIO
   ════════════════════════════════════════ -->
     <title>
-      Filipe Rosso | Desenvolvedor Full Stack — Desenvolvedor Web
+      Filipe Rosso | Desenvolvedor Full Stack — C#/.NET, React, TypeScript
     </title>
     <meta
       name="description"
@@ -44,7 +44,7 @@
     <meta property="og:url" content="https://roxouw.github.io/" />
     <meta
       property="og:title"
-      content="Filipe Rosso | Desenvolvedor Full Stack | Desenvolvedor Web"
+      content="Filipe Rosso | Desenvolvedor Full Stack"
     />
     <meta
       property="og:description"
@@ -59,7 +59,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Filipe Rosso | Desenvolvedor Full Stack | Desenvolvedor Web"
+      content="Filipe Rosso | Desenvolvedor Full Stack"
     />
     <meta
       name="twitter:description"
@@ -171,6 +171,8 @@
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
         --transition: 0.25s ease;
+        --cursor: white;
+        --cursor-glow: rgba(255, 252, 252, 0.15);
       }
 
       /* ── LIGHT MODE ──────────────────────────── */
@@ -192,6 +194,8 @@
         --teal-20: rgba(26, 79, 160, 0.2);
         --teal-30: rgba(26, 79, 160, 0.3);
         --lime: #2563eb;
+        --cursor: black;
+        --cursor-glow: rgba(1, 1, 1, 0.15);
       }
 
       html.light-mode {
@@ -250,7 +254,7 @@
           display: block;
           width: 8px;
           height: 8px;
-          background: var(--teal);
+          background: var(--cursor);
           border-radius: 50%;
           transition: transform 0.15s ease;
           z-index: 9999;
@@ -259,7 +263,7 @@
           display: block;
           width: 30px;
           height: 30px;
-          border: 1px solid var(--teal-glow);
+          border: 1px solid var(--cursor-glow);
           border-radius: 50%;
           z-index: 9998;
           transition: border-color 0.4s ease;
@@ -276,7 +280,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+        padding: 1.25rem 3rem;
         border-bottom: 1px solid transparent;
         transition:
           background var(--transition),
@@ -397,7 +401,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 0 clamp(1.25rem, 5vw, 3rem) 5rem;
+        padding: 0 3rem 5rem;
         position: relative;
         overflow: hidden;
       }
@@ -517,7 +521,7 @@
       }
       .scroll-indicator {
         position: absolute;
-        right: clamp(1.25rem, 4vw, 3rem);
+        right: 3rem;
         bottom: 5rem;
         display: flex;
         flex-direction: column;
@@ -587,7 +591,7 @@
 
       /* SECTION COMMON */
       section {
-        padding: 7rem clamp(1.25rem, 5vw, 3rem);
+        padding: 7rem 3rem;
         position: relative;
       }
       .divider {
@@ -617,13 +621,319 @@
         margin-bottom: 4rem;
       }
 
+      /* ══ SEÇÕES COLORIDAS ════════════════════════════════ */
+      section.sec-accent {
+        background: var(--teal);
+        position: relative;
+        overflow: hidden;
+      }
+      section.sec-accent::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          -55deg,
+          transparent,
+          transparent 30px,
+          rgba(0, 0, 0, 0.035) 31px
+        );
+        pointer-events: none;
+      }
+      /* Cores dos textos dentro da accent (dark mode — teal vibrante) */
+      section.sec-accent .section-eyebrow {
+        color: rgba(19, 20, 22, 0.55);
+      }
+      section.sec-accent .section-eyebrow::before {
+        color: rgba(19, 20, 22, 0.35);
+      }
+      section.sec-accent .section-title {
+        color: var(--bg);
+      }
+      section.sec-accent .about-text {
+        color: rgba(19, 20, 22, 0.72);
+      }
+      section.sec-accent .about-text strong {
+        color: var(--bg);
+      }
+      section.sec-accent .about-stats {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.13);
+      }
+      section.sec-accent .stat-box {
+        background: rgba(0, 0, 0, 0.06);
+      }
+      section.sec-accent .stat-box:hover {
+        background: rgba(0, 0, 0, 0.16);
+      }
+      section.sec-accent .stat-num {
+        color: var(--bg);
+      }
+      section.sec-accent .stat-label {
+        color: rgba(19, 20, 22, 0.55);
+      }
+      section.sec-accent .stack-label {
+        color: rgba(19, 20, 22, 0.5);
+      }
+      section.sec-accent .tech-grid {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .tech-item {
+        background: rgba(0, 0, 0, 0.05);
+        color: rgba(19, 20, 22, 0.78);
+      }
+      section.sec-accent .tech-item:hover {
+        background: rgba(0, 0, 0, 0.16);
+        color: var(--bg);
+      }
+      section.sec-accent .tech-dot {
+        background: var(--bg);
+      }
+      section.sec-accent .tech-badge {
+        border-color: rgba(0, 0, 0, 0.18);
+        color: rgba(19, 20, 22, 0.5);
+      }
+      /* Skills accent */
+      section.sec-accent .skills-grid {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .skill-card {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      section.sec-accent .skill-card:hover {
+        background: rgba(0, 0, 0, 0.15);
+      }
+      section.sec-accent .skill-icon {
+        color: var(--bg);
+      }
+      section.sec-accent .skill-name {
+        color: var(--bg);
+      }
+      section.sec-accent .skill-desc {
+        color: rgba(19, 20, 22, 0.62);
+      }
+      section.sec-accent .skill-tag {
+        color: var(--bg);
+        border-color: rgba(19, 20, 22, 0.22);
+      }
+      section.sec-accent .skill-card::after {
+        background: linear-gradient(90deg, rgba(19, 20, 22, 0.5), transparent);
+      }
+      /* Projects accent */
+      section.sec-accent .project-card {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.13);
+      }
+      section.sec-accent .project-card:hover {
+        background: rgba(0, 0, 0, 0.13);
+        border-color: rgba(0, 0, 0, 0.28);
+      }
+      section.sec-accent .project-num {
+        color: rgba(19, 20, 22, 0.45);
+      }
+      section.sec-accent .project-title {
+        color: var(--bg);
+      }
+      section.sec-accent .project-desc {
+        color: rgba(19, 20, 22, 0.62);
+      }
+      section.sec-accent .stack-tag {
+        color: var(--bg);
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .project-link {
+        color: rgba(19, 20, 22, 0.6);
+        border-color: rgba(0, 0, 0, 0.18);
+      }
+      section.sec-accent .project-link:hover {
+        color: var(--bg);
+        border-color: var(--bg);
+      }
+      section.sec-accent .project-visual {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      section.sec-accent .project-visual-text {
+        color: rgba(19, 20, 22, 0.35);
+      }
+      /* Freelance accent */
+      section.sec-accent .freelance-text h2 {
+        color: var(--bg);
+      }
+      section.sec-accent .freelance-text h2 span {
+        color: rgba(19, 20, 22, 0.42);
+        text-decoration: underline;
+        text-decoration-color: rgba(19, 20, 22, 0.22);
+      }
+      section.sec-accent .freelance-text p {
+        color: rgba(19, 20, 22, 0.62);
+      }
+      /* Buttons invertidos */
+      section.sec-accent .btn-ghost {
+        color: var(--bg);
+        border-color: rgba(19, 20, 22, 0.32);
+      }
+      section.sec-accent .btn-ghost:hover {
+        color: var(--bg);
+        border-color: rgba(19, 20, 22, 0.65);
+        background: rgba(0, 0, 0, 0.07);
+      }
+      section.sec-accent .btn-primary {
+        background: var(--bg);
+        color: var(--teal);
+        border-color: var(--bg);
+      }
+      section.sec-accent .btn-primary:hover {
+        background: transparent;
+        color: var(--bg);
+        border-color: var(--bg);
+      }
+      /* Contact accent */
+      section.sec-accent .contact-title {
+        color: var(--bg);
+      }
+      section.sec-accent .contact-title .outline {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(19, 20, 22, 0.38);
+      }
+      section.sec-accent .contact-email {
+        color: var(--bg);
+        border-color: rgba(19, 20, 22, 0.32);
+      }
+      section.sec-accent .contact-email:hover {
+        border-color: var(--bg);
+      }
+      section.sec-accent .social-link {
+        color: rgba(19, 20, 22, 0.65);
+      }
+      section.sec-accent .social-link:hover {
+        color: var(--bg);
+      }
+      section.sec-accent .social-divider {
+        background: rgba(19, 20, 22, 0.22);
+      }
+
+      /* LIGHT MODE — accent usa navy (#1a4fa0) e textos brancos */
+      html.light-mode section.sec-accent .section-title,
+      html.light-mode section.sec-accent .about-text strong,
+      html.light-mode section.sec-accent .stat-num,
+      html.light-mode section.sec-accent .skill-icon,
+      html.light-mode section.sec-accent .skill-name,
+      html.light-mode section.sec-accent .project-title,
+      html.light-mode section.sec-accent .freelance-text h2,
+      html.light-mode section.sec-accent .contact-title {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .about-text {
+        color: rgba(255, 255, 255, 0.72);
+      }
+      html.light-mode section.sec-accent .about-stats,
+      html.light-mode section.sec-accent .tech-grid,
+      html.light-mode section.sec-accent .skills-grid {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      html.light-mode section.sec-accent .stat-box,
+      html.light-mode section.sec-accent .tech-item,
+      html.light-mode section.sec-accent .skill-card,
+      html.light-mode section.sec-accent .project-card {
+        background: rgba(255, 255, 255, 0.07);
+      }
+      html.light-mode section.sec-accent .stat-box:hover,
+      html.light-mode section.sec-accent .tech-item:hover,
+      html.light-mode section.sec-accent .skill-card:hover,
+      html.light-mode section.sec-accent .project-card:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+      html.light-mode section.sec-accent .stat-label,
+      html.light-mode section.sec-accent .stack-label,
+      html.light-mode section.sec-accent .section-eyebrow {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      html.light-mode section.sec-accent .tech-item {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      html.light-mode section.sec-accent .tech-item:hover {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .tech-dot {
+        background: rgba(255, 255, 255, 0.85);
+      }
+      html.light-mode section.sec-accent .skill-desc,
+      html.light-mode section.sec-accent .project-desc,
+      html.light-mode section.sec-accent .freelance-text p {
+        color: rgba(255, 255, 255, 0.62);
+      }
+      html.light-mode section.sec-accent .skill-tag,
+      html.light-mode section.sec-accent .project-link {
+        color: rgba(255, 255, 255, 0.85);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      html.light-mode section.sec-accent .project-link:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+      html.light-mode section.sec-accent .stack-tag {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+      html.light-mode section.sec-accent .btn-ghost {
+        color: rgba(255, 255, 255, 0.85);
+        border-color: rgba(255, 255, 255, 0.32);
+      }
+      html.light-mode section.sec-accent .btn-ghost:hover {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+      html.light-mode section.sec-accent .btn-primary {
+        background: #fff;
+        color: var(--teal);
+        border-color: #fff;
+      }
+      html.light-mode section.sec-accent .btn-primary:hover {
+        background: transparent;
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .contact-title .outline {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+      }
+      html.light-mode section.sec-accent .contact-email {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+      html.light-mode section.sec-accent .social-link {
+        color: rgba(255, 255, 255, 0.65);
+      }
+      html.light-mode section.sec-accent .social-link:hover {
+        color: #fff;
+      }
+      html.light-mode section.sec-accent .social-divider {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      html.light-mode section.sec-accent .freelance-text h2 span {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      /* Divisor entre accent e dark */
+      hr.divider-accent {
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      html.light-mode hr.divider-accent {
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      /* ── DARK SPLIT: seções alternadas mais escuras ────── */
+      section.sec-dark {
+        background: var(--bg2);
+      }
+
       /* ABOUT */
       #about {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
         gap: 5rem;
         align-items: start;
-        overflow: hidden;
       }
       .about-text {
         font-size: 1rem;
@@ -722,7 +1032,7 @@
 
       /* SKILLS */
       #skills {
-        background: var(--bg2);
+        /* background controlado por .sec-dark */
       }
       .skills-grid {
         display: grid;
@@ -957,7 +1267,6 @@
 
       /* FREELANCE BANNER */
       #freelance {
-        background: var(--bg2);
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
       }
@@ -993,7 +1302,7 @@
       /* CONTACT */
       #contact {
         text-align: center;
-        padding: 9rem clamp(1.25rem, 5vw, 3rem);
+        padding: 9rem 3rem;
       }
       .contact-title {
         font-size: clamp(2.8rem, 7vw, 7rem);
@@ -1048,7 +1357,7 @@
       /* FOOTER */
       footer {
         border-top: 1px solid var(--border);
-        padding: 1.75rem clamp(1.25rem, 4vw, 3rem);
+        padding: 1.75rem 3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1121,87 +1430,10 @@
         }
       }
 
-      /* ── TABLET (769px – 1024px) ───────────────────── */
-      @media (min-width: 769px) and (max-width: 1024px) {
-        nav {
-          padding: 1.1rem 2rem;
-        }
-        .nav-links {
-          gap: 1.25rem;
-        }
-        .nav-links a {
-          font-size: 0.65rem;
-        }
-
-        #hero {
-          padding: 0 2rem 5rem;
-        }
-        .hero-title {
-          font-size: clamp(2.8rem, 6vw, 5.5rem);
-        }
-        .hero-bottom {
-          gap: 1.5rem;
-        }
-        .hero-desc {
-          max-width: 260px;
-        }
-
-        section {
-          padding: 5.5rem 2rem;
-        }
-
-        #about {
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
-        }
-        .about-right {
-          padding-top: 4rem;
-        }
-        .tech-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .skills-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .projects-grid {
-          grid-template-columns: 1fr;
-        }
-        .project-card.featured {
-          grid-column: span 1;
-          grid-template-columns: 1fr 0.7fr;
-          gap: 2rem;
-        }
-
-        #freelance {
-          padding: 4.5rem 2rem;
-        }
-        .freelance-inner {
-          gap: 2rem;
-        }
-        .freelance-actions {
-          flex-direction: column;
-          gap: 0.6rem;
-        }
-        .freelance-actions .btn {
-          justify-content: center;
-          text-align: center;
-        }
-
-        #contact {
-          padding: 7rem 2rem;
-        }
-
-        footer {
-          padding: 1.75rem 2rem;
-        }
-      }
-
-      /* ── MOBILE (≤ 768px) ──────────────────────────── */
+      /* ── MOBILE ─────────────────────────────────── */
       @media (max-width: 768px) {
         nav {
-          padding: 1rem 1.25rem;
+          padding: 1.1rem 1.5rem;
         }
         .nav-logo {
           font-size: 0.88rem;
@@ -1219,15 +1451,11 @@
         }
 
         #hero {
-          padding: 0 1.25rem 4rem;
+          padding: 0 1.5rem 4.5rem;
           min-height: 100svh;
         }
-        .hero-badge {
-          font-size: 0.58rem;
-          margin-bottom: 1rem;
-        }
         .hero-title {
-          font-size: clamp(2.2rem, 9.5vw, 4rem);
+          font-size: clamp(2rem, 9vw, 4rem);
         }
         .intro-name {
           flex-direction: column;
@@ -1239,25 +1467,16 @@
         .hero-bottom {
           flex-direction: column;
           align-items: flex-start;
-          gap: 1.5rem;
-          margin-top: 2rem;
-        }
-        .hero-desc {
-          font-size: 0.78rem;
-          max-width: 100%;
+          gap: 1.75rem;
         }
         .hero-cta {
           width: 100%;
           flex-wrap: wrap;
-          gap: 0.6rem;
         }
         .hero-cta .btn {
-          flex: 1 1 calc(50% - 0.3rem);
-          min-width: 110px;
+          flex: 1;
+          min-width: 120px;
           justify-content: center;
-          text-align: center;
-          font-size: 0.65rem;
-          padding: 0.75rem 1rem;
         }
         .scroll-indicator {
           display: none;
@@ -1269,30 +1488,15 @@
         }
 
         section {
-          padding: 4rem 1.25rem;
-        }
-
-        .section-title {
-          font-size: clamp(1.75rem, 7vw, 2.5rem);
-          margin-bottom: 2.5rem;
+          padding: 5rem 1.5rem;
         }
 
         #about {
           grid-template-columns: 1fr;
-          gap: 2rem;
-          padding: 4rem 1.25rem;
+          gap: 2.5rem;
         }
         .about-right {
           padding-top: 0;
-        }
-        .about-text {
-          font-size: 0.92rem;
-        }
-        .about-stats {
-          grid-template-columns: 1fr 1fr;
-        }
-        .stat-num {
-          font-size: 1.6rem;
         }
         .tech-grid {
           grid-template-columns: repeat(2, 1fr);
@@ -1302,95 +1506,58 @@
           grid-template-columns: 1fr;
         }
         .skill-card {
-          padding: 1.75rem 1.25rem;
+          padding: 2rem 1.5rem;
         }
 
         .projects-grid {
           grid-template-columns: 1fr;
         }
-        .project-card {
-          padding: 1.75rem 1.25rem;
-        }
         .project-card.featured {
           grid-column: span 1;
           grid-template-columns: 1fr;
-          gap: 1.5rem;
         }
         .project-visual {
           display: none;
         }
-        .project-title {
-          font-size: 1.15rem;
-        }
 
         #freelance {
-          padding: 3.5rem 1.25rem;
+          padding: 4rem 1.5rem;
         }
         .freelance-inner {
           flex-direction: column;
-          gap: 1.75rem;
+          gap: 2rem;
         }
         .freelance-actions {
           flex-direction: column;
           width: 100%;
-          gap: 0.6rem;
         }
         .freelance-actions .btn {
           justify-content: center;
-          text-align: center;
         }
 
         #contact {
-          padding: 5rem 1.25rem;
-        }
-        .contact-title {
-          font-size: clamp(2.2rem, 10vw, 4rem);
-        }
-        .contact-email {
-          font-size: 0.8rem;
-          word-break: break-all;
+          padding: 6rem 1.5rem;
         }
         .social-divider {
           display: none;
         }
         .social-links {
-          gap: 1rem;
-          flex-wrap: wrap;
-          justify-content: center;
+          gap: 1.1rem;
         }
 
         footer {
           flex-direction: column;
           text-align: center;
-          padding: 1.25rem;
-          gap: 0.75rem;
+          padding: 1.5rem;
         }
-
-        /* Modal nicho já tem @media 480px abaixo, mantido */
       }
 
-      /* ── MOBILE PEQUENO (≤ 420px) ──────────────────── */
-      @media (max-width: 420px) {
+      @media (max-width: 400px) {
         .hero-title {
-          font-size: clamp(1.9rem, 9vw, 2.8rem);
-        }
-        .hero-cta .btn {
-          flex: 1 1 100%;
+          font-size: clamp(1.85rem, 8.5vw, 2.8rem);
         }
         .about-stats {
           grid-template-columns: 1fr 1fr;
-        }
-        .tech-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .contact-title {
-          font-size: clamp(1.9rem, 9.5vw, 3rem);
-        }
-        section {
-          padding: 3.5rem 1rem;
-        }
-        nav {
-          padding: 0.9rem 1rem;
         }
       }
       /* ── INTRO OVERLAY ─────────────────────── */
@@ -1787,7 +1954,8 @@
         <div class="intro-bar-shine" id="introBarShine"></div>
       </div>
       <span class="intro-text" id="introText"
-        >Full Stack Developer / Web Designer</span>
+        >Full Stack Developer / Web Designer</span
+      >
     </div>
 
     <div class="cursor" id="cursor"></div>
@@ -1885,15 +2053,7 @@
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
       <div class="hero-grid"></div>
-      <div class="hero-badge">
-        Full Stack Developer
-      </div>
-      <div class="hero-badge">
-        Web Developer
-      </div>
-      <div class="hero-badge">
-        Cachoeirinha, RS
-      </div>
+      <div class="hero-badge">Full Stack Developer - Web Developer</div>
       <h1 class="hero-title">
         Do back ao<br />
         <span class="line2"
@@ -1929,7 +2089,7 @@
     <hr class="divider" />
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="sec-accent">
       <div class="about-left">
         <p class="section-eyebrow" data-num="01">Sobre mim</p>
         <h2 class="section-title reveal">Código com<br />contexto.</h2>
@@ -2020,10 +2180,10 @@
       </div>
     </section>
 
-    <hr class="divider" />
+    <hr class="divider divider-accent" />
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="sec-dark">
       <p class="section-eyebrow reveal" data-num="02">Habilidades</p>
       <h2 class="section-title reveal">O que<br />eu faço.</h2>
       <div class="skills-grid">
@@ -2075,7 +2235,7 @@
     <hr class="divider" />
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="sec-accent">
       <p class="section-eyebrow reveal" data-num="03">Projetos</p>
       <h2 class="section-title reveal">Trabalhos<br />selecionados.</h2>
       <div class="projects-grid">
@@ -2235,7 +2395,7 @@
     </section>
 
     <!-- FREELANCE BANNER -->
-    <section id="freelance">
+    <section id="freelance" class="sec-dark">
       <div class="freelance-inner">
         <div class="freelance-text reveal">
           <h2>
@@ -2287,7 +2447,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="sec-accent">
       <p
         class="section-eyebrow reveal"
         style="justify-content: center"
