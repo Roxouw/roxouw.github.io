@@ -85,21 +85,16 @@
         --text: #111318;
         --muted: #6b7280;
         --muted2: #4b5563;
-        --teal: #1a4fa0;
-        --teal-glow: rgba(26, 79, 160, 0.15);
-        --teal-dim: rgba(26, 79, 160, 0.08);
-        --teal-11: rgba(26, 79, 160, 0.11);
-        --teal-04: rgba(26, 79, 160, 0.04);
-        --teal-10: rgba(26, 79, 160, 0.1);
-        --teal-03: rgba(26, 79, 160, 0.03);
-        --teal-20: rgba(26, 79, 160, 0.2);
-        --teal-30: rgba(26, 79, 160, 0.3);
-        --teal-40: rgba(26, 79, 160, 0.4);
-        --teal-05: rgba(26, 79, 160, 0.05);
-        --teal-06: rgba(26, 79, 160, 0.06);
-        --teal-12: rgba(26, 79, 160, 0.12);
-        --teal-25: rgba(26, 79, 160, 0.25);
-        --lime: #2563eb;
+        --teal: #37a5b3;
+        --teal-glow: rgba(55, 165, 179, 0.15);
+        --teal-dim: rgba(55, 165, 179, 0.08);
+        --teal-11: rgba(55, 165, 179, 0.11);
+        --teal-04: rgba(55, 165, 179, 0.04);
+        --teal-20: rgba(55, 165, 179, 0.2);
+        --teal-30: rgba(55, 165, 179, 0.3);
+        --lime: #37a5b3;
+        --cursor: black;
+        --cursor-glow: rgba(1, 1, 1, 0.15);
       }
       html.light-mode {
         background: #f4f5f7;
@@ -1039,7 +1034,7 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso"> ROSSO</span><span>.</span></a
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span></a
         >
       </div>
       <div class="nav-right">
@@ -1610,7 +1605,7 @@
         const isLight = document.documentElement.classList.toggle("light-mode");
         document.body.classList.toggle("light-mode", isLight);
         localStorage.setItem("theme", isLight ? "light" : "dark");
-        launchInk(isLight ? "#1a4fa0" : "#2dd4c8");
+        launchInk(isLight ? "#37a5b3" : "#2dd4c8");
       });
     </script>
     <script src="/transitions.js"></script>

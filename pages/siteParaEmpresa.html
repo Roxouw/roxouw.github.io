@@ -114,13 +114,13 @@
         --text: #111318;
         --muted: #6b7280;
         --muted2: #4b5563;
-        --teal: #1a4fa0;
-        --teal-glow: rgba(26, 79, 160, 0.15);
-        --teal-dim: rgba(26, 79, 160, 0.08);
-        --teal-10: rgba(26, 79, 160, 0.1);
-        --teal-20: rgba(26, 79, 160, 0.2);
-        --teal-30: rgba(26, 79, 160, 0.3);
-        --teal-03: rgba(26, 79, 160, 0.03);
+        --teal: #37a5b3;
+        --teal-glow: rgba(55, 165, 179, 0.15);
+        --teal-dim: rgba(55, 165, 179, 0.08);
+        --teal-11: rgba(55, 165, 179, 0.11);
+        --teal-04: rgba(55, 165, 179, 0.04);
+        --teal-20: rgba(55, 165, 179, 0.2);
+        --teal-30: rgba(55, 165, 179, 0.3);
         --lime: #2563eb;
         --cursor: black;
         --cursor-glow: rgba(1, 1, 1, 0.15);
@@ -2375,7 +2375,7 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso"> ROSSO</span><span>.</span></a
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span></a
         >
       </div>
       <div class="nav-right">
@@ -2441,7 +2441,7 @@
       <h1 class="hero-title">
         Tenha um site rápido,<br />
         <span class="accent">moderno</span> e pronto para<br />
-        <span class="outline">vender todos os dias.</span>
+        vender todos os dias.
       </h1>
       <div class="hero-checklist">
         <div class="hero-check-item">
@@ -2941,7 +2941,7 @@
           </div>
           <div class="pkg-price">
             <span class="currency">a partir de R$</span
-            ><span class="value">697</span>
+            ><span class="value">897</span>
           </div>
           <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
           <div class="pkg-divider"></div>
@@ -2981,11 +2981,12 @@
           <div class="pkg-name">Business</div>
           <div class="pkg-desc">
             Para negócios que querem ser encontrados no Google e converter
-            visitantes em clientes.
+            visitantes em clientes. <br />
+            💰 Pode se pagar com 1 cliente fechado.
           </div>
           <div class="pkg-price">
             <span class="currency">a partir de R$</span
-            ><span class="value">1.497</span>
+            ><span class="value">1.697</span>
           </div>
           <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
           <div class="pkg-divider"></div>
@@ -3589,7 +3590,7 @@
       themeToggle.addEventListener("click", () => {
         const isLight = document.body.classList.toggle("light-mode");
         localStorage.setItem("theme", isLight ? "light" : "dark");
-        launchInk(isLight ? "#1a4fa0" : "#2dd4c8");
+        launchInk(isLight ? "#37a5b3" : "#2dd4c8");
       });
     </script>
     <script src="/transitions.js"></script>
