@@ -74,14 +74,14 @@
         --text: #e2e4e8;
         --muted: #606470;
         --muted2: #8a8f9a;
-        --teal: #2dd4c8;
-        --teal-glow: rgba(45, 212, 200, 0.15);
-        --teal-dim: rgba(45, 212, 200, 0.08);
-        --teal-10: rgba(45, 212, 200, 0.1);
-        --teal-20: rgba(45, 212, 200, 0.2);
-        --teal-30: rgba(45, 212, 200, 0.3);
-        --teal-03: rgba(45, 212, 200, 0.03);
-        --lime: #b8f04a;
+        --teal-10: rgba(23, 138, 130, 0.1);
+        --teal-20: rgba(23, 138, 130, 0.2);
+        --teal-30: rgba(23, 138, 130, 0.3);
+        --teal: #178a82;
+        --teal-bright: #2dd4c8;
+        --teal-glow: rgba(23, 138, 130, 0.1);
+        --teal-dim: rgba(23, 138, 130, 0.06);
+        --teal-03: rgba(23, 138, 130, 0.025);
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
         --t: 0.25s ease;
@@ -106,27 +106,26 @@
 
       /* ── LIGHT MODE ────────────────────────── */
       body.light-mode {
-        --bg: #f4f5f7;
-        --bg2: #eaecf0;
-        --surface: #dde1e8;
-        --border: #c8cdd8;
-        --border2: #b0b7c6;
-        --text: #111318;
+        --bg: #f7fafc;
+        --bg2: #f1f5f9;
+        --surface: #ffffff;
+        --border: #e2e8f0;
+        --border2: #cbd5e1;
+        --text: #0f172a;
         --muted: #6b7280;
-        --muted2: #4b5563;
-        --teal: #37a5b3;
-        --teal-glow: rgba(55, 165, 179, 0.15);
-        --teal-dim: rgba(55, 165, 179, 0.08);
-        --teal-11: rgba(55, 165, 179, 0.11);
-        --teal-04: rgba(55, 165, 179, 0.04);
-        --teal-20: rgba(55, 165, 179, 0.2);
-        --teal-30: rgba(55, 165, 179, 0.3);
-        --lime: #2563eb;
+        --muted2: #475569;
+        --teal: #2a9fa5;
+        --teal-glow: rgba(42, 159, 165, 0.15);
+        --teal-dim: rgba(42, 159, 165, 0.08);
+        --teal-11: rgba(42, 159, 165, 0.11);
+        --teal-04: rgba(42, 159, 165, 0.04);
+        --teal-20: rgba(42, 159, 165, 0.2);
+        --teal-30: rgba(42, 159, 165, 0.3);
         --cursor: black;
         --cursor-glow: rgba(1, 1, 1, 0.15);
       }
       body.light-mode nav.scrolled {
-        background: rgba(244, 245, 247, 0.94);
+        background: #f7fafc;;
       }
 
       ::-webkit-scrollbar {
@@ -512,6 +511,9 @@
       }
       .sec-title .accent {
         color: var(--teal);
+      }
+      .sec-title .accent-dark {
+        color: var(--text);
       }
       .sec-sub {
         font-family: var(--font-mono);
@@ -2375,8 +2377,8 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span></a
-        >
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span
+        ></a>
       </div>
       <div class="nav-right">
         <link
@@ -2503,7 +2505,9 @@
         O problema
       </p>
       <h2 class="sec-title reveal">
-        Seu negócio precisa<br /><span class="accent">aparecer no Google.</span>
+        Seu negócio precisa<br /><span class="accent-dark"
+          >aparecer no Google.</span
+        >
       </h2>
       <p class="sec-sub reveal">
         Todos os dias, pessoas pesquisam por serviços como o seu. Se sua empresa
@@ -2604,7 +2608,9 @@
     <section id="exemplos" class="sec-accent">
       <p class="eyebrow reveal" data-num="03">Exemplos</p>
       <h2 class="sec-title reveal">
-        Sites que já<br /><span class="accent">geramos para clientes.</span>
+        Sites que já<br /><span class="accent-dark"
+          >geramos para clientes.</span
+        >
       </h2>
       <p class="sec-sub reveal">
         Cada site é desenvolvido do zero, personalizado para o nicho e otimizado
@@ -2823,7 +2829,9 @@
     <section id="prova" class="sec-accent">
       <p class="eyebrow reveal" data-num="05">Por que escolher</p>
       <h2 class="sec-title reveal">
-        Presença digital<br /><span class="accent">que funciona.</span>
+        Presença digital<br /><span class="accent-dark"
+          >que funciona.</span
+        >
       </h2>
       <p class="sec-sub reveal">
         Cada detalhe é pensado para que seu site não só pareça profissional —
@@ -3072,7 +3080,7 @@
     <section id="addons" class="sec-accent">
       <p class="eyebrow reveal" data-num="07">Extras & Recorrência</p>
       <h2 class="sec-title reveal">
-        Upgrades e<br /><span class="accent">manutenção mensal.</span>
+        Upgrades e<br /><span class="accent-dark"> manutenção mensal.</span>
       </h2>
       <p class="sec-sub reveal">
         Adicione funcionalidades ao seu site ou mantenha tudo atualizado com um
@@ -3094,7 +3102,9 @@
                   etc.)
                 </div>
               </div>
-              <div class="addon-price">+ R$ 200<small>por página</small></div>
+              <div class="addon-price-monthly">
+                + R$ 200<small class="addon-price-monthly">por página</small>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -3103,7 +3113,9 @@
                   Registro e configuração do .com.br do seu negócio
                 </div>
               </div>
-              <div class="addon-price">+ R$ 120<small>por ano</small></div>
+              <div class="addon-price-monthly">
+                + R$ 120<small class="addon-price-monthly">por ano</small>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -3113,7 +3125,9 @@
                   com mensagem pré-preenchida
                 </div>
               </div>
-              <div class="addon-price">+ R$ 150<small>único</small></div>
+              <div class="addon-price-monthly">
+                + R$ 150<small class="addon-price-monthly">único</small>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -3122,7 +3136,9 @@
                   Seção de imagens com lightbox e categorias
                 </div>
               </div>
-              <div class="addon-price">+ R$ 200<small>único</small></div>
+              <div class="addon-price-monthly">
+                + R$ 200<small class="addon-price-monthly">único</small>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -3132,7 +3148,9 @@
                   comportamento
                 </div>
               </div>
-              <div class="addon-price">+ R$ 100<small>único</small></div>
+              <div class="addon-price-monthly">
+                + R$ 100<small class="addon-price-monthly">único</small>
+              </div>
             </div>
             <div class="addon-item">
               <div class="addon-info">
@@ -3142,7 +3160,9 @@
                   WhatsApp
                 </div>
               </div>
-              <div class="addon-price">+ R$ 180<small>único</small></div>
+              <div class="addon-price-monthly">
+                + R$ 180<small class="addon-price-monthly">único</small>
+              </div>
             </div>
           </div>
         </div>
@@ -3161,7 +3181,9 @@
                 </div>
               </div>
               <div class="addon-price-wrap">
-                <div class="addon-price-monthly">R$ 99<small>/mês</small></div>
+                <div class="addon-price-monthly">
+                  R$ 99<small class="addon-price-monthly">/mês</small>
+                </div>
                 <div class="addon-price-annual">
                   ou <span class="annual-value">R$ 990/ano</span><br /><span
                     class="annual-badge"
@@ -3186,7 +3208,9 @@
                 </div>
               </div>
               <div class="addon-price-wrap">
-                <div class="addon-price-monthly">R$ 189<small>/mês</small></div>
+                <div class="addon-price-monthly">
+                  R$ 189<small class="addon-price-monthly">/mês</small>
+                </div>
                 <div class="addon-price-annual">
                   ou <span class="annual-value">R$ 1.890/ano</span><br /><span
                     class="annual-badge"
@@ -3204,7 +3228,9 @@
                 </div>
               </div>
               <div class="addon-price-wrap">
-                <div class="addon-price-monthly">R$ 299<small>/mês</small></div>
+                <div class="addon-price-monthly">
+                  R$ 299<small class="addon-price-monthly">/mês</small>
+                </div>
                 <div class="addon-price-annual">
                   ou <span class="annual-value">R$ 2.990/ano</span><br /><span
                     class="annual-badge"
@@ -3218,7 +3244,7 @@
                 <div class="addon-name" style="color: var(--teal)">
                   Por que contratar manutenção?
                 </div>
-                <div class="addon-desc">
+                <div class="addon-desc" style="color: var(--teal)">
                   Sites sem atualização perdem posição no Google. Com
                   manutenção, seu site fica sempre relevante — e você não
                   precisa me acionar toda vez que mudar um telefone ou adicionar
@@ -3227,8 +3253,13 @@
               </div>
             </div>
           </div>
-          <div class="maint-tagline">
-            <strong>Seu site pronto é só o começo.</strong><br />
+          <div
+            class="maint-tagline"
+            style="background: var(--surface); color: var(--teal)"
+          >
+            <strong style="color: var(--teal)"
+              >Seu site pronto é só o começo.</strong
+            ><br />
             Mantemos ele atualizado, seguro e funcionando para você.
           </div>
         </div>
@@ -3335,7 +3366,7 @@
       </p>
       <h2 class="sec-title reveal">
         Seu site gerando<br />
-        <span class="accent">clientes em 7 dias.</span>
+        <span class="accent-dark">clientes em 7 dias.</span>
       </h2>
       <p class="sec-sub reveal">
         Não perca mais clientes para concorrentes que já têm presença

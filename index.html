@@ -143,6 +143,15 @@
       rel="stylesheet"
     />
     <style>
+      html.theme-transition,
+      html.theme-transition * {
+        transition:
+          background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          fill 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          stroke 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
       *,
       *::before,
       *::after {
@@ -160,17 +169,17 @@
         --text: #e2e4e8;
         --muted: #606470;
         --muted2: #8a8f9a;
-        --teal: #2dd4c8;
-        --teal-glow: rgba(45, 212, 200, 0.15);
-        --teal-dim: rgba(45, 212, 200, 0.08);
-        --teal-11: rgba(45, 212, 200, 0.11);
-        --teal-04: rgba(45, 212, 200, 0.04);
-        --teal-20: rgba(45, 212, 200, 0.2);
-        --teal-30: rgba(45, 212, 200, 0.3);
-        --lime: #b8f04a;
+        --teal-10: rgba(23, 138, 130, 0.1);
+        --teal-20: rgba(23, 138, 130, 0.2);
+        --teal-30: rgba(23, 138, 130, 0.3);
+        --teal: #178a82;
+        --teal-bright: #2dd4c8;
+        --teal-glow: rgba(23, 138, 130, 0.1);
+        --teal-dim: rgba(23, 138, 130, 0.06);
+        --teal-03: rgba(23, 138, 130, 0.025);
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
-        --transition: 0.25s ease;
+        --t: 0.25s ease;
         --cursor: white;
         --cursor-glow: rgba(255, 252, 252, 0.15);
       }
@@ -178,28 +187,27 @@
       /* ── LIGHT MODE ──────────────────────────── */
       body.light-mode,
       html.light-mode body {
-        --bg: #f4f5f7;
-        --bg2: #eaecf0;
-        --surface: #dde1e8;
-        --border: #c8cdd8;
-        --border2: #b0b7c6;
-        --text: #111318;
+        --bg: #f7fafc;
+        --bg2: #f1f5f9;
+        --surface: #ffffff;
+        --border: #e2e8f0;
+        --border2: #cbd5e1;
+        --text: #0f172a;
         --muted: #6b7280;
-        --muted2: #4b5563;
-        --teal: #37a5b3;
-        --teal-glow: rgba(55, 165, 179, 0.15);
-        --teal-dim: rgba(55, 165, 179, 0.08);
-        --teal-11: rgba(55, 165, 179, 0.11);
-        --teal-04: rgba(55, 165, 179, 0.04);
-        --teal-20: rgba(55, 165, 179, 0.2);
-        --teal-30: rgba(55, 165, 179, 0.3);
-        --lime: #37a5b3;
+        --muted2: #475569;
+        --teal: #2a9fa5;
+        --teal-glow: rgba(42, 159, 165, 0.15);
+        --teal-dim: rgba(42, 159, 165, 0.08);
+        --teal-11: rgba(42, 159, 165, 0.11);
+        --teal-04: rgba(42, 159, 165, 0.04);
+        --teal-20: rgba(42, 159, 165, 0.2);
+        --teal-30: rgba(42, 159, 165, 0.3);
         --cursor: black;
         --cursor-glow: rgba(1, 1, 1, 0.15);
       }
 
       html.light-mode {
-        background: #f4f5f7;
+        background: #f7fafc;
       }
 
       html {
@@ -226,7 +234,7 @@
 
       body.light-mode nav.scrolled,
       html.light-mode nav.scrolled {
-        background: rgba(244, 245, 247, 0.94);
+        background: #f7fafc;
       }
 
       ::-webkit-scrollbar {
@@ -2223,7 +2231,7 @@
           openNichoModal();
           return false;
         "
-        >Quero meu site agora!</a
+        >Quero meu site agora</a
       >
     </div>
 
@@ -2246,7 +2254,7 @@
               openNichoModal();
               return false;
             "
-            >Quero meu site agora!</a
+            >Quero meu site agora</a
           >
         </li>
       </ul>
@@ -2303,15 +2311,14 @@
       <div class="hero-grid"></div>
       <div class="hero-badge">Full Stack Developer - Web Developer</div>
       <h1 class="hero-title">
-        Do back ao<br />
-        <span class="line2"
-          >front, do zero ao <span class="teal-word">deploy.</span></span
-        >
+        Mais clientes<br />
+        <span class="teal-word"
+          >Mais vendas <span class="teal-word"></span
+        ></span>
       </h1>
       <div class="hero-bottom">
         <p class="hero-desc">
-          C#/.NET no servidor.<br />
-          React na interface.<br />
+          Rápido, estratégico e profissional.<br />
           Resultado na tela do cliente.
         </p>
         <div class="hero-cta">
@@ -2322,7 +2329,7 @@
               return false;
             "
             class="btn btn-primary"
-            >Quero meu site agora!</a
+            >Quero meu site agora</a
           >
           <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
           <a href="#contact" class="btn btn-ghost">Falar Comigo</a>
@@ -2664,7 +2671,7 @@
               return false;
             "
             class="btn btn-primary"
-            >Quero meu site agora!</a
+            >Quero meu site agora</a
           >
           <a
             href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20site"
@@ -2752,7 +2759,7 @@
         <button class="nicho-close" id="nichoCloseBtn" aria-label="Fechar">
           ✕
         </button>
-        <p class="nicho-eyebrow">Quero meu site agora!</p>
+        <p class="nicho-eyebrow">Quero meu site agora</p>
         <h2 class="nicho-title" id="nichoTitleEl">
           Escolha seu segmento e veja valores iniciais. <br />
           Vagas limitadas para este mês.
@@ -2774,9 +2781,7 @@
           <a href="/pages/siteParaDentista.html" class="nicho-btn"
             ><span class="nicho-icon">🦷</span>Dentista</a
           >
-          <a
-            href="/pages/siteParaEmpresa.html"
-            class="nicho-btn"
+          <a href="/pages/siteParaEmpresa.html" class="nicho-btn"
             ><span class="nicho-icon">🏢</span>Outro segmento</a
           >
           <!-- <a
@@ -2789,7 +2794,7 @@
           href="https://wa.me/5551980335252?text=Oi%20Filipe,%20acabei%20de%20ver%20seu%20site%20e%20quero%20criar%20um%20site%20para%20meu%20negócio.%20Pode%20me%20explicar%20como%20funciona"
           target="_blank"
           class="btn btn-whatsapp"
-          style="align-items: center;"
+          style="align-items: center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -3189,15 +3194,37 @@
         drawInk();
       }
 
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "light")
-        document.documentElement.classList.add("light-mode");
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+          if (savedTheme === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } else {
+          const prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)",
+          ).matches;
+
+          if (prefersLight) {
+            document.documentElement.classList.add("light-mode");
+          }
+        }
+      })();
 
       themeToggle.addEventListener("click", () => {
         const isLight = document.documentElement.classList.toggle("light-mode");
         document.body.classList.toggle("light-mode", isLight);
         localStorage.setItem("theme", isLight ? "light" : "dark");
         launchInk(isLight ? "#37a5b3" : "#2dd4c8");
+      });
+
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+      mediaQuery.addEventListener("change", (e) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.classList.toggle("light-mode", e.matches);
+        }
       });
     </script>
     <script src="/transitions.js"></script>

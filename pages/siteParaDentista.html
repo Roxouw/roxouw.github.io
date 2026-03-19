@@ -81,18 +81,19 @@
         --text: #e2e4e8;
         --muted: #606470;
         --muted2: #8a8f9a;
-        --teal: #2dd4c8;
-        --teal-glow: rgba(45, 212, 200, 0.15);
-        --teal-dim: rgba(45, 212, 200, 0.08);
-        --teal-10: rgba(45, 212, 200, 0.1);
-        --teal-20: rgba(45, 212, 200, 0.2);
-        --teal-30: rgba(45, 212, 200, 0.3);
-        --teal-03: rgba(45, 212, 200, 0.03);
-        --lime: #b8f04a;
+        --teal-10: rgba(23, 138, 130, 0.1);
+        --teal-20: rgba(23, 138, 130, 0.2);
+        --teal-30: rgba(23, 138, 130, 0.3);
+        --teal: #178a82;
+        --teal-bright: #2dd4c8;
+        --teal-glow: rgba(23, 138, 130, 0.1);
+        --teal-dim: rgba(23, 138, 130, 0.06);
+        --teal-03: rgba(23, 138, 130, 0.025);
         --font-display: "Syne", sans-serif;
         --font-mono: "DM Mono", monospace;
         --t: 0.25s ease;
         --cursor: white;
+        --cursor-glow: rgba(255, 252, 252, 0.15);
       }
 
       html {
@@ -113,31 +114,30 @@
       /* ── LIGHT MODE ────────────────────────── */
       body.light-mode,
       html.light-mode body {
-        --bg: #f4f5f7;
-        --bg2: #eaecf0;
-        --surface: #dde1e8;
-        --border: #c8cdd8;
-        --border2: #b0b7c6;
-        --text: #111318;
+        --bg: #f7fafc;
+        --bg2: #f1f5f9;
+        --surface: #ffffff;
+        --border: #e2e8f0;
+        --border2: #cbd5e1;
+        --text: #0f172a;
         --muted: #6b7280;
-        --muted2: #4b5563;
-        --teal: #37a5b3;
-        --teal-glow: rgba(55, 165, 179, 0.15);
-        --teal-dim: rgba(55, 165, 179, 0.08);
-        --teal-11: rgba(55, 165, 179, 0.11);
-        --teal-04: rgba(55, 165, 179, 0.04);
-        --teal-20: rgba(55, 165, 179, 0.2);
-        --teal-30: rgba(55, 165, 179, 0.3);
-        --lime: #2563eb;
+        --muted2: #475569;
+        --teal: #2a9fa5;
+        --teal-glow: rgba(42, 159, 165, 0.15);
+        --teal-dim: rgba(42, 159, 165, 0.08);
+        --teal-11: rgba(42, 159, 165, 0.11);
+        --teal-04: rgba(42, 159, 165, 0.04);
+        --teal-20: rgba(42, 159, 165, 0.2);
+        --teal-30: rgba(42, 159, 165, 0.3);
         --cursor: black;
         --cursor-glow: rgba(1, 1, 1, 0.15);
       }
       html.light-mode {
-        background: #f4f5f7;
+        background: #f7fafc;
       }
       body.light-mode nav.scrolled,
       html.light-mode nav.scrolled {
-        background: rgba(244, 245, 247, 0.94);
+        background: #f7fafc;
       }
 
       ::-webkit-scrollbar {
@@ -541,7 +541,10 @@
         margin-bottom: 1rem;
       }
       .sec-title .accent {
-        color: var(--cursor);
+        color: var(--teal);
+      }
+      .sec-title .accent-dark {
+        color: var(--text);
       }
       .sec-sub {
         font-family: var(--font-mono);
@@ -2904,7 +2907,7 @@
         O problema
       </p>
       <h2 class="sec-title reveal">
-        Seus futuros pacientes estão<br /><span class="accent"
+        Seus futuros pacientes estão<br /><span class="accent-dark"
           >pesquisando no Google agora.</span
         >
       </h2>
@@ -3009,7 +3012,7 @@
     <section id="exemplos" class="sec-accent">
       <p class="eyebrow reveal" data-num="03">Modelos</p>
       <h2 class="sec-title reveal">
-        O que seu site<br /><span class="accent">pode ter.</span>
+        O que seu site<br /><span class="accent-dark">pode ter.</span>
       </h2>
       <p class="sec-sub reveal">
         Cada site odontológico é desenvolvido do zero — nada de template
@@ -3233,7 +3236,7 @@
           <div class="projeto-badge">Site real · Dr. Eduardo Vasques</div>
           <h2 class="projeto-title">
             Veja um exemplo<br />
-            <span class="accent">real e entregue.</span>
+            <span class="accent-dark">real e entregue.</span>
           </h2>
           <p class="projeto-desc">
             Este é o site desenvolvido para o Dr. Eduardo Vasques, especialista
@@ -3467,7 +3470,7 @@
     <section id="planos" class="sec-accent">
       <p class="eyebrow reveal" data-num="07">Planos</p>
       <h2 class="sec-title reveal">
-        Investimento,<br /><span class="accent"
+        Investimento,<br /><span class="accent-dark"
           >que se paga com poucos pacientes.</span
         >
       </h2>
@@ -3786,7 +3789,7 @@
     <section id="faq" class="sec-accent">
       <p class="eyebrow reveal" data-num="09">Dúvidas</p>
       <h2 class="sec-title reveal">
-        Perguntas antes<br /><span class="accent">de decidir.</span>
+        Perguntas antes<br /><span class="accent-dark">de decidir.</span>
       </h2>
       <div class="faq-list">
         <div class="faq-item reveal">
