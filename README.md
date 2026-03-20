@@ -1,101 +1,155 @@
-# Filipe Rosso — Portfólio Pessoal
+# 🚀 Portfólio — Filipe Rosso
 
-Site de portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro. Apresenta minha experiência profissional, stack técnica, projetos freelance e canais de contato.
+Site profissional desenvolvido para apresentação de serviços como **Desenvolvedor Full Stack**, com foco em captação de clientes para criação de sites, landing pages e sistemas web.
 
-🔗 **[roxouw.github.io](https://roxouw.github.io/)**
-
----
-
-## ✦ Sobre o projeto
-
-Construído do zero com foco em **performance**, **SEO** e **design premium**. Sem frameworks, sem dependências — código limpo e carregamento instantâneo.
-
-### Destaques
-
-- Design dark com paleta acinzentada premium e accent teal
-- Animações de entrada com `IntersectionObserver`
-- Cursor customizado (desktop)
-- Menu hambúrguer — 100% responsivo e mobile-first
-- SEO completo: Schema.org, Open Graph, Twitter Card, sitemap e canonical
-- Favicon personalizado `FR` + logo OG para preview no WhatsApp e Instagram
-- Verificado e indexado no Google Search Console
+🔗 **Acesse:** https://roxouw.github.io/
 
 ---
 
-## 🛠 Stack
+## 💼 Sobre o projeto
 
-| Camada | Tecnologia |
-|--------|-----------|
-| Estrutura | HTML5 semântico |
-| Estilo | CSS3 — variáveis, grid, flexbox, animações |
-| Interação | JavaScript vanilla (ES6+) |
-| Fontes | Google Fonts — Syne + DM Mono |
-| Hospedagem | GitHub Pages |
+Este projeto é um site institucional e portfólio pessoal com foco em:
 
----
-
-## 📁 Estrutura
-
-```
-roxouw.github.io/
-├── index.html            # Aplicação principal (single-file)
-├── favicon.ico           # Favicon multi-resolução (16/32/48/256px)
-├── favicon.png           # Favicon PNG 512px + Apple Touch Icon
-├── logo.png              # Imagem OG 1200×630 — preview WhatsApp/Instagram
-├── sitemap.xml           # Sitemap para indexação Google
-├── CV_Filipe_Rosso.pdf   # Currículo para download
-└── README.md             # Este arquivo
-```
+* Geração de leads (WhatsApp integrado)
+* Apresentação de projetos reais
+* Posicionamento profissional no Google (SEO)
+* Conversão (CTA estratégicos)
 
 ---
 
-## 🚀 Rodando localmente
+## 🧠 Tecnologias utilizadas
 
-Nenhuma instalação necessária:
+* HTML5
+* CSS3 (customizado)
+* JavaScript (vanilla)
+* Google Analytics (gtag)
+* GitHub Pages (deploy)
+
+---
+
+## ⚙️ Funcionalidades
+
+* 🌙 **Tema claro/escuro automático**
+
+  * Detecta preferência do sistema
+  * Persistência via `localStorage`
+
+* 📱 **Responsivo (mobile-first)**
+
+* ⚡ **Animações e transições suaves**
+
+  * Intro animada
+  * Transições entre páginas
+
+* 🎯 **Call to Actions estratégicos**
+
+  * Botões para conversão
+  * Integração direta com WhatsApp
+
+* 🧩 **Modal de segmentação de nicho**
+
+  * Advogado
+  * Academia
+  * Personal
+  * Nutricionista
+  * Dentista
+  * Empresas
+
+* 🔍 **SEO otimizado**
+
+  * Meta tags completas
+  * Open Graph (WhatsApp, LinkedIn)
+  * Structured Data (Schema.org)
+
+---
+
+## 🔐 Segurança
+
+O projeto implementa práticas modernas de segurança no front-end:
+
+* Content Security Policy (CSP)
+* Proteção contra clickjacking (`frame-ancestors`)
+* Controle de fontes externas
+* Uso exclusivo de HTTPS
+
+---
+
+## 📂 Estrutura do projeto
 
 ```bash
-# Opção 1 — abrir direto
-open index.html
+📁 assets/
+ ├── css/
+ │   └── index.css
+ ├── js/
+ │   └── index.js
+ ├── images/
+ └── icons/
 
-# Opção 2 — com VS Code Live Server
-# Instale a extensão Live Server e clique em "Go Live"
+📁 pages/
+ ├── siteParaAdvogado.html
+ ├── siteParaAcademia.html
+ ├── siteParaPersonal.html
+ ├── siteParaNutricionista.html
+ ├── siteParaDentista.html
+ └── siteParaEmpresa.html
+
+📄 index.html
+📄 transitions.js
+📄 mobile-fix.js
 ```
 
 ---
 
-## 📌 Projetos em destaque
-
-### [Gabriel Consultoria — Funil de Captação](https://roxouw.github.io/consultoria-gabriel/)
-Quiz mobile-first para personal trainer. Qualifica o lead e encaminha direto ao WhatsApp com dados preenchidos. Depoimentos em carrossel, Open Graph e animações de conversão.
-`HTML · CSS · JavaScript · WhatsApp API · SEO`
-
-### [INOVATA Móveis Sob Medida](https://roxouw.github.io/SiteInovata/)
-Site institucional para empresa de móveis planejados. Galeria de projetos, contato exclusivo via WhatsApp com animação, Open Graph customizado.
-`HTML · CSS · JavaScript · Open Graph · GitHub Pages`
-
----
-
-## ⚙️ Configuração Git recomendada
-
-Para evitar erros de push com arquivos maiores:
+## 🚀 Como rodar localmente
 
 ```bash
-git config --global http.postBuffer 524288000
+git clone https://github.com/Roxouw/seu-repositorio.git
+cd seu-repositorio
 ```
+
+Abra o arquivo:
+
+```bash
+index.html
+```
+
+Ou utilize uma extensão como **Live Server** no VS Code.
 
 ---
 
-## 📬 Contato
+## 📈 Objetivo do projeto
 
-| Canal | Link |
-|-------|------|
-| E-mail | [filiperosso99@gmail.com](mailto:filiperosso99@gmail.com) |
-| LinkedIn | [linkedin.com/in/filiperosso](https://www.linkedin.com/in/filiperosso/) |
-| WhatsApp | [+55 51 98033-5252](https://wa.me/5551980335252) |
-| GitHub | [@Roxouw](https://github.com/Roxouw) |
+Este site não é apenas um portfólio, mas uma **máquina de vendas** para serviços de desenvolvimento web.
+
+Foco em:
+
+* Conversão
+* Performance
+* Escalabilidade (templates por nicho)
+
+---
+
+## 💰 Serviços oferecidos
+
+* Criação de sites profissionais
+* Landing pages de alta conversão
+* Sistemas web sob demanda
+* Integração com APIs
+* SEO básico para negócios locais
+
+---
+
+## 📞 Contato
+
+* 💼 LinkedIn: https://www.linkedin.com/in/filiperosso/
+* 💻 GitHub: https://github.com/Roxouw
+* 📲 WhatsApp: https://wa.me/5551980335252
 
 ---
 
 ## 📄 Licença
 
-Projeto de uso pessoal. O código pode ser usado como referência, mas o design e conteúdo pertencem a Filipe Rosso.
+© 2026 Filipe Rosso. Todos os direitos reservados.
+É proibida a reprodução total ou parcial sem autorização.
+
+---
