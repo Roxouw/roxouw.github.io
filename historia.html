@@ -1,7 +1,21 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com data:;
+        img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
+        connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+      "
+    />
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
@@ -12,7 +26,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-57VS8P14FH");
     </script>
 
@@ -23,7 +36,10 @@
       name="description"
       content="A trajetória de Filipe Rosso na programação — de 2018 até hoje, passando por Banrisul, Stefanini e Qintess."
     />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +53,19 @@
         document.documentElement.classList.add("light-mode");
     </script>
     <style>
+      html.theme-transition {
+        transition:
+          background-color 0.35s ease,
+          color 0.35s ease;
+      }
+
+      .theme-transition .btn,
+      .theme-transition nav,
+      .theme-transition section {
+        transition:
+          background-color 0.35s ease,
+          color 0.35s ease;
+      }
       *,
       *::before,
       *::after {
@@ -177,7 +206,6 @@
       }
       nav.scrolled {
         background: rgba(19, 20, 22, 0.94);
-        backdrop-filter: blur(24px);
         border-color: var(--border);
       }
       .nav-logo {
@@ -763,10 +791,13 @@
         padding: 0.8rem 1.75rem;
         border: 1px solid;
         text-decoration: none;
-        transition: all var(--t);
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
+        white-space: nowrap;
       }
       .btn-primary {
         background: var(--teal);
@@ -1013,7 +1044,39 @@
       .cursor-ring {
         transition: border-color 0.4s ease;
       }
+      .hero,
+      .project-card,
+      .skill-card,
+      .btn,
+      .reveal,
+      .intro-name {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+      }
     </style>
+    <script>
+      if (localStorage.getItem("theme") === "light")
+        document.documentElement.classList.add("light-mode");
+    </script>
+
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (savedTheme === "light") {
+          document.documentElement.classList.add("light-mode");
+        } else if (savedTheme === "dark") {
+          document.documentElement.classList.remove("light-mode");
+        } else {
+          if (!prefersDark) {
+            document.documentElement.classList.add("light-mode");
+          }
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- INK EXPLOSION CANVAS -->
@@ -1034,11 +1097,13 @@
     <nav id="navbar">
       <div class="nav-logo-group">
         <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span></a
-        >
+          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span
+        ></a>
       </div>
       <div class="nav-right">
-        <a href="/" class="nav-back"><span class="material-symbols-outlined">arrow_back</span> Voltar</a>
+        <a href="/" class="nav-back"
+          ><span class="material-symbols-outlined">arrow_back</span> Voltar</a
+        >
         <button
           class="theme-toggle"
           id="themeToggle"
@@ -1610,5 +1675,19 @@
     </script>
     <script src="/transitions.js"></script>
     <script src="/mobile-fix.js"></script>
+
+    <script>
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (localStorage.getItem("theme")) return;
+
+          if (e.matches) {
+            document.documentElement.classList.remove("light-mode");
+          } else {
+            document.documentElement.classList.add("light-mode");
+          }
+        });
+    </script>
   </body>
 </html>
