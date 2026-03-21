@@ -13,13 +13,9 @@
         frame-ancestors 'none';
         base-uri 'self';
         form-action 'self';
-      "
-    />
+      " />
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -34,19 +30,16 @@
     <title>Sobre — Filipe Rosso</title>
     <meta
       name="description"
-      content="A trajetória de Filipe Rosso na programação — de 2018 até hoje, passando por Banrisul, Stefanini e Qintess."
-    />
+      content="A trajetória de Filipe Rosso na programação — de 2018 até hoje, passando por Banrisul, Stefanini e Qintess." />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <!-- Aplica tema salvo antes do render — evita flash ao trocar de página -->
     <script>
       if (localStorage.getItem("theme") === "light")
@@ -279,11 +272,7 @@
           linear-gradient(90deg, var(--border) 1px, transparent 1px);
         background-size: 48px 48px;
         opacity: 0.25;
-        mask-image: radial-gradient(
-          ellipse 90% 70% at 50% 0%,
-          black 20%,
-          transparent 100%
-        );
+        mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 100%);
       }
       /* Vertical progress line on the left */
       .hero-line {
@@ -739,11 +728,7 @@
         width: 60vw;
         height: 60vw;
         pointer-events: none;
-        background: radial-gradient(
-          ellipse,
-          var(--teal-06) 0%,
-          transparent 65%
-        );
+        background: radial-gradient(ellipse, var(--teal-06) 0%, transparent 65%);
       }
       .cta-eyebrow {
         font-family: var(--font-mono);
@@ -1062,9 +1047,7 @@
     <script>
       (function () {
         const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
         if (savedTheme === "light") {
           document.documentElement.classList.add("light-mode");
@@ -1089,27 +1072,28 @@
         pointer-events: none;
         width: 100%;
         height: 100%;
-      "
-    ></canvas>
+      "></canvas>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
     <nav id="navbar">
       <div class="nav-logo-group">
-        <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso"> ROSSO</span><span></span
-        ></a>
+        <a href="#hero" class="nav-logo">
+          FILIPE
+          <span class="logo-rosso">ROSSO</span>
+          <span></span>
+        </a>
       </div>
       <div class="nav-right">
-        <a href="/" class="nav-back"
-          ><span class="material-symbols-outlined">arrow_back</span> Voltar</a
-        >
+        <a href="/" class="nav-back">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Voltar
+        </a>
         <button
           class="theme-toggle"
           id="themeToggle"
           aria-label="Alternar tema"
-          title="Alternar tema claro/escuro"
-        >
+          title="Alternar tema claro/escuro">
           <svg
             class="icon-moon"
             xmlns="http://www.w3.org/2000/svg"
@@ -1118,8 +1102,7 @@
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
           </svg>
           <svg
@@ -1130,8 +1113,7 @@
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <circle cx="12" cy="12" r="5" />
             <line x1="12" y1="1" x2="12" y2="3" />
             <line x1="12" y1="21" x2="12" y2="23" />
@@ -1154,13 +1136,18 @@
 
       <div class="hero-eyebrow">Minha história</div>
       <h1 class="hero-title">
-        Uma linha<br />
-        <span class="outline">de código</span><br />
-        de cada <span class="teal">vez.</span>
+        Uma linha
+        <br />
+        <span class="outline">de código</span>
+        <br />
+        de cada
+        <span class="teal">vez.</span>
       </h1>
       <p class="hero-desc">
-        Comecei em 2018 sem saber exatamente onde ia chegar.<br />
-        Passei por uma pandemia, voltei mais forte, entrei no mercado<br />
+        Comecei em 2018 sem saber exatamente onde ia chegar.
+        <br />
+        Passei por uma pandemia, voltei mais forte, entrei no mercado
+        <br />
         e não parei mais. Aqui está o caminho até agora.
       </p>
       <div class="hero-scroll">
@@ -1175,20 +1162,25 @@
 
       <div class="timeline-intro">
         <div class="eyebrow">Trajetória</div>
-        <h2>Do início até o <span>presente.</span></h2>
+        <h2>
+          Do início até o
+          <span>presente.</span>
+        </h2>
       </div>
 
       <!-- 2018 -->
       <div class="milestone">
         <div class="ms-left">
           <div class="ms-card">
-            <div class="ms-year"><span class="ms-year-dot"></span>2018</div>
+            <div class="ms-year">
+              <span class="ms-year-dot"></span>
+              2018
+            </div>
             <div class="ms-title">O primeiro passo</div>
             <div class="ms-company">Análise e Desenvolvimento de Sistemas</div>
             <div class="ms-desc">
-              Entrei na faculdade de ADS sem saber muito bem o que me esperava.
-              Foi o primeiro contato real com lógica de programação, algoritmos
-              e a base que carrego até hoje.
+              Entrei na faculdade de ADS sem saber muito bem o que me esperava. Foi o primeiro
+              contato real com lógica de programação, algoritmos e a base que carrego até hoje.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">Lógica</span>
@@ -1211,13 +1203,16 @@
         </div>
         <div class="ms-right">
           <div class="ms-card">
-            <div class="ms-year"><span class="ms-year-dot"></span>2020</div>
+            <div class="ms-year">
+              <span class="ms-year-dot"></span>
+              2020
+            </div>
             <div class="ms-title">A pausa forçada</div>
             <div class="ms-company">Pandemia — Restruturação</div>
             <div class="ms-desc">
-              A pandemia interrompeu o ritmo da faculdade. Trancamento,
-              incerteza, mas também tempo para refletir sobre o que realmente
-              queria. A vontade de voltar cresceu mais forte do que a de parar.
+              A pandemia interrompeu o ritmo da faculdade. Trancamento, incerteza, mas também tempo
+              para refletir sobre o que realmente queria. A vontade de voltar cresceu mais forte do
+              que a de parar.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">Resiliência</span>
@@ -1232,15 +1227,15 @@
         <div class="ms-left">
           <div class="ms-card">
             <div class="ms-year">
-              <span class="ms-year-dot"></span>Abr · 2022
+              <span class="ms-year-dot"></span>
+              Abr · 2022
             </div>
             <div class="ms-title">Entrada no mercado</div>
             <div class="ms-company">Banrisul — Estágio em Desenvolvimento</div>
             <div class="ms-desc">
-              Voltei com tudo — direto para dentro de um dos maiores bancos do
-              Sul do Brasil. Primeiro contato com sistemas corporativos reais,
-              código de produção e times ágeis. A faculdade ganhou sentido na
-              prática.
+              Voltei com tudo — direto para dentro de um dos maiores bancos do Sul do Brasil.
+              Primeiro contato com sistemas corporativos reais, código de produção e times ágeis. A
+              faculdade ganhou sentido na prática.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">C#</span>
@@ -1265,15 +1260,15 @@
         <div class="ms-right">
           <div class="ms-card">
             <div class="ms-year">
-              <span class="ms-year-dot"></span>Out · 2023
+              <span class="ms-year-dot"></span>
+              Out · 2023
             </div>
             <div class="ms-title">Evoluindo dentro do ecossistema</div>
             <div class="ms-company">Stefanini Consultoria — Dev Júnior</div>
             <div class="ms-desc">
-              Continuei atuando dentro do Banrisul, agora como Júnior pela
-              Stefanini. Evolução natural: mais responsabilidade, projetos mais
-              complexos e entrada no ecossistema Open Finance. Testes unitários
-              viraram rotina.
+              Continuei atuando dentro do Banrisul, agora como Júnior pela Stefanini. Evolução
+              natural: mais responsabilidade, projetos mais complexos e entrada no ecossistema Open
+              Finance. Testes unitários viraram rotina.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">C# / .NET</span>
@@ -1290,14 +1285,15 @@
         <div class="ms-left">
           <div class="ms-card">
             <div class="ms-year">
-              <span class="ms-year-dot"></span>Nov · 2024
+              <span class="ms-year-dot"></span>
+              Nov · 2024
             </div>
             <div class="ms-title">Nível Pleno</div>
             <div class="ms-company">Qintess Consultoria — Dev Pleno</div>
             <div class="ms-desc">
-              Mais uma evolução dentro do mesmo ecossistema bancário. Como
-              Pleno, assumi maior protagonismo técnico — arquitetura, code
-              review e mentoria de iniciantes. Sem parar de aprender.
+              Mais uma evolução dentro do mesmo ecossistema bancário. Como Pleno, assumi maior
+              protagonismo técnico — arquitetura, code review e mentoria de iniciantes. Sem parar de
+              aprender.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">C# / .NET</span>
@@ -1322,14 +1318,15 @@
         <div class="ms-right">
           <div class="ms-card">
             <div class="ms-year">
-              <span class="ms-year-dot"></span>2025 – 2026
+              <span class="ms-year-dot"></span>
+              2025 – 2026
             </div>
             <div class="ms-title">Expandindo horizontes</div>
             <div class="ms-company">Freelance — Sites & Sistemas</div>
             <div class="ms-desc">
-              Comecei a transformar conhecimento técnico em produto. Primeiro
-              freelance entregue, depois outro. Agora construo presença digital
-              para clientes enquanto evoluo minha stack com Node.js e Next.js.
+              Comecei a transformar conhecimento técnico em produto. Primeiro freelance entregue,
+              depois outro. Agora construo presença digital para clientes enquanto evoluo minha
+              stack com Node.js e Next.js.
             </div>
             <div class="ms-tags">
               <span class="ms-tag">HTML / CSS</span>
@@ -1353,9 +1350,10 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-align: right;
-            "
-          >
-            A história<br />continua...
+            ">
+            A história
+            <br />
+            continua...
           </div>
         </div>
         <div class="ms-node">
@@ -1392,7 +1390,11 @@
     <section id="tech">
       <div class="tech-header">
         <div class="tech-eyebrow">Evolução técnica</div>
-        <h2 class="tech-title">Stack que cresceu<br />com a jornada.</h2>
+        <h2 class="tech-title">
+          Stack que cresceu
+          <br />
+          com a jornada.
+        </h2>
       </div>
       <div class="tech-phases">
         <div class="tech-phase">
@@ -1448,29 +1450,27 @@
       <div class="cta-glow"></div>
       <div class="cta-eyebrow">Próximo capítulo</div>
       <h2 class="cta-title">
-        Vamos escrever<br />
+        Vamos escrever
+        <br />
         <span class="outline">juntos?</span>
       </h2>
       <p class="cta-sub">
-        Se você precisa de um site, sistema ou desenvolvedor para seu time —
-        estou disponível para freelance e oportunidades PJ/CLT.
+        Se você precisa de um site, sistema ou desenvolvedor para seu time — estou disponível para
+        freelance e oportunidades PJ/CLT.
       </p>
       <div class="cta-btns">
         <a
           href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar"
           target="_blank"
-          class="btn btn-whatsapp"
-        >
+          class="btn btn-whatsapp">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
             viewBox="0 0 24 24"
-            fill="currentColor"
-          >
+            fill="currentColor">
             <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-            />
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
           WhatsApp
         </a>
@@ -1524,7 +1524,7 @@
       // Navbar scroll
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () =>
-        navbar.classList.toggle("scrolled", window.scrollY > 50),
+        navbar.classList.toggle("scrolled", window.scrollY > 50)
       );
 
       // Reveal observer
@@ -1537,7 +1537,7 @@
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.1 }
       );
 
       document
@@ -1623,7 +1623,7 @@
               d.size * 0.72,
               Math.atan2(d.vy, d.vx),
               0,
-              Math.PI * 2,
+              Math.PI * 2
             );
             inkCtx.fillStyle = color;
             inkCtx.fill();
@@ -1635,7 +1635,7 @@
               d.size * 0.18,
               0,
               0,
-              Math.PI * 2,
+              Math.PI * 2
             );
             inkCtx.fillStyle = color;
             inkCtx.fill();
@@ -1673,21 +1673,19 @@
         launchInk(isLight ? "#37a5b3" : "#2dd4c8");
       });
     </script>
-    <script src="/transitions.js"></script>
-    <script src="/mobile-fix.js"></script>
+    <script src="/assets/js/transitions.js"></script>
+    <script src="/assets/js/mobile-fix.js"></script>
 
     <script>
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (e) => {
-          if (localStorage.getItem("theme")) return;
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        if (localStorage.getItem("theme")) return;
 
-          if (e.matches) {
-            document.documentElement.classList.remove("light-mode");
-          } else {
-            document.documentElement.classList.add("light-mode");
-          }
-        });
+        if (e.matches) {
+          document.documentElement.classList.remove("light-mode");
+        } else {
+          document.documentElement.classList.add("light-mode");
+        }
+      });
     </script>
   </body>
 </html>

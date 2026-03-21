@@ -23,9 +23,7 @@ if (window.matchMedia("(pointer:fine)").matches) {
     el.addEventListener("mouseenter", () => {
       cursor.style.transform = "scale(2.5)";
       ring.style.borderColor =
-        getComputedStyle(document.documentElement)
-          .getPropertyValue("--teal")
-          .trim() + "99";
+        getComputedStyle(document.documentElement).getPropertyValue("--teal").trim() + "99";
     });
     el.addEventListener("mouseleave", () => {
       cursor.style.transform = "scale(1)";
@@ -36,9 +34,7 @@ if (window.matchMedia("(pointer:fine)").matches) {
 
 // Navbar scroll
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () =>
-  navbar.classList.toggle("scrolled", window.scrollY > 50),
-);
+window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50));
 
 // Hamburger
 const hamburger = document.getElementById("hamburger");
@@ -46,9 +42,7 @@ const mobileMenu = document.getElementById("mobileMenu");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   mobileMenu.classList.toggle("open");
-  document.body.style.overflow = mobileMenu.classList.contains("open")
-    ? "hidden"
-    : "";
+  document.body.style.overflow = mobileMenu.classList.contains("open") ? "hidden" : "";
 });
 function closeMobile() {
   hamburger.classList.remove("open");
@@ -103,8 +97,7 @@ function closeMobile() {
       const start = performance.now();
       function tick(now) {
         const raw = Math.min((now - start) / duration, 1);
-        const eased =
-          raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;
+        const eased = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;
         const pct = eased * 100;
         barFill.style.width = pct + "%";
         // shine: brilhinho que corre pela barra
@@ -219,7 +212,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.08 },
+  { threshold: 0.08 }
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
@@ -244,7 +237,14 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeNichoModal();
 });
 
-// ── Light / Dark theme toggle + ink splash ──
+// ── Theme toggle — 3 estados: auto → light → dark → auto ───────
+// ── Theme toggle — 3 estados: auto → light → dark → auto ───────
+// Padrão = "auto" (segue o sistema em tempo real)
+// Ciclo do clique: auto → light → dark → auto → …
+// Ícone exibe o ESTADO ATUAL:
+//   auto  → ícone auto (meio sol / meio lua)
+//   light → sol
+//   dark  → lua
 const themeToggle = document.getElementById("themeToggle");
 const inkCanvas = document.getElementById("inkCanvas");
 const inkCtx = inkCanvas.getContext("2d");
@@ -257,15 +257,13 @@ resizeInkCanvas();
 window.addEventListener("resize", resizeInkCanvas);
 
 function launchInk(color) {
-  const W = inkCanvas.width;
-  const H = inkCanvas.height;
+  const W = inkCanvas.width,
+    H = inkCanvas.height;
   const rect = themeToggle.getBoundingClientRect();
   const originX = rect.left + rect.width / 2;
   const originY = rect.top + rect.height / 2;
-
-  // Drops
-  const drops = [];
-  const COUNT = 22;
+  const drops = [],
+    COUNT = 22;
   for (let i = 0; i < COUNT; i++) {
     const angle = ((Math.PI * 2) / COUNT) * i + (Math.random() - 0.5) * 0.4;
     const speed = 6 + Math.random() * 14;
@@ -280,10 +278,8 @@ function launchInk(color) {
       decay: 0.013 + Math.random() * 0.01,
     });
   }
-
-  // Expanding ring bursts
   const bursts = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i++)
     bursts.push({
       x: originX,
       y: originY,
@@ -292,12 +288,9 @@ function launchInk(color) {
       alpha: 0.18 - i * 0.03,
       speed: 28 + i * 12,
     });
-  }
-
   let frame = 0;
   function drawInk() {
     inkCtx.clearRect(0, 0, W, H);
-
     bursts.forEach((b) => {
       b.r += b.speed;
       if (b.r < b.maxR) {
@@ -313,7 +306,6 @@ function launchInk(color) {
         b.alpha -= 0.003;
       }
     });
-
     let alive = false;
     drops.forEach((d) => {
       if (d.alpha <= 0) return;
@@ -333,7 +325,7 @@ function launchInk(color) {
         d.size * 0.72,
         Math.atan2(d.vy, d.vx),
         0,
-        Math.PI * 2,
+        Math.PI * 2
       );
       inkCtx.fillStyle = color;
       inkCtx.fill();
@@ -345,22 +337,20 @@ function launchInk(color) {
         d.size * 0.18,
         0,
         0,
-        Math.PI * 2,
+        Math.PI * 2
       );
       inkCtx.fillStyle = color;
       inkCtx.fill();
       inkCtx.restore();
     });
-
     frame++;
-    if (alive || frame < 40) {
-      requestAnimationFrame(drawInk);
-    } else {
+    if (alive || frame < 40) requestAnimationFrame(drawInk);
+    else {
       let fa = 1;
-      (function fadeOut() {
+      (function fo() {
         fa -= 0.06;
         inkCtx.globalAlpha = fa;
-        if (fa > 0) requestAnimationFrame(fadeOut);
+        if (fa > 0) requestAnimationFrame(fo);
         else {
           inkCtx.clearRect(0, 0, W, H);
           inkCtx.globalAlpha = 1;
@@ -371,78 +361,129 @@ function launchInk(color) {
   drawInk();
 }
 
-(function () {
-  const savedTheme = localStorage.getItem("theme");
+const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-  if (savedTheme) {
-    if (savedTheme === "light") {
-      document.documentElement.classList.add("light-mode");
-    }
-  } else {
-    const prefersLight = window.matchMedia(
-      "(prefers-color-scheme: light)",
-    ).matches;
+// Aplica o estado ao DOM — ícone reflete o estado ATUAL
+function applyThemeState(state) {
+  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches; // auto: segue o sistema
 
-    if (prefersLight) {
-      document.documentElement.classList.add("light-mode");
-    }
-  }
-})();
+  document.documentElement.classList.toggle("light-mode", isLight);
+  document.body.classList.toggle("light-mode", isLight);
 
-// Aplica tema salvo + sincroniza body e html
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") {
-  document.documentElement.classList.add("light-mode");
-  document.body.classList.add("light-mode");
+  // data-theme no botão = estado atual → CSS mostra o ícone correto
+  themeToggle.setAttribute("data-theme", state);
+  themeToggle.setAttribute(
+    "aria-label",
+    state === "light"
+      ? "Tema claro (clique para escuro)"
+      : state === "dark"
+        ? "Tema escuro (clique para automático)"
+        : "Tema automático (clique para claro)"
+  );
 }
 
-themeToggle.addEventListener("click", () => {
-  const isLight = document.documentElement.classList.toggle("light-mode");
-  document.body.classList.toggle("light-mode", isLight);
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-  launchInk(isLight ? "#37a5b3" : "#2dd4c8");
+// Carrega estado salvo — padrão = "auto"
+applyThemeState(localStorage.getItem("theme") || "auto");
+
+// Reage em tempo real quando o sistema muda (modo noturno automático do celular)
+sysDark.addEventListener("change", () => {
+  if ((localStorage.getItem("theme") || "auto") === "auto") applyThemeState("auto");
 });
 
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+// Ciclo: auto → light → dark → auto → …
+themeToggle.addEventListener("click", () => {
+  const current = localStorage.getItem("theme") || "auto";
+  const next = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+  localStorage.setItem("theme", next);
+  applyThemeState(next);
+  const nowLight = next === "light" || (next === "auto" && !sysDark.matches);
+  launchInk(nowLight ? "#37a5b3" : "#2dd4c8");
+});
 
-function applyTheme(e) {
-  const saved = localStorage.getItem("theme");
+(function () {
+  const toggle = document.getElementById("deviceToggle");
+  const track = document.getElementById("photoTrack");
+  const prev = document.querySelector(".photo-nav.prev");
+  const next = document.querySelector(".photo-nav.next");
 
-  if (saved === "dark") {
-    document.documentElement.classList.remove("light-mode");
-    return;
+  if (!toggle || !track) return;
+
+  const toggleButtons = Array.from(toggle.querySelectorAll(".device-option"));
+  const cards = Array.from(track.querySelectorAll(".project-shot"));
+
+  let currentDevice = "desktop";
+  let currentIndex = 0;
+
+  function applyDevice(device) {
+    currentDevice = device;
+
+    toggleButtons.forEach((button) => {
+      const active = button.dataset.device === device;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    });
+
+    cards.forEach((card) => {
+      const desktopFrame = card.querySelector(".shot-desktop");
+      const mobileFrame = card.querySelector(".shot-mobile");
+
+      if (!desktopFrame || !mobileFrame) return;
+
+      desktopFrame.classList.toggle("hidden", device !== "desktop");
+      mobileFrame.classList.toggle("hidden", device !== "mobile");
+    });
+
+    currentIndex = 0;
+    updateCarousel();
   }
 
-  if (saved === "light") {
-    document.documentElement.classList.add("light-mode");
-    return;
+  function getStep() {
+    const firstCard = cards[0];
+    if (!firstCard) return 0;
+
+    const style = window.getComputedStyle(track);
+    const gap = parseFloat(style.gap || style.columnGap || 20);
+
+    return firstCard.offsetWidth + gap;
   }
 
-  // system mode
-  if (e.matches) {
-    document.documentElement.classList.remove("light-mode");
-  } else {
-    document.documentElement.classList.add("light-mode");
-  }
-}
+  function getMaxIndex() {
+    const wrap = track.parentElement;
+    const step = getStep();
+    if (!wrap || !step) return 0;
 
-// apply on load
-applyTheme(mediaQuery);
-
-// listen system changes
-mediaQuery.addEventListener("change", applyTheme);
-
-// toggle button (3 states)
-function toggleTheme() {
-  const current = localStorage.getItem("theme");
-
-  if (!current) {
-    localStorage.setItem("theme", "light");
-  } else if (current === "light") {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.removeItem("theme");
+    const visible = Math.max(1, Math.floor(wrap.offsetWidth / step));
+    return Math.max(0, cards.length - visible);
   }
 
-  applyTheme(mediaQuery);
-}
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
+  }
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyDevice(button.dataset.device);
+    });
+  });
+
+  if (next) {
+    next.addEventListener("click", () => {
+      currentIndex = Math.min(currentIndex + 1, getMaxIndex());
+      updateCarousel();
+    });
+  }
+
+  if (prev) {
+    prev.addEventListener("click", () => {
+      currentIndex = Math.max(currentIndex - 1, 0);
+      updateCarousel();
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    currentIndex = Math.min(currentIndex, getMaxIndex());
+    updateCarousel();
+  });
+
+  applyDevice("desktop");
+})();

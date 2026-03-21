@@ -5,20 +5,22 @@
 (function () {
   "use strict";
 
-  const FADE_DURATION   = 320;
-  const PROGRESS_COLOR  = null;
+  const FADE_DURATION = 320;
+  const PROGRESS_COLOR = null;
   const PROGRESS_HEIGHT = "2px";
 
-  let progressBar   = null;
+  let progressBar = null;
   let progressTimer = null;
-  let isNavigating  = false;
-  const prefetched  = new Set();
+  let isNavigating = false;
+  const prefetched = new Set();
 
   function isSameSite(url) {
     try {
       const u = new URL(url, location.href);
       return u.hostname === location.hostname;
-    } catch { return false; }
+    } catch {
+      return false;
+    }
   }
 
   function isSkippable(el) {
@@ -36,8 +38,7 @@
 
   function getTealColor() {
     if (PROGRESS_COLOR) return PROGRESS_COLOR;
-    const v = getComputedStyle(document.documentElement)
-      .getPropertyValue("--teal").trim();
+    const v = getComputedStyle(document.documentElement).getPropertyValue("--teal").trim();
     return v || "#2dd4c8";
   }
 
@@ -46,11 +47,16 @@
     progressBar = document.createElement("div");
     progressBar.id = "__pg-bar";
     Object.assign(progressBar.style, {
-      position: "fixed", top: "0", left: "0", width: "0%",
-      height: PROGRESS_HEIGHT, background: getTealColor(),
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "0%",
+      height: PROGRESS_HEIGHT,
+      background: getTealColor(),
       zIndex: "99999",
       transition: "width .4s cubic-bezier(.16,1,.3,1), opacity .3s ease",
-      opacity: "0", pointerEvents: "none",
+      opacity: "0",
+      pointerEvents: "none",
       borderRadius: "0 2px 2px 0",
       boxShadow: "0 0 8px " + getTealColor() + "88",
     });
@@ -61,24 +67,26 @@
     createProgressBar();
     const color = getTealColor();
     progressBar.style.background = color;
-    progressBar.style.boxShadow  = "0 0 8px " + color + "88";
-    progressBar.style.opacity    = "1";
-    progressBar.style.width      = "0%";
+    progressBar.style.boxShadow = "0 0 8px " + color + "88";
+    progressBar.style.opacity = "1";
+    progressBar.style.width = "0%";
     progressBar.style.transition = "none";
     progressBar.getBoundingClientRect();
     progressBar.style.transition = "width 2.5s cubic-bezier(.16,1,.3,1)";
-    progressBar.style.width      = "85%";
+    progressBar.style.width = "85%";
     clearTimeout(progressTimer);
   }
 
   function progressFinish() {
     if (!progressBar) return;
     progressBar.style.transition = "width .2s ease, opacity .3s ease .15s";
-    progressBar.style.width      = "100%";
+    progressBar.style.width = "100%";
     clearTimeout(progressTimer);
     progressTimer = setTimeout(() => {
       progressBar.style.opacity = "0";
-      setTimeout(() => { progressBar.style.width = "0%"; }, 300);
+      setTimeout(() => {
+        progressBar.style.width = "0%";
+      }, 300);
     }, 200);
   }
 
@@ -91,9 +99,12 @@
       !document.documentElement.classList.contains("light-mode") &&
       !document.body.classList.contains("light-mode");
     Object.assign(overlay.style, {
-      position: "fixed", inset: "0", zIndex: "99998",
+      position: "fixed",
+      inset: "0",
+      zIndex: "99998",
       background: isDark ? "#131416" : "#f4f5f7",
-      opacity: "0", pointerEvents: "none",
+      opacity: "0",
+      pointerEvents: "none",
       transition: `opacity ${FADE_DURATION}ms cubic-bezier(.16,1,.3,1)`,
     });
     document.body.appendChild(overlay);
@@ -105,7 +116,7 @@
     const isDark =
       !document.documentElement.classList.contains("light-mode") &&
       !document.body.classList.contains("light-mode");
-    overlay.style.background    = isDark ? "#131416" : "#f4f5f7";
+    overlay.style.background = isDark ? "#131416" : "#f4f5f7";
     overlay.style.pointerEvents = "all";
     overlay.getBoundingClientRect();
     overlay.style.opacity = "1";
@@ -124,7 +135,7 @@
     overlay.style.transition = `opacity ${FADE_DURATION * 1.2}ms cubic-bezier(.16,1,.3,1)`;
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        overlay.style.opacity      = "0";
+        overlay.style.opacity = "0";
         overlay.style.pointerEvents = "none";
         progressFinish();
       });
@@ -135,7 +146,9 @@
     if (prefetched.has(url)) return;
     prefetched.add(url);
     const link = document.createElement("link");
-    link.rel = "prefetch"; link.href = url; link.as = "document";
+    link.rel = "prefetch";
+    link.href = url;
+    link.as = "document";
     document.head.appendChild(link);
   }
 
@@ -143,21 +156,25 @@
     if (isNavigating) return;
     isNavigating = true;
     progressStart();
-    fadeOut(() => { location.href = url; });
+    fadeOut(() => {
+      location.href = url;
+    });
   }
 
-  document.addEventListener("click", function (e) {
-    let el = e.target;
-    while (el && el.tagName !== "A") el = el.parentElement;
-    if (!el || isSkippable(el)) return;
-    const samePageUrl = new URL(el.href, location.href);
-    if (
-      samePageUrl.pathname === location.pathname &&
-      samePageUrl.search   === location.search
-    ) return;
-    e.preventDefault();
-    navigate(el.href);
-  }, true);
+  document.addEventListener(
+    "click",
+    function (e) {
+      let el = e.target;
+      while (el && el.tagName !== "A") el = el.parentElement;
+      if (!el || isSkippable(el)) return;
+      const samePageUrl = new URL(el.href, location.href);
+      if (samePageUrl.pathname === location.pathname && samePageUrl.search === location.search)
+        return;
+      e.preventDefault();
+      navigate(el.href);
+    },
+    true
+  );
 
   let hoverTimer = null;
   document.addEventListener("mouseover", function (e) {
@@ -167,14 +184,20 @@
     clearTimeout(hoverTimer);
     hoverTimer = setTimeout(() => prefetch(el.href), 80);
   });
-  document.addEventListener("mouseout", function () { clearTimeout(hoverTimer); });
+  document.addEventListener("mouseout", function () {
+    clearTimeout(hoverTimer);
+  });
 
-  document.addEventListener("touchstart", function (e) {
-    let el = e.target;
-    while (el && el.tagName !== "A") el = el.parentElement;
-    if (!el || isSkippable(el)) return;
-    prefetch(el.href);
-  }, { passive: true });
+  document.addEventListener(
+    "touchstart",
+    function (e) {
+      let el = e.target;
+      while (el && el.tagName !== "A") el = el.parentElement;
+      if (!el || isSkippable(el)) return;
+      prefetch(el.href);
+    },
+    { passive: true }
+  );
 
   if (document.readyState === "loading") {
     createOverlay();
@@ -191,5 +214,4 @@
   });
 
   window.PageTransitions = { navigate, prefetch };
-
 })();

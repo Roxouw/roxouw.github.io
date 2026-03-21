@@ -13,13 +13,9 @@
         frame-ancestors 'none';
         base-uri 'self';
         form-action 'self';
-      "
-    />
+      " />
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -35,17 +31,13 @@
     <!-- ═══════════════════════════════════════
        SEO PRIMÁRIO
   ════════════════════════════════════════ -->
-    <title>
-      Filipe Rosso | Desenvolvedor Full Stack — C#/.NET, React, TypeScript
-    </title>
+    <title>Filipe Rosso | Desenvolvedor Full Stack — C#/.NET, React, TypeScript</title>
     <meta
       name="description"
-      content="Filipe Rosso, desenvolvedor full stack com 3+ anos de experiência em C#/.NET, React e TypeScript. Disponível para freelance (sites, landing pages, sistemas) e oportunidades CLT/PJ em Cachoeirinha, RS."
-    />
+      content="Filipe Rosso, desenvolvedor full stack com 3+ anos de experiência em C#/.NET, React e TypeScript. Disponível para freelance (sites, landing pages, sistemas) e oportunidades CLT/PJ em Cachoeirinha, RS." />
     <meta
       name="keywords"
-      content="desenvolvedor full stack, desenvolvedor C# .NET, desenvolvedor React, freelance desenvolvimento web, criar site profissional, landing page, Cachoeirinha, Rio Grande do Sul, TypeScript, Node.js"
-    />
+      content="desenvolvedor full stack, desenvolvedor C# .NET, desenvolvedor React, freelance desenvolvimento web, criar site profissional, landing page, Cachoeirinha, Rio Grande do Sul, TypeScript, Node.js" />
     <meta name="author" content="Filipe Rosso" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://roxouw.github.io/" />
@@ -55,14 +47,10 @@
   ════════════════════════════════════════ -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://roxouw.github.io/" />
-    <meta
-      property="og:title"
-      content="Filipe Rosso | Desenvolvedor Full Stack"
-    />
+    <meta property="og:title" content="Filipe Rosso | Desenvolvedor Full Stack" />
     <meta
       property="og:description"
-      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET no servidor, React na interface. Disponível para freelance."
-    />
+      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET no servidor, React na interface. Disponível para freelance." />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Filipe Rosso — Dev" />
 
@@ -70,14 +58,10 @@
        TWITTER / X CARD
   ════════════════════════════════════════ -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Filipe Rosso | Desenvolvedor Full Stack"
-    />
+    <meta name="twitter:title" content="Filipe Rosso | Desenvolvedor Full Stack" />
     <meta
       name="twitter:description"
-      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET, React, TypeScript."
-    />
+      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET, React, TypeScript." />
 
     <!-- ═══════════════════════════════════════
        SCHEMA.ORG — STRUCTURED DATA (Google)
@@ -97,10 +81,7 @@
           "addressRegion": "RS",
           "addressCountry": "BR"
         },
-        "sameAs": [
-          "https://github.com/Roxouw",
-          "https://www.linkedin.com/in/filiperosso/"
-        ],
+        "sameAs": ["https://github.com/Roxouw", "https://www.linkedin.com/in/filiperosso/"],
         "knowsAbout": [
           "C#",
           ".NET",
@@ -124,27 +105,16 @@
        FAVICON
   ════════════════════════════════════════ -->
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/assets/icons/favicon.ico"
-      sizes="512x512"
-    />
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.ico" sizes="512x512" />
     <link rel="apple-touch-icon" href="/assets/icons/favicon.ico" />
 
     <!-- ═══════════════════════════════════════
        OPEN GRAPH — usa a logo como preview
   ════════════════════════════════════════ -->
-    <meta
-      property="og:image"
-      content="https://roxouw.github.io/assets/images/logo.png"
-    />
+    <meta property="og:image" content="https://roxouw.github.io/assets/images/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      name="twitter:image"
-      content="https://roxouw.github.io/assets/images/logo.png"
-    />
+    <meta name="twitter:image" content="https://roxouw.github.io/assets/images/logo.png" />
 
     <!-- ═══════════════════════════════════════
        PERFORMANCE
@@ -153,31 +123,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <!-- Aplica tema salvo antes do render — evita flash ao trocar de página -->
-    <script>
-      if (localStorage.getItem("theme") === "light")
-        document.documentElement.classList.add("light-mode");
-    </script>
-
+    <!-- Aplica tema antes do render — evita flash (3 estados: light / dark / auto) -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-
-        if (savedTheme === "light") {
-          document.documentElement.classList.add("light-mode");
-        } else if (savedTheme === "dark") {
-          document.documentElement.classList.remove("light-mode");
-        } else {
-          if (!prefersDark) {
-            document.documentElement.classList.add("light-mode");
-          }
-        }
+        var t = localStorage.getItem("theme");
+        var sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var isLight = t === "light" || (t !== "dark" && !sysDark);
+        if (isLight) document.documentElement.classList.add("light-mode");
       })();
     </script>
   </head>
@@ -193,21 +147,18 @@
         pointer-events: none;
         width: 100%;
         height: 100%;
-      "
-    ></canvas>
+      "></canvas>
     <!-- INTRO OVERLAY -->
     <div id="intro" aria-hidden="true">
       <div class="intro-name" id="introName">
-        <span class="intro-first" id="introFirst"></span
-        ><span class="intro-last" id="introLast"></span>
+        <span class="intro-first" id="introFirst"></span>
+        <span class="intro-last" id="introLast"></span>
       </div>
       <div class="intro-bar" id="introBar">
         <div class="intro-bar-fill" id="introBarFill"></div>
         <div class="intro-bar-shine" id="introBarShine"></div>
       </div>
-      <span class="intro-text" id="introText"
-        >Full Stack Developer / Web Designer</span
-      >
+      <span class="intro-text" id="introText">Full Stack Developer / Web Designer</span>
     </div>
 
     <div class="cursor" id="cursor"></div>
@@ -227,16 +178,18 @@
           openNichoModal();
           return false;
         "
-        style="color: var(--teal); text-align: center"
-        >Quero meu site agora</a
-      >
+        style="color: var(--teal); text-align: center">
+        Quero meu site agora
+      </a>
     </div>
 
     <nav id="navbar">
       <div class="nav-logo-group">
-        <a href="#hero" class="nav-logo"
-          >FILIPE<span class="logo-rosso">ROSSO</span><span></span
-        ></a>
+        <a href="#hero" class="nav-logo">
+          FILIPE
+          <span class="logo-rosso">ROSSO</span>
+          <span></span>
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="#about">Sobre</a></li>
@@ -251,18 +204,17 @@
               openNichoModal();
               return false;
             "
-            style="color: var(--teal); text-align: center"
-            >Quero meu site agora</a
-          >
+            style="color: var(--teal); text-align: center">
+            Quero meu site agora
+          </a>
         </li>
       </ul>
       <div style="display: flex; align-items: center; gap: 0.6rem">
         <button
           class="theme-toggle"
           id="themeToggle"
-          aria-label="Alternar tema claro/escuro"
-          title="Alternar tema"
-        >
+          aria-label="Alternar tema"
+          title="Claro / Escuro / Automático">
           <svg
             class="icon-moon"
             xmlns="http://www.w3.org/2000/svg"
@@ -271,8 +223,7 @@
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
           </svg>
           <svg
@@ -283,8 +234,7 @@
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <circle cx="12" cy="12" r="5" />
             <line x1="12" y1="1" x2="12" y2="3" />
             <line x1="12" y1="21" x2="12" y2="23" />
@@ -295,9 +245,28 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
+          <svg
+            class="icon-auto"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <path d="M17 12a5 5 0 0 1-5 5V7a5 5 0 0 1 5 5z" fill="currentColor" stroke="none" />
+          </svg>
         </button>
         <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </nav>
@@ -307,31 +276,31 @@
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
       <div class="hero-grid"></div>
-      <div class="hero-badge">Full Stack Developer - Web Developer</div>
+      <div class="hero-badge">Criação de sites para empresas e autônomos</div>
       <h1 class="hero-title">
-        Mais clientes<br />
-        <span class="teal-word"
-          >Mais vendas <span class="teal-word"></span
-        ></span>
+        Pare de perder clientes
+        <br />
+        <span class="teal-word">para quem tem site profissional</span>
       </h1>
-      <div class="hero-bottom">
-        <p class="hero-desc">
-          Rápido, estratégico e profissional.<br />
-          Resultado na tela do cliente.
-        </p>
-        <div class="hero-cta">
-          <a
-            href="#"
-            onclick="
-              openNichoModal();
-              return false;
-            "
-            class="btn btn-primary"
-            >Quero meu site agora</a
-          >
-          <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
-          <a href="#contact" class="btn btn-ghost">Falar Comigo</a>
-        </div>
+
+      <p class="hero-desc">
+        Enquanto você lê isso, pessoas estão procurando seu serviço no Google. Se você não aparece,
+        você perde dinheiro todos os dias.
+        <br />
+        Eu crio sites que atraem clientes e fecham vendas automaticamente.
+      </p>
+      <div class="hero-cta">
+        <a
+          href="#"
+          onclick="
+            openNichoModal();
+            return false;
+          "
+          class="btn btn-primary">
+          Quero começar a receber clientes →
+        </a>
+        <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
+        <a href="#contact" class="btn btn-ghost">Falar Comigo</a>
       </div>
       <div class="scroll-indicator">
         <div class="scroll-line"></div>
@@ -341,40 +310,291 @@
 
     <hr class="divider" />
 
+    <section id="portfolio-fotos" class="sec-dark">
+      <p class="section-eyebrow reveal" data-num="00">Sites entregues</p>
+      <h2 class="section-title reveal">
+        Projetos reais em
+        <br />
+        formato de
+        <span class="teal-word">vitrine visual.</span>
+      </h2>
+
+      <div class="portfolio-topbar reveal">
+        <p class="portfolio-subtitle">Veja os projetos na versão desktop ou mobile.</p>
+
+        <div
+          class="device-toggle"
+          id="deviceToggle"
+          role="tablist"
+          aria-label="Escolher visualização">
+          <button
+            class="device-option active"
+            data-device="desktop"
+            type="button"
+            role="tab"
+            aria-selected="true">
+            Monitor
+          </button>
+          <button
+            class="device-option"
+            data-device="mobile"
+            type="button"
+            role="tab"
+            aria-selected="false">
+            Celular
+          </button>
+        </div>
+      </div>
+
+      <div class="photo-carousel reveal">
+        <button class="photo-nav prev" aria-label="Anterior" type="button">‹</button>
+
+        <div class="photo-track-wrap">
+          <div class="photo-track" id="photoTrack">
+            <a class="project-shot" href="/pages/siteParaAdvogado.html" target="_blank">
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/advogado.webp"
+                  data-desktop="/assets/images/prints/desktop/advogado.webp"
+                  data-mobile="/assets/images/prints/mobile/advogado.png"
+                  alt="Projeto para advogado" />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/advogado.png"
+                  data-desktop="/assets/images/prints/desktop/advogado.webp"
+                  data-mobile="/assets/images/prints/mobile/advogado.png"
+                  alt="Projeto para advogado no celular" />
+              </div>
+
+              <span class="shot-caption">Advogado</span>
+            </a>
+
+            <a class="project-shot" href="/pages/siteParaAcademia.html" target="_blank">
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/academia.webp"
+                  data-desktop="/assets/images/prints/desktop/academia.webp"
+                  data-mobile="/assets/images/prints/mobile/academia.png"
+                  alt="Projeto para academia" />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/academia.png"
+                  data-desktop="/assets/images/prints/desktop/academia.webp"
+                  data-mobile="/assets/images/prints/mobile/academia.png"
+                  alt="Projeto para academia no celular" />
+              </div>
+
+              <span class="shot-caption">Academia</span>
+            </a>
+
+            <a class="project-shot" href="/pages/siteParaDentista.html" target="_blank">
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/dentista.webp"
+                  data-desktop="/assets/images/prints/desktop/dentista.webp"
+                  data-mobile="/assets/images/prints/mobile/dentista.webp"
+                  alt="Projeto para dentista" />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/dentista.png"
+                  data-desktop="/assets/images/prints/desktop/dentista.webp"
+                  data-mobile="/assets/images/prints/mobile/dentista.png"
+                  alt="Projeto para dentista no celular" />
+              </div>
+
+              <span class="shot-caption">Dentista</span>
+            </a>
+
+            <!-- <a
+              class="project-shot"
+              href="/pages/siteParaPersonal.html"
+              target="_blank"
+            >
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/personal.webp"
+                  data-desktop="/assets/images/prints/desktop/personal.webp"
+                  data-mobile="/assets/images/prints/mobile/personal.webp"
+                  alt="Projeto para personal"
+                />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/personal.png"
+                  data-desktop="/assets/images/prints/desktop/personal.webp"
+                  data-mobile="/assets/images/prints/mobile/personal.png"
+                  alt="Projeto para personal no celular"
+                />
+              </div>
+
+              <span class="shot-caption">Personal</span>
+            </a> -->
+
+            <a class="project-shot" href="/pages/siteParaNutricionista.html" target="_blank">
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/nutricionista.webp"
+                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
+                  data-mobile="/assets/images/prints/mobile/nutricionista.webp"
+                  alt="Projeto para nutricionista" />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/nutricionista.png"
+                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
+                  data-mobile="/assets/images/prints/mobile/nutricionista.png"
+                  alt="Projeto para nutricionista no celular" />
+              </div>
+
+              <span class="shot-caption">Nutricionista</span>
+            </a>
+
+            <!-- <a
+              class="project-shot"
+              href="/pages/siteParaEmpresa.html"
+              target="_blank"
+            >
+              <div class="shot-frame shot-desktop">
+                <div class="browser-ui">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/desktop/empresa.webp"
+                  data-desktop="/assets/images/prints/desktop/empresa.webp"
+                  data-mobile="/assets/images/prints/mobile/empresa.webp"
+                  alt="Projeto para empresa"
+                />
+              </div>
+
+              <div class="shot-frame shot-mobile hidden">
+                <div class="phone-ui">
+                  <div class="phone-notch"></div>
+                </div>
+                <img
+                  class="shot-image"
+                  src="/assets/images/prints/mobile/empresa.png"
+                  data-desktop="/assets/images/prints/desktop/empresa.webp"
+                  data-mobile="/assets/images/prints/mobile/empresa.png"
+                  alt="Projeto para empresa no celular"
+                />
+              </div>
+
+              <span class="shot-caption">Empresa</span>
+            </a> -->
+          </div>
+        </div>
+
+        <button class="photo-nav next" aria-label="Próximo" type="button">›</button>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
     <!-- ABOUT -->
     <section id="about" class="sec-accent">
       <div class="about-left">
         <p class="section-eyebrow" data-num="01">Sobre mim</p>
-        <h2 class="section-title reveal">Código com<br />contexto.</h2>
+        <h2 class="section-title reveal">
+          Código com
+          <br />
+          contexto.
+        </h2>
         <p class="about-text reveal">
-          Sou desenvolvedor full stack com experiência em
-          <strong>C#/.NET, React e TypeScript</strong>, atuando há mais de 3
-          anos em projetos corporativos — incluindo o ecossistema
-          <strong>Open Finance</strong>. Trabalho com boas práticas como SOLID,
-          Clean Code e testes unitários.
+          Ajudo empresas e profissionais a terem presença digital profissional, atraindo mais
+          clientes e aumentando suas vendas através de sites estratégicos.
         </p>
         <p class="about-text reveal">
-          Além do trabalho fixo, desenvolvo
-          <strong>sites e sistemas sob demanda</strong> para clientes — do
-          briefing ao deploy. Se você precisa de presença digital ou de um
-          sistema que funcione de verdade, é aqui.
+          Meu foco não é só criar sites bonitos. É criar sites que fazem seu WhatsApp tocar.
+        </p>
+
+        <p class="about-text reveal">
+          Cada projeto é pensado para transformar visitantes em clientes. Com estratégia,
+          posicionamento e estrutura que vende.
+        </p>
+
+        <p class="about-text reveal">
+          Você não precisa entender de tecnologia. Só precisa de alguém que entregue resultado.
+        </p>
+        <p class="about-text reveal">
+          Sou desenvolvedor full stack com experiência em
+          <strong>C#/.NET, React e TypeScript</strong>
+          , atuando há mais de 3 anos em projetos corporativos — incluindo o ecossistema
+          <strong>Open Finance</strong>
+          . Trabalho com boas práticas como SOLID, Clean Code e testes unitários.
         </p>
         <div class="about-stats reveal">
           <div class="stat-box">
-            <span class="stat-num">3+</span
-            ><span class="stat-label">Anos de experiência</span>
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Anos de experiência</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">2</span
-            ><span class="stat-label">Projetos freelance</span>
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Projetos freelance</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">CLT</span
-            ><span class="stat-label">+ Freelance disponível</span>
+            <span class="stat-num">CLT</span>
+            <span class="stat-label">+ Freelance disponível</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">100%</span
-            ><span class="stat-label">Comprometimento</span>
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Comprometimento</span>
           </div>
         </div>
       </div>
@@ -419,11 +639,13 @@
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            Node.js<span class="tech-badge">em curso</span>
+            Node.js
+            <span class="tech-badge">em curso</span>
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            Next.js<span class="tech-badge">em curso</span>
+            Next.js
+            <span class="tech-badge">em curso</span>
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
@@ -438,14 +660,18 @@
     <!-- SKILLS -->
     <section id="skills" class="sec-dark">
       <p class="section-eyebrow reveal" data-num="02">Habilidades</p>
-      <h2 class="section-title reveal">O que<br />eu faço.</h2>
+      <h2 class="section-title reveal">
+        O que
+        <br />
+        eu faço.
+      </h2>
       <div class="skills-grid">
         <div class="skill-card reveal">
           <span class="skill-icon">◈</span>
-          <div class="skill-name">Front-end</div>
+          <div class="skill-name">Sites que vendem</div>
           <p class="skill-desc">
-            Interfaces responsivas e mobile-first com atenção à experiência do
-            usuário. Do wireframe ao produto final, com animações e performance.
+            Sites estratégicos focados em gerar clientes. Com WhatsApp, SEO e estrutura pronta para
+            conversão.
           </p>
           <div class="skill-tags">
             <span class="skill-tag">React</span>
@@ -456,10 +682,9 @@
         </div>
         <div class="skill-card reveal">
           <span class="skill-icon">⬡</span>
-          <div class="skill-name">Back-end</div>
+          <div class="skill-name">Landing Pages</div>
           <p class="skill-desc">
-            APIs REST robustas, autenticação, regras de negócio e integrações
-            com serviços externos. Arquitetura limpa e código testável.
+            Páginas focadas em conversão. Ideais para tráfego pago e captação de leads.
           </p>
           <div class="skill-tags">
             <span class="skill-tag">C# / .NET</span>
@@ -470,10 +695,10 @@
         </div>
         <div class="skill-card reveal">
           <span class="skill-icon">⬢</span>
-          <div class="skill-name">Sites para Clientes</div>
+          <div class="skill-name">Sistemas sob medida</div>
           <p class="skill-desc">
-            Sites profissionais para pequenas empresas e autônomos — SEO,
-            WhatsApp integrado, Open Graph e hospedagem incluída.
+            Desenvolvimento de sistemas personalizados para automatizar processos e aumentar
+            produtividade do negócio.
           </p>
           <div class="skill-tags">
             <span class="skill-tag">Landing Pages</span>
@@ -490,19 +715,23 @@
     <!-- PROJECTS -->
     <section id="projects" class="sec-accent">
       <p class="section-eyebrow reveal" data-num="03">Projetos</p>
-      <h2 class="section-title reveal">Trabalhos<br />selecionados.</h2>
+      <h2 class="section-title reveal">
+        Trabalhos
+        <br />
+        selecionados.
+      </h2>
+      <p class="section-eyebrow reveal">
+        Sites reais que já estão gerando resultado para clientes.
+      </p>
       <div class="projects-grid">
         <div class="project-card featured reveal">
           <div>
             <p class="project-num">001 — Destaque · Freelance</p>
-            <h3 class="project-title">
-              Gabriel Consultoria — Funil de Captação
-            </h3>
+            <h3 class="project-title">Gabriel Consultoria — Funil de Captação</h3>
             <p class="project-desc">
-              App mobile-first para personal trainer: quiz interativo que
-              qualifica o lead, coleta dados e encaminha direto para o WhatsApp
-              do cliente. Conta com carrossel de depoimentos, Open Graph e
-              animações para maximizar conversão.
+              App mobile-first para personal trainer: quiz interativo que qualifica o lead, coleta
+              dados e encaminha direto para o WhatsApp do cliente. Conta com carrossel de
+              depoimentos, Open Graph e animações para maximizar conversão.
             </p>
             <div class="project-stack">
               <span class="stack-tag">HTML / CSS</span>
@@ -515,20 +744,22 @@
               <a
                 href="https://roxouw.github.io/consultoria-gabriel/"
                 target="_blank"
-                class="project-link"
-                >↗ Ver projeto</a
-              >
+                class="project-link">
+                ↗ Ver projeto
+              </a>
               <a
                 href="https://github.com/Roxouw/consultoria-gabriel"
                 target="_blank"
-                class="project-link"
-                >⌥ GitHub</a
-              >
+                class="project-link">
+                ⌥ GitHub
+              </a>
             </div>
           </div>
           <div class="project-visual">
             <div class="project-visual-text">
-              consultoria-gabriel<br />quiz · whatsapp · lead capture
+              consultoria-gabriel
+              <br />
+              quiz · whatsapp · lead capture
             </div>
           </div>
         </div>
@@ -537,9 +768,8 @@
           <p class="project-num">002 — Freelance</p>
           <h3 class="project-title">INOVATA Móveis Sob Medida</h3>
           <p class="project-desc">
-            Site institucional para empresa de móveis planejados. Galeria de
-            projetos, integração via WhatsApp, animações de entrada e Open Graph
-            customizado para redes sociais.
+            Site desenvolvido para captar clientes e gerar contatos direto no WhatsApp. Estrutura
+            pensada para conversão e posicionamento no Google.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -548,18 +778,12 @@
             <span class="stack-tag">GitHub Pages</span>
           </div>
           <div class="project-links">
-            <a
-              href="https://roxouw.github.io/SiteInovata/"
-              target="_blank"
-              class="project-link"
-              >↗ Ver projeto</a
-            >
-            <a
-              href="https://github.com/Roxouw/SiteInovata"
-              target="_blank"
-              class="project-link"
-              >⌥ GitHub</a
-            >
+            <a href="https://roxouw.github.io/SiteInovata/" target="_blank" class="project-link">
+              ↗ Ver projeto
+            </a>
+            <a href="https://github.com/Roxouw/SiteInovata" target="_blank" class="project-link">
+              ⌥ GitHub
+            </a>
           </div>
         </div>
 
@@ -567,8 +791,8 @@
           <p class="project-num">003 — Freelance</p>
           <h3 class="project-title">Academia Iron House</h3>
           <p class="project-desc">
-            Site institucional para academia. Valores, integração via WhatsApp,
-            animações de entrada e Open Graph customizado para redes sociais.
+            Site institucional para academia. Valores, integração via WhatsApp, animações de entrada
+            e Open Graph customizado para redes sociais.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -577,9 +801,7 @@
             <span class="stack-tag">GitHub Pages</span>
           </div>
           <div class="project-links">
-            <a href="/pages/academia.html" target="_blank" class="project-link"
-              >↗ Ver projeto</a
-            >
+            <a href="/pages/academia.html" target="_blank" class="project-link">↗ Ver projeto</a>
           </div>
         </div>
 
@@ -587,28 +809,7 @@
           <p class="project-num">004 — Freelance</p>
           <h3 class="project-title">Consultoria Dentista</h3>
           <p class="project-desc">
-            Site institucional para consultorio dentista. Valores, integração
-            via WhatsApp, animações de entrada e Open Graph customizado para
-            redes sociais.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">HTML / CSS</span>
-            <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Open Graph</span>
-            <span class="stack-tag">GitHub Pages</span>
-          </div>
-          <div class="project-links">
-            <a href="/pages/dentista.html" target="_blank" class="project-link"
-              >↗ Ver projeto</a
-            >
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <p class="project-num">005 — Freelance</p>
-          <h3 class="project-title">Advogado</h3>
-          <p class="project-desc">
-            Site institucional para advogado. Valores, integração via WhatsApp,
+            Site institucional para consultorio dentista. Valores, integração via WhatsApp,
             animações de entrada e Open Graph customizado para redes sociais.
           </p>
           <div class="project-stack">
@@ -618,30 +819,39 @@
             <span class="stack-tag">GitHub Pages</span>
           </div>
           <div class="project-links">
-            <a href="/pages/advogado.html" target="_blank" class="project-link"
-              >↗ Ver projeto</a
-            >
+            <a href="/pages/dentista.html" target="_blank" class="project-link">↗ Ver projeto</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <p class="project-num">005 — Freelance</p>
+          <h3 class="project-title">Advogado</h3>
+          <p class="project-desc">
+            Site institucional para advogado. Valores, integração via WhatsApp, animações de entrada
+            e Open Graph customizado para redes sociais.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML / CSS</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Open Graph</span>
+            <span class="stack-tag">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="/pages/advogado.html" target="_blank" class="project-link">↗ Ver projeto</a>
           </div>
         </div>
 
         <div class="project-card placeholder reveal">
           <p class="project-num">006 — Em breve</p>
           <h3 class="project-title">Próximo projeto</h3>
-          <p class="project-desc">
-            Novo projeto em andamento. Acesse o GitHub para acompanhar.
-          </p>
+          <p class="project-desc">Novo projeto em andamento. Acesse o GitHub para acompanhar.</p>
           <div class="project-stack">
             <span class="stack-tag">React</span>
             <span class="stack-tag">Node.js</span>
             <span class="stack-tag">PostgreSQL</span>
           </div>
           <div class="project-links">
-            <a
-              href="https://github.com/Roxouw"
-              target="_blank"
-              class="project-link"
-              >↗ GitHub</a
-            >
+            <a href="https://github.com/Roxouw" target="_blank" class="project-link">↗ GitHub</a>
           </div>
         </div>
       </div>
@@ -652,13 +862,18 @@
       <div class="freelance-inner">
         <div class="freelance-text reveal">
           <h2>
-            Precisa de um <span>site profissional</span><br />para o seu
-            negócio?
+            Seu concorrente já está no Google.
+            <br />
+            <span>E você não.</span>
           </h2>
+
           <p>
-            Desenvolvo sites e landing pages para pequenas empresas, autônomos e
-            empreendedores. Do design ao deploy, com WhatsApp integrado, SEO e
-            hospedagem. Preço justo, entrega rápida.
+            Todo dia pessoas procuram pelo seu serviço. Quem aparece, vende. Quem não aparece,
+            perde.
+            <br />
+            <br />
+            Eu coloco seu negócio online, com um site profissional pronto para atrair clientes e
+            fechar vendas.
           </p>
         </div>
         <div class="freelance-actions reveal">
@@ -668,25 +883,22 @@
               openNichoModal();
               return false;
             "
-            class="btn btn-primary"
-            >Quero meu site agora</a
-          >
+            class="btn btn-primary">
+            Quero meu site agora
+          </a>
           <a
             href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20site"
             target="_blank"
-            class="btn btn-whatsapp"
-          >
+            class="btn btn-whatsapp">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               viewBox="0 0 24 24"
               fill="currentColor"
-              style="flex-shrink: 0"
-            >
+              style="flex-shrink: 0">
               <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-              />
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
             WhatsApp
           </a>
@@ -701,48 +913,36 @@
 
     <!-- CONTACT -->
     <section id="contact" class="sec-accent">
-      <p
-        class="section-eyebrow reveal"
-        style="justify-content: center"
-        data-num="04"
-      >
-        Contato
-      </p>
+      <p class="section-eyebrow reveal" style="justify-content: center" data-num="04">Contato</p>
       <h2 class="contact-title reveal">
-        Vamos<br /><span class="outline">construir</span><br />juntos?
+        Vamos colocar seu negócio no Google e
+        <br />
+        <span class="outline">começar</span>
+        <br />
+        a gerar clientes?
       </h2>
-
+      <p style="margin-top: 1rem; opacity: 0.7">
+        ✔ Entrega rápida • ✔ Design moderno • ✔ Pronto para vender
+      </p>
       <div class="social-links reveal">
-        <a href="https://github.com/Roxouw" target="_blank" class="social-link"
-          >GitHub</a
-        >
+        <a href="https://github.com/Roxouw" target="_blank" class="social-link">GitHub</a>
         <div class="social-divider"></div>
-        <a
-          href="https://www.linkedin.com/in/filiperosso/"
-          target="_blank"
-          class="social-link"
-          >LinkedIn</a
-        >
+        <a href="https://www.linkedin.com/in/filiperosso/" target="_blank" class="social-link">
+          LinkedIn
+        </a>
         <div class="social-divider"></div>
-        <a
-          href="https://wa.me/5551980335252"
-          target="_blank"
-          class="social-link"
-          >WhatsApp</a
-        >
+        <a href="https://wa.me/5551980335252" target="_blank" class="social-link">WhatsApp</a>
         <div class="social-divider"></div>
-        <a href="/docs/CV_Filipe_Rosso.pdf" download class="social-link"
-          >CV — Download</a
-        >
+        <a href="/docs/CV_Filipe_Rosso.pdf" download class="social-link">CV — Download</a>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <span class="footer-copy"
-        >© 2026 Filipe Rosso. Todos os direitos reservados. É proibida a
-        reprodução total ou parcial sem autorização.</span
-      >
+      <span class="footer-copy">
+        © 2026 Filipe Rosso. Todos os direitos reservados. É proibida a reprodução total ou parcial
+        sem autorização.
+      </span>
       <span class="footer-note">
         <span class="footer-dot"></span>
         Disponível para freelance e oportunidades PJ/CLT
@@ -750,41 +950,41 @@
     </footer>
 
     <!-- MODAL NICHO -->
-    <div
-      id="nichoModal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="nichoTitleEl"
-    >
+    <div id="nichoModal" role="dialog" aria-modal="true" aria-labelledby="nichoTitleEl">
       <div class="nicho-card">
-        <button class="nicho-close" id="nichoCloseBtn" aria-label="Fechar">
-          ✕
-        </button>
+        <button class="nicho-close" id="nichoCloseBtn" aria-label="Fechar">✕</button>
         <p class="nicho-eyebrow">Quero meu site agora</p>
         <h2 class="nicho-title" id="nichoTitleEl">
-          Escolha seu segmento e veja valores iniciais. <br />
-          Vagas limitadas para este mês.
+          Veja quanto custa começar a ganhar clientes pela internet
         </h2>
-        <p class="nicho-sub">Escolha seu segmento e veja valores iniciais.</p>
+        <p class="nicho-sub">
+          Escolha seu segmento e veja como seu site pode começar a trazer resultados.
+        </p>
         <div class="nicho-grid">
-          <a href="/pages/siteParaAdvogado.html" class="nicho-btn"
-            ><span class="nicho-icon">⚖️</span>Advogado</a
-          >
-          <a href="/pages/siteParaAcademia.html" class="nicho-btn"
-            ><span class="nicho-icon">🏋️</span>Academia</a
-          >
-          <a href="/pages/siteParaPersonal.html" class="nicho-btn"
-            ><span class="nicho-icon">📋</span>Personal</a
-          >
-          <a href="/pages/siteParaNutricionista.html" class="nicho-btn"
-            ><span class="nicho-icon">🥗</span>Nutrição</a
-          >
-          <a href="/pages/siteParaDentista.html" class="nicho-btn"
-            ><span class="nicho-icon">🦷</span>Dentista</a
-          >
-          <a href="/pages/siteParaEmpresa.html" class="nicho-btn"
-            ><span class="nicho-icon">🏢</span>Outro segmento</a
-          >
+          <a href="/pages/siteParaAdvogado.html" class="nicho-btn">
+            <span class="nicho-icon">⚖️</span>
+            Advogado
+          </a>
+          <a href="/pages/siteParaAcademia.html" class="nicho-btn">
+            <span class="nicho-icon">🏋️</span>
+            Academia
+          </a>
+          <a href="/pages/siteParaPersonal.html" class="nicho-btn">
+            <span class="nicho-icon">📋</span>
+            Personal
+          </a>
+          <a href="/pages/siteParaNutricionista.html" class="nicho-btn">
+            <span class="nicho-icon">🥗</span>
+            Nutrição
+          </a>
+          <a href="/pages/siteParaDentista.html" class="nicho-btn">
+            <span class="nicho-icon">🦷</span>
+            Dentista
+          </a>
+          <a href="/pages/siteParaEmpresa.html" class="nicho-btn">
+            <span class="nicho-icon">🏢</span>
+            Outro segmento
+          </a>
           <!-- <a
             href="/pages/siteParaEmpresa.html"
             class="nicho-btn nicho-btn-outro"
@@ -795,19 +995,16 @@
           href="https://wa.me/5551980335252?text=Oi%20Filipe,%20acabei%20de%20ver%20seu%20site%20e%20quero%20criar%20um%20site%20para%20meu%20negócio.%20Pode%20me%20explicar%20como%20funciona"
           target="_blank"
           class="btn btn-whatsapp"
-          style="align-items: center"
-        >
+          style="align-items: center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
             height="15"
             viewBox="0 0 24 24"
             fill="currentColor"
-            style="flex-shrink: 0"
-          >
+            style="flex-shrink: 0">
             <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-            />
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
           WhatsApp
         </a>
@@ -815,7 +1012,7 @@
     </div>
 
     <script src="/assets/js/index.js"></script>
-    <script src="/transitions.js"></script>
-    <script src="/mobile-fix.js"></script>
+    <script src="/assets/js/transitions.js"></script>
+    <script src="/assets/js/mobile-fix.js"></script>
   </body>
 </html>

@@ -1,0 +1,37 @@
+# dependências
+node_modules
+
+# build
+dist
+build
+coverage
+
+# arquivos gerados
+*.min.js
+*.map
+
+# lockfile (não precisa formatar)
+package-lock.json
+
+# cache
+.cache
+.parcel-cache
+.next
+.nuxt
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# imagens (opcional, mas recomendado)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.svg
+
+# husky (não precisa formatar script shell)
+.husky
+
+# docs grandes (opcional)
+docs/*.pdf

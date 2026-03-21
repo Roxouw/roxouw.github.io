@@ -1,0 +1,38 @@
+{
+  "name": "roxouw.github.io",
+  "version": "1.0.0",
+  "description": "Site profissional para apresentação de serviços de desenvolvimento web, com foco em captação de clientes para sites, landing pages e sistemas web.",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roxouw/roxouw.github.io.git"
+  },
+  "author": "Filipe Rosso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roxouw/roxouw.github.io/issues"
+  },
+  "homepage": "https://roxouw.github.io",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,jsx,tsx,json,md,css,html}": [
+      "prettier --write"
+    ],
+    "*.{js,mjs,cjs,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}

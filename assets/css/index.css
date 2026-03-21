@@ -315,11 +315,7 @@ nav.scrolled {
   width: 45vw;
   height: 45vw;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse,
-    rgba(184, 240, 74, 0.045) 0%,
-    transparent 65%
-  );
+  background: radial-gradient(ellipse, rgba(184, 240, 74, 0.045) 0%, transparent 65%);
 }
 
 .hero-grid {
@@ -330,11 +326,7 @@ nav.scrolled {
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 48px 48px;
   opacity: 0.3;
-  mask-image: radial-gradient(
-    ellipse 90% 70% at 50% 0%,
-    black 20%,
-    transparent 100%
-  );
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 100%);
 }
 
 /* Hero começa oculto — entra via JS após intro */
@@ -1265,11 +1257,7 @@ section.sec-dark {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse at 60% 40%,
-    var(--teal-dim) 0%,
-    transparent 65%
-  );
+  background: radial-gradient(ellipse at 60% 40%, var(--teal-dim) 0%, transparent 65%);
 }
 
 .project-visual::after {
@@ -1277,18 +1265,8 @@ section.sec-dark {
   position: absolute;
   inset: 0;
   background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 47px,
-      var(--teal-04) 48px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 47px,
-      var(--teal-04) 48px
-    );
+    repeating-linear-gradient(90deg, transparent, transparent 47px, var(--teal-04) 48px),
+    repeating-linear-gradient(0deg, transparent, transparent 47px, var(--teal-04) 48px);
 }
 
 /* FREELANCE BANNER */
@@ -1526,15 +1504,20 @@ footer {
   }
 
   .hero-cta {
-  display: flex;
-  gap: 0.75rem;
-  flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
   }
 
   .hero-cta .btn {
-    flex: 1;
-    min-width: 120px;
+    flex: 1 1 120px;
     justify-content: center;
+    text-align: center;
+  }
+
+  .hero-cta .btn-primary {
+    flex: 1 1 100%;
   }
 
   .scroll-indicator {
@@ -1747,11 +1730,7 @@ footer {
   left: 0;
   width: 40px;
   height: 5px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.7) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, transparent 70%);
   opacity: 0;
   pointer-events: none;
   will-change: left, opacity;
@@ -1801,7 +1780,12 @@ footer {
   gap: 1rem;
 }
 
-/* ── THEME TOGGLE (sol / lua) ─────────────── */
+/* ── THEME TOGGLE — ícone reflete o ESTADO ATUAL ────────────────
+   data-theme="auto"   → ícone auto  (padrão / primeiro acesso)
+   data-theme="light"  → sol
+   data-theme="dark"   → lua
+   Ciclo do clique: auto → light → dark → auto → …
+──────────────────────────────────────────────────────────────── */
 .theme-toggle {
   background: none;
   border: 1px solid var(--border2);
@@ -1838,28 +1822,60 @@ footer {
   height: 15px;
 }
 
-/* dark mode: show moon, hide sun */
-.theme-toggle .icon-moon {
+/* padrão sem atributo = auto */
+.theme-toggle .icon-auto {
   opacity: 1;
   transform: scale(1) rotate(0deg);
 }
-
+.theme-toggle .icon-moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
 .theme-toggle .icon-sun {
   opacity: 0;
   transform: scale(0.5) rotate(90deg);
 }
 
-/* light mode: show sun, hide moon */
-body.light-mode .theme-toggle .icon-moon,
-html.light-mode .theme-toggle .icon-moon {
+/* auto */
+.theme-toggle[data-theme="auto"] .icon-auto {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.theme-toggle[data-theme="auto"] .icon-moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+.theme-toggle[data-theme="auto"] .icon-sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
+
+/* light → sol */
+.theme-toggle[data-theme="light"] .icon-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.theme-toggle[data-theme="light"] .icon-auto {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+.theme-toggle[data-theme="light"] .icon-moon {
   opacity: 0;
   transform: scale(0.5) rotate(-90deg);
 }
 
-body.light-mode .theme-toggle .icon-sun,
-html.light-mode .theme-toggle .icon-sun {
+/* dark → lua */
+.theme-toggle[data-theme="dark"] .icon-moon {
   opacity: 1;
   transform: scale(1) rotate(0deg);
+}
+.theme-toggle[data-theme="dark"] .icon-auto {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
+.theme-toggle[data-theme="dark"] .icon-sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
 }
 
 body.light-mode .mobile-menu,
@@ -2044,4 +2060,235 @@ html.light-mode .nicho-btn:hover {
 .intro-name {
   will-change: transform, opacity;
   transform: translateZ(0);
+}
+
+#portfolio-fotos {
+  overflow: hidden;
+}
+
+.portfolio-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.device-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.3rem;
+  border-radius: 999px;
+  gap: 0.35rem;
+}
+
+.device-option {
+  border: none;
+  background: transparent;
+  color: var(--muted2);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.device-option.active {
+  background: var(--teal);
+  color: var(--bg);
+}
+
+.photo-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.photo-track-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.photo-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-shot {
+  flex: 0 0 clamp(240px, 28vw, 340px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.shot-caption {
+  display: block;
+  margin-top: 0.9rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.shot-frame {
+  transition:
+    transform 0.3s ease,
+    opacity 0.25s ease;
+}
+
+.project-shot:hover .shot-frame {
+  transform: translateY(-6px);
+}
+
+.shot-desktop {
+  background: #0f1115;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 0.8rem;
+  overflow: hidden;
+}
+
+.browser-ui {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0 0.75rem;
+}
+
+.browser-ui span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: block;
+}
+
+.shot-desktop .shot-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.shot-mobile {
+  width: min(240px, 70%);
+  margin: 0 auto;
+  background: #0d0f13;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 34px;
+  padding: 0.65rem;
+}
+
+.phone-ui {
+  display: flex;
+  justify-content: center;
+  padding: 0.15rem 0 0.5rem;
+}
+
+.phone-notch {
+  width: 34%;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.shot-mobile .shot-image {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.photo-nav {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.photo-nav:hover {
+  transform: scale(1.06);
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+html.light-mode .shot-desktop,
+body.light-mode .shot-desktop,
+html.light-mode .shot-mobile,
+body.light-mode .shot-mobile {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+html.light-mode .browser-ui span,
+body.light-mode .browser-ui span,
+html.light-mode .phone-notch,
+body.light-mode .phone-notch {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 768px) {
+  .photo-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-nav {
+    display: none;
+  }
+
+  .photo-track-wrap {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .photo-track-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo-track {
+    width: max-content;
+    padding-right: 1rem;
+  }
+
+  .project-shot {
+    flex: 0 0 78vw;
+    max-width: 320px;
+  }
 }

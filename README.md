@@ -10,56 +10,51 @@ Site profissional desenvolvido para apresentação de serviços como **Desenvolv
 
 Este projeto é um site institucional e portfólio pessoal com foco em:
 
-* Geração de leads (WhatsApp integrado)
-* Apresentação de projetos reais
-* Posicionamento profissional no Google (SEO)
-* Conversão (CTA estratégicos)
+- Geração de leads (WhatsApp integrado)
+- Apresentação de projetos reais
+- Posicionamento profissional no Google (SEO)
+- Conversão (CTA estratégicos)
 
 ---
 
 ## 🧠 Tecnologias utilizadas
 
-* HTML5
-* CSS3 (customizado)
-* JavaScript (vanilla)
-* Google Analytics (gtag)
-* GitHub Pages (deploy)
+- HTML5
+- CSS3 (customizado)
+- JavaScript (vanilla)
+- Google Analytics (gtag)
+- GitHub Pages (deploy)
 
 ---
 
 ## ⚙️ Funcionalidades
 
-* 🌙 **Tema claro/escuro automático**
+- 🌙 **Tema claro/escuro automático**
+  - Detecta preferência do sistema
+  - Persistência via `localStorage`
 
-  * Detecta preferência do sistema
-  * Persistência via `localStorage`
+- 📱 **Responsivo (mobile-first)**
 
-* 📱 **Responsivo (mobile-first)**
+- ⚡ **Animações e transições suaves**
+  - Intro animada
+  - Transições entre páginas
 
-* ⚡ **Animações e transições suaves**
+- 🎯 **Call to Actions estratégicos**
+  - Botões para conversão
+  - Integração direta com WhatsApp
 
-  * Intro animada
-  * Transições entre páginas
+- 🧩 **Modal de segmentação de nicho**
+  - Advogado
+  - Academia
+  - Personal
+  - Nutricionista
+  - Dentista
+  - Empresas
 
-* 🎯 **Call to Actions estratégicos**
-
-  * Botões para conversão
-  * Integração direta com WhatsApp
-
-* 🧩 **Modal de segmentação de nicho**
-
-  * Advogado
-  * Academia
-  * Personal
-  * Nutricionista
-  * Dentista
-  * Empresas
-
-* 🔍 **SEO otimizado**
-
-  * Meta tags completas
-  * Open Graph (WhatsApp, LinkedIn)
-  * Structured Data (Schema.org)
+- 🔍 **SEO otimizado**
+  - Meta tags completas
+  - Open Graph (WhatsApp, LinkedIn)
+  - Structured Data (Schema.org)
 
 ---
 
@@ -67,10 +62,10 @@ Este projeto é um site institucional e portfólio pessoal com foco em:
 
 O projeto implementa práticas modernas de segurança no front-end:
 
-* Content Security Policy (CSP)
-* Proteção contra clickjacking (`frame-ancestors`)
-* Controle de fontes externas
-* Uso exclusivo de HTTPS
+- Content Security Policy (CSP)
+- Proteção contra clickjacking (`frame-ancestors`)
+- Controle de fontes externas
+- Uso exclusivo de HTTPS
 
 ---
 
@@ -123,27 +118,27 @@ Este site não é apenas um portfólio, mas uma **máquina de vendas** para serv
 
 Foco em:
 
-* Conversão
-* Performance
-* Escalabilidade (templates por nicho)
+- Conversão
+- Performance
+- Escalabilidade (templates por nicho)
 
 ---
 
 ## 💰 Serviços oferecidos
 
-* Criação de sites profissionais
-* Landing pages de alta conversão
-* Sistemas web sob demanda
-* Integração com APIs
-* SEO básico para negócios locais
+- Criação de sites profissionais
+- Landing pages de alta conversão
+- Sistemas web sob demanda
+- Integração com APIs
+- SEO básico para negócios locais
 
 ---
 
 ## 📞 Contato
 
-* 💼 LinkedIn: https://www.linkedin.com/in/filiperosso/
-* 💻 GitHub: https://github.com/Roxouw
-* 📲 WhatsApp: https://wa.me/5551980335252
+- 💼 LinkedIn: https://www.linkedin.com/in/filiperosso/
+- 💻 GitHub: https://github.com/Roxouw
+- 📲 WhatsApp: https://wa.me/5551980335252
 
 ---
 

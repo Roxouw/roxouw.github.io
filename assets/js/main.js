@@ -22,9 +22,7 @@ if (window.matchMedia("(pointer:fine)").matches) {
     el.addEventListener("mouseenter", () => {
       cursor.style.transform = "scale(2.5)";
       ring.style.borderColor =
-        getComputedStyle(document.documentElement)
-          .getPropertyValue("--teal")
-          .trim() + "99";
+        getComputedStyle(document.documentElement).getPropertyValue("--teal").trim() + "99";
     });
     el.addEventListener("mouseleave", () => {
       cursor.style.transform = "scale(1)";
@@ -34,9 +32,7 @@ if (window.matchMedia("(pointer:fine)").matches) {
 }
 
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () =>
-  navbar.classList.toggle("scrolled", window.scrollY > 50),
-);
+window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50));
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -47,19 +43,15 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.08 },
+  { threshold: 0.08 }
 );
-document
-  .querySelectorAll(".reveal, .addon-item")
-  .forEach((el) => observer.observe(el));
+document.querySelectorAll(".reveal, .addon-item").forEach((el) => observer.observe(el));
 
 document.querySelectorAll(".faq-q").forEach((q) => {
   q.addEventListener("click", () => {
     const item = q.parentElement;
     const isOpen = item.classList.contains("open");
-    document
-      .querySelectorAll(".faq-item")
-      .forEach((i) => i.classList.remove("open"));
+    document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
     if (!isOpen) item.classList.add("open");
   });
 });
@@ -142,7 +134,7 @@ function launchInk(color) {
         d.size * 0.72,
         Math.atan2(d.vy, d.vx),
         0,
-        Math.PI * 2,
+        Math.PI * 2
       );
       inkCtx.fillStyle = color;
       inkCtx.fill();
@@ -154,7 +146,7 @@ function launchInk(color) {
         d.size * 0.18,
         0,
         0,
-        Math.PI * 2,
+        Math.PI * 2
       );
       inkCtx.fillStyle = color;
       inkCtx.fill();
@@ -179,60 +171,42 @@ function launchInk(color) {
   draw();
 }
 
-// Aplica tema salvo + sincroniza body e html
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") {
-  document.documentElement.classList.add("light-mode");
-  document.body.classList.add("light-mode");
+// ── Theme toggle — 3 estados: auto → light → dark → auto ───────
+// Padrão = "auto" (segue o sistema em tempo real)
+// Ícone reflete o ESTADO ATUAL
+const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyThemeState(state) {
+  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
+
+  document.documentElement.classList.toggle("light-mode", isLight);
+  document.body.classList.toggle("light-mode", isLight);
+
+  themeToggle.setAttribute("data-theme", state);
+  themeToggle.setAttribute(
+    "aria-label",
+    state === "light"
+      ? "Tema claro (clique para escuro)"
+      : state === "dark"
+        ? "Tema escuro (clique para automático)"
+        : "Tema automático (clique para claro)"
+  );
 }
 
-themeToggle.addEventListener("click", () => {
-  const isLight = document.documentElement.classList.toggle("light-mode");
-  document.body.classList.toggle("light-mode", isLight);
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-  launchInk(isLight ? "#37a5b3" : "#2dd4c8");
+// Carrega estado salvo — padrão = "auto"
+applyThemeState(localStorage.getItem("theme") || "auto");
+
+// Reage em tempo real quando o sistema muda (modo noturno automático do celular)
+sysDark.addEventListener("change", () => {
+  if ((localStorage.getItem("theme") || "auto") === "auto") applyThemeState("auto");
 });
 
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-function applyTheme(e) {
-  const saved = localStorage.getItem("theme");
-
-  if (saved === "dark") {
-    document.documentElement.classList.remove("light-mode");
-    return;
-  }
-
-  if (saved === "light") {
-    document.documentElement.classList.add("light-mode");
-    return;
-  }
-
-  // system mode
-  if (e.matches) {
-    document.documentElement.classList.remove("light-mode");
-  } else {
-    document.documentElement.classList.add("light-mode");
-  }
-}
-
-// apply on load
-applyTheme(mediaQuery);
-
-// listen system changes
-mediaQuery.addEventListener("change", applyTheme);
-
-// toggle button (3 states)
-function toggleTheme() {
-  const current = localStorage.getItem("theme");
-
-  if (!current) {
-    localStorage.setItem("theme", "light");
-  } else if (current === "light") {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.removeItem("theme");
-  }
-
-  applyTheme(mediaQuery);
-}
+// Ciclo: auto → light → dark → auto → …
+themeToggle.addEventListener("click", () => {
+  const current = localStorage.getItem("theme") || "auto";
+  const next = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+  localStorage.setItem("theme", next);
+  applyThemeState(next);
+  const nowLight = next === "light" || (next === "auto" && !sysDark.matches);
+  launchInk(nowLight ? "#37a5b3" : "#2dd4c8");
+});

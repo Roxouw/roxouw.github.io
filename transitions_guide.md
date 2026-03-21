@@ -24,6 +24,7 @@ Adicione **uma única linha** antes do `</body>` em cada arquivo HTML:
 ```
 
 **Ordem correta no `index.html`:**
+
 ```html
     <!-- ... conteúdo ... -->
     </footer>
@@ -47,19 +48,19 @@ Adicione **uma única linha** antes do `</body>` em cada arquivo HTML:
 
 Adicionar em todos os arquivos do projeto:
 
-| Arquivo            | Precisa adicionar |
-|--------------------|-------------------|
-| `index.html`       | ✅ Sim            |
-| `historia.html`    | ✅ Sim            |
-| `siteParaEmpresa.html`   | ✅ Sim      |
-| `siteParaAdvogado.html`  | ✅ Sim      |
-| `siteParaAcademia.html`  | ✅ Sim      |
-| `siteParaDentista.html`  | ✅ Sim      |
-| `siteParaNutricionista.html` | ✅ Sim  |
-| `nutricionista.html`     | ✅ Sim      |
-| `dentista.html`          | ✅ Sim      |
-| `academia.html`          | ✅ Sim      |
-| `advogado.html`          | ✅ Sim      |
+| Arquivo                      | Precisa adicionar |
+| ---------------------------- | ----------------- |
+| `index.html`                 | ✅ Sim            |
+| `historia.html`              | ✅ Sim            |
+| `siteParaEmpresa.html`       | ✅ Sim            |
+| `siteParaAdvogado.html`      | ✅ Sim            |
+| `siteParaAcademia.html`      | ✅ Sim            |
+| `siteParaDentista.html`      | ✅ Sim            |
+| `siteParaNutricionista.html` | ✅ Sim            |
+| `nutricionista.html`         | ✅ Sim            |
+| `dentista.html`              | ✅ Sim            |
+| `academia.html`              | ✅ Sim            |
+| `advogado.html`              | ✅ Sim            |
 
 ---
 
@@ -83,9 +84,9 @@ Ou seja: **nenhuma alteração necessária** nos links existentes.
 No topo do `transitions.js`, há 3 constantes:
 
 ```js
-const FADE_DURATION   = 320;   // ms — velocidade do fade
-const PROGRESS_COLOR  = null;  // null = usa --teal do CSS
-const PROGRESS_HEIGHT = '2px'; // espessura da barra
+const FADE_DURATION = 320; // ms — velocidade do fade
+const PROGRESS_COLOR = null; // null = usa --teal do CSS
+const PROGRESS_HEIGHT = "2px"; // espessura da barra
 ```
 
 ---
@@ -96,8 +97,8 @@ Se precisar disparar uma transição via JS:
 
 ```js
 // Navegar com transição
-window.PageTransitions.navigate('/outra-pagina.html');
+window.PageTransitions.navigate("/outra-pagina.html");
 
 // Prefetch manual
-window.PageTransitions.prefetch('/pagina-pesada.html');
+window.PageTransitions.prefetch("/pagina-pesada.html");
 ```
