@@ -67,6 +67,7 @@ html.light-mode body {
 
 html.light-mode {
   background: #f7fafc;
+  image-rendering: auto;
 }
 
 html {
@@ -88,7 +89,6 @@ body {
 /* Light mode — outline text uses darker stroke */
 body.light-mode .hero-title,
 html.light-mode .hero-title .line2 {
-  -webkit-text-stroke: 1px var(--border2);
 }
 
 body.light-mode nav.scrolled,
@@ -407,12 +407,10 @@ body.hero-passed .hero-grid {
 .hero-title .line2 {
   display: block;
   color: transparent;
-  -webkit-text-stroke: 1px var(--border2);
 }
 
 .hero-title .teal-word {
   color: var(--teal);
-  -webkit-text-stroke: 0;
 }
 
 .hero-bottom {
@@ -551,7 +549,7 @@ section {
 
 .section-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 1rem;
   color: var(--teal);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -751,13 +749,11 @@ section.sec-accent .freelance-text h2 {
 }
 
 section.sec-accent .freelance-text h2 span {
-  color: rgba(19, 20, 22, 0.42);
-  text-decoration: underline;
-  text-decoration-color: rgba(19, 20, 22, 0.22);
+  color: var(--teal-dark);
 }
 
 section.sec-accent .freelance-text p {
-  color: rgba(19, 20, 22, 0.62);
+  color: var(--teal-dark);
 }
 
 /* Buttons invertidos */
@@ -789,11 +785,12 @@ section.sec-accent .contact-title {
   color: var(--bg);
 }
 
-section.sec-accent .contact-title .outline {
+section.sec-accent .contact-title .text-teal {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(19, 20, 22, 0.38);
 }
-
+section.sec-dark .contact-title .text-teal {
+  color: var(--teal);
+}
 section.sec-accent .contact-email {
   color: var(--bg);
   border-color: rgba(19, 20, 22, 0.32);
@@ -915,7 +912,6 @@ html.light-mode section.sec-accent .btn-primary:hover {
 }
 
 html.light-mode section.sec-accent .contact-title .outline {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
 }
 
 html.light-mode section.sec-accent .contact-email {
@@ -1362,7 +1358,7 @@ section.sec-dark {
 }
 
 .contact-title {
-  font-size: clamp(2.8rem, 7vw, 7rem);
+  font-size: clamp(2.8rem, 5vw, 7rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -1371,7 +1367,6 @@ section.sec-dark {
 
 .contact-title .outline {
   color: transparent;
-  -webkit-text-stroke: 1px var(--border2);
 }
 
 .contact-email {
@@ -2189,15 +2184,14 @@ html.light-mode .nicho-btn:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
 .portfolio-subtitle {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--teal-dark);
 }
 
 .device-toggle {
@@ -2337,22 +2331,9 @@ html.light-mode .nicho-btn:hover {
 .shot-mobile {
   background: #0d0f13;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 34px;
-  padding: 0.65rem;
+  border-radius: 30px;
+  padding: 0.3rem;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
-}
-
-.phone-ui {
-  display: flex;
-  justify-content: center;
-  padding: 0.15rem 0 0.5rem;
-}
-
-.phone-notch {
-  width: 34%;
-  height: 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .shot-mobile .shot-image {
@@ -2367,25 +2348,10 @@ html.light-mode .nicho-btn:hover {
 .shot-desktop {
   background: #0f1115;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
-  padding: 0.8rem;
+  border-radius: 12px;
+  padding: 0.4rem;
   overflow: hidden;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
-}
-
-.browser-ui {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.15rem 0 0.75rem;
-}
-
-.browser-ui span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-  display: block;
 }
 
 .shot-desktop .shot-image {
@@ -2393,7 +2359,7 @@ html.light-mode .nicho-btn:hover {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 /* Desktop mode: card mais largo */

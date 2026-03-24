@@ -174,39 +174,57 @@ function launchInk(color) {
 // ── Theme toggle — 3 estados: auto → light → dark → auto ───────
 // Padrão = "auto" (segue o sistema em tempo real)
 // Ícone reflete o ESTADO ATUAL
-const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+document.addEventListener("DOMContentLoaded", () => {
+  const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const themeLogo = document.getElementById("theme-logo");
+  const themeToggle = document.querySelector(".theme-toggle");
 
-function applyThemeState(state) {
-  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
+  function updateThemeImage(isLight) {
+    if (!themeLogo) return;
 
-  document.documentElement.classList.toggle("light-mode", isLight);
-  document.body.classList.toggle("light-mode", isLight);
+    themeLogo.src = isLight
+      ? "/assets/images/logo/logo-light.png"
+      : "/assets/images/logo/logo-dark.png";
+  }
 
-  themeToggle.setAttribute("data-theme", state);
-  themeToggle.setAttribute(
-    "aria-label",
-    state === "light"
-      ? "Tema claro (clique para escuro)"
-      : state === "dark"
-        ? "Tema escuro (clique para automático)"
-        : "Tema automático (clique para claro)"
-  );
-}
+  function applyThemeState(state) {
+    const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
 
-// Carrega estado salvo — padrão = "auto"
-applyThemeState(localStorage.getItem("theme") || "auto");
+    document.documentElement.classList.toggle("light-mode", isLight);
+    document.body.classList.toggle("light-mode", isLight);
 
-// Reage em tempo real quando o sistema muda (modo noturno automático do celular)
-sysDark.addEventListener("change", () => {
-  if ((localStorage.getItem("theme") || "auto") === "auto") applyThemeState("auto");
-});
+    if (themeToggle) {
+      themeToggle.setAttribute("data-theme", state);
+      themeToggle.setAttribute(
+        "aria-label",
+        state === "light"
+          ? "Tema claro (clique para escuro)"
+          : state === "dark"
+            ? "Tema escuro (clique para automático)"
+            : "Tema automático (clique para claro)"
+      );
+    }
 
-// Ciclo: auto → light → dark → auto → …
-themeToggle.addEventListener("click", () => {
-  const current = localStorage.getItem("theme") || "auto";
-  const next = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
-  localStorage.setItem("theme", next);
-  applyThemeState(next);
-  const nowLight = next === "light" || (next === "auto" && !sysDark.matches);
-  launchInk(nowLight ? "#37a5b3" : "#2dd4c8");
+    updateThemeImage(isLight);
+  }
+
+  applyThemeState(localStorage.getItem("theme") || "auto");
+
+  sysDark.addEventListener("change", () => {
+    if ((localStorage.getItem("theme") || "auto") === "auto") {
+      applyThemeState("auto");
+    }
+  });
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const cur = localStorage.getItem("theme") || "auto";
+      const next = cur === "auto" ? "light" : cur === "light" ? "dark" : "auto";
+
+      localStorage.setItem("theme", next);
+      applyThemeState(next);
+
+      launchInk(next === "light" || (next === "auto" && !sysDark.matches) ? "#37a5b3" : "#2dd4c8");
+    });
+  }
 });

@@ -128,8 +128,8 @@ function closeMobile() {
     await preloadDone;
 
     const welcomeLetters = buildLetters(introWelcome, "Welcome To,", "intro-welcome-letter");
-    const firstLetters = buildLetters(introFirst, "Filipe", "intro-first");
-    const lastLetters = buildLetters(introLast, " Rosso", "intro-last");
+    const firstLetters = buildLetters(introFirst, "Rosso", "intro-first");
+    const lastLetters = buildLetters(introLast, " Labs", "intro-last");
 
     await wait(80);
 
@@ -328,33 +328,64 @@ function launchInk(color) {
   drawInk();
 }
 
-const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+document.addEventListener("DOMContentLoaded", () => {
+  const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const themeLogo = document.getElementById("theme-logo");
+  const themeLogo2 = document.getElementById("theme-logo2");
 
-function applyThemeState(state) {
-  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
-  document.documentElement.classList.toggle("light-mode", isLight);
-  document.body.classList.toggle("light-mode", isLight);
-  themeToggle.setAttribute("data-theme", state);
-  themeToggle.setAttribute(
-    "aria-label",
-    state === "light"
-      ? "Tema claro (clique para escuro)"
-      : state === "dark"
-        ? "Tema escuro (clique para automático)"
-        : "Tema automático (clique para claro)"
-  );
-}
+  const themeToggle = document.querySelector(".theme-toggle");
 
-applyThemeState(localStorage.getItem("theme") || "auto");
-sysDark.addEventListener("change", () => {
-  if ((localStorage.getItem("theme") || "auto") === "auto") applyThemeState("auto");
-});
-themeToggle.addEventListener("click", () => {
-  const cur = localStorage.getItem("theme") || "auto";
-  const next = cur === "auto" ? "light" : cur === "light" ? "dark" : "auto";
-  localStorage.setItem("theme", next);
-  applyThemeState(next);
-  launchInk(next === "light" || (next === "auto" && !sysDark.matches) ? "#37a5b3" : "#2dd4c8");
+  function updateThemeImage(isLight) {
+    if (!themeLogo) return;
+
+    themeLogo.src = isLight
+      ? "/assets/images/logo/logo-light.png"
+      : "/assets/images/logo/logo-dark.png";
+    themeLogo2.src = isLight
+      ? "/assets/images/logo/logo-light.png"
+      : "/assets/images/logo/logo-dark.png";
+  }
+
+  function applyThemeState(state) {
+    const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
+
+    document.documentElement.classList.toggle("light-mode", isLight);
+    document.body.classList.toggle("light-mode", isLight);
+
+    if (themeToggle) {
+      themeToggle.setAttribute("data-theme", state);
+      themeToggle.setAttribute(
+        "aria-label",
+        state === "light"
+          ? "Tema claro (clique para escuro)"
+          : state === "dark"
+            ? "Tema escuro (clique para automático)"
+            : "Tema automático (clique para claro)"
+      );
+    }
+
+    updateThemeImage(isLight);
+  }
+
+  applyThemeState(localStorage.getItem("theme") || "auto");
+
+  sysDark.addEventListener("change", () => {
+    if ((localStorage.getItem("theme") || "auto") === "auto") {
+      applyThemeState("auto");
+    }
+  });
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const cur = localStorage.getItem("theme") || "auto";
+      const next = cur === "auto" ? "light" : cur === "light" ? "dark" : "auto";
+
+      localStorage.setItem("theme", next);
+      applyThemeState(next);
+
+      launchInk(next === "light" || (next === "auto" && !sysDark.matches) ? "#37a5b3" : "#2dd4c8");
+    });
+  }
 });
 
 // ── Vitrine sobreposta ─────────────────────────────────────────
