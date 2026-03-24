@@ -1,4 +1,10 @@
-// Custom cursor — desktop only
+// ═══════════════════════════════════════════════════════════════
+//  index.js — GSAP + ScrollTrigger
+//  ScrollSmoother removido (Club GSAP — requer licença paga)
+//  Smooth scroll: CSS scroll-behavior nativo
+// ═══════════════════════════════════════════════════════════════
+
+// ── Custom cursor — desktop only ──────────────────────────────
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 let mx = 0,
@@ -32,11 +38,13 @@ if (window.matchMedia("(pointer:fine)").matches) {
   });
 }
 
-// Navbar scroll
+// ── Navbar scrolled ────────────────────────────────────────────
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50));
+window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50), {
+  passive: true,
+});
 
-// Hamburger
+// ── Hamburger ──────────────────────────────────────────────────
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 hamburger.addEventListener("click", () => {
@@ -50,10 +58,12 @@ function closeMobile() {
   document.body.style.overflow = "";
 }
 
-// ── Intro: cinematic sequence ─────────────────────────────
+// ── Intro cinematic sequence ───────────────────────────────────
+// ── Intro cinematic sequence ───────────────────────────────────
 (function () {
   const intro = document.getElementById("intro");
   const introName = document.getElementById("introName");
+  const introWelcome = document.getElementById("introWelcome");
   const introFirst = document.getElementById("introFirst");
   const introLast = document.getElementById("introLast");
   const introBar = document.getElementById("introBar");
@@ -65,7 +75,6 @@ function closeMobile() {
 
   document.body.style.overflow = "hidden";
 
-  // ── 1. Preload real: aguarda fontes + imagens críticas ──────
   const preloadDone = Promise.all([
     document.fonts.ready,
     new Promise((res) => {
@@ -74,10 +83,9 @@ function closeMobile() {
     }),
   ]);
 
-  // ── 2. Helpers ──────────────────────────────────────────────
   function buildLetters(el, text, cls) {
     el.innerHTML = "";
-    return [...text].map((ch, i) => {
+    return [...text].map((ch) => {
       const s = document.createElement("span");
       s.className = "intro-letter " + cls;
       s.textContent = ch === " " ? "\u00A0" : ch;
@@ -90,19 +98,20 @@ function closeMobile() {
     return new Promise((r) => setTimeout(r, ms));
   }
 
-  // Barra: rAF-driven, easing quadrático
   function runBar(duration) {
     return new Promise((res) => {
       introBar.classList.add("visible");
-      const start = performance.now();
+      const t0 = performance.now();
+
       function tick(now) {
-        const raw = Math.min((now - start) / duration, 1);
+        const raw = Math.min((now - t0) / duration, 1);
         const eased = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;
+
         const pct = eased * 100;
         barFill.style.width = pct + "%";
-        // shine: brilhinho que corre pela barra
         barShine.style.left = pct - 3 + "%";
         barShine.style.opacity = raw > 0.02 && raw < 0.97 ? "1" : "0";
+
         if (raw < 1) requestAnimationFrame(tick);
         else {
           barFill.style.width = "100%";
@@ -110,113 +119,84 @@ function closeMobile() {
           res();
         }
       }
+
       requestAnimationFrame(tick);
     });
   }
 
-  // ── 3. Sequência principal ──────────────────────────────────
   async function runIntro() {
     await preloadDone;
 
-    const firstName = "Filipe";
-    const lastName = " Rosso";
-    const LETTER_GAP = 58; // ms entre letras
+    const welcomeLetters = buildLetters(introWelcome, "Welcome To,", "intro-welcome-letter");
+    const firstLetters = buildLetters(introFirst, "Filipe", "intro-first");
+    const lastLetters = buildLetters(introLast, " Rosso", "intro-last");
 
-    // Gera spans
-    const firstLetters = buildLetters(introFirst, firstName, "intro-first");
-    const lastLetters = buildLetters(introLast, lastName, "intro-last");
-    const allLetters = [...firstLetters, ...lastLetters];
-
-    // Aguarda um frame para garantir que o DOM está pronto
     await wait(80);
 
-    // ── a) Letra por letra ──
-    for (let i = 0; i < allLetters.length; i++) {
-      await wait(LETTER_GAP);
-      allLetters[i].classList.add("on");
+    for (let i = 0; i < welcomeLetters.length; i++) {
+      await wait(40);
+      welcomeLetters[i].classList.add("on");
+    }
+
+    await wait(120);
+
+    const allNameLetters = [...firstLetters, ...lastLetters];
+    for (let i = 0; i < allNameLetters.length; i++) {
+      await wait(58);
+      allNameLetters[i].classList.add("on");
     }
 
     await wait(180);
-
-    // ── b) Barra carrega ──
     await runBar(820);
-
-    // ── c) Subtítulo aparece ──
     introText.classList.add("visible");
     await wait(460);
 
-    // ── d) Zoom-out: nome escala levemente (anticipação) ──
     introName.classList.add("zoom-out");
     await wait(300);
 
-    // ── e) Morph: calcula posição da nav-logo e voa até lá ──
     const nameBounds = introName.getBoundingClientRect();
     const logoBounds = navLogo ? navLogo.getBoundingClientRect() : null;
 
     if (logoBounds) {
-      // Centro do nome atual
       const nameCX = nameBounds.left + nameBounds.width / 2;
       const nameCY = nameBounds.top + nameBounds.height / 2;
-      // Centro do nav-logo de destino
       const logoCX = logoBounds.left + logoBounds.width / 2;
       const logoCY = logoBounds.top + logoBounds.height / 2;
-      // Scale relativo (nav-logo é menor)
-      const scaleX = logoBounds.width / nameBounds.width;
-      const scaleY = logoBounds.height / nameBounds.height;
-      const scaleTarget = Math.min(scaleX, scaleY);
-      // Remove zoom-out (que adicionou scale via classe) e aplica o transform manual
+      const scaleT = Math.min(
+        logoBounds.width / nameBounds.width,
+        logoBounds.height / nameBounds.height
+      );
+
       introName.classList.remove("zoom-out");
-
-      // Pequeno rAF para garantir o remove tomou efeito
       await new Promise((r) => requestAnimationFrame(r));
-
-      const dx = logoCX - nameCX;
-      const dy = logoCY - nameCY;
 
       introName.style.transition =
         "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.45s ease 0.1s, filter 0.45s ease 0.1s";
-      introName.style.transform = `translate(${dx}px, ${dy}px) scale(${scaleTarget})`;
+      introName.style.transform = `translate(${logoCX - nameCX}px,${logoCY - nameCY}px) scale(${scaleT})`;
       introName.style.opacity = "0";
       introName.style.filter = "blur(4px)";
     } else {
-      // fallback: fade out simples
       introName.style.transition = "opacity 0.5s, filter 0.5s";
       introName.style.opacity = "0";
       introName.style.filter = "blur(8px)";
     }
 
-    // ── f) Fundo dissolve com blur ──
     await wait(120);
     intro.classList.add("exit");
-
-    // ── g) Hero surge suavemente, com atraso mínimo ──
     await wait(180);
     heroSection.classList.add("hero-enter");
 
-    // Limpa overlay do fluxo depois da transição
     await wait(950);
     intro.style.display = "none";
     document.body.style.overflow = "";
+
+    initGSAP();
   }
 
   runIntro();
 })();
 
-// Reveal on scroll
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add("visible"), i * 70);
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.08 }
-);
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-// ── Modal Nicho ────────────────────────────
+// ── Modal Nicho ────────────────────────────────────────────────
 const nichoModal = document.getElementById("nichoModal");
 const nichoCloseBtn = document.getElementById("nichoCloseBtn");
 
@@ -237,14 +217,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeNichoModal();
 });
 
-// ── Theme toggle — 3 estados: auto → light → dark → auto ───────
-// ── Theme toggle — 3 estados: auto → light → dark → auto ───────
-// Padrão = "auto" (segue o sistema em tempo real)
-// Ciclo do clique: auto → light → dark → auto → …
-// Ícone exibe o ESTADO ATUAL:
-//   auto  → ícone auto (meio sol / meio lua)
-//   light → sol
-//   dark  → lua
+// ── Theme toggle ───────────────────────────────────────────────
 const themeToggle = document.getElementById("themeToggle");
 const inkCanvas = document.getElementById("inkCanvas");
 const inkCtx = inkCanvas.getContext("2d");
@@ -259,35 +232,29 @@ window.addEventListener("resize", resizeInkCanvas);
 function launchInk(color) {
   const W = inkCanvas.width,
     H = inkCanvas.height;
-  const rect = themeToggle.getBoundingClientRect();
-  const originX = rect.left + rect.width / 2;
-  const originY = rect.top + rect.height / 2;
-  const drops = [],
-    COUNT = 22;
-  for (let i = 0; i < COUNT; i++) {
-    const angle = ((Math.PI * 2) / COUNT) * i + (Math.random() - 0.5) * 0.4;
+  const ox = W / 2,
+    oy = H / 2;
+  const drops = Array.from({ length: 38 }, () => {
+    const angle = Math.random() * Math.PI * 2;
     const speed = 6 + Math.random() * 14;
-    const size = 18 + Math.random() * 60;
-    drops.push({
-      x: originX,
-      y: originY,
+    return {
+      x: ox,
+      y: oy,
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
-      size,
+      size: 18 + Math.random() * 60,
       alpha: 0.85 + Math.random() * 0.15,
       decay: 0.013 + Math.random() * 0.01,
-    });
-  }
-  const bursts = [];
-  for (let i = 0; i < 5; i++)
-    bursts.push({
-      x: originX,
-      y: originY,
-      r: 0,
-      maxR: W * (0.35 + i * 0.18),
-      alpha: 0.18 - i * 0.03,
-      speed: 28 + i * 12,
-    });
+    };
+  });
+  const bursts = Array.from({ length: 5 }, (_, i) => ({
+    x: ox,
+    y: oy,
+    r: 0,
+    maxR: W * (0.35 + i * 0.18),
+    alpha: 0.18 - i * 0.03,
+    speed: 28 + i * 12,
+  }));
   let frame = 0;
   function drawInk() {
     inkCtx.clearRect(0, 0, W, H);
@@ -363,14 +330,10 @@ function launchInk(color) {
 
 const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Aplica o estado ao DOM — ícone reflete o estado ATUAL
 function applyThemeState(state) {
-  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches; // auto: segue o sistema
-
+  const isLight = state === "light" ? true : state === "dark" ? false : !sysDark.matches;
   document.documentElement.classList.toggle("light-mode", isLight);
   document.body.classList.toggle("light-mode", isLight);
-
-  // data-theme no botão = estado atual → CSS mostra o ícone correto
   themeToggle.setAttribute("data-theme", state);
   themeToggle.setAttribute(
     "aria-label",
@@ -382,108 +345,309 @@ function applyThemeState(state) {
   );
 }
 
-// Carrega estado salvo — padrão = "auto"
 applyThemeState(localStorage.getItem("theme") || "auto");
-
-// Reage em tempo real quando o sistema muda (modo noturno automático do celular)
 sysDark.addEventListener("change", () => {
   if ((localStorage.getItem("theme") || "auto") === "auto") applyThemeState("auto");
 });
-
-// Ciclo: auto → light → dark → auto → …
 themeToggle.addEventListener("click", () => {
-  const current = localStorage.getItem("theme") || "auto";
-  const next = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+  const cur = localStorage.getItem("theme") || "auto";
+  const next = cur === "auto" ? "light" : cur === "light" ? "dark" : "auto";
   localStorage.setItem("theme", next);
   applyThemeState(next);
-  const nowLight = next === "light" || (next === "auto" && !sysDark.matches);
-  launchInk(nowLight ? "#37a5b3" : "#2dd4c8");
+  launchInk(next === "light" || (next === "auto" && !sysDark.matches) ? "#37a5b3" : "#2dd4c8");
 });
 
+// ── Vitrine sobreposta ─────────────────────────────────────────
 (function () {
+  const stage = document.getElementById("showcaseStage");
+  const dotsWrap = document.getElementById("showcaseDots");
   const toggle = document.getElementById("deviceToggle");
-  const track = document.getElementById("photoTrack");
-  const prev = document.querySelector(".photo-nav.prev");
-  const next = document.querySelector(".photo-nav.next");
+  const prevBtn = document.querySelector(".photo-nav.prev");
+  const nextBtn = document.querySelector(".photo-nav.next");
+  const wrap = document.getElementById("showcaseWrap");
 
-  if (!toggle || !track) return;
+  if (!stage) return;
 
-  const toggleButtons = Array.from(toggle.querySelectorAll(".device-option"));
-  const cards = Array.from(track.querySelectorAll(".project-shot"));
+  const cards = Array.from(stage.querySelectorAll(".project-shot"));
+  const n = cards.length;
+  if (!n) return;
 
-  let currentDevice = "desktop";
-  let currentIndex = 0;
+  const INTERVAL = 4200;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let current = 0,
+    autoTimer = null,
+    isPaused = false,
+    transitioning = false;
+
+  // Dots
+  const dots = [];
+  if (dotsWrap) {
+    cards.forEach((_, i) => {
+      const d = document.createElement("button");
+      d.className = "showcase-dot" + (i === 0 ? " active" : "");
+      d.setAttribute("aria-label", "Slide " + (i + 1));
+      d.setAttribute("role", "tab");
+      d.setAttribute("aria-selected", i === 0 ? "true" : "false");
+      d.addEventListener("click", () => goTo(i, true));
+      dotsWrap.appendChild(d);
+      dots.push(d);
+    });
+  }
+
+  function updateDots() {
+    dots.forEach((d, i) => {
+      d.classList.toggle("active", i === current);
+      d.setAttribute("aria-selected", String(i === current));
+    });
+  }
+
+  function getState(i) {
+    const diff = (((i - current) % n) + n) % n;
+    if (diff === 0) return "active";
+    if (diff === 1) return "next";
+    if (diff === n - 1) return "prev";
+    if (diff === 2) return "far-next";
+    if (diff === n - 2) return "far-prev";
+    return "hidden";
+  }
+
+  function applyStates() {
+    cards.forEach((card, i) => {
+      const s = getState(i);
+      card.dataset.state = s;
+      card.setAttribute("tabindex", s === "active" ? "0" : "-1");
+      card.setAttribute("aria-hidden", s === "active" ? "false" : "true");
+    });
+    updateDots();
+  }
+
+  function goTo(idx, manual = false) {
+    if (transitioning && !manual) return;
+    transitioning = true;
+    current = ((idx % n) + n) % n;
+    applyStates();
+    setTimeout(
+      () => {
+        transitioning = false;
+      },
+      reducedMotion ? 0 : 550
+    );
+    if (manual) {
+      isPaused = true;
+      setTimeout(() => {
+        isPaused = false;
+      }, 2500);
+    }
+  }
+
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      if (!isPaused) goTo(current + 1);
+    }, INTERVAL);
+  }
 
   function applyDevice(device) {
-    currentDevice = device;
-
-    toggleButtons.forEach((button) => {
-      const active = button.dataset.device === device;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-selected", String(active));
-    });
-
+    if (toggle) {
+      toggle.querySelectorAll(".device-option").forEach((btn) => {
+        const active = btn.dataset.device === device;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-selected", String(active));
+      });
+    }
     cards.forEach((card) => {
-      const desktopFrame = card.querySelector(".shot-desktop");
-      const mobileFrame = card.querySelector(".shot-mobile");
-
-      if (!desktopFrame || !mobileFrame) return;
-
-      desktopFrame.classList.toggle("hidden", device !== "desktop");
-      mobileFrame.classList.toggle("hidden", device !== "mobile");
+      card.querySelector(".shot-desktop")?.classList.toggle("hidden", device !== "desktop");
+      card.querySelector(".shot-mobile")?.classList.toggle("hidden", device !== "mobile");
     });
-
-    currentIndex = 0;
-    updateCarousel();
+    wrap?.classList.toggle("device-desktop", device === "desktop");
+    wrap?.classList.toggle("device-mobile", device === "mobile");
   }
 
-  function getStep() {
-    const firstCard = cards[0];
-    if (!firstCard) return 0;
+  // Events
+  toggle
+    ?.querySelectorAll(".device-option")
+    .forEach((btn) => btn.addEventListener("click", () => applyDevice(btn.dataset.device)));
 
-    const style = window.getComputedStyle(track);
-    const gap = parseFloat(style.gap || style.columnGap || 20);
+  nextBtn?.addEventListener("click", () => goTo(current + 1, true));
+  prevBtn?.addEventListener("click", () => goTo(current - 1, true));
 
-    return firstCard.offsetWidth + gap;
-  }
-
-  function getMaxIndex() {
-    const wrap = track.parentElement;
-    const step = getStep();
-    if (!wrap || !step) return 0;
-
-    const visible = Math.max(1, Math.floor(wrap.offsetWidth / step));
-    return Math.max(0, cards.length - visible);
-  }
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
-  }
-
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      applyDevice(button.dataset.device);
-    });
+  document.addEventListener("keydown", (e) => {
+    const r = wrap?.getBoundingClientRect();
+    if (!r || r.top >= window.innerHeight || r.bottom <= 0) return;
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goTo(current + 1, true);
+    }
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goTo(current - 1, true);
+    }
   });
 
-  if (next) {
-    next.addEventListener("click", () => {
-      currentIndex = Math.min(currentIndex + 1, getMaxIndex());
-      updateCarousel();
-    });
-  }
-
-  if (prev) {
-    prev.addEventListener("click", () => {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-    });
-  }
-
-  window.addEventListener("resize", () => {
-    currentIndex = Math.min(currentIndex, getMaxIndex());
-    updateCarousel();
+  wrap?.addEventListener("mouseenter", () => {
+    isPaused = true;
+  });
+  wrap?.addEventListener("mouseleave", () => {
+    isPaused = false;
+  });
+  document.addEventListener("visibilitychange", () => {
+    isPaused = document.hidden;
   });
 
-  applyDevice("desktop");
+  // Swipe
+  let tx = 0,
+    ty = 0;
+  stage.addEventListener(
+    "touchstart",
+    (e) => {
+      tx = e.touches[0].clientX;
+      ty = e.touches[0].clientY;
+      isPaused = true;
+    },
+    { passive: true }
+  );
+  stage.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].clientX - tx;
+      const dy = e.changedTouches[0].clientY - ty;
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40)
+        goTo(dx < 0 ? current + 1 : current - 1, true);
+      setTimeout(() => {
+        isPaused = false;
+      }, 2000);
+    },
+    { passive: true }
+  );
+
+  // Clicar em card não-ativo navega para ele
+  cards.forEach((card, i) =>
+    card.addEventListener("click", (e) => {
+      if (card.dataset.state !== "active") {
+        e.preventDefault();
+        goTo(i, true);
+      }
+    })
+  );
+
+  // Init
+  applyDevice("mobile");
+  applyStates();
+  if (!reducedMotion) startAuto();
 })();
+
+// ── GSAP ScrollTrigger ─────────────────────────────────────────
+function initGSAP() {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+    initFallback();
+    return;
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Navbar
+  ScrollTrigger.create({
+    start: "top -50px",
+    onEnter: () => navbar.classList.add("scrolled"),
+    onLeaveBack: () => navbar.classList.remove("scrolled"),
+  });
+
+  // Hero backgrounds parallax + hero-passed
+  const hero = document.getElementById("hero");
+  const glow = document.querySelector(".hero-glow");
+  const glow2 = document.querySelector(".hero-glow-2");
+  const grid = document.querySelector(".hero-grid");
+  const scrollI = hero?.querySelector(".scroll-indicator");
+
+  if (hero && !reducedMotion) {
+    // Backgrounds movem-se para cima mais devagar que o scroll
+    // → parecem fixos enquanto o conteúdo sobe
+    [glow, { el: glow, y: "-28%" }, glow2, { el: glow2, y: "-18%" }, grid, { el: grid, y: "-12%" }];
+
+    [
+      [glow, "-28%"],
+      [glow2, "-18%"],
+      [grid, "-12%"],
+    ].forEach(([el, y]) => {
+      if (!el) return;
+      gsap.to(el, {
+        y,
+        ease: "none",
+        scrollTrigger: { trigger: hero, start: "top top", end: "bottom top", scrub: 0.8 },
+      });
+    });
+
+    // Scroll indicator desaparece
+    if (scrollI) {
+      gsap.to(scrollI, {
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: { trigger: hero, start: "top top", end: "20% top", scrub: true },
+      });
+    }
+  }
+
+  // hero-passed — esconde backgrounds fixos quando hero sai da tela
+  ScrollTrigger.create({
+    trigger: hero,
+    start: "bottom top",
+    onEnter: () => document.body.classList.add("hero-passed"),
+    onLeaveBack: () => document.body.classList.remove("hero-passed"),
+  });
+
+  // Reveals
+  document.querySelectorAll(".reveal").forEach((el, i) => {
+    if (reducedMotion) {
+      el.classList.add("visible");
+      return;
+    }
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 22 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.65,
+        ease: "power2.out",
+        delay: (i % 3) * 0.06,
+        scrollTrigger: { trigger: el, start: "top 92%", toggleActions: "play none none none" },
+      }
+    );
+  });
+
+  window.addEventListener("load", () => ScrollTrigger.refresh());
+}
+
+// ── Fallback (GSAP offline ou reduced-motion) ──────────────────
+function initFallback() {
+  // Hero passed
+  const hero = document.getElementById("hero");
+  const scrollI = hero?.querySelector(".scroll-indicator");
+  window.addEventListener(
+    "scroll",
+    () => {
+      const sy = window.scrollY;
+      document.body.classList.toggle(
+        "hero-passed",
+        hero ? hero.getBoundingClientRect().bottom <= 0 : false
+      );
+      if (scrollI) scrollI.style.opacity = String(Math.max(0, 1 - sy / 150));
+    },
+    { passive: true }
+  );
+
+  // Reveals
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add("visible"), i * 70);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+}

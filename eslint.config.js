@@ -20,25 +20,20 @@ module.exports = [
 
     languageOptions: {
       ecmaVersion: "latest",
-      sourceType: "module", // 🔥 IMPORTANTE
+      sourceType: "script",
       globals: {
         ...globals.browser,
         ...globals.node,
+        gsap: "readonly",
+        ScrollTrigger: "readonly",
       },
     },
 
     rules: {
-      // evita variável esquecida
       "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-
-      // evita bug silencioso
       "no-undef": "error",
-
-      // melhora legibilidade
       "no-var": "error",
       "prefer-const": "warn",
-
-      // console liberado (ok pra teu caso)
       "no-console": "off",
     },
   },

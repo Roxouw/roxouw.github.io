@@ -5,7 +5,7 @@
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
-        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         font-src 'self' https://fonts.gstatic.com data:;
         img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
@@ -28,50 +28,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ═══════════════════════════════════════
-       SEO PRIMÁRIO
-  ════════════════════════════════════════ -->
-    <title>Filipe Rosso | Desenvolvedor Full Stack — C#/.NET, React, TypeScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap"
+      rel="stylesheet" />
+
+    <title>Site Profissional para Empresas e Autônomos | Filipe Rosso</title>
     <meta
       name="description"
-      content="Filipe Rosso, desenvolvedor full stack com 3+ anos de experiência em C#/.NET, React e TypeScript. Disponível para freelance (sites, landing pages, sistemas) e oportunidades CLT/PJ em Cachoeirinha, RS." />
+      content="Seu negócio merece um site que gera contato. Crio sites profissionais para empresas e autônomos aparecerem no Google e receberem clientes pelo WhatsApp." />
     <meta
       name="keywords"
-      content="desenvolvedor full stack, desenvolvedor C# .NET, desenvolvedor React, freelance desenvolvimento web, criar site profissional, landing page, Cachoeirinha, Rio Grande do Sul, TypeScript, Node.js" />
+      content="criação de sites, site para empresa, site para autônomo, site profissional, landing page, presença digital, WhatsApp, SEO, Cachoeirinha, Rio Grande do Sul" />
     <meta name="author" content="Filipe Rosso" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://roxouw.github.io/" />
 
-    <!-- ═══════════════════════════════════════
-       OPEN GRAPH (WhatsApp, Facebook, LinkedIn)
-  ════════════════════════════════════════ -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://roxouw.github.io/" />
-    <meta property="og:title" content="Filipe Rosso | Desenvolvedor Full Stack" />
+    <meta
+      property="og:title"
+      content="Site Profissional para Empresas e Autônomos | Filipe Rosso" />
     <meta
       property="og:description"
-      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET no servidor, React na interface. Disponível para freelance." />
+      content="Seu negócio merece um site que gera contato. Crio sites profissionais para empresas e autônomos aparecerem no Google e receberem clientes pelo WhatsApp." />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Filipe Rosso — Dev" />
+    <meta property="og:site_name" content="Filipe Rosso — Sites Profissionais" />
 
-    <!-- ═══════════════════════════════════════
-       TWITTER / X CARD
-  ════════════════════════════════════════ -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Filipe Rosso | Desenvolvedor Full Stack" />
+    <meta
+      name="twitter:title"
+      content="Site Profissional para Empresas e Autônomos | Filipe Rosso" />
     <meta
       name="twitter:description"
-      content="Sites, sistemas e APIs do zero ao deploy. C#/.NET, React, TypeScript." />
+      content="Seu negócio merece um site que gera contato. Crio sites profissionais para empresas e autônomos aparecerem no Google e receberem clientes pelo WhatsApp." />
 
-    <!-- ═══════════════════════════════════════
-       SCHEMA.ORG — STRUCTURED DATA (Google)
-  ════════════════════════════════════════ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Filipe Rosso",
-        "jobTitle": "Desenvolvedor Full Stack",
+        "jobTitle": "Criação de Sites Profissionais",
         "url": "https://roxouw.github.io/",
         "email": "filiperosso99@gmail.com",
         "telephone": "+55-51-98033-5252",
@@ -82,50 +80,28 @@
           "addressCountry": "BR"
         },
         "sameAs": ["https://github.com/Roxouw", "https://www.linkedin.com/in/filiperosso/"],
-        "knowsAbout": [
-          "C#",
-          ".NET",
-          "React",
-          "TypeScript",
-          "JavaScript",
-          "SQL",
-          "Node.js",
-          "Next.js",
-          "Docker",
-          "Git"
-        ],
         "offers": {
           "@type": "Offer",
-          "description": "Desenvolvimento de sites, landing pages e sistemas web sob demanda"
+          "description": "Criação de sites profissionais para empresas e autônomos"
         }
       }
     </script>
 
-    <!-- ═══════════════════════════════════════
-       FAVICON
-  ════════════════════════════════════════ -->
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
     <link rel="icon" type="image/png" href="/assets/icons/favicon.ico" sizes="512x512" />
     <link rel="apple-touch-icon" href="/assets/icons/favicon.ico" />
 
-    <!-- ═══════════════════════════════════════
-       OPEN GRAPH — usa a logo como preview
-  ════════════════════════════════════════ -->
     <meta property="og:image" content="https://roxouw.github.io/assets/images/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:image" content="https://roxouw.github.io/assets/images/logo.png" />
 
-    <!-- ═══════════════════════════════════════
-       PERFORMANCE
-  ════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <!-- Aplica tema antes do render — evita flash (3 estados: light / dark / auto) -->
     <script>
       (function () {
         var t = localStorage.getItem("theme");
@@ -137,7 +113,6 @@
   </head>
 
   <body>
-    <!-- INK EXPLOSION CANVAS -->
     <canvas
       id="inkCanvas"
       style="
@@ -148,26 +123,28 @@
         width: 100%;
         height: 100%;
       "></canvas>
-    <!-- INTRO OVERLAY -->
+
     <div id="intro" aria-hidden="true">
       <div class="intro-name" id="introName">
-        <span class="intro-first" id="introFirst"></span>
-        <span class="intro-last" id="introLast"></span>
+        <div id="introWelcome" class="intro-welcome"></div>
+        <div class="intro-main-name">
+          <span id="introFirst"></span>
+          <span id="introLast"></span>
+        </div>
       </div>
       <div class="intro-bar" id="introBar">
         <div class="intro-bar-fill" id="introBarFill"></div>
         <div class="intro-bar-shine" id="introBarShine"></div>
       </div>
-      <span class="intro-text" id="introText">Full Stack Developer / Web Designer</span>
+      <span class="intro-text" id="introText">Sites que geram contato.</span>
     </div>
 
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="#about" onclick="closeMobile()">Sobre</a>
-      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#skills" onclick="closeMobile()">Serviços</a>
       <a href="#projects" onclick="closeMobile()">Projetos</a>
       <a href="/historia.html">História</a>
       <a href="#contact" onclick="closeMobile()">Contato</a>
@@ -193,7 +170,7 @@
       </div>
       <ul class="nav-links">
         <li><a href="#about">Sobre</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#skills">Serviços</a></li>
         <li><a href="#projects">Projetos</a></li>
         <li><a href="/historia.html">História</a></li>
         <li><a href="#contact">Contato</a></li>
@@ -276,52 +253,65 @@
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
       <div class="hero-grid"></div>
-      <div class="hero-badge">Criação de sites para empresas e autônomos</div>
-      <h1 class="hero-title">
-        Pare de perder clientes
-        <br />
-        <span class="teal-word">para quem tem site profissional</span>
-      </h1>
 
-      <p class="hero-desc">
-        Enquanto você lê isso, pessoas estão procurando seu serviço no Google. Se você não aparece,
-        você perde dinheiro todos os dias.
-        <br />
-        Eu crio sites que atraem clientes e fecham vendas automaticamente.
-      </p>
-      <div class="hero-cta">
-        <a
-          href="#"
-          onclick="
-            openNichoModal();
-            return false;
-          "
-          class="btn btn-primary">
-          Quero começar a receber clientes →
-        </a>
-        <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
-        <a href="#contact" class="btn btn-ghost">Falar Comigo</a>
-      </div>
-      <div class="scroll-indicator">
-        <div class="scroll-line"></div>
-        <span>scroll</span>
+      <div class="hero-content">
+        <div class="hero-badge">Sites para empresas e autônomos</div>
+        <h1 class="hero-title">
+          Seu cliente está
+          <br />
+          <span class="teal-word">buscando agora.</span>
+          <br />
+          Você aparece?
+        </h1>
+
+        <p class="hero-desc">
+          Quem não tem site profissional perde para quem tem — todos os dias.
+          <br />
+          Crio sites que transmitem confiança, aparecem no Google e fazem o WhatsApp tocar.
+        </p>
+        <div class="hero-cta">
+          <a
+            href="#"
+            onclick="
+              openNichoModal();
+              return false;
+            "
+            class="btn btn-primary">
+            Ver modelos e preços →
+          </a>
+          <a href="#portfolio-fotos" class="btn btn-ghost">Ver projetos</a>
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20site%20e%20quero%20pedir%20um%20or%C3%A7amento"
+            target="_blank"
+            class="btn btn-ghost">
+            Pedir orçamento
+          </a>
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>scroll</span>
+        </div>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <section id="portfolio-fotos" class="sec-dark">
-      <p class="section-eyebrow reveal" data-num="00">Sites entregues</p>
+    <!-- VITRINE VISUAL -->
+    <section id="portfolio-fotos" class="sec-accent">
+      <p class="section-eyebrow reveal" data-num="00">Projetos entregues</p>
       <h2 class="section-title reveal">
-        Projetos reais em
+        Veja o que
         <br />
-        formato de
-        <span class="teal-word">vitrine visual.</span>
+        seu site
+        <span class="teal-word">pode ser.</span>
       </h2>
 
       <div class="portfolio-topbar reveal">
-        <p class="portfolio-subtitle">Veja os projetos na versão desktop ou mobile.</p>
-
+        <p class="portfolio-subtitle">
+          Sites reais, publicados, já gerando resultado. Esse nível está disponível para o seu
+          negócio.
+        </p>
         <div
           class="device-toggle"
           id="deviceToggle"
@@ -329,327 +319,258 @@
           aria-label="Escolher visualização">
           <button
             class="device-option active"
-            data-device="desktop"
-            type="button"
-            role="tab"
-            aria-selected="true">
-            Monitor
-          </button>
-          <button
-            class="device-option"
             data-device="mobile"
             type="button"
             role="tab"
-            aria-selected="false">
+            aria-selected="true">
             Celular
+          </button>
+          <button
+            class="device-option"
+            data-device="desktop"
+            type="button"
+            role="tab"
+            aria-selected="false">
+            Monitor
           </button>
         </div>
       </div>
 
-      <div class="photo-carousel reveal">
-        <button class="photo-nav prev" aria-label="Anterior" type="button">‹</button>
-
-        <div class="photo-track-wrap">
-          <div class="photo-track" id="photoTrack">
-            <a class="project-shot" href="/pages/siteParaAdvogado.html" target="_blank">
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/advogado.webp"
-                  data-desktop="/assets/images/prints/desktop/advogado.webp"
-                  data-mobile="/assets/images/prints/mobile/advogado.png"
-                  alt="Projeto para advogado" />
+      <div
+        class="showcase-wrap reveal"
+        id="showcaseWrap"
+        aria-label="Vitrine de projetos"
+        role="region">
+        <button class="photo-nav prev" aria-label="Projeto anterior" type="button">&#8249;</button>
+        <div class="showcase-stage" id="showcaseStage">
+          <a
+            class="project-shot"
+            href="/pages/siteParaAdvogado.html"
+            target="_blank"
+            data-index="0"
+            tabindex="-1">
+            <div class="shot-frame shot-mobile">
+              <div class="phone-ui"><div class="phone-notch"></div></div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/mobile/advogado.png"
+                data-desktop="/assets/images/prints/desktop/advogado.webp"
+                data-mobile="/assets/images/prints/mobile/advogado.png"
+                alt="Projeto para advogado no celular"
+                loading="lazy" />
+            </div>
+            <div class="shot-frame shot-desktop hidden">
+              <div class="browser-ui">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/desktop/advogado.webp"
+                data-desktop="/assets/images/prints/desktop/advogado.webp"
+                data-mobile="/assets/images/prints/mobile/advogado.png"
+                alt="Projeto para advogado"
+                loading="lazy" />
+            </div>
+            <span class="shot-caption">Advogado</span>
+          </a>
 
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/advogado.png"
-                  data-desktop="/assets/images/prints/desktop/advogado.webp"
-                  data-mobile="/assets/images/prints/mobile/advogado.png"
-                  alt="Projeto para advogado no celular" />
+          <a
+            class="project-shot"
+            href="/pages/siteParaAcademia.html"
+            target="_blank"
+            data-index="1"
+            tabindex="-1">
+            <div class="shot-frame shot-mobile">
+              <div class="phone-ui"><div class="phone-notch"></div></div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/mobile/academia.png"
+                data-desktop="/assets/images/prints/desktop/academia.webp"
+                data-mobile="/assets/images/prints/mobile/academia.png"
+                alt="Projeto para academia no celular"
+                loading="lazy" />
+            </div>
+            <div class="shot-frame shot-desktop hidden">
+              <div class="browser-ui">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/desktop/academia.webp"
+                data-desktop="/assets/images/prints/desktop/academia.webp"
+                data-mobile="/assets/images/prints/mobile/academia.png"
+                alt="Projeto para academia"
+                loading="lazy" />
+            </div>
+            <span class="shot-caption">Academia</span>
+          </a>
 
-              <span class="shot-caption">Advogado</span>
-            </a>
-
-            <a class="project-shot" href="/pages/siteParaAcademia.html" target="_blank">
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/academia.webp"
-                  data-desktop="/assets/images/prints/desktop/academia.webp"
-                  data-mobile="/assets/images/prints/mobile/academia.png"
-                  alt="Projeto para academia" />
+          <a
+            class="project-shot"
+            href="/pages/siteParaDentista.html"
+            target="_blank"
+            data-index="2"
+            tabindex="-1">
+            <div class="shot-frame shot-mobile">
+              <div class="phone-ui"><div class="phone-notch"></div></div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/mobile/dentista.png"
+                data-desktop="/assets/images/prints/desktop/dentista.webp"
+                data-mobile="/assets/images/prints/mobile/dentista.png"
+                alt="Projeto para dentista no celular"
+                loading="lazy" />
+            </div>
+            <div class="shot-frame shot-desktop hidden">
+              <div class="browser-ui">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/desktop/dentista.webp"
+                data-desktop="/assets/images/prints/desktop/dentista.webp"
+                data-mobile="/assets/images/prints/mobile/dentista.webp"
+                alt="Projeto para dentista"
+                loading="lazy" />
+            </div>
+            <span class="shot-caption">Dentista</span>
+          </a>
 
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/academia.png"
-                  data-desktop="/assets/images/prints/desktop/academia.webp"
-                  data-mobile="/assets/images/prints/mobile/academia.png"
-                  alt="Projeto para academia no celular" />
+          <a
+            class="project-shot"
+            href="/pages/siteParaNutricionista.html"
+            target="_blank"
+            data-index="3"
+            tabindex="-1">
+            <div class="shot-frame shot-mobile">
+              <div class="phone-ui"><div class="phone-notch"></div></div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/mobile/nutricionista.png"
+                data-desktop="/assets/images/prints/desktop/nutricionista.webp"
+                data-mobile="/assets/images/prints/mobile/nutricionista.png"
+                alt="Projeto para nutricionista no celular"
+                loading="lazy" />
+            </div>
+            <div class="shot-frame shot-desktop hidden">
+              <div class="browser-ui">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-
-              <span class="shot-caption">Academia</span>
-            </a>
-
-            <a class="project-shot" href="/pages/siteParaDentista.html" target="_blank">
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/dentista.webp"
-                  data-desktop="/assets/images/prints/desktop/dentista.webp"
-                  data-mobile="/assets/images/prints/mobile/dentista.webp"
-                  alt="Projeto para dentista" />
-              </div>
-
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/dentista.png"
-                  data-desktop="/assets/images/prints/desktop/dentista.webp"
-                  data-mobile="/assets/images/prints/mobile/dentista.png"
-                  alt="Projeto para dentista no celular" />
-              </div>
-
-              <span class="shot-caption">Dentista</span>
-            </a>
-
-            <!-- <a
-              class="project-shot"
-              href="/pages/siteParaPersonal.html"
-              target="_blank"
-            >
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span><span></span><span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/personal.webp"
-                  data-desktop="/assets/images/prints/desktop/personal.webp"
-                  data-mobile="/assets/images/prints/mobile/personal.webp"
-                  alt="Projeto para personal"
-                />
-              </div>
-
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/personal.png"
-                  data-desktop="/assets/images/prints/desktop/personal.webp"
-                  data-mobile="/assets/images/prints/mobile/personal.png"
-                  alt="Projeto para personal no celular"
-                />
-              </div>
-
-              <span class="shot-caption">Personal</span>
-            </a> -->
-
-            <a class="project-shot" href="/pages/siteParaNutricionista.html" target="_blank">
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/nutricionista.webp"
-                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
-                  data-mobile="/assets/images/prints/mobile/nutricionista.webp"
-                  alt="Projeto para nutricionista" />
-              </div>
-
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/nutricionista.png"
-                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
-                  data-mobile="/assets/images/prints/mobile/nutricionista.png"
-                  alt="Projeto para nutricionista no celular" />
-              </div>
-
-              <span class="shot-caption">Nutricionista</span>
-            </a>
-
-            <!-- <a
-              class="project-shot"
-              href="/pages/siteParaEmpresa.html"
-              target="_blank"
-            >
-              <div class="shot-frame shot-desktop">
-                <div class="browser-ui">
-                  <span></span><span></span><span></span>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/empresa.webp"
-                  data-desktop="/assets/images/prints/desktop/empresa.webp"
-                  data-mobile="/assets/images/prints/mobile/empresa.webp"
-                  alt="Projeto para empresa"
-                />
-              </div>
-
-              <div class="shot-frame shot-mobile hidden">
-                <div class="phone-ui">
-                  <div class="phone-notch"></div>
-                </div>
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/empresa.png"
-                  data-desktop="/assets/images/prints/desktop/empresa.webp"
-                  data-mobile="/assets/images/prints/mobile/empresa.png"
-                  alt="Projeto para empresa no celular"
-                />
-              </div>
-
-              <span class="shot-caption">Empresa</span>
-            </a> -->
-          </div>
+              <img
+                class="shot-image"
+                src="/assets/images/prints/desktop/nutricionista.webp"
+                data-desktop="/assets/images/prints/desktop/nutricionista.webp"
+                data-mobile="/assets/images/prints/mobile/nutricionista.webp"
+                alt="Projeto para nutricionista"
+                loading="lazy" />
+            </div>
+            <span class="shot-caption">Nutricionista</span>
+          </a>
         </div>
-
-        <button class="photo-nav next" aria-label="Próximo" type="button">›</button>
+        <button class="photo-nav next" aria-label="Próximo projeto" type="button">&#8250;</button>
       </div>
+      <div
+        class="showcase-dots"
+        id="showcaseDots"
+        aria-label="Indicadores de slide"
+        role="tablist"></div>
     </section>
 
     <hr class="divider" />
 
     <!-- ABOUT -->
-    <section id="about" class="sec-accent">
+    <section id="about" class="sec-dark">
       <div class="about-left">
-        <p class="section-eyebrow" data-num="01">Sobre mim</p>
+        <p class="section-eyebrow" data-num="01">Sobre</p>
         <h2 class="section-title reveal">
-          Código com
+          Site bom
           <br />
-          contexto.
+          gera cliente.
         </h2>
         <p class="about-text reveal">
-          Ajudo empresas e profissionais a terem presença digital profissional, atraindo mais
-          clientes e aumentando suas vendas através de sites estratégicos.
+          A maioria dos sites não converte porque foi feito só para existir. Eu faço diferente.
         </p>
         <p class="about-text reveal">
-          Meu foco não é só criar sites bonitos. É criar sites que fazem seu WhatsApp tocar.
-        </p>
-
-        <p class="about-text reveal">
-          Cada projeto é pensado para transformar visitantes em clientes. Com estratégia,
-          posicionamento e estrutura que vende.
-        </p>
-
-        <p class="about-text reveal">
-          Você não precisa entender de tecnologia. Só precisa de alguém que entregue resultado.
+          Cada projeto começa com uma pergunta: o que esse site precisa fazer pelo negócio do
+          cliente? A resposta guia tudo — do texto ao botão de contato.
         </p>
         <p class="about-text reveal">
-          Sou desenvolvedor full stack com experiência em
-          <strong>C#/.NET, React e TypeScript</strong>
-          , atuando há mais de 3 anos em projetos corporativos — incluindo o ecossistema
-          <strong>Open Finance</strong>
-          . Trabalho com boas práticas como SOLID, Clean Code e testes unitários.
+          O resultado é uma presença digital que passa credibilidade, apresenta o serviço com
+          clareza e incentiva o visitante a entrar em contato.
+        </p>
+        <p class="about-text reveal">
+          Você foca no seu negócio. Eu entrego o site que o representa online — com
+          profissionalismo, agilidade e foco em resultado.
         </p>
         <div class="about-stats reveal">
           <div class="stat-box">
             <span class="stat-num">4+</span>
-            <span class="stat-label">Anos de experiência</span>
+            <span class="stat-label">Anos criando soluções web</span>
           </div>
           <div class="stat-box">
             <span class="stat-num">10+</span>
-            <span class="stat-label">Projetos freelance</span>
+            <span class="stat-label">Projetos entregues</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">CLT</span>
-            <span class="stat-label">+ Freelance disponível</span>
+            <span class="stat-num">1:1</span>
+            <span class="stat-label">Atendimento direto do início ao fim</span>
           </div>
           <div class="stat-box">
             <span class="stat-num">100%</span>
-            <span class="stat-label">Comprometimento</span>
+            <span class="stat-label">Foco em conversão</span>
           </div>
         </div>
       </div>
       <div class="about-right reveal">
-        <p class="stack-label">Stack atual</p>
+        <p class="stack-label">O que seu site pode ter</p>
         <div class="tech-grid">
           <div class="tech-item">
             <div class="tech-dot"></div>
-            C#
+            Design responsivo
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            .NET
+            WhatsApp integrado
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            React
+            SEO no Google
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            TypeScript
+            Página de serviços
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            JavaScript
+            Página de contato
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            SQL
+            Formulário de orçamento
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            PostgreSQL
+            Hospedagem incluída
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            Git
+            Domínio personalizado
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            Docker
+            Google Maps
           </div>
           <div class="tech-item">
             <div class="tech-dot"></div>
-            Node.js
-            <span class="tech-badge">em curso</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-dot"></div>
-            Next.js
-            <span class="tech-badge">em curso</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-dot"></div>
-            NUnit
+            Botões de conversão
           </div>
         </div>
       </div>
@@ -658,53 +579,54 @@
     <hr class="divider divider-accent" />
 
     <!-- SKILLS -->
-    <section id="skills" class="sec-dark">
-      <p class="section-eyebrow reveal" data-num="02">Habilidades</p>
+    <section id="skills" class="sec-accent">
+      <p class="section-eyebrow reveal" data-num="02">Serviços</p>
       <h2 class="section-title reveal">
-        O que
+        O que eu
         <br />
-        eu faço.
+        entrego.
       </h2>
       <div class="skills-grid">
         <div class="skill-card reveal">
           <span class="skill-icon">◈</span>
-          <div class="skill-name">Sites que vendem</div>
+          <div class="skill-name">Site institucional</div>
           <p class="skill-desc">
-            Sites estratégicos focados em gerar clientes. Com WhatsApp, SEO e estrutura pronta para
-            conversão.
+            Sua empresa online com identidade profissional. Apresenta seus serviços, transmite
+            confiança e convida o visitante a entrar em contato.
           </p>
           <div class="skill-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">Presença online</span>
+            <span class="skill-tag">WhatsApp</span>
+            <span class="skill-tag">SEO</span>
+            <span class="skill-tag">Responsivo</span>
           </div>
         </div>
         <div class="skill-card reveal">
           <span class="skill-icon">⬡</span>
-          <div class="skill-name">Landing Pages</div>
+          <div class="skill-name">Landing page</div>
           <p class="skill-desc">
-            Páginas focadas em conversão. Ideais para tráfego pago e captação de leads.
+            Página de alta conversão para campanhas, lançamentos e tráfego pago. Focada em uma ação:
+            fazer o visitante virar lead.
           </p>
           <div class="skill-tags">
-            <span class="skill-tag">C# / .NET</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">NUnit</span>
+            <span class="skill-tag">Conversão</span>
+            <span class="skill-tag">Tráfego pago</span>
+            <span class="skill-tag">Formulário</span>
+            <span class="skill-tag">CTA</span>
           </div>
         </div>
         <div class="skill-card reveal">
           <span class="skill-icon">⬢</span>
-          <div class="skill-name">Sistemas sob medida</div>
+          <div class="skill-name">Solução personalizada</div>
           <p class="skill-desc">
-            Desenvolvimento de sistemas personalizados para automatizar processos e aumentar
-            produtividade do negócio.
+            Para negócios que precisam de mais: quiz de captação, funil de vendas, sistema de
+            agendamento ou qualquer estrutura específica para o seu processo.
           </p>
           <div class="skill-tags">
-            <span class="skill-tag">Landing Pages</span>
-            <span class="skill-tag">SEO</span>
-            <span class="skill-tag">GitHub Pages</span>
-            <span class="skill-tag">Deploy</span>
+            <span class="skill-tag">Sistema web</span>
+            <span class="skill-tag">Automação</span>
+            <span class="skill-tag">Processo</span>
+            <span class="skill-tag">Escala</span>
           </div>
         </div>
       </div>
@@ -713,15 +635,15 @@
     <hr class="divider" />
 
     <!-- PROJECTS -->
-    <section id="projects" class="sec-accent">
+    <section id="projects" class="sec-dark">
       <p class="section-eyebrow reveal" data-num="03">Projetos</p>
       <h2 class="section-title reveal">
-        Trabalhos
+        Cases
         <br />
-        selecionados.
+        reais.
       </h2>
       <p class="section-eyebrow reveal">
-        Sites reais que já estão gerando resultado para clientes.
+        Projetos feitos para negócios reais — com estratégia, visual e foco em gerar contato.
       </p>
       <div class="projects-grid">
         <div class="project-card featured reveal">
@@ -729,9 +651,8 @@
             <p class="project-num">001 — Destaque · Freelance</p>
             <h3 class="project-title">Gabriel Consultoria — Funil de Captação</h3>
             <p class="project-desc">
-              App mobile-first para personal trainer: quiz interativo que qualifica o lead, coleta
-              dados e encaminha direto para o WhatsApp do cliente. Conta com carrossel de
-              depoimentos, Open Graph e animações para maximizar conversão.
+              Quiz interativo que qualifica o lead antes do contato. O visitante responde perguntas,
+              recebe um diagnóstico e é direcionado direto para o WhatsApp — pronto para fechar.
             </p>
             <div class="project-stack">
               <span class="stack-tag">HTML / CSS</span>
@@ -768,8 +689,8 @@
           <p class="project-num">002 — Freelance</p>
           <h3 class="project-title">INOVATA Móveis Sob Medida</h3>
           <p class="project-desc">
-            Site desenvolvido para captar clientes e gerar contatos direto no WhatsApp. Estrutura
-            pensada para conversão e posicionamento no Google.
+            Site para marcenaria com galeria de projetos, identidade visual forte e CTA direto para
+            o WhatsApp. Posicionamento profissional para um mercado visual.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -791,8 +712,8 @@
           <p class="project-num">003 — Freelance</p>
           <h3 class="project-title">Academia Iron House</h3>
           <p class="project-desc">
-            Site institucional para academia. Valores, integração via WhatsApp, animações de entrada
-            e Open Graph customizado para redes sociais.
+            Site institucional com apresentação de planos, diferenciais e botão de contato por
+            WhatsApp. Visual impactante para atrair novos alunos.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -807,10 +728,10 @@
 
         <div class="project-card reveal">
           <p class="project-num">004 — Freelance</p>
-          <h3 class="project-title">Consultoria Dentista</h3>
+          <h3 class="project-title">Clínica Odontológica</h3>
           <p class="project-desc">
-            Site institucional para consultorio dentista. Valores, integração via WhatsApp,
-            animações de entrada e Open Graph customizado para redes sociais.
+            Site para dentista com foco em autoridade e confiança. Apresentação dos tratamentos,
+            depoimentos e agendamento facilitado pelo WhatsApp.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -825,10 +746,10 @@
 
         <div class="project-card reveal">
           <p class="project-num">005 — Freelance</p>
-          <h3 class="project-title">Advogado</h3>
+          <h3 class="project-title">Escritório de Advocacia</h3>
           <p class="project-desc">
-            Site institucional para advogado. Valores, integração via WhatsApp, animações de entrada
-            e Open Graph customizado para redes sociais.
+            Site sóbrio e profissional para advogado. Transmite autoridade, apresenta as áreas de
+            atuação e facilita o primeiro contato com o cliente.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML / CSS</span>
@@ -844,7 +765,9 @@
         <div class="project-card placeholder reveal">
           <p class="project-num">006 — Em breve</p>
           <h3 class="project-title">Próximo projeto</h3>
-          <p class="project-desc">Novo projeto em andamento. Acesse o GitHub para acompanhar.</p>
+          <p class="project-desc">
+            Novo case em andamento. Acompanhe pelo GitHub ou entre em contato para saber mais.
+          </p>
           <div class="project-stack">
             <span class="stack-tag">React</span>
             <span class="stack-tag">Node.js</span>
@@ -858,22 +781,18 @@
     </section>
 
     <!-- FREELANCE BANNER -->
-    <section id="freelance" class="sec-dark">
+    <section id="freelance" class="sec-accent">
       <div class="freelance-inner">
         <div class="freelance-text reveal">
           <h2>
-            Seu concorrente já está no Google.
+            Seu concorrente já tem site.
             <br />
-            <span>E você não.</span>
+            <span>E está recebendo seus clientes.</span>
           </h2>
-
           <p>
-            Todo dia pessoas procuram pelo seu serviço. Quem aparece, vende. Quem não aparece,
-            perde.
-            <br />
-            <br />
-            Eu coloco seu negócio online, com um site profissional pronto para atrair clientes e
-            fechar vendas.
+            Sem presença digital profissional, seu negócio depende só de indicação. Com um site bem
+            feito, você aparece no Google, passa mais confiança e recebe contato de quem já quer
+            contratar.
           </p>
         </div>
         <div class="freelance-actions reveal">
@@ -900,29 +819,23 @@
               <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
-            WhatsApp
+            Falar no WhatsApp
           </a>
-          <!-- <a
-            href="/cdn-cgi/l/email-protection#3c5a5550554c594e534f4f5305057c5b515d5550125f5351"
-            class="btn btn-ghost"
-            >E-mail</a
-          > -->
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="sec-accent">
+    <section id="contact" class="sec-dark">
       <p class="section-eyebrow reveal" style="justify-content: center" data-num="04">Contato</p>
       <h2 class="contact-title reveal">
-        Vamos colocar seu negócio no Google e
+        Pronto para ter um site
         <br />
-        <span class="outline">começar</span>
-        <br />
-        a gerar clientes?
+        que trabalha por
+        <span class="outline">você?</span>
       </h2>
       <p style="margin-top: 1rem; opacity: 0.7">
-        ✔ Entrega rápida • ✔ Design moderno • ✔ Pronto para vender
+        ✔ Entrega em até 10 dias • ✔ Visual profissional • ✔ Focado em gerar contato
       </p>
       <div class="social-links reveal">
         <a href="https://github.com/Roxouw" target="_blank" class="social-link">GitHub</a>
@@ -931,9 +844,11 @@
           LinkedIn
         </a>
         <div class="social-divider"></div>
-        <a href="https://wa.me/5551980335252" target="_blank" class="social-link">WhatsApp</a>
+        <a href="https://wa.me/5551980335252" target="_blank" class="social-link">
+          Pedir orçamento no WhatsApp
+        </a>
         <div class="social-divider"></div>
-        <a href="/docs/CV_Filipe_Rosso.pdf" download class="social-link">CV — Download</a>
+        <a href="/docs/CV_Filipe_Rosso.pdf" download class="social-link">Ver perfil profissional</a>
       </div>
     </section>
 
@@ -945,7 +860,7 @@
       </span>
       <span class="footer-note">
         <span class="footer-dot"></span>
-        Disponível para freelance e oportunidades PJ/CLT
+        Sites profissionais para empresas e autônomos — do RS para o Brasil.
       </span>
     </footer>
 
@@ -953,12 +868,11 @@
     <div id="nichoModal" role="dialog" aria-modal="true" aria-labelledby="nichoTitleEl">
       <div class="nicho-card">
         <button class="nicho-close" id="nichoCloseBtn" aria-label="Fechar">✕</button>
-        <p class="nicho-eyebrow">Quero meu site agora</p>
-        <h2 class="nicho-title" id="nichoTitleEl">
-          Veja quanto custa começar a ganhar clientes pela internet
-        </h2>
+        <p class="nicho-eyebrow">Ver modelos e preços</p>
+        <h2 class="nicho-title" id="nichoTitleEl">Qual é o segmento do seu negócio?</h2>
         <p class="nicho-sub">
-          Escolha seu segmento e veja como seu site pode começar a trazer resultados.
+          Escolha abaixo e veja um modelo pensado para o seu mercado — com estrutura, visual e foco
+          em gerar contato.
         </p>
         <div class="nicho-grid">
           <a href="/pages/siteParaAdvogado.html" class="nicho-btn">
@@ -985,11 +899,6 @@
             <span class="nicho-icon">🏢</span>
             Outro segmento
           </a>
-          <!-- <a
-            href="/pages/siteParaEmpresa.html"
-            class="nicho-btn nicho-btn-outro"
-            ><span class="nicho-icon">🏢</span>Outro segmento</a
-          > -->
         </div>
         <a
           href="https://wa.me/5551980335252?text=Oi%20Filipe,%20acabei%20de%20ver%20seu%20site%20e%20quero%20criar%20um%20site%20para%20meu%20negócio.%20Pode%20me%20explicar%20como%20funciona"
@@ -1006,11 +915,13 @@
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
-          WhatsApp
+          Prefiro falar no WhatsApp
         </a>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/transitions.js"></script>
     <script src="/assets/js/mobile-fix.js"></script>
