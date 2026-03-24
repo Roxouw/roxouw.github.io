@@ -59,10 +59,10 @@ function closeMobile() {
 }
 
 // ── Intro cinematic sequence ───────────────────────────────────
-// ── Intro cinematic sequence ───────────────────────────────────
 (function () {
   const intro = document.getElementById("intro");
   const introName = document.getElementById("introName");
+  const introEyebrow = document.getElementById("introEyebrow");
   const introWelcome = document.getElementById("introWelcome");
   const introFirst = document.getElementById("introFirst");
   const introLast = document.getElementById("introLast");
@@ -70,6 +70,7 @@ function closeMobile() {
   const barFill = document.getElementById("introBarFill");
   const barShine = document.getElementById("introBarShine");
   const introText = document.getElementById("introText");
+  const introLogoWrap = document.getElementById("introLogoWrap");
   const heroSection = document.getElementById("hero");
   const navLogo = document.querySelector(".nav-logo");
 
@@ -87,7 +88,7 @@ function closeMobile() {
     el.innerHTML = "";
     return [...text].map((ch) => {
       const s = document.createElement("span");
-      s.className = "intro-letter " + cls;
+      s.className = "intro-letter " + (cls || "");
       s.textContent = ch === " " ? "\u00A0" : ch;
       el.appendChild(s);
       return s;
@@ -102,16 +103,13 @@ function closeMobile() {
     return new Promise((res) => {
       introBar.classList.add("visible");
       const t0 = performance.now();
-
       function tick(now) {
         const raw = Math.min((now - t0) / duration, 1);
         const eased = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;
-
         const pct = eased * 100;
         barFill.style.width = pct + "%";
         barShine.style.left = pct - 3 + "%";
         barShine.style.opacity = raw > 0.02 && raw < 0.97 ? "1" : "0";
-
         if (raw < 1) requestAnimationFrame(tick);
         else {
           barFill.style.width = "100%";
@@ -119,7 +117,6 @@ function closeMobile() {
           res();
         }
       }
-
       requestAnimationFrame(tick);
     });
   }
@@ -127,32 +124,45 @@ function closeMobile() {
   async function runIntro() {
     await preloadDone;
 
-    const welcomeLetters = buildLetters(introWelcome, "Welcome To,", "intro-welcome-letter");
-    const firstLetters = buildLetters(introFirst, "Rosso", "intro-first");
-    const lastLetters = buildLetters(introLast, " Labs", "intro-last");
+    // Eyebrow aparece primeiro (linha discreta)
+    introEyebrow.classList.add("visible");
+    await wait(180);
 
-    await wait(80);
-
+    // "Welcome To," letra a letra — sutil, menor
+    const welcomeLetters = buildLetters(introWelcome, "Welcome To,", "");
     for (let i = 0; i < welcomeLetters.length; i++) {
-      await wait(40);
+      await wait(36);
       welcomeLetters[i].classList.add("on");
     }
 
-    await wait(120);
+    await wait(80);
 
-    const allNameLetters = [...firstLetters, ...lastLetters];
-    for (let i = 0; i < allNameLetters.length; i++) {
-      await wait(58);
-      allNameLetters[i].classList.add("on");
+    // "Rosso Labs" — Rosso normal, Labs em teal via CSS
+    const firstLetters = buildLetters(introFirst, "Rosso", "");
+    const lastLetters = buildLetters(introLast, "\u00A0Labs", "");
+    const nameLetters = [...firstLetters, ...lastLetters];
+
+    for (let i = 0; i < nameLetters.length; i++) {
+      await wait(50);
+      nameLetters[i].classList.add("on");
     }
 
-    await wait(180);
-    await runBar(820);
-    introText.classList.add("visible");
-    await wait(460);
+    await wait(160);
 
+    // Barra de progresso
+    await runBar(780);
+
+    // Tagline
+    introText.classList.add("visible");
+    await wait(280);
+
+    // Logo entra com fade+slide, depois flutua
+    introLogoWrap.classList.add("visible");
+    await wait(720);
+
+    // Morph: nome voa para nav-logo
     introName.classList.add("zoom-out");
-    await wait(300);
+    await wait(260);
 
     const nameBounds = introName.getBoundingClientRect();
     const logoBounds = navLogo ? navLogo.getBoundingClientRect() : null;
@@ -166,10 +176,8 @@ function closeMobile() {
         logoBounds.width / nameBounds.width,
         logoBounds.height / nameBounds.height
       );
-
       introName.classList.remove("zoom-out");
       await new Promise((r) => requestAnimationFrame(r));
-
       introName.style.transition =
         "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.45s ease 0.1s, filter 0.45s ease 0.1s";
       introName.style.transform = `translate(${logoCX - nameCX}px,${logoCY - nameCY}px) scale(${scaleT})`;
@@ -183,13 +191,14 @@ function closeMobile() {
 
     await wait(120);
     intro.classList.add("exit");
-    await wait(180);
+    await wait(200);
     heroSection.classList.add("hero-enter");
 
-    await wait(950);
+    await wait(900);
     intro.style.display = "none";
     document.body.style.overflow = "";
 
+    // Inicia GSAP depois que o intro termina e o scroll está liberado
     initGSAP();
   }
 
@@ -330,7 +339,7 @@ function launchInk(color) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const themeLogo = document.getElementById("theme-logo");
+  const themeLogo = document.getElementById("introLogoImg");
   const themeLogo2 = document.getElementById("theme-logo2");
 
   const themeToggle = document.querySelector(".theme-toggle");

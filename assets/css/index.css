@@ -20,22 +20,24 @@ html.theme-transition {
 }
 
 :root {
-  --bg: #131416;
-  --bg2: #1a1c1f;
-  --surface: #21242a;
-  --border: #2a2d33;
-  --border2: #353940;
-  --text: #e2e4e8;
-  --muted: #606470;
-  --muted2: #8a8f9a;
-  --teal-10: rgba(23, 138, 130, 0.1);
-  --teal-20: rgba(23, 138, 130, 0.2);
-  --teal-30: rgba(23, 138, 130, 0.3);
-  --teal: #178a82;
+  --bg: #16181d;
+  --bg2: #1d222a;
+  --surface: #252b35;
+  --border: #313744;
+  --border2: #3a404d;
+  --text: #f3f5f7;
+  --muted: #a7b0bd;
+  --muted2: #8f97a3;
+
+  --teal: #1fa39a;
   --teal-bright: #2dd4c8;
-  --teal-glow: rgba(23, 138, 130, 0.1);
-  --teal-dim: rgba(23, 138, 130, 0.06);
-  --teal-03: rgba(23, 138, 130, 0.025);
+  --teal-10: rgba(31, 163, 154, 0.1);
+  --teal-20: rgba(31, 163, 154, 0.2);
+  --teal-30: rgba(31, 163, 154, 0.3);
+  --teal-glow: rgba(31, 163, 154, 0.14);
+  --teal-dim: rgba(31, 163, 154, 0.06);
+  --teal-03: rgba(31, 163, 154, 0.025);
+
   --font-display: "Syne", sans-serif;
   --font-mono: "Poppins", monospace;
   --t: 0.25s ease;
@@ -47,27 +49,27 @@ html.theme-transition {
 body.light-mode,
 html.light-mode body {
   --bg: #f7fafc;
-  --bg2: #f1f5f9;
+  --bg2: #eef3f7;
   --surface: #ffffff;
-  --border: #e2e8f0;
-  --border2: #cbd5e1;
+  --border: #dbe3ec;
+  --border2: #c8d3df;
   --text: #0f172a;
-  --muted: #6b7280;
-  --muted2: #475569;
-  --teal: #2a9fa5;
-  --teal-glow: rgba(42, 159, 165, 0.15);
-  --teal-dim: rgba(42, 159, 165, 0.08);
-  --teal-11: rgba(42, 159, 165, 0.11);
-  --teal-04: rgba(42, 159, 165, 0.04);
-  --teal-20: rgba(42, 159, 165, 0.2);
-  --teal-30: rgba(42, 159, 165, 0.3);
+  --muted: #667085;
+  --muted2: #475467;
+
+  --teal: #1f9d96;
+  --teal-bright: #14b8a6;
+  --teal-glow: rgba(31, 157, 150, 0.15);
+  --teal-dim: rgba(31, 157, 150, 0.08);
+  --teal-20: rgba(31, 157, 150, 0.2);
+  --teal-30: rgba(31, 157, 150, 0.3);
+
   --cursor: black;
   --cursor-glow: rgba(1, 1, 1, 0.15);
 }
 
 html.light-mode {
   background: #f7fafc;
-  image-rendering: auto;
 }
 
 html {
@@ -549,7 +551,7 @@ section {
 
 .section-eyebrow {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.62rem;
   color: var(--teal);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -749,11 +751,13 @@ section.sec-accent .freelance-text h2 {
 }
 
 section.sec-accent .freelance-text h2 span {
-  color: var(--teal-dark);
+  color: rgba(19, 20, 22, 0.42);
+  text-decoration: underline;
+  text-decoration-color: rgba(19, 20, 22, 0.22);
 }
 
 section.sec-accent .freelance-text p {
-  color: var(--teal-dark);
+  color: rgba(19, 20, 22, 0.62);
 }
 
 /* Buttons invertidos */
@@ -785,12 +789,10 @@ section.sec-accent .contact-title {
   color: var(--bg);
 }
 
-section.sec-accent .contact-title .text-teal {
+section.sec-accent .contact-title .outline {
   color: transparent;
 }
-section.sec-dark .contact-title .text-teal {
-  color: var(--teal);
-}
+
 section.sec-accent .contact-email {
   color: var(--bg);
   border-color: rgba(19, 20, 22, 0.32);
@@ -1358,7 +1360,7 @@ section.sec-dark {
 }
 
 .contact-title {
-  font-size: clamp(2.8rem, 5vw, 7rem);
+  font-size: clamp(2rem, 9vw, 4rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -1523,20 +1525,18 @@ footer {
   }
 
   #hero {
-    padding: 0 1.5rem 4.5rem;
+    padding: 80px 1.5rem 4.5rem;
     min-height: 100svh;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    justify-content: flex-end;
+    padding-bottom: 0;
   }
 
   .hero-title {
     font-size: clamp(2rem, 9vw, 4rem);
-  }
-
-  .intro-name {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    font-size: clamp(3.5rem, 18vw, 5rem);
-    line-height: 0.95;
   }
 
   .hero-bottom {
@@ -1658,6 +1658,7 @@ footer {
 }
 
 /* ── INTRO OVERLAY ─────────────────────── */
+/* ══ INTRO ══════════════════════════════════════════════════════ */
 #intro {
   position: fixed;
   inset: 0;
@@ -1666,9 +1667,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  text-align: center;
   will-change: opacity, filter;
 }
 
@@ -1681,13 +1679,61 @@ footer {
     filter 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Nome — container */
-.intro-name {
+/* Layout principal: dois blocos lado a lado no desktop */
+.intro-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  padding: 2rem clamp(1.5rem, 6vw, 5rem);
+  width: 100%;
+  max-width: 960px;
+}
+
+/* ── Coluna de texto ── */
+.intro-text-col {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  flex: 1;
+}
+
+/* Eyebrow acima do nome */
+.intro-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--teal);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: flex;
   align-items: center;
-  gap: 0.65rem;
-  text-align: center;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.intro-eyebrow.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.intro-eyebrow span {
+  width: 24px;
+  height: 1px;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* Nome — container (mantém morph-to-logo via JS) */
+.intro-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
   will-change: transform, filter, opacity;
   transition:
     transform 0.65s cubic-bezier(0.4, 0, 0.2, 1),
@@ -1695,87 +1741,24 @@ footer {
     filter 0.45s ease;
 }
 
-.intro-welcome {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
+/* Linha "Welcome To," — menor */
+.intro-welcome-line {
+  font-size: clamp(1.2rem, 3.5vw, 2.4rem);
   color: var(--muted2);
-  font-weight: 500;
 }
 
+/* Linha "Rosso Labs" — grande */
 .intro-main-name {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--font-display);
-  font-size: clamp(2.8rem, 8vw, 7rem);
-  font-weight: 800;
+  font-size: clamp(1.7rem, 4.7vw, 3.7rem);
+  line-height: 0.92;
   letter-spacing: -0.04em;
-  line-height: 1;
 }
 
-.intro-first {
+#introFirst {
   color: var(--text);
 }
-
-.intro-last {
+#introLast {
   color: var(--teal);
-}
-
-.intro-letter {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(22px) scale(0.96);
-  filter: blur(10px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.5s ease;
-}
-
-.intro-letter.on {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-.intro-welcome-letter {
-  color: inherit;
-}
-
-html.light-mode .intro-welcome,
-body.light-mode .intro-welcome {
-  color: var(--muted2);
-}
-
-html.light-mode .intro-first,
-body.light-mode .intro-first {
-  color: var(--text);
-}
-
-html.light-mode .intro-last,
-body.light-mode .intro-last {
-  color: var(--teal);
-}
-
-@media (max-width: 768px) {
-  .intro-name {
-    gap: 0.45rem;
-  }
-
-  .intro-welcome {
-    font-size: 0.78rem;
-    letter-spacing: 0.28em;
-  }
-
-  .intro-main-name {
-    font-size: clamp(2rem, 11vw, 3.6rem);
-  }
 }
 
 /* Letras individuais */
@@ -1785,33 +1768,25 @@ body.light-mode .intro-last {
   transform: translateY(14px);
   filter: blur(5px);
   transition:
-    opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.28s ease;
+    opacity 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.26s ease;
 }
-
 .intro-letter.on {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
 }
 
-/* Zoom-out: nome escala ligeiramente antes de sair */
+/* zoom-out antes de sair */
 .intro-name.zoom-out {
-  transform: scale(1.1);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* Morph: voa para posição da nav-logo */
-.intro-name.morph {
-  opacity: 0;
-  filter: blur(6px);
-  /* transform é setado inline pelo JS com translate + scale calculados */
+  transform: scale(1.06);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Barra de progresso */
 .intro-bar {
-  width: min(240px, 58vw);
+  width: min(260px, 70vw);
   height: 1px;
   background: var(--border2);
   position: relative;
@@ -1819,7 +1794,6 @@ body.light-mode .intro-last {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .intro-bar.visible {
   opacity: 1;
 }
@@ -1834,8 +1808,6 @@ body.light-mode .intro-last {
   box-shadow: 0 0 8px var(--teal);
   will-change: width;
 }
-
-/* Brilho andante na barra */
 .intro-bar-shine {
   position: absolute;
   top: -2px;
@@ -1861,10 +1833,149 @@ body.light-mode .intro-last {
     opacity 0.45s ease,
     transform 0.45s ease;
 }
-
 .intro-text.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Coluna da logo ── */
+.intro-logo-col {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Estado inicial: invisível, abaixo */
+  opacity: 0;
+  transform: translateY(28px) scale(0.82);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.intro-logo-wrap.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  /* Depois de visível: flutua suavemente */
+  animation: introLogoFloat 4s ease-in-out infinite 0.75s;
+}
+
+@keyframes introLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.intro-logo-img {
+  width: clamp(90px, 16vw, 180px);
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 24px var(--teal-20));
+}
+
+/* Glow pulsante atrás da logo */
+.intro-logo-glow {
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(ellipse, var(--teal-20) 0%, transparent 65%);
+  border-radius: 50%;
+  animation: introGlowPulse 3s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes introGlowPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Anéis orbitando a logo */
+.intro-logo-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--teal-20);
+  z-index: 0;
+}
+.intro-logo-ring.r1 {
+  width: 140%;
+  height: 140%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: introRingSpin 8s linear infinite;
+  border-style: dashed;
+}
+.intro-logo-ring.r2 {
+  width: 175%;
+  height: 175%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: introRingSpin 14s linear infinite reverse;
+  opacity: 0.5;
+}
+@keyframes introRingSpin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ── RESPONSIVO ──────────────────────────────────────── */
+
+/* Tablet: reduz gap */
+@media (max-width: 768px) and (min-width: 481px) {
+  .intro-layout {
+    gap: 2rem;
+  }
+  .intro-logo-img {
+    width: clamp(80px, 14vw, 120px);
+  }
+}
+
+/* Mobile: empilha vertical, logo em cima centralizada */
+@media (max-width: 480px) {
+  .intro-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    text-align: center;
+  }
+  .intro-text-col {
+    align-items: center;
+    order: 2;
+  }
+  .intro-logo-col {
+    order: 1;
+  }
+  .intro-logo-img {
+    width: clamp(72px, 22vw, 110px);
+  }
+  .intro-eyebrow {
+    justify-content: center;
+  }
+  .intro-welcome-line {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    text-align: center;
+  }
+  .intro-main-name {
+    font-size: clamp(1.7rem, 8vw, 3rem);
+    text-align: center;
+  }
 }
 
 /* Hero: começa invisível, entra junto ao morph */
@@ -2184,14 +2295,15 @@ html.light-mode .nicho-btn:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
 .portfolio-subtitle {
   font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--teal-dark);
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .device-toggle {
@@ -2331,9 +2443,22 @@ html.light-mode .nicho-btn:hover {
 .shot-mobile {
   background: #0d0f13;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 30px;
-  padding: 0.3rem;
+  border-radius: 34px;
+  padding: 0.65rem;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.phone-ui {
+  display: flex;
+  justify-content: center;
+  padding: 0.15rem 0 0.5rem;
+}
+
+.phone-notch {
+  width: 34%;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .shot-mobile .shot-image {
@@ -2348,10 +2473,25 @@ html.light-mode .nicho-btn:hover {
 .shot-desktop {
   background: #0f1115;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 0.4rem;
+  border-radius: 18px;
+  padding: 0.8rem;
   overflow: hidden;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.browser-ui {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0 0.75rem;
+}
+
+.browser-ui span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: block;
 }
 
 .shot-desktop .shot-image {
@@ -2359,7 +2499,7 @@ html.light-mode .nicho-btn:hover {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* Desktop mode: card mais largo */

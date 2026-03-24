@@ -4,13 +4,9 @@
     <meta
       http-equiv="Content-Security-Policy"
       content="
-        default-src 'self';
         script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com data:;
         img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
         connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
-        frame-ancestors 'none';
         base-uri 'self';
         form-action 'self';
       " />
@@ -137,25 +133,41 @@
       "></canvas>
 
     <div id="intro" aria-hidden="true">
-      <div class="intro-name" id="introName">
-        <div id="introWelcome" class="intro-welcome"></div>
-        <div class="intro-main-name">
-          <span id="introFirst"></span>
-          <span id="introLast"></span>
+      <div class="intro-layout">
+        <!-- Coluna esquerda: texto -->
+        <div class="intro-text-col">
+          <p class="intro-eyebrow" id="introEyebrow">
+            <span></span>
+            Sites para Empresas e Autônomos
+          </p>
+          <div class="intro-name" id="introName">
+            <div id="introWelcome" class="intro-welcome-line"></div>
+            <div class="intro-main-name">
+              <span id="introFirst"></span>
+              <span id="introLast"></span>
+            </div>
+          </div>
+          <div class="intro-bar" id="introBar">
+            <div class="intro-bar-fill" id="introBarFill"></div>
+            <div class="intro-bar-shine" id="introBarShine"></div>
+          </div>
+          <span class="intro-text" id="introText">Sites que geram contato.</span>
+        </div>
+
+        <!-- Coluna direita: logo animada -->
+        <div class="intro-logo-col" id="introLogoCol">
+          <div class="intro-logo-wrap" id="introLogoWrap">
+            <img
+              id="introLogoImg"
+              src="assets/images/logo/logo-dark.png"
+              alt="Rosso Labs"
+              class="intro-logo-img" />
+            <div class="intro-logo-glow"></div>
+            <div class="intro-logo-ring r1"></div>
+            <div class="intro-logo-ring r2"></div>
+          </div>
         </div>
       </div>
-      <div class="intro-bar" id="introBar">
-        <div class="intro-bar-fill" id="introBarFill"></div>
-        <div class="intro-bar-shine" id="introBarShine"></div>
-      </div>
-      <span class="intro-text" id="introText">Sites que geram contato.</span>
-      <span>
-        <img
-          id="theme-logo"
-          src="assets/images/logo/logo-dark.png"
-          style="height: 4rem"
-          alt="Labs" />
-      </span>
     </div>
 
     <div class="cursor" id="cursor"></div>
@@ -788,7 +800,7 @@
           <h2>
             Seu concorrente já tem site.
             <br />
-            <span>E está recebendo seus clientes.</span>
+            E está recebendo seus clientes.
           </h2>
           <p>
             Sem presença digital profissional, seu negócio depende só de indicação. Com um site bem

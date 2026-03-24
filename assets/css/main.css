@@ -26,24 +26,26 @@ html.theme-transition {
 }
 
 :root {
-  --bg: #131416;
-  --bg2: #1a1c1f;
-  --surface: #21242a;
-  --border: #2a2d33;
-  --border2: #353940;
-  --text: #e2e4e8;
-  --muted: #606470;
-  --muted2: #8a8f9a;
-  --teal-10: rgba(23, 138, 130, 0.1);
-  --teal-20: rgba(23, 138, 130, 0.2);
-  --teal-30: rgba(23, 138, 130, 0.3);
-  --teal: #178a82;
+  --bg: #16181d;
+  --bg2: #1d222a;
+  --surface: #252b35;
+  --border: #313744;
+  --border2: #3a404d;
+  --text: #f3f5f7;
+  --muted: #a7b0bd;
+  --muted2: #8f97a3;
+
+  --teal: #1fa39a;
   --teal-bright: #2dd4c8;
-  --teal-glow: rgba(23, 138, 130, 0.1);
-  --teal-dim: rgba(23, 138, 130, 0.06);
-  --teal-03: rgba(23, 138, 130, 0.025);
+  --teal-10: rgba(31, 163, 154, 0.1);
+  --teal-20: rgba(31, 163, 154, 0.2);
+  --teal-30: rgba(31, 163, 154, 0.3);
+  --teal-glow: rgba(31, 163, 154, 0.14);
+  --teal-dim: rgba(31, 163, 154, 0.06);
+  --teal-03: rgba(31, 163, 154, 0.025);
+
   --font-display: "Syne", sans-serif;
-  --font-mono: "DM Mono", monospace;
+  --font-mono: "Poppins", monospace;
   --t: 0.25s ease;
   --cursor: white;
   --cursor-glow: rgba(255, 252, 252, 0.15);
@@ -65,26 +67,29 @@ body {
     color 0.5s ease;
 }
 
-/* ── LIGHT MODE ────────────────────────── */
-body.light-mode {
+/* ── LIGHT MODE ──────────────────────────── */
+body.light-mode,
+html.light-mode body {
   --bg: #f7fafc;
-  --bg2: #f1f5f9;
+  --bg2: #eef3f7;
   --surface: #ffffff;
-  --border: #e2e8f0;
-  --border2: #cbd5e1;
+  --border: #dbe3ec;
+  --border2: #c8d3df;
   --text: #0f172a;
-  --muted: #6b7280;
-  --muted2: #475569;
-  --teal: #2a9fa5;
-  --teal-glow: rgba(42, 159, 165, 0.15);
-  --teal-dim: rgba(42, 159, 165, 0.08);
-  --teal-11: rgba(42, 159, 165, 0.11);
-  --teal-04: rgba(42, 159, 165, 0.04);
-  --teal-20: rgba(42, 159, 165, 0.2);
-  --teal-30: rgba(42, 159, 165, 0.3);
+  --muted: #667085;
+  --muted2: #475467;
+
+  --teal: #1f9d96;
+  --teal-bright: #14b8a6;
+  --teal-glow: rgba(31, 157, 150, 0.15);
+  --teal-dim: rgba(31, 157, 150, 0.08);
+  --teal-20: rgba(31, 157, 150, 0.2);
+  --teal-30: rgba(31, 157, 150, 0.3);
+
   --cursor: black;
   --cursor-glow: rgba(1, 1, 1, 0.15);
 }
+
 body.light-mode nav.scrolled {
   background: #f7fafc;
 }
