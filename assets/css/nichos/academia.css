@@ -1,0 +1,39 @@
+body.niche-academia {
+  --teal: #739f41;
+  --teal-bright: #9fc96d;
+  --teal-10: rgba(115, 159, 65, 0.08);
+  --teal-20: rgba(115, 159, 65, 0.14);
+  --teal-30: rgba(115, 159, 65, 0.22);
+  --teal-glow: rgba(115, 159, 65, 0.12);
+  --teal-dim: rgba(115, 159, 65, 0.05);
+  --teal-03: rgba(132, 196, 65, 0.03);
+}
+
+body.niche-academia .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(159, 201, 109, 0.12) 0%,
+    rgba(115, 159, 65, 0.04) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-academia .pkg.featured,
+body.niche-academia .example-card:hover {
+  box-shadow: 0 0 0 1px rgba(185, 235, 110, 0.25);
+}
+
+body.niche-academia #cta-final {
+  background: linear-gradient(180deg, rgba(115, 159, 65, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-academia,
+body.light-mode.niche-academia {
+  --teal: #7eb43f;
+  --teal-bright: #8fcf48;
+  --teal-10: rgba(126, 180, 63, 0.12);
+  --teal-20: rgba(126, 180, 63, 0.2);
+  --teal-30: rgba(126, 180, 63, 0.28);
+  --teal-glow: rgba(126, 180, 63, 0.14);
+  --teal-dim: rgba(126, 180, 63, 0.08);
+}

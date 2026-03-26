@@ -44,8 +44,8 @@ html.theme-transition {
   --teal-dim: rgba(31, 163, 154, 0.06);
   --teal-03: rgba(31, 163, 154, 0.025);
 
-  --font-display: "Syne", sans-serif;
-  --font-mono: "Poppins", monospace;
+  --font-display: var(--font-display-stack, "Syne", "Segoe UI", Arial, sans-serif);
+  --font-mono: var(--font-mono-stack, "DM Mono", "IBM Plex Mono", Consolas, monospace);
   --t: 0.25s ease;
   --cursor: white;
   --cursor-glow: rgba(255, 252, 252, 0.15);
@@ -92,6 +92,12 @@ html.light-mode body {
 
 body.light-mode nav.scrolled {
   background: #f7fafc;
+}
+
+html.fx-lite nav.scrolled,
+body.fx-lite nav.scrolled {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 ::-webkit-scrollbar {
@@ -175,6 +181,12 @@ nav.scrolled {
 }
 .logo-rosso {
   color: var(--teal);
+}
+
+.logo-labs-word {
+  display: inline-block;
+  margin-left: 0.18rem;
+  letter-spacing: -0.03em;
 }
 .nav-right {
   display: flex;
@@ -489,7 +501,7 @@ nav.scrolled {
 
 /* SECTION COMMON */
 section {
-  padding: 7rem clamp(1.25rem, 5vw, 3rem);
+  padding: 6rem clamp(1.25rem, 5vw, 3rem);
   position: relative;
 }
 .divider {
@@ -530,7 +542,39 @@ section {
   color: var(--muted2);
   line-height: 1.9;
   max-width: 520px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.cta-inline {
+  text-align: center;
+  padding-block: 3.35rem;
+}
+
+.cta-inline .sec-title {
+  max-width: 11ch;
+  margin-inline: auto;
+}
+
+.cta-inline .sec-sub {
+  max-width: 580px;
+  margin: 0 auto 1.8rem;
+}
+
+.cta-inline-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.cta-inline-note {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 /* REVEAL */
@@ -662,7 +706,7 @@ section {
   right: -1px;
   width: 2px;
   height: 24px;
-  background: linear-gradient(to bottom, var(--teal), transparent);
+  background: rgba(31, 163, 154, 0.35);
   display: none;
 }
 .step:not(:last-child) .step-connector {
@@ -1560,7 +1604,7 @@ section {
 .browser-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 55%, var(--bg) 100%);
+  background: rgba(15, 23, 42, 0.18);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1819,6 +1863,15 @@ footer {
     width: 100%;
     text-align: center;
   }
+  .cta-inline {
+    padding-block: 2.7rem;
+  }
+  .cta-inline-actions {
+    flex-direction: column;
+  }
+  .cta-inline-actions .btn {
+    width: 100%;
+  }
   .hero-trust {
     gap: 0.85rem;
     flex-wrap: wrap;
@@ -2013,12 +2066,7 @@ section.sec-accent::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    -55deg,
-    transparent,
-    transparent 32px,
-    rgba(0, 0, 0, 0.032) 33px
-  );
+  background: none;
   pointer-events: none;
 }
 
@@ -2181,7 +2229,7 @@ section.sec-accent .browser-url {
   color: rgba(19, 20, 22, 0.6);
 }
 section.sec-accent .browser-overlay {
-  background: linear-gradient(to bottom, transparent 55%, var(--teal) 100%);
+  background: rgba(0, 0, 0, 0.12);
 }
 section.sec-accent .browser-overlay a {
   color: var(--bg);
@@ -2385,6 +2433,75 @@ section.sec-accent .btn-primary:hover {
   border-color: var(--bg);
 }
 
+/* --- NICHE PAGES IN DARK MODE: accent com texto claro para evitar baixo contraste --- */
+body.niche-page:not(.light-mode) section.sec-accent .eyebrow {
+  color: rgba(243, 245, 247, 0.68);
+}
+body.niche-page:not(.light-mode) section.sec-accent .eyebrow::before {
+  color: rgba(243, 245, 247, 0.42);
+}
+body.niche-page:not(.light-mode) section.sec-accent .sec-title,
+body.niche-page:not(.light-mode) section.sec-accent .step-title,
+body.niche-page:not(.light-mode) section.sec-accent .example-name,
+body.niche-page:not(.light-mode) section.sec-accent .dep-name,
+body.niche-page:not(.light-mode) section.sec-accent .proof-label,
+body.niche-page:not(.light-mode) section.sec-accent .proof-feat-title,
+body.niche-page:not(.light-mode) section.sec-accent .addons-col-title,
+body.niche-page:not(.light-mode) section.sec-accent .faq-q-text {
+  color: var(--text);
+}
+body.niche-page:not(.light-mode) section.sec-accent .sec-sub,
+body.niche-page:not(.light-mode) section.sec-accent .search-query,
+body.niche-page:not(.light-mode) section.sec-accent .problema-alert,
+body.niche-page:not(.light-mode) section.sec-accent .step-desc,
+body.niche-page:not(.light-mode) section.sec-accent .steps-footer,
+body.niche-page:not(.light-mode) section.sec-accent .example-desc,
+body.niche-page:not(.light-mode) section.sec-accent .dep-text,
+body.niche-page:not(.light-mode) section.sec-accent .proof-desc,
+body.niche-page:not(.light-mode) section.sec-accent .proof-feat-desc,
+body.niche-page:not(.light-mode) section.sec-accent .pkg-desc,
+body.niche-page:not(.light-mode) section.sec-accent .pkg-features li,
+body.niche-page:not(.light-mode) section.sec-accent .faq-a-inner,
+body.niche-page:not(.light-mode) section.sec-accent .cta-note {
+  color: rgba(243, 245, 247, 0.74);
+}
+body.niche-page:not(.light-mode) section.sec-accent .searches-grid,
+body.niche-page:not(.light-mode) section.sec-accent .steps-grid,
+body.niche-page:not(.light-mode) section.sec-accent .dep-grid,
+body.niche-page:not(.light-mode) section.sec-accent .proof-grid,
+body.niche-page:not(.light-mode) section.sec-accent .proof-features,
+body.niche-page:not(.light-mode) section.sec-accent .packages-grid,
+body.niche-page:not(.light-mode) section.sec-accent .faq-list {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+body.niche-page:not(.light-mode) section.sec-accent .search-item,
+body.niche-page:not(.light-mode) section.sec-accent .step,
+body.niche-page:not(.light-mode) section.sec-accent .dep-card,
+body.niche-page:not(.light-mode) section.sec-accent .proof-item,
+body.niche-page:not(.light-mode) section.sec-accent .proof-feat,
+body.niche-page:not(.light-mode) section.sec-accent .pkg,
+body.niche-page:not(.light-mode) section.sec-accent .faq-item {
+  background: rgba(10, 14, 20, 0.14);
+}
+body.niche-page:not(.light-mode) section.sec-accent .search-item:hover,
+body.niche-page:not(.light-mode) section.sec-accent .step:hover,
+body.niche-page:not(.light-mode) section.sec-accent .dep-card:hover,
+body.niche-page:not(.light-mode) section.sec-accent .proof-item:hover,
+body.niche-page:not(.light-mode) section.sec-accent .proof-feat:hover,
+body.niche-page:not(.light-mode) section.sec-accent .faq-q:hover {
+  background: rgba(10, 14, 20, 0.2);
+}
+body.niche-page:not(.light-mode) section.sec-accent .btn-ghost {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+body.niche-page:not(.light-mode) section.sec-accent .btn-ghost:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* ─── LIGHT MODE: accent usa navy (#1a4fa0), textos brancos ─── */
 html.light-mode section.sec-accent .sec-title,
 html.light-mode section.sec-accent .step-title,
@@ -2506,7 +2623,7 @@ html.light-mode section.sec-accent .btn-primary:hover {
   color: #fff;
 }
 html.light-mode section.sec-accent .browser-overlay {
-  background: linear-gradient(to bottom, transparent 55%, var(--teal) 100%);
+  background: rgba(255, 255, 255, 0.1);
 }
 html.light-mode section.sec-accent .browser-overlay a {
   color: #fff;

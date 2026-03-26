@@ -4,31 +4,15 @@
     <meta
       http-equiv="Content-Security-Policy"
       content="
-        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
         img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
         connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
         base-uri 'self';
         form-action 'self';
       " />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-57VS8P14FH");
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap"
-      rel="stylesheet" />
 
     <title>Rosso Labs | Sites Profissionais para Empresas e Autônomos</title>
     <meta
@@ -109,6 +93,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
       rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
     <script>
       (function () {
@@ -186,7 +171,7 @@
           openNichoModal();
           return false;
         "
-        style="color: var(--teal); text-align: center">
+        class="mobile-menu-cta">
         Quero meu site agora
       </a>
     </div>
@@ -218,7 +203,7 @@
               openNichoModal();
               return false;
             "
-            style="color: var(--teal); text-align: center">
+            class="nav-cta-link">
             Quero meu site agora
           </a>
         </li>
@@ -292,37 +277,92 @@
       <div class="hero-grid"></div>
 
       <div class="hero-content">
-        <div class="hero-badge">Sites para empresas e autônomos</div>
-        <h1 class="hero-title">
-          Seu cliente está
-          <br />
-          <span class="teal-word">buscando agora.</span>
-          <br />
-          Você aparece?
-        </h1>
+        <div class="hero-layout">
+          <div class="hero-main">
+            <div class="hero-badge">Sites para empresas e autônomos</div>
+            <p class="hero-kicker">Sites e landing pages para gerar contato</p>
+            <h1 class="hero-title">
+              Seu cliente está
+              <br />
+              <span class="teal-word">buscando agora.</span>
+              <br />
+              Você aparece?
+            </h1>
 
-        <p class="hero-desc">
-          Quem não tem site profissional perde para quem tem — todos os dias.
-          <br />
-          Crio sites que transmitem confiança, aparecem no Google e fazem o WhatsApp tocar.
-        </p>
-        <div class="hero-cta">
-          <a
-            href="#"
-            onclick="
-              openNichoModal();
-              return false;
-            "
-            class="btn btn-primary">
-            Ver modelos e preços →
-          </a>
-          <a href="#portfolio-fotos" class="btn btn-ghost">Ver projetos</a>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20site%20e%20quero%20pedir%20um%20or%C3%A7amento"
-            target="_blank"
-            class="btn btn-ghost">
-            Pedir orçamento
-          </a>
+            <p class="hero-desc">
+              Seu site precisa explicar rápido, passar confiança e levar para o contato.
+              <br />
+              Eu crio isso para você.
+            </p>
+            <div class="hero-cta">
+              <a
+                href="#"
+                onclick="
+                  openNichoModal();
+                  return false;
+                "
+                class="btn btn-primary">
+                Ver modelos e preços →
+              </a>
+              <a
+                href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20site%20e%20quero%20pedir%20um%20or%C3%A7amento"
+                target="_blank"
+                class="btn btn-whatsapp">
+                Pedir orçamento
+              </a>
+              <a href="#portfolio-fotos" class="btn btn-ghost">Ver projetos</a>
+            </div>
+
+            <div class="hero-proof">
+              <span class="hero-proof-item">Entrega rápida</span>
+              <span class="hero-proof-item">Estrutura de venda</span>
+              <span class="hero-proof-item">SEO + WhatsApp</span>
+            </div>
+            <p class="hero-microcopy">
+              Diagnóstico rápido, proposta objetiva e execução direta com a Rosso Labs.
+            </p>
+          </div>
+          <aside class="hero-panel">
+            <div class="hero-panel-top">
+              <p class="hero-panel-label">Oferta principal</p>
+              <h2 class="hero-panel-title">Presença digital para parecer maior e vender melhor</h2>
+              <p class="hero-panel-text">
+                Mensagem clara, prova certa e caminho curto até o orçamento.
+              </p>
+            </div>
+            <div class="hero-panel-grid">
+              <div class="hero-mini-card">
+                <strong>7-10 dias</strong>
+                <span>prazo médio de entrega</span>
+              </div>
+              <div class="hero-mini-card">
+                <strong>100%</strong>
+                <span>responsivo</span>
+              </div>
+              <div class="hero-mini-card">
+                <strong>Direto</strong>
+                <span>sem agência no meio</span>
+              </div>
+              <div class="hero-mini-card">
+                <strong>CTA claro</strong>
+                <span>WhatsApp e e-mail</span>
+              </div>
+            </div>
+            <div class="hero-steps">
+              <div class="hero-step">
+                <span>01</span>
+                Oferta e posicionamento
+              </div>
+              <div class="hero-step">
+                <span>02</span>
+                Página feita para converter
+              </div>
+              <div class="hero-step">
+                <span>03</span>
+                Publicação pronta para captar
+              </div>
+            </div>
+          </aside>
         </div>
 
         <div class="scroll-indicator">
@@ -338,16 +378,15 @@
     <section id="portfolio-fotos" class="sec-accent">
       <p class="section-eyebrow reveal" data-num="00">Projetos entregues</p>
       <h2 class="section-title reveal">
-        Veja o que
+        Veja o nível que
         <br />
-        seu site
-        <span class="teal-word">pode ser.</span>
+        sua marca
+        <span class="teal-word">pode ter.</span>
       </h2>
 
       <div class="portfolio-topbar reveal">
         <p class="portfolio-subtitle">
-          Sites reais, publicados, já gerando resultado. Esse nível está disponível para o seu
-          negócio.
+          Projetos publicados com foco comercial, leitura rápida e contato fácil.
         </p>
         <div
           class="device-toggle"
@@ -651,12 +690,12 @@
     <section id="projects" class="sec-dark">
       <p class="section-eyebrow reveal" data-num="03">Projetos</p>
       <h2 class="section-title reveal">
-        Cases
+        Trabalho
         <br />
-        reais.
+        publicado.
       </h2>
       <p class="section-eyebrow reveal">
-        Projetos feitos para negócios reais — com estratégia, visual e foco em gerar contato.
+        Cada projeto abaixo resolve um problema comercial concreto: clareza, confiança e contato.
       </p>
       <div class="projects-grid">
         <div class="project-card featured reveal">
@@ -842,15 +881,30 @@
     <section id="contact" class="sec-dark">
       <p class="section-eyebrow reveal" style="justify-content: center" data-num="04">Contato</p>
       <h2 class="contact-title reveal">
-        Pronto para ter um
+        Seu próximo
         <span class="text-teal">site</span>
         <br />
-        que trabalha por
-        <span class="text-teal">você?</span>
+        pode começar
+        <span class="text-teal">hoje.</span>
       </h2>
-      <p style="margin-top: 1rem; opacity: 0.7">
-        ✔ Entrega em até 10 dias • ✔ Visual profissional • ✔ Focado em gerar contato
-      </p>
+      <p class="contact-subtitle">✔ Diagnóstico rápido • ✔ Proposta clara • ✔ Execução direta</p>
+      <div class="contact-actions reveal">
+        <a
+          href="#"
+          onclick="
+            openNichoModal();
+            return false;
+          "
+          class="btn btn-primary">
+          Ver modelos e preços
+        </a>
+        <a
+          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio"
+          target="_blank"
+          class="btn btn-whatsapp">
+          Falar no WhatsApp
+        </a>
+      </div>
       <div class="social-links reveal">
         <a href="https://github.com/Roxouw" target="_blank" class="social-link">GitHub</a>
         <div class="social-divider"></div>
@@ -860,6 +914,12 @@
         <div class="social-divider"></div>
         <a href="https://wa.me/5551980335252" target="_blank" class="social-link">
           Pedir orçamento no WhatsApp
+        </a>
+        <div class="social-divider"></div>
+        <a
+          href="mailto:filiperosso99@gmail.com?subject=Quero%20um%20site%20profissional"
+          class="social-link">
+          Pedir orçamento por e-mail
         </a>
         <div class="social-divider"></div>
         <a href="/docs/CV_Filipe_Rosso.pdf" download class="social-link">Ver perfil profissional</a>
@@ -928,11 +988,16 @@
           </svg>
           Prefiro falar no WhatsApp
         </a>
+        <a
+          href="mailto:filiperosso99@gmail.com?subject=Quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio"
+          class="btn btn-ghost"
+          style="align-items: center; justify-content: center">
+          Prefiro falar por e-mail
+        </a>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/analytics.js"></script>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/transitions.js"></script>
     <script src="/assets/js/mobile-fix.js"></script>

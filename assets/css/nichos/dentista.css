@@ -1,0 +1,39 @@
+body.niche-dentista {
+  --teal: #4ba8a2;
+  --teal-bright: #7ccdc8;
+  --teal-10: rgba(75, 168, 162, 0.08);
+  --teal-20: rgba(75, 168, 162, 0.14);
+  --teal-30: rgba(75, 168, 162, 0.22);
+  --teal-glow: rgba(75, 168, 162, 0.12);
+  --teal-dim: rgba(75, 168, 162, 0.05);
+  --teal-03: rgba(34, 184, 176, 0.03);
+}
+
+body.niche-dentista .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(124, 205, 200, 0.11) 0%,
+    rgba(75, 168, 162, 0.035) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-dentista .example-card:hover,
+body.niche-dentista .pkg.featured {
+  box-shadow: 0 0 0 1px rgba(113, 224, 218, 0.24);
+}
+
+body.niche-dentista #cta-final {
+  background: linear-gradient(180deg, rgba(75, 168, 162, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-dentista,
+body.light-mode.niche-dentista {
+  --teal: #1fa9a0;
+  --teal-bright: #4ccac2;
+  --teal-10: rgba(31, 169, 160, 0.12);
+  --teal-20: rgba(31, 169, 160, 0.2);
+  --teal-30: rgba(31, 169, 160, 0.28);
+  --teal-glow: rgba(31, 169, 160, 0.14);
+  --teal-dim: rgba(31, 169, 160, 0.08);
+}

@@ -1,0 +1,39 @@
+body.niche-empresa {
+  --teal: #5a8ec9;
+  --teal-bright: #86b2e1;
+  --teal-10: rgba(90, 142, 201, 0.08);
+  --teal-20: rgba(90, 142, 201, 0.14);
+  --teal-30: rgba(90, 142, 201, 0.22);
+  --teal-glow: rgba(90, 142, 201, 0.12);
+  --teal-dim: rgba(90, 142, 201, 0.05);
+  --teal-03: rgba(47, 143, 255, 0.03);
+}
+
+body.niche-empresa .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(134, 178, 225, 0.11) 0%,
+    rgba(90, 142, 201, 0.035) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-empresa .proof-item,
+body.niche-empresa .dep-card {
+  background-image: linear-gradient(180deg, rgba(47, 143, 255, 0.03), transparent 46%);
+}
+
+body.niche-empresa #cta-final {
+  background: linear-gradient(180deg, rgba(90, 142, 201, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-empresa,
+body.light-mode.niche-empresa {
+  --teal: #317fd9;
+  --teal-bright: #5f9fe9;
+  --teal-10: rgba(49, 127, 217, 0.12);
+  --teal-20: rgba(49, 127, 217, 0.2);
+  --teal-30: rgba(49, 127, 217, 0.28);
+  --teal-glow: rgba(49, 127, 217, 0.14);
+  --teal-dim: rgba(49, 127, 217, 0.08);
+}

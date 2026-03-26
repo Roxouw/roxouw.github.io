@@ -1,4 +1,4 @@
-# 🚀 Portfólio — Filipe Rosso
+# 🚀 Portfólio — Rosso Labs
 
 Site profissional desenvolvido para apresentação de serviços como **Desenvolvedor Full Stack**, com foco em captação de clientes para criação de sites, landing pages e sistemas web.
 
@@ -144,7 +144,7 @@ Foco em:
 
 ## 📄 Licença
 
-© 2026 Filipe Rosso. Todos os direitos reservados.
+© 2026 Rosso Labs. Todos os direitos reservados.
 É proibida a reprodução total ou parcial sem autorização.
 
 ---

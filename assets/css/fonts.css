@@ -1,0 +1,24 @@
+:root {
+  --font-display-stack: "Syne", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono-stack:
+    "DM Mono", "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-accent-stack: "Bowlby One", Impact, Haettenschweiler, "Arial Black", sans-serif;
+}
+
+/*
+  Estrutura pronta para auto-hospedar fontes locais.
+  Quando os arquivos .woff2/.woff entrarem em /assets/fonts, adicione os @font-face aqui
+  e então remova gradualmente os links do Google Fonts das páginas correspondentes.
+
+  Exemplo:
+
+  @font-face {
+    font-family: "Syne";
+    src:
+      url("/assets/fonts/syne/syne-400.woff2") format("woff2"),
+      url("/assets/fonts/syne/syne-400.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+*/

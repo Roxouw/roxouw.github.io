@@ -1,0 +1,39 @@
+body.niche-nutricionista {
+  --teal: #6a9a70;
+  --teal-bright: #93be98;
+  --teal-10: rgba(106, 154, 112, 0.08);
+  --teal-20: rgba(106, 154, 112, 0.14);
+  --teal-30: rgba(106, 154, 112, 0.22);
+  --teal-glow: rgba(106, 154, 112, 0.12);
+  --teal-dim: rgba(106, 154, 112, 0.05);
+  --teal-03: rgba(100, 168, 107, 0.03);
+}
+
+body.niche-nutricionista .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(147, 190, 152, 0.12) 0%,
+    rgba(106, 154, 112, 0.04) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-nutricionista .dep-card,
+body.niche-nutricionista .proof-feat {
+  background-image: linear-gradient(180deg, rgba(100, 168, 107, 0.03), transparent 48%);
+}
+
+body.niche-nutricionista #cta-final {
+  background: linear-gradient(180deg, rgba(106, 154, 112, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-nutricionista,
+body.light-mode.niche-nutricionista {
+  --teal: #6ea873;
+  --teal-bright: #8ccf93;
+  --teal-10: rgba(110, 168, 115, 0.12);
+  --teal-20: rgba(110, 168, 115, 0.2);
+  --teal-30: rgba(110, 168, 115, 0.28);
+  --teal-glow: rgba(110, 168, 115, 0.14);
+  --teal-dim: rgba(110, 168, 115, 0.08);
+}

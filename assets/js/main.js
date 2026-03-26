@@ -1,10 +1,55 @@
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function isBackForwardNavigation() {
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  return navEntry?.type === "back_forward";
+}
+
+function shouldForceTop() {
+  return !window.location.hash && !isBackForwardNavigation();
+}
+
+function resetScrollTop() {
+  if (!shouldForceTop()) return;
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+}
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted || !shouldForceTop()) return;
+  resetScrollTop();
+});
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", resetScrollTop, { once: true });
+} else {
+  resetScrollTop();
+}
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const lowBandwidth =
+  !!connection && (connection.saveData || /(?:slow-2g|2g)/i.test(connection.effectiveType || ""));
+const lowPowerCpu =
+  typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 4;
+const lowDeviceMemory = typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 4;
+const shouldReduceEffects = prefersReducedMotion || lowBandwidth || lowPowerCpu || lowDeviceMemory;
+const shouldLiteEffects =
+  shouldReduceEffects ||
+  (typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 8) ||
+  (typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 8);
+
+document.documentElement.classList.toggle("fx-lite", shouldLiteEffects);
+document.body.classList.toggle("fx-lite", shouldLiteEffects);
+
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 let mx = 0,
   my = 0,
   rx = 0,
   ry = 0;
-if (window.matchMedia("(pointer:fine)").matches) {
+if (cursor && ring && window.matchMedia("(pointer:fine)").matches && !shouldReduceEffects) {
   document.addEventListener("mousemove", (e) => {
     mx = e.clientX;
     my = e.clientY;
@@ -32,7 +77,9 @@ if (window.matchMedia("(pointer:fine)").matches) {
 }
 
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50));
+window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 50), {
+  passive: true,
+});
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -58,8 +105,9 @@ document.querySelectorAll(".faq-q").forEach((q) => {
 
 const themeToggle = document.getElementById("themeToggle");
 const inkCanvas = document.getElementById("inkCanvas");
-const inkCtx = inkCanvas.getContext("2d");
+const inkCtx = inkCanvas ? inkCanvas.getContext("2d") : null;
 function resizeInk() {
+  if (!inkCanvas) return;
   inkCanvas.width = window.innerWidth;
   inkCanvas.height = window.innerHeight;
 }
@@ -67,13 +115,14 @@ resizeInk();
 window.addEventListener("resize", resizeInk);
 
 function launchInk(color) {
+  if (!inkCanvas || !inkCtx || shouldLiteEffects || !themeToggle) return;
   const W = inkCanvas.width,
     H = inkCanvas.height;
   const rect = themeToggle.getBoundingClientRect();
   const ox = rect.left + rect.width / 2,
     oy = rect.top + rect.height / 2;
   const drops = [];
-  for (let i = 0; i < 22; i++) {
+  for (let i = 0; i < 14; i++) {
     const a = ((Math.PI * 2) / 22) * i + (Math.random() - 0.5) * 0.4;
     const s = 6 + Math.random() * 14,
       sz = 18 + Math.random() * 60;
@@ -88,7 +137,7 @@ function launchInk(color) {
     });
   }
   const bursts = [];
-  for (let i = 0; i < 5; i++)
+  for (let i = 0; i < 3; i++)
     bursts.push({
       x: ox,
       y: oy,
@@ -180,8 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.querySelector(".theme-toggle");
 
   function updateThemeImage(isLight) {
-    if (!themeLogo) return;
-
+    if (!themeLogo || themeLogo.tagName !== "IMG") return;
     themeLogo.src = isLight
       ? "/assets/images/logo/logo-light.png"
       : "/assets/images/logo/logo-dark.png";

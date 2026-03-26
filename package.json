@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Site profissional para apresentação de serviços de desenvolvimento web, com foco em captação de clientes para sites, landing pages e sistemas web.",
   "scripts": {
+    "check:links": "node scripts/check-html-links.js",
+    "check": "npm run lint && npm run check:links",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
@@ -13,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/Roxouw/roxouw.github.io.git"
   },
-  "author": "Filipe Rosso",
+  "author": "Rosso Labs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Roxouw/roxouw.github.io/issues"

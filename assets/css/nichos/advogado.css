@@ -1,0 +1,38 @@
+body.niche-advogado {
+  --teal: #5f82d6;
+  --teal-bright: #8ca8ea;
+  --teal-10: rgba(95, 130, 214, 0.08);
+  --teal-20: rgba(95, 130, 214, 0.14);
+  --teal-30: rgba(95, 130, 214, 0.22);
+  --teal-glow: rgba(95, 130, 214, 0.12);
+  --teal-dim: rgba(95, 130, 214, 0.05);
+  --teal-03: rgba(79, 124, 255, 0.03);
+}
+
+body.niche-advogado .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(140, 168, 234, 0.11) 0%,
+    rgba(95, 130, 214, 0.035) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-advogado .dep-card {
+  background: linear-gradient(180deg, rgba(79, 124, 255, 0.03), transparent 40%), var(--bg2);
+}
+
+body.niche-advogado #cta-final {
+  background: linear-gradient(180deg, rgba(95, 130, 214, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-advogado,
+body.light-mode.niche-advogado {
+  --teal: #4f78d8;
+  --teal-bright: #6e95f0;
+  --teal-10: rgba(79, 120, 216, 0.12);
+  --teal-20: rgba(79, 120, 216, 0.2);
+  --teal-30: rgba(79, 120, 216, 0.28);
+  --teal-glow: rgba(79, 120, 216, 0.14);
+  --teal-dim: rgba(79, 120, 216, 0.08);
+}

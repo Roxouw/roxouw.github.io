@@ -5,13 +5,59 @@
 // ═══════════════════════════════════════════════════════════════
 
 // ── Custom cursor — desktop only ──────────────────────────────
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function isBackForwardNavigation() {
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  return navEntry?.type === "back_forward";
+}
+
+function shouldForceTop() {
+  return !window.location.hash && !isBackForwardNavigation();
+}
+
+function resetScrollTop() {
+  if (!shouldForceTop()) return;
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+}
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted || !shouldForceTop()) return;
+  resetScrollTop();
+});
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", resetScrollTop, { once: true });
+} else {
+  resetScrollTop();
+}
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hasCoarsePointer = window.matchMedia("(pointer:coarse)").matches;
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const lowBandwidth =
+  !!connection && (connection.saveData || /(?:slow-2g|2g)/i.test(connection.effectiveType || ""));
+const lowPowerCpu =
+  typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 4;
+const lowDeviceMemory = typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 4;
+const shouldReduceEffects = prefersReducedMotion || lowBandwidth || lowPowerCpu || lowDeviceMemory;
+const shouldLiteEffects =
+  shouldReduceEffects ||
+  (typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 8) ||
+  (typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 8);
+
+document.documentElement.classList.toggle("fx-lite", shouldLiteEffects);
+document.body.classList.toggle("fx-lite", shouldLiteEffects);
+
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 let mx = 0,
   my = 0,
   rx = 0,
   ry = 0;
-if (window.matchMedia("(pointer:fine)").matches) {
+if (cursor && ring && window.matchMedia("(pointer:fine)").matches && !shouldReduceEffects) {
   document.addEventListener("mousemove", (e) => {
     mx = e.clientX;
     my = e.clientY;
@@ -73,7 +119,16 @@ function closeMobile() {
   const introLogoWrap = document.getElementById("introLogoWrap");
   const heroSection = document.getElementById("hero");
   const navLogo = document.querySelector(".nav-logo");
+  const isMobileIntro = hasCoarsePointer && !shouldReduceEffects;
 
+  if (!intro || !heroSection || shouldReduceEffects) {
+    if (intro) intro.style.display = "none";
+    if (heroSection) heroSection.classList.add("hero-enter");
+    initGSAP();
+    return;
+  }
+
+  intro.classList.toggle("intro-mobile", isMobileIntro);
   document.body.style.overflow = "hidden";
 
   const preloadDone = Promise.all([
@@ -122,20 +177,50 @@ function closeMobile() {
   }
 
   async function runIntro() {
+    const timings = isMobileIntro
+      ? {
+          eyebrow: 110,
+          welcomeLetter: 22,
+          afterWelcome: 50,
+          nameLetter: 30,
+          beforeBar: 90,
+          bar: 420,
+          afterTagline: 140,
+          afterLogo: 320,
+          zoomOut: 150,
+          beforeExit: 80,
+          heroEnter: 120,
+          cleanup: 360,
+        }
+      : {
+          eyebrow: 180,
+          welcomeLetter: 36,
+          afterWelcome: 80,
+          nameLetter: 50,
+          beforeBar: 160,
+          bar: 780,
+          afterTagline: 280,
+          afterLogo: 720,
+          zoomOut: 260,
+          beforeExit: 120,
+          heroEnter: 200,
+          cleanup: 900,
+        };
+
     await preloadDone;
 
     // Eyebrow aparece primeiro (linha discreta)
     introEyebrow.classList.add("visible");
-    await wait(180);
+    await wait(timings.eyebrow);
 
     // "Welcome To," letra a letra — sutil, menor
     const welcomeLetters = buildLetters(introWelcome, "Welcome To,", "");
     for (let i = 0; i < welcomeLetters.length; i++) {
-      await wait(36);
+      await wait(timings.welcomeLetter);
       welcomeLetters[i].classList.add("on");
     }
 
-    await wait(80);
+    await wait(timings.afterWelcome);
 
     // "Rosso Labs" — Rosso normal, Labs em teal via CSS
     const firstLetters = buildLetters(introFirst, "Rosso", "");
@@ -143,26 +228,26 @@ function closeMobile() {
     const nameLetters = [...firstLetters, ...lastLetters];
 
     for (let i = 0; i < nameLetters.length; i++) {
-      await wait(50);
+      await wait(timings.nameLetter);
       nameLetters[i].classList.add("on");
     }
 
-    await wait(160);
+    await wait(timings.beforeBar);
 
     // Barra de progresso
-    await runBar(780);
+    await runBar(timings.bar);
 
     // Tagline
     introText.classList.add("visible");
-    await wait(280);
+    await wait(timings.afterTagline);
 
     // Logo entra com fade+slide, depois flutua
     introLogoWrap.classList.add("visible");
-    await wait(720);
+    await wait(timings.afterLogo);
 
     // Morph: nome voa para nav-logo
     introName.classList.add("zoom-out");
-    await wait(260);
+    await wait(timings.zoomOut);
 
     const nameBounds = introName.getBoundingClientRect();
     const logoBounds = navLogo ? navLogo.getBoundingClientRect() : null;
@@ -178,8 +263,9 @@ function closeMobile() {
       );
       introName.classList.remove("zoom-out");
       await new Promise((r) => requestAnimationFrame(r));
-      introName.style.transition =
-        "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.45s ease 0.1s, filter 0.45s ease 0.1s";
+      introName.style.transition = isMobileIntro
+        ? "transform 0.38s cubic-bezier(0.4,0,0.2,1), opacity 0.28s ease 0.05s, filter 0.28s ease 0.05s"
+        : "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.45s ease 0.1s, filter 0.45s ease 0.1s";
       introName.style.transform = `translate(${logoCX - nameCX}px,${logoCY - nameCY}px) scale(${scaleT})`;
       introName.style.opacity = "0";
       introName.style.filter = "blur(4px)";
@@ -189,12 +275,12 @@ function closeMobile() {
       introName.style.filter = "blur(8px)";
     }
 
-    await wait(120);
+    await wait(timings.beforeExit);
     intro.classList.add("exit");
-    await wait(200);
+    await wait(timings.heroEnter);
     heroSection.classList.add("hero-enter");
 
-    await wait(900);
+    await wait(timings.cleanup);
     intro.style.display = "none";
     document.body.style.overflow = "";
 
@@ -229,9 +315,10 @@ document.addEventListener("keydown", (e) => {
 // ── Theme toggle ───────────────────────────────────────────────
 const themeToggle = document.getElementById("themeToggle");
 const inkCanvas = document.getElementById("inkCanvas");
-const inkCtx = inkCanvas.getContext("2d");
+const inkCtx = inkCanvas ? inkCanvas.getContext("2d") : null;
 
 function resizeInkCanvas() {
+  if (!inkCanvas) return;
   inkCanvas.width = window.innerWidth;
   inkCanvas.height = window.innerHeight;
 }
@@ -239,11 +326,12 @@ resizeInkCanvas();
 window.addEventListener("resize", resizeInkCanvas);
 
 function launchInk(color) {
+  if (!inkCanvas || !inkCtx || shouldLiteEffects) return;
   const W = inkCanvas.width,
     H = inkCanvas.height;
   const ox = W / 2,
     oy = H / 2;
-  const drops = Array.from({ length: 38 }, () => {
+  const drops = Array.from({ length: 18 }, () => {
     const angle = Math.random() * Math.PI * 2;
     const speed = 6 + Math.random() * 14;
     return {
@@ -256,7 +344,7 @@ function launchInk(color) {
       decay: 0.013 + Math.random() * 0.01,
     };
   });
-  const bursts = Array.from({ length: 5 }, (_, i) => ({
+  const bursts = Array.from({ length: 3 }, (_, i) => ({
     x: ox,
     y: oy,
     r: 0,
@@ -345,14 +433,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.querySelector(".theme-toggle");
 
   function updateThemeImage(isLight) {
-    if (!themeLogo) return;
-
-    themeLogo.src = isLight
+    const nextSrc = isLight
       ? "/assets/images/logo/logo-light.png"
       : "/assets/images/logo/logo-dark.png";
-    themeLogo2.src = isLight
-      ? "/assets/images/logo/logo-light.png"
-      : "/assets/images/logo/logo-dark.png";
+    if (themeLogo && themeLogo.tagName === "IMG") themeLogo.src = nextSrc;
+    if (themeLogo2 && themeLogo2.tagName === "IMG") themeLogo2.src = nextSrc;
   }
 
   function applyThemeState(state) {
@@ -573,7 +658,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Init
   applyDevice("mobile");
   applyStates();
-  if (!reducedMotion) startAuto();
+  if (!reducedMotion && !shouldLiteEffects) startAuto();
 })();
 
 // ── GSAP ScrollTrigger ─────────────────────────────────────────
@@ -584,6 +669,11 @@ function initGSAP() {
   }
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reducedMotion || shouldReduceEffects) {
+    initFallback();
+    return;
+  }
+
   gsap.registerPlugin(ScrollTrigger);
 
   // Navbar

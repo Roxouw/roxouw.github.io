@@ -1,0 +1,39 @@
+body.niche-personal {
+  --teal: #cf895b;
+  --teal-bright: #e5ae86;
+  --teal-10: rgba(207, 137, 91, 0.08);
+  --teal-20: rgba(207, 137, 91, 0.14);
+  --teal-30: rgba(207, 137, 91, 0.22);
+  --teal-glow: rgba(207, 137, 91, 0.12);
+  --teal-dim: rgba(207, 137, 91, 0.05);
+  --teal-03: rgba(255, 140, 66, 0.03);
+}
+
+body.niche-personal .hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 26%,
+    rgba(229, 174, 134, 0.12) 0%,
+    rgba(207, 137, 91, 0.04) 42%,
+    transparent 70%
+  );
+}
+
+body.niche-personal .example-card:hover,
+body.niche-personal .dep-card {
+  background-image: linear-gradient(180deg, rgba(255, 140, 66, 0.03), transparent 46%);
+}
+
+body.niche-personal #cta-final {
+  background: linear-gradient(180deg, rgba(207, 137, 91, 0.035), transparent 72%);
+}
+
+html.light-mode body.niche-personal,
+body.light-mode.niche-personal {
+  --teal: #f28b3f;
+  --teal-bright: #ffae73;
+  --teal-10: rgba(242, 139, 63, 0.12);
+  --teal-20: rgba(242, 139, 63, 0.2);
+  --teal-30: rgba(242, 139, 63, 0.28);
+  --teal-glow: rgba(242, 139, 63, 0.14);
+  --teal-dim: rgba(242, 139, 63, 0.08);
+}
