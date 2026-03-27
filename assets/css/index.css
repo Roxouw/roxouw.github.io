@@ -1325,6 +1325,13 @@ section.sec-dark {
   gap: 3rem;
 }
 
+.freelance-copy {
+  display: grid;
+  gap: 1.5rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
 .freelance-text h2 {
   font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-weight: 800;
@@ -1349,6 +1356,127 @@ section.sec-dark {
   display: flex;
   gap: 0.75rem;
   flex-shrink: 0;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.offer-card {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-card-featured {
+  background: rgba(19, 20, 22, 0.12);
+  border-color: rgba(19, 20, 22, 0.22);
+}
+
+.offer-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(19, 20, 22, 0.58);
+}
+
+.offer-title {
+  margin-top: 0.5rem;
+  font-size: 1.12rem;
+  line-height: 1.15;
+  color: var(--bg);
+}
+
+.offer-desc {
+  margin-top: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(19, 20, 22, 0.78);
+}
+
+.offer-points {
+  margin-top: 0.9rem;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: rgba(19, 20, 22, 0.9);
+}
+
+/* FAQ */
+.faq-intro {
+  max-width: 720px;
+  margin-top: -2.5rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: var(--teal-30);
+  box-shadow: 0 18px 36px rgba(3, 8, 20, 0.12);
+}
+
+.faq-question {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.2rem 1.25rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--teal-bright);
+}
+
+.faq-item[open] .faq-question::after {
+  content: "-";
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.2rem;
+  max-width: 760px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--muted);
 }
 
 /* CONTACT */
@@ -2689,7 +2817,7 @@ nav.scrolled {
 .hero-desc {
   margin-top: 1.15rem;
   line-height: 1.55;
-  max-width: 480px;
+  max-width: 560px;
 }
 
 .hero-cta {
@@ -2715,11 +2843,12 @@ nav.scrolled {
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.68rem 0.9rem;
+  white-space: nowrap;
 }
 
 .hero-microcopy {
   margin-top: 0.85rem;
-  max-width: 500px;
+  max-width: 560px;
   font-family: var(--font-mono);
   font-size: 0.76rem;
   line-height: 1.55;
@@ -2979,6 +3108,27 @@ nav.scrolled {
   }
 }
 
+@media (max-width: 767px) {
+  .hero-title {
+    max-width: 11ch;
+  }
+
+  .hero-desc,
+  .hero-microcopy {
+    max-width: 100%;
+  }
+
+  .hero-proof {
+    gap: 0.55rem;
+  }
+
+  .hero-proof-item {
+    white-space: normal;
+    text-align: center;
+    flex: 1 1 calc(50% - 0.55rem);
+  }
+}
+
 .contact-actions {
   margin-top: 2rem;
   display: flex;
@@ -3089,6 +3239,40 @@ footer {
     height: 30px;
   }
 
+  .faq-intro {
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.84rem;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    padding: 0.95rem;
+  }
+
+  .offer-title {
+    font-size: 1rem;
+  }
+
+  .offer-desc,
+  .offer-points {
+    font-size: 0.78rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+    font-size: 0.92rem;
+    align-items: flex-start;
+  }
+
+  .faq-answer {
+    padding: 0 1rem 1rem;
+    font-size: 0.83rem;
+  }
+
   .portfolio-topbar,
   .freelance-inner,
   .social-links {
@@ -3131,6 +3315,30 @@ body.light-mode .browser-ui span,
 html.light-mode .phone-notch,
 body.light-mode .phone-notch {
   background: rgba(15, 23, 42, 0.12);
+}
+
+html.light-mode .faq-item,
+body.light-mode .faq-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+html.light-mode .offer-card,
+body.light-mode .offer-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+html.light-mode .offer-card-featured,
+body.light-mode .offer-card-featured {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+html.light-mode .faq-item[open],
+body.light-mode .faq-item[open] {
+  border-color: rgba(31, 157, 150, 0.35);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
 }
 
 /* Reduced motion */
