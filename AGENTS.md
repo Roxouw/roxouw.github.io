@@ -1,11 +1,14 @@
 # AGENTS.md
 
 ## Objetivo do projeto
+
 Este projeto é a landing principal da Rosso Labs.
 O objetivo é gerar mais pedidos de orçamento para criação de sites e landing pages para empresas e autônomos.
 
 ## Prioridade máxima
+
 Toda alteração deve priorizar:
+
 1. conversão
 2. clareza da oferta
 3. prova/credibilidade
@@ -15,13 +18,16 @@ Toda alteração deve priorizar:
 Estética vem depois. Mudança bonita que piora clareza, CTA ou desempenho não é melhoria.
 
 ## Resultado esperado da página
+
 A página deve fazer o visitante:
+
 - entender em poucos segundos o que a Rosso Labs oferece
 - perceber valor e profissionalismo
 - confiar nos projetos e na execução
 - clicar em CTA de orçamento, WhatsApp ou modelos/preços
 
 ## O que preservar sempre
+
 - Estrutura principal de navegação, hero, vitrine visual, serviços, projetos, banner comercial, contato e modal de nicho
 - Classes, IDs e ganchos usados por CSS e JavaScript
 - Responsividade
@@ -32,6 +38,7 @@ A página deve fazer o visitante:
 - Scripts existentes em `/assets/js/`
 
 ## O que evitar
+
 - Não transformar a página em portfólio frio
 - Não encher a landing de texto institucional
 - Não esconder CTA principal
@@ -42,7 +49,9 @@ A página deve fazer o visitante:
 - Não criar copy genérica tipo “soluções inovadoras” ou “presença digital de excelência”
 
 ## Direção de copy
+
 A copy deve ser:
+
 - direta
 - profissional
 - comercial
@@ -51,6 +60,7 @@ A copy deve ser:
 - orientada a benefício
 
 A copy deve enfatizar:
+
 - geração de contato
 - clareza da mensagem
 - confiança
@@ -59,7 +69,9 @@ A copy deve enfatizar:
 - estrutura pensada para conversão
 
 ## CTAs
+
 Priorizar CTAs objetivos, como:
+
 - Ver modelos e preços
 - Pedir orçamento
 - Falar no WhatsApp
@@ -68,7 +80,9 @@ Priorizar CTAs objetivos, como:
 Evitar CTAs fracos, vagos ou institucionais.
 
 ## Hierarquia da página
+
 Ao revisar a página, preservar ou melhorar esta lógica:
+
 1. promessa comercial no hero
 2. CTA visível acima da dobra
 3. prova rápida de valor
@@ -80,26 +94,32 @@ Ao revisar a página, preservar ou melhorar esta lógica:
 9. fechamento com CTA forte
 
 ## Regras para mudanças
+
 Antes de mudanças grandes:
+
 - resumir o problema atual
 - explicar o que será alterado
 - apontar risco técnico
 - executar em etapas pequenas
 
 Em mudanças de copy:
+
 - melhorar sem aumentar texto desnecessariamente
 - manter boa leitura no mobile
 - evitar repetição excessiva
 - reforçar promessa, prova e ação
 
 Em mudanças de layout:
+
 - preservar semântica
 - preservar acessibilidade básica
 - preservar performance
 - não piorar CLS, carregamento ou leitura
 
 ## Prova e credibilidade
+
 Sempre que possível, reforçar:
+
 - projetos publicados
 - foco comercial dos cases
 - atendimento direto
@@ -110,8 +130,10 @@ Sempre que possível, reforçar:
 Nunca reduzir prova social/visual sem colocar algo melhor no lugar.
 
 ## Mobile first
+
 Toda alteração deve ser pensada primeiro para mobile.
 Verificar sempre:
+
 - headline quebrando bem
 - CTA visível cedo
 - botões clicáveis
@@ -121,7 +143,9 @@ Verificar sempre:
 - menu mobile funcionando
 
 ## SEO e descoberta
+
 Preservar e melhorar quando fizer sentido:
+
 - title
 - meta description
 - headings
@@ -133,7 +157,9 @@ Preservar e melhorar quando fizer sentido:
 Não mudar SEO técnico sem necessidade.
 
 ## JavaScript e comportamento
+
 Antes de alterar HTML, verificar impacto em:
+
 - `analytics.js`
 - `index.js`
 - `transitions.js`
@@ -142,7 +168,9 @@ Antes de alterar HTML, verificar impacto em:
 Se houver risco de quebrar comportamento, preferir mudanças menores e compatíveis.
 
 ## Como decidir se algo é melhoria
+
 Uma mudança só é considerada melhoria se fizer pelo menos um destes:
+
 - deixar a oferta mais clara
 - aumentar confiança
 - facilitar contato
@@ -152,6 +180,7 @@ Uma mudança só é considerada melhoria se fizer pelo menos um destes:
 - reforçar conversão
 
 ## Checklist antes de concluir
+
 - Hero continua forte?
 - CTA principal continua visível acima da dobra?
 - A oferta está clara?
@@ -164,7 +193,9 @@ Uma mudança só é considerada melhoria se fizer pelo menos um destes:
 - O resultado final está mais comercial do que antes?
 
 ## Formato de entrega esperado
+
 Ao final de cada tarefa, informar:
+
 1. o que foi alterado
 2. por que isso melhora a conversão
 3. qualquer risco técnico

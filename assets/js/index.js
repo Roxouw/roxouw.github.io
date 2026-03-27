@@ -93,16 +93,19 @@ window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", wind
 // ── Hamburger ──────────────────────────────────────────────────
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-  mobileMenu.classList.toggle("open");
-  document.body.style.overflow = mobileMenu.classList.contains("open") ? "hidden" : "";
-});
-function closeMobile() {
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
+    document.body.style.overflow = mobileMenu.classList.contains("open") ? "hidden" : "";
+  });
+}
+window.closeMobile = function closeMobile() {
+  if (!hamburger || !mobileMenu) return;
   hamburger.classList.remove("open");
   mobileMenu.classList.remove("open");
   document.body.style.overflow = "";
-}
+};
 
 // ── Intro cinematic sequence ───────────────────────────────────
 (function () {
@@ -119,9 +122,10 @@ function closeMobile() {
   const introLogoWrap = document.getElementById("introLogoWrap");
   const heroSection = document.getElementById("hero");
   const navLogo = document.querySelector(".nav-logo");
+  const shouldSkipIntro = shouldReduceEffects || hasCoarsePointer || window.innerWidth <= 768;
   const isMobileIntro = hasCoarsePointer && !shouldReduceEffects;
 
-  if (!intro || !heroSection || shouldReduceEffects) {
+  if (!intro || !heroSection || shouldSkipIntro) {
     if (intro) intro.style.display = "none";
     if (heroSection) heroSection.classList.add("hero-enter");
     initGSAP();
@@ -295,25 +299,28 @@ function closeMobile() {
 const nichoModal = document.getElementById("nichoModal");
 const nichoCloseBtn = document.getElementById("nichoCloseBtn");
 
-function openNichoModal() {
+window.openNichoModal = function openNichoModal() {
+  if (!nichoModal) return;
   nichoModal.classList.add("open");
   document.body.style.overflow = "hidden";
-}
+};
 function closeNichoModal() {
+  if (!nichoModal) return;
   nichoModal.classList.remove("open");
   document.body.style.overflow = "";
 }
 
-nichoCloseBtn.addEventListener("click", closeNichoModal);
-nichoModal.addEventListener("click", (e) => {
-  if (e.target === nichoModal) closeNichoModal();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeNichoModal();
-});
+if (nichoCloseBtn && nichoModal) {
+  nichoCloseBtn.addEventListener("click", closeNichoModal);
+  nichoModal.addEventListener("click", (e) => {
+    if (e.target === nichoModal) closeNichoModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNichoModal();
+  });
+}
 
 // ── Theme toggle ───────────────────────────────────────────────
-const themeToggle = document.getElementById("themeToggle");
 const inkCanvas = document.getElementById("inkCanvas");
 const inkCtx = inkCanvas ? inkCanvas.getContext("2d") : null;
 
