@@ -48,4 +48,3 @@ Avoid weak or institutional CTAs.
 - `assets/js/index.js`: navbar, intro, modal, theme behavior, inline compatibility helpers
 - `assets/js/mobile-fix.js`: mobile safety patches
 - niche pages under `pages/sitePara*.html`
-
