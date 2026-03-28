@@ -3555,3 +3555,60 @@ html.light-mode body.niche-page section.sec-accent .search-volume,
 html.light-mode body.niche-page section.sec-accent .addon-tag {
   color: rgba(255, 255, 255, 0.94);
 }
+
+/* ── NICHE PAGES / LIGHT MODE: cards claros dentro da accent precisam de texto escuro ── */
+html.light-mode body.niche-page section.sec-accent .search-item .search-query,
+html.light-mode body.niche-page section.sec-accent .search-item .search-volume,
+html.light-mode body.niche-page section.sec-accent .problema-alert,
+html.light-mode body.niche-page section.sec-accent .problema-alert strong,
+html.light-mode body.niche-page section.sec-accent .step .step-title,
+html.light-mode body.niche-page section.sec-accent .step .step-desc,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-name,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-desc,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-price .value,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-price .currency,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-prazo,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-features li,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-name,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-desc,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-price-monthly,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-price-annual,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-price-annual .annual-value,
+html.light-mode body.niche-page section.sec-accent .maint-tagline,
+html.light-mode body.niche-page section.sec-accent .maint-tagline strong,
+html.light-mode body.niche-page section.sec-accent .faq-item .faq-q-text,
+html.light-mode body.niche-page section.sec-accent .faq-item .faq-a-inner {
+  color: var(--text);
+}
+
+html.light-mode body.niche-page section.sec-accent .search-item .search-volume,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-price .currency,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-prazo,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-price-annual,
+html.light-mode body.niche-page section.sec-accent .maint-tagline {
+  color: var(--muted2);
+}
+
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-desc,
+html.light-mode body.niche-page section.sec-accent .pkg:not(.featured) .pkg-features li,
+html.light-mode body.niche-page section.sec-accent .addon-item .addon-desc,
+html.light-mode body.niche-page section.sec-accent .faq-item .faq-a-inner,
+html.light-mode body.niche-page section.sec-accent .problema-alert {
+  color: var(--muted);
+}
+
+html.light-mode body.niche-page section.sec-accent .problema-alert {
+  border-left-color: var(--border2);
+}
+
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-name,
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-price .value {
+  color: #fff;
+}
+
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-desc,
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-price .currency,
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-prazo,
+html.light-mode body.niche-page section.sec-accent .pkg.featured .pkg-features li {
+  color: rgba(255, 255, 255, 0.88);
+}
