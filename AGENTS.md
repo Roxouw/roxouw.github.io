@@ -1,5 +1,80 @@
 # AGENTS.md
 
+## Commands
+
+```bash
+# Lint (ESLint)
+npm run lint
+
+# Lint with auto-fix
+npm run lint:fix
+
+# Format (Prettier)
+npm run format
+
+# Check formatting without changes
+npm run format:check
+
+# Check HTML links
+npm run check:links
+
+# Full check (lint + links)
+npm run check
+```
+
+## Code Style
+
+### Formatting (Prettier)
+
+- Semi-colons: yes
+- Single quotes: no
+- Tab width: 2
+- Print width: 100
+- Trailing commas: es5
+- Bracket same line: true
+
+### ESLint Rules
+
+- `no-unused-vars`: warn (ignore if starts with `_`)
+- `no-undef`: error
+- `no-var`: error
+- `prefer-const`: warn
+- `no-console`: off
+- Globals: browser + node + `gsap` + `ScrollTrigger`
+
+### JavaScript Patterns
+
+- Wrap isolated scripts in IIFE with `"use strict"`
+- Use section comment headers: `// ── Title ─────────────────────────────`
+- Use arrow functions for event listeners and callbacks
+- Use `const` by default, `let` only when reassignment is needed
+- No TypeScript (plain JavaScript)
+- Browser-only code (no Node.js APIs in assets/js)
+
+### HTML/CSS Conventions
+
+- Indent: 2 spaces
+- Use semantic HTML
+- Classes and IDs: lowercase-kebab-case
+- Data attributes: `data-*`
+- Prefer CSS custom properties (variables) for theming
+
+### Error Handling
+
+- Use optional chaining (`?.`) for DOM queries that may not exist
+- Guard early with `if (!element) return;`
+- Use try/catch only when necessary (e.g., URL parsing in transitions.js)
+- Handle `null`/`undefined` explicitly rather than relying on coercion
+
+### Performance
+
+- Use passive event listeners where applicable: `{ passive: true }`
+- Use `requestAnimationFrame` for animations
+- Lazy-load analytics (requestIdleCallback or setTimeout)
+- Minimize DOM queries, cache elements when reused
+
+---
+
 ## Objetivo do projeto
 
 Este projeto é a landing principal da Rosso Labs.

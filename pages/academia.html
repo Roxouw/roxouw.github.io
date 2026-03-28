@@ -51,7 +51,7 @@
         overflow-x: hidden;
       }
 
-      /* -- NAV -- */
+      /* ── NAV ── */
       nav {
         position: fixed;
         top: 0;
@@ -95,7 +95,7 @@
         color: var(--red);
       }
 
-      /* -- HERO -- */
+      /* ── HERO ── */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -244,7 +244,7 @@
         user-select: none;
       }
 
-      /* -- PARCEIROS CAROUSEL -- */
+      /* ── PARCEIROS CAROUSEL ── */
       .parceiros {
         background: var(--bg2);
         border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -367,7 +367,7 @@
         background: linear-gradient(to left, var(--bg2), transparent);
       }
 
-      /* -- SECTIONS BASE -- */
+      /* ── SECTIONS BASE ── */
       section {
         padding: 100px 5%;
       }
@@ -398,7 +398,7 @@
         margin-bottom: 24px;
       }
 
-      /* -- SOBRE -- */
+      /* ── SOBRE ── */
       #sobre {
         background: var(--bg);
         display: grid;
@@ -487,7 +487,7 @@
         font-size: 1.2rem;
       }
 
-      /* -- PLANOS -- */
+      /* ── PLANOS ── */
       #planos {
         background: var(--bg2);
       }
@@ -578,12 +578,12 @@
         gap: 10px;
       }
       .plano-items li::before {
-        content: "�";
+        content: "—";
         color: var(--red);
         font-weight: 700;
       }
       .plano-items li.ok::before {
-        content: "?";
+        content: "✓";
         color: #2ecc71;
       }
 
@@ -629,7 +629,7 @@
         padding: 5px 12px;
       }
 
-      /* -- MODALIDADES -- */
+      /* ── MODALIDADES ── */
       #modalidades {
         background: var(--bg);
       }
@@ -672,7 +672,7 @@
         line-height: 1.6;
       }
 
-      /* -- ENDERE�O -- */
+      /* ── ENDEREÇO ── */
       #endereco {
         background: var(--bg2);
         display: grid;
@@ -794,7 +794,7 @@
         font-weight: 600;
       }
 
-      /* -- FOOTER -- */
+      /* ── FOOTER ── */
       footer {
         background: #060606;
         padding: 48px 5% 36px;
@@ -846,7 +846,7 @@
         color: var(--red);
       }
 
-      /* -- RESPONSIVE -- */
+      /* ── RESPONSIVE ── */
       @media (max-width: 800px) {
         nav ul {
           display: none;
@@ -864,7 +864,7 @@
         }
       }
 
-      /* -- ANIMATIONS -- */
+      /* ── ANIMATIONS ── */
       .fade-up {
         opacity: 0;
         transform: translateY(30px);
@@ -899,14 +899,14 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#modalidades">Modalidades</a></li>
         <li><a href="#planos">Planos</a></li>
-        <li><a href="#endereco">Endere�o</a></li>
+        <li><a href="#endereco">Endereço</a></li>
       </ul>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-tag">Academia de Bairro � Desde 2012</div>
+      <div class="hero-tag">Academia de Bairro · Desde 2012</div>
       <h1>
         FORGE
         <br />
@@ -927,99 +927,99 @@
 
     <!-- PARCEIROS CAROUSEL -->
     <div class="parceiros">
-      <div class="parceiros-label">Aceitamos os principais conv�nios</div>
+      <div class="parceiros-label">Aceitamos os principais convênios</div>
       <div class="carousel-track-wrapper">
         <div class="carousel-track" id="carousel">
           <!-- set A -->
           <div class="parceiro-badge">
-            <div class="icon gympass-icon">??</div>
+            <div class="icon gympass-icon">💪</div>
             <div class="info">
               <strong>GYMPASS</strong>
               <span>Aceito aqui</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon totalpass-icon">???</div>
+            <div class="icon totalpass-icon">🏋️</div>
             <div class="info">
               <strong>TOTALPASS</strong>
               <span>Aceito aqui</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon" style="background: #1a1a2e; border: 1px solid #444">??</div>
+            <div class="icon" style="background: #1a1a2e; border: 1px solid #444">💳</div>
             <div class="info">
-              <strong>CONV�NIO EMPRESA</strong>
+              <strong>CONVÊNIO EMPRESA</strong>
               <span>Fale conosco</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon gympass-icon">??</div>
+            <div class="icon gympass-icon">💪</div>
             <div class="info">
               <strong>WELLHUB</strong>
               <span>Parceiro oficial</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon" style="background: #c0392b">??</div>
+            <div class="icon" style="background: #c0392b">🔥</div>
             <div class="info">
               <strong>PLANO MENSAL</strong>
               <span>Sem fidelidade</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <!-- set B (clone) -->
           <div class="parceiro-badge">
-            <div class="icon gympass-icon">??</div>
+            <div class="icon gympass-icon">💪</div>
             <div class="info">
               <strong>GYMPASS</strong>
               <span>Aceito aqui</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon totalpass-icon">???</div>
+            <div class="icon totalpass-icon">🏋️</div>
             <div class="info">
               <strong>TOTALPASS</strong>
               <span>Aceito aqui</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon" style="background: #1a1a2e; border: 1px solid #444">??</div>
+            <div class="icon" style="background: #1a1a2e; border: 1px solid #444">💳</div>
             <div class="info">
-              <strong>CONV�NIO EMPRESA</strong>
+              <strong>CONVÊNIO EMPRESA</strong>
               <span>Fale conosco</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon gympass-icon">??</div>
+            <div class="icon gympass-icon">💪</div>
             <div class="info">
               <strong>WELLHUB</strong>
               <span>Parceiro oficial</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
 
           <div class="parceiro-badge">
-            <div class="icon" style="background: #c0392b">??</div>
+            <div class="icon" style="background: #c0392b">🔥</div>
             <div class="info">
               <strong>PLANO MENSAL</strong>
               <span>Sem fidelidade</span>
             </div>
-            <div class="badge-check">?</div>
+            <div class="badge-check">✓</div>
           </div>
         </div>
       </div>
@@ -1030,11 +1030,11 @@
       <div class="sobre-visual fade-up">
         <div class="sobre-box">
           <p style="font-size: 1rem; color: var(--light-gray); line-height: 1.8; font-weight: 300">
-            "Nossa miss�o � simples: criar um espa�o onde qualquer pessoa � independente do n�vel �
+            "Nossa missão é simples: criar um espaço onde qualquer pessoa — independente do nível —
             possa treinar com qualidade, foco e resultados de verdade."
           </p>
           <p style="margin-top: 20px; font-size: 0.8rem; color: var(--gray); letter-spacing: 1px">
-            � Fundadores da Iron House
+            — Fundadores da Iron House
           </p>
         </div>
         <div class="sobre-stats">
@@ -1044,51 +1044,51 @@
           </div>
           <div class="stat fade-up delay-2">
             <strong>12</strong>
-            <span>Anos de hist�ria</span>
+            <span>Anos de história</span>
           </div>
           <div class="stat fade-up delay-1">
             <strong>8</strong>
             <span>Professores</span>
           </div>
           <div class="stat fade-up delay-2">
-            <strong>600m�</strong>
-            <span>De �rea total</span>
+            <strong>600m²</strong>
+            <span>De área total</span>
           </div>
         </div>
       </div>
 
       <div class="sobre-text fade-up delay-1">
-        <div class="section-label">Sobre n�s</div>
+        <div class="section-label">Sobre nós</div>
         <h2 class="section-title">
           UMA ACADEMIA
           <br />
           DE VERDADE
         </h2>
         <p>
-          Nascemos no cora��o do bairro e crescemos com nossa comunidade. Aqui n�o tem ego, tem
-          resultado. Cada equipamento foi escolhido a dedo, cada professor � apaixonado pelo que
+          Nascemos no coração do bairro e crescemos com nossa comunidade. Aqui não tem ego, tem
+          resultado. Cada equipamento foi escolhido a dedo, cada professor é apaixonado pelo que
           faz.
         </p>
         <p>
-          Do iniciante ao atleta avan�ado, temos a estrutura e o suporte que voc� precisa para
+          Do iniciante ao atleta avançado, temos a estrutura e o suporte que você precisa para
           evoluir. Ambiente limpo, climatizado e com estacionamento.
         </p>
 
         <div class="pilares">
           <div class="pilar">
-            <span class="pilar-icon">??</span>
-            Equipamentos profissionais de �ltima gera��o
+            <span class="pilar-icon">🏆</span>
+            Equipamentos profissionais de última geração
           </div>
           <div class="pilar">
-            <span class="pilar-icon">?????</span>
+            <span class="pilar-icon">👨‍🏫</span>
             Professores formados e especializados
           </div>
           <div class="pilar">
-            <span class="pilar-icon">??</span>
+            <span class="pilar-icon">❄️</span>
             Ambiente climatizado e higienizado
           </div>
           <div class="pilar">
-            <span class="pilar-icon">???</span>
+            <span class="pilar-icon">🅿️</span>
             Estacionamento gratuito
           </div>
         </div>
@@ -1101,41 +1101,41 @@
       <h2 class="section-title fade-up">MODALIDADES</h2>
       <div class="modalidades-grid">
         <div class="modalidade fade-up">
-          <span class="modalidade-icon">???</span>
-          <h3>Muscula��o</h3>
-          <p>Sala equipada com aparelhos de �ltima gera��o para todos os grupos musculares.</p>
+          <span class="modalidade-icon">🏋️</span>
+          <h3>Musculação</h3>
+          <p>Sala equipada com aparelhos de última geração para todos os grupos musculares.</p>
         </div>
         <div class="modalidade fade-up delay-1">
-          <span class="modalidade-icon">??</span>
+          <span class="modalidade-icon">🥊</span>
           <h3>Muay Thai</h3>
-          <p>Aulas para iniciantes e avan�ados com professor especializado e campe�o regional.</p>
+          <p>Aulas para iniciantes e avançados com professor especializado e campeão regional.</p>
         </div>
         <div class="modalidade fade-up delay-2">
-          <span class="modalidade-icon">??</span>
+          <span class="modalidade-icon">🧘</span>
           <h3>Funcional</h3>
-          <p>Treinos funcionais em grupo com foco em for�a, resist�ncia e mobilidade.</p>
+          <p>Treinos funcionais em grupo com foco em força, resistência e mobilidade.</p>
         </div>
         <div class="modalidade fade-up delay-3">
-          <span class="modalidade-icon">??</span>
+          <span class="modalidade-icon">🚴</span>
           <h3>Spinning</h3>
-          <p>Sala de bike com sistema de som imersivo e aulas com DJ ao vivo aos s�bados.</p>
+          <p>Sala de bike com sistema de som imersivo e aulas com DJ ao vivo aos sábados.</p>
         </div>
         <div class="modalidade fade-up">
-          <span class="modalidade-icon">??</span>
+          <span class="modalidade-icon">🤸</span>
           <h3>Pilates</h3>
-          <p>Est�dio de pilates com equipamentos completos e atendimento personalizado.</p>
+          <p>Estúdio de pilates com equipamentos completos e atendimento personalizado.</p>
         </div>
         <div class="modalidade fade-up delay-1">
-          <span class="modalidade-icon">??</span>
+          <span class="modalidade-icon">💪</span>
           <h3>Personal</h3>
-          <p>Treino personalizado com plano de evolu��o individual e acompanhamento semanal.</p>
+          <p>Treino personalizado com plano de evolução individual e acompanhamento semanal.</p>
         </div>
       </div>
     </section>
 
     <!-- PLANOS -->
     <section id="planos">
-      <div class="section-label">Invista em voc�</div>
+      <div class="section-label">Invista em você</div>
       <h2 class="section-title fade-up">
         PLANOS &
         <br />
@@ -1144,17 +1144,17 @@
 
       <div class="planos-grid">
         <div class="plano fade-up">
-          <div class="plano-tag">B�sico</div>
+          <div class="plano-tag">Básico</div>
           <div class="plano-nome">START</div>
           <div class="plano-preco">
             <span class="cifrao">R$</span>
             <span class="valor">89</span>
-            <span class="periodo">/m�s</span>
+            <span class="periodo">/mês</span>
           </div>
           <ul class="plano-items">
-            <li class="ok">Muscula��o livre</li>
-            <li class="ok">Vesti�rios completos</li>
-            <li class="ok">Avalia��o f�sica inicial</li>
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física inicial</li>
             <li>Aulas coletivas</li>
             <li>Treino personalizado</li>
           </ul>
@@ -1168,12 +1168,12 @@
           <div class="plano-preco">
             <span class="cifrao">R$</span>
             <span class="valor">149</span>
-            <span class="periodo">/m�s</span>
+            <span class="periodo">/mês</span>
           </div>
           <ul class="plano-items">
-            <li class="ok">Muscula��o livre</li>
-            <li class="ok">Vesti�rios completos</li>
-            <li class="ok">Avalia��o f�sica inicial</li>
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física inicial</li>
             <li class="ok">Todas as aulas coletivas</li>
             <li>Treino personalizado</li>
           </ul>
@@ -1186,14 +1186,14 @@
           <div class="plano-preco">
             <span class="cifrao">R$</span>
             <span class="valor">219</span>
-            <span class="periodo">/m�s</span>
+            <span class="periodo">/mês</span>
           </div>
           <ul class="plano-items">
-            <li class="ok">Muscula��o livre</li>
-            <li class="ok">Vesti�rios completos</li>
-            <li class="ok">Avalia��o f�sica trimestral</li>
+            <li class="ok">Musculação livre</li>
+            <li class="ok">Vestiários completos</li>
+            <li class="ok">Avaliação física trimestral</li>
             <li class="ok">Todas as aulas coletivas</li>
-            <li class="ok">4 sess�es de personal/m�s</li>
+            <li class="ok">4 sessões de personal/mês</li>
           </ul>
           <a href="#" class="btn-plano">Matricule-se</a>
         </div>
@@ -1207,12 +1207,12 @@
           color: var(--gray);
           letter-spacing: 0.5px;
         ">
-        Gympass e TotalPass aceitos � Primeira semana gratuita � Sem taxa de matr�cula em planos
+        Gympass e TotalPass aceitos · Primeira semana gratuita · Sem taxa de matrícula em planos
         anuais
       </p>
     </section>
 
-    <!-- ENDERE�O -->
+    <!-- ENDEREÇO -->
     <section id="endereco">
       <div class="fade-up">
         <div class="section-label">Onde estamos</div>
@@ -1224,46 +1224,46 @@
 
         <div class="endereco-info">
           <div class="info-block">
-            <h3>Endere�o</h3>
+            <h3>Endereço</h3>
             <address>
-              Rua das Palmeiras, 742 � Bairro S�o Jos�
+              Rua das Palmeiras, 742 — Bairro São José
               <br />
-              Cachoeirinha � RS, 94900-000
+              Cachoeirinha — RS, 94900-000
               <br />
-              Pr�ximo ao Mercado Central
+              Próximo ao Mercado Central
             </address>
           </div>
 
           <div class="info-block">
-            <h3>Hor�rio de funcionamento</h3>
+            <h3>Horário de funcionamento</h3>
             <div class="horarios-grid">
               <div class="horario-row">
                 <span>Segunda</span>
-                <span>06h � 22h</span>
+                <span>06h – 22h</span>
               </div>
               <div class="horario-row">
-                <span>Ter�a</span>
-                <span>06h � 22h</span>
+                <span>Terça</span>
+                <span>06h – 22h</span>
               </div>
               <div class="horario-row">
                 <span>Quarta</span>
-                <span>06h � 22h</span>
+                <span>06h – 22h</span>
               </div>
               <div class="horario-row">
                 <span>Quinta</span>
-                <span>06h � 22h</span>
+                <span>06h – 22h</span>
               </div>
               <div class="horario-row">
                 <span>Sexta</span>
-                <span>06h � 21h</span>
+                <span>06h – 21h</span>
               </div>
               <div class="horario-row">
-                <span>S�bado</span>
-                <span>08h � 14h</span>
+                <span>Sábado</span>
+                <span>08h – 14h</span>
               </div>
               <div class="horario-row">
                 <span>Domingo</span>
-                <span>09h � 12h</span>
+                <span>09h – 12h</span>
               </div>
             </div>
           </div>
@@ -1271,11 +1271,11 @@
           <div class="info-block">
             <h3>Contato</h3>
             <p>
-              ?? (51) 9 9999-9999
+              📞 (51) 9 9999-9999
               <br />
-              ?? contato@ironhouse.com.br
+              📧 contato@ironhouse.com.br
               <br />
-              ?? @ironhouseacademia
+              📷 @ironhouseacademia
             </p>
           </div>
         </div>
@@ -1283,11 +1283,11 @@
 
       <div class="fade-up delay-1">
         <div class="map-placeholder">
-          <div class="map-pin">??</div>
+          <div class="map-pin">📍</div>
           <p>
             Rua das Palmeiras, 742
             <br />
-            Cachoeirinha � RS
+            Cachoeirinha — RS
           </p>
           <a href="https://maps.google.com" target="_blank" class="map-link">
             Abrir no Google Maps
@@ -1302,11 +1302,11 @@
         IRON
         <span>HOUSE</span>
       </div>
-      <p>� 2024 Iron House Academia � Todos os direitos reservados</p>
+      <p>© 2024 Iron House Academia · Todos os direitos reservados</p>
       <div class="footer-social">
-        <a href="#" class="social-btn">??</a>
-        <a href="#" class="social-btn">??</a>
-        <a href="#" class="social-btn">??</a>
+        <a href="#" class="social-btn">📷</a>
+        <a href="#" class="social-btn">👍</a>
+        <a href="#" class="social-btn">💬</a>
       </div>
     </footer>
 
@@ -1331,7 +1331,7 @@
       clone.id = "carousel-clone";
       track.parentElement.appendChild(clone);
     </script>
-    <script src="/assets/js/transitions.js"></script>
-    <script src="/assets/js/mobile-fix.js"></script>
+    <script src="/transitions.js"></script>
+    <script src="/mobile-fix.js"></script>
   </body>
 </html>

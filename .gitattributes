@@ -1,8 +1,11 @@
 * text=auto eol=lf
-*.js text eol=lf
-*.css text eol=lf
-*.html text eol=lf
-*.json text eol=lf
-*.md text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf
+*.js text eol=lf working-tree-encoding=UTF-8
+*.css text eol=lf working-tree-encoding=UTF-8
+*.html text eol=lf working-tree-encoding=UTF-8
+*.json text eol=lf working-tree-encoding=UTF-8
+*.md text eol=lf working-tree-encoding=UTF-8
+*.xml text eol=lf working-tree-encoding=UTF-8
+*.svg text eol=lf working-tree-encoding=UTF-8
+*.txt text eol=lf working-tree-encoding=UTF-8
+*.yml text eol=lf working-tree-encoding=UTF-8
+*.yaml text eol=lf working-tree-encoding=UTF-8
