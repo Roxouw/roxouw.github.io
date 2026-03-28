@@ -19,6 +19,7 @@
 - `index.html` relies on inline calls to `closeMobile()` and `openNichoModal()`, so those helpers must remain available on `window`.
 - Theme toggle behavior is controlled inside `assets/js/index.js` using `.theme-toggle`; avoid introducing duplicate theme-toggle state logic.
 - Before editing HTML structure, check whether navigation, modal, analytics, transitions, or mobile-fix behavior depends on the current markup.
+- The homepage intro is expected to remain enabled across devices unless the user explicitly asks to disable or reduce it; only skip it for real reduced-motion accessibility cases.
 
 ## Validation lessons
 
@@ -26,3 +27,4 @@
 - For mobile-sensitive tasks, validate at least one niche page in `360px` and one in `320px`.
 - If a layout issue appears in one niche page, inspect whether the same pattern exists in the other `pages/sitePara*.html` files.
 - When reviewing niche pages, run a text scan for terms from other niches to catch copy contamination before shipping.
+- Large visual rewrites should be applied incrementally and scoped to known sections or page types; broad end-of-file CSS overrides are high risk for regressions in the home and `pages/sitePara*.html`.

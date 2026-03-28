@@ -35,6 +35,11 @@ if (document.readyState === "loading") {
 }
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const testParams = new URLSearchParams(window.location.search);
+const isAutomatedTest =
+  /HeadlessChrome|puppeteer|playwright/i.test(navigator.userAgent) ||
+  testParams.has("skipIntro") ||
+  testParams.get("testMode") === "1";
 const hasCoarsePointer = window.matchMedia("(pointer:coarse)").matches;
 const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 const lowBandwidth =
@@ -48,6 +53,8 @@ const shouldLiteEffects =
   (typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 8) ||
   (typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 8);
 
+document.documentElement.classList.toggle("test-mode", isAutomatedTest);
+document.body.classList.toggle("test-mode", isAutomatedTest);
 document.documentElement.classList.toggle("fx-lite", shouldLiteEffects);
 document.body.classList.toggle("fx-lite", shouldLiteEffects);
 
@@ -122,7 +129,7 @@ window.closeMobile = function closeMobile() {
   const introLogoWrap = document.getElementById("introLogoWrap");
   const heroSection = document.getElementById("hero");
   const navLogo = document.querySelector(".nav-logo");
-  const shouldSkipIntro = shouldReduceEffects || hasCoarsePointer || window.innerWidth <= 768;
+  const shouldSkipIntro = prefersReducedMotion || isAutomatedTest;
   const isMobileIntro = hasCoarsePointer && !shouldReduceEffects;
 
   if (!intro || !heroSection || shouldSkipIntro) {
@@ -438,6 +445,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeLogo2 = document.getElementById("theme-logo2");
 
   const themeToggle = document.querySelector(".theme-toggle");
+  let themeTransitionTimer = null;
+
+  function beginThemeTransition() {
+    document.documentElement.classList.add("theme-transition");
+    document.body.classList.add("theme-transition");
+    window.clearTimeout(themeTransitionTimer);
+    themeTransitionTimer = window.setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+      document.body.classList.remove("theme-transition");
+    }, 420);
+  }
 
   function updateThemeImage(isLight) {
     const nextSrc = isLight
@@ -482,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const next = cur === "auto" ? "light" : cur === "light" ? "dark" : "auto";
 
       localStorage.setItem("theme", next);
+      beginThemeTransition();
       applyThemeState(next);
 
       launchInk(next === "light" || (next === "auto" && !sysDark.matches) ? "#37a5b3" : "#2dd4c8");

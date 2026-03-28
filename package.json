@@ -21,6 +21,10 @@
     "url": "https://github.com/Roxouw/roxouw.github.io/issues"
   },
   "homepage": "https://roxouw.github.io",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.1.0",
