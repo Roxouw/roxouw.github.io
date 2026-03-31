@@ -955,6 +955,15 @@ html.light-mode section.sec-accent .social-divider {
   background: rgba(255, 255, 255, 0.25);
 }
 
+html.light-mode section.sec-accent .showcase-cta {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html.light-mode section.sec-accent .showcase-cta-copy {
+  color: rgba(255, 255, 255, 0.88);
+}
+
 html.light-mode section.sec-accent .freelance-text h2 span {
   color: rgba(255, 255, 255, 0.45);
 }
@@ -1775,6 +1784,20 @@ footer {
   }
 
   .freelance-actions .btn {
+    justify-content: center;
+  }
+
+  .showcase-cta {
+    align-items: stretch;
+  }
+
+  .showcase-cta-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .showcase-cta-actions .btn {
+    width: 100%;
     justify-content: center;
   }
 
@@ -2711,6 +2734,32 @@ html.light-mode .nicho-btn:hover {
   justify-content: center;
   gap: 0.55rem;
   margin-top: 2rem;
+}
+
+.showcase-cta {
+  margin-top: 2rem;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.showcase-cta-copy {
+  max-width: 42rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.showcase-cta-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .showcase-dot {

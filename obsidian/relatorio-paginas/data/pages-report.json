@@ -1,0 +1,2536 @@
+{
+  "generatedAt": "2026-03-31T02:30:26.345Z",
+  "summary": {
+    "totalPages": 12,
+    "totalCtas": 161,
+    "totalInternalHtmlLinks": 31,
+    "byType": {
+      "institucional": 1,
+      "home": 1,
+      "demo-de-cliente": 4,
+      "landing-de-nicho": 6
+    },
+    "byNiche": {
+      "academia": 2,
+      "advogado": 2,
+      "dentista": 2,
+      "nutricionista": 2,
+      "empresa": 1,
+      "personal": 1
+    }
+  },
+  "usedSkills": [
+    {
+      "name": "rosso-project-memory",
+      "type": "projeto",
+      "purpose": "Memoria operacional da Rosso Labs para preservar conversao, compatibilidade com HTML, CSS e JavaScript existente e prioridades do projeto.",
+      "source": ".agents/skills/rosso-project-memory/SKILL.md"
+    },
+    {
+      "name": "create-plan-lite",
+      "type": "processo",
+      "purpose": "Planejamento curto antes de mudancas maiores, com foco em risco tecnico, ordem de execucao e validacao final.",
+      "source": ".agents/skills/create-plan-lite/SKILL.md"
+    }
+  ],
+  "pages": [
+    {
+      "path": "historia.html",
+      "fileName": "historia.html",
+      "slug": "historia",
+      "title": "História da Rosso Labs — Trajetória, Projetos e Contato",
+      "description": "Conheça a trajetória por trás da Rosso Labs, a experiência construída em projetos reais e como falar direto para tirar um site ou sistema do papel.",
+      "canonical": "",
+      "h1": "A jornada por trás dos projetos que viraram resultado.",
+      "bodyClass": "",
+      "pageType": "institucional",
+      "niche": "",
+      "goal": "Reforcar credibilidade, trajetoria e confianca da marca.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "A jornada por trás dos projetos que viraram resultado."
+        },
+        {
+          "id": "timeline",
+          "title": "Do início até o presente."
+        },
+        {
+          "id": "stats",
+          "title": "Sem titulo explicito"
+        },
+        {
+          "id": "tech",
+          "title": "Stack que cresceu com a jornada."
+        },
+        {
+          "id": "cta",
+          "title": "Vamos colocar o seu site em movimento?"
+        }
+      ],
+      "stylesheets": ["/assets/css/fonts.css"],
+      "scripts": [
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js",
+        "/assets/js/analytics.js"
+      ],
+      "ctas": [
+        {
+          "text": "WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver portfólio",
+          "href": "/",
+          "kind": "acao"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        },
+        {
+          "href": "/",
+          "text": "Ver portfólio",
+          "className": "btn btn-ghost",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "FILIPE ROSSO",
+          "className": "nav-logo",
+          "internal": true
+        }
+      ],
+      "warnings": ["Pagina sem canonical."],
+      "wordCount": 437,
+      "modifiedAt": "2026-03-31T02:23:41.903Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "index.html",
+      "fileName": "index.html",
+      "slug": "index",
+      "title": "Rosso Labs | Sites e Landing Pages para Gerar Orçamentos",
+      "description": "Criação de sites e landing pages para empresas e profissionais que querem explicar melhor a oferta, gerar confiança e receber mais pedidos de orçamento.",
+      "canonical": "https://roxouw.github.io/",
+      "h1": "Seu site precisa explicar melhor e vender por você.",
+      "bodyClass": "",
+      "pageType": "home",
+      "niche": "",
+      "goal": "Captar pedidos de orcamento para sites e landing pages da Rosso Labs.",
+      "hasSchema": true,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Página comercial feita para transformar visita em pedido de orçamento"
+        },
+        {
+          "id": "about",
+          "title": "Você pode entregar bem. Se a página não vende, o cliente não descobre."
+        },
+        {
+          "id": "skills",
+          "title": "O que acontece quando sua página começa a trabalhar."
+        },
+        {
+          "id": "portfolio-fotos",
+          "title": "Exemplos do que o seu site pode mostrar para converter."
+        },
+        {
+          "id": "projects",
+          "title": "Projetos que já ajudam a gerar orçamento."
+        },
+        {
+          "id": "freelance",
+          "title": "Escolha a estrutura certa para receber mais pedidos de orçamento."
+        },
+        {
+          "id": "faq",
+          "title": "Respostas para destravar o pedido de orçamento."
+        },
+        {
+          "id": "contact",
+          "title": "Se o seu negócio já entrega bem, falta uma página que explique isso e gere orçamento."
+        }
+      ],
+      "stylesheets": ["/assets/css/fonts.css", "/assets/css/index.css"],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/index.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Contato",
+          "href": "#contact",
+          "kind": "contato"
+        },
+        {
+          "text": "Quero meu site agora",
+          "href": "#",
+          "kind": "cta"
+        },
+        {
+          "text": "Contato",
+          "href": "#contact",
+          "kind": "contato"
+        },
+        {
+          "text": "Quero meu site agora",
+          "href": "#",
+          "kind": "cta"
+        },
+        {
+          "text": "Quero meu site agora",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Falar direto no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20site%20e%20quero%20pedir%20um%20or%C3%A7amento",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver como funciona",
+          "href": "#about",
+          "kind": "acao"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20os%20modelos%20do%20seu%20site%20e%20quero%20entender%20qual%20formato%20faz%20mais%20sentido%20para%20o%20meu%20neg%C3%B3cio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20o%20melhor%20site%20para%20o%20meu%20neg%C3%B3cio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Receber proposta por e-mail",
+          "href": "mailto:filiperosso99@gmail.com?subject=Quero%20um%20site%20profissional",
+          "kind": "acao"
+        },
+        {
+          "text": "⚖️ Advogado",
+          "href": "/pages/siteParaAdvogado.html",
+          "kind": "acao"
+        },
+        {
+          "text": "🏋️ Academia",
+          "href": "/pages/siteParaAcademia.html",
+          "kind": "acao"
+        },
+        {
+          "text": "📋 Personal",
+          "href": "/pages/siteParaPersonal.html",
+          "kind": "acao"
+        },
+        {
+          "text": "🥗 Nutrição",
+          "href": "/pages/siteParaNutricionista.html",
+          "kind": "acao"
+        },
+        {
+          "text": "🦷 Dentista",
+          "href": "/pages/siteParaDentista.html",
+          "kind": "acao"
+        },
+        {
+          "text": "🏢 Outro segmento",
+          "href": "/pages/siteParaEmpresa.html",
+          "kind": "acao"
+        },
+        {
+          "text": "Prefiro falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20acabei%20de%20ver%20seu%20site%20e%20quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Pode%20me%20explicar%20como%20funciona",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Prefiro falar por e-mail",
+          "href": "mailto:filiperosso99@gmail.com?subject=Quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio",
+          "kind": "acao"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/historia.html",
+          "text": "História",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "/historia.html",
+          "text": "História",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "/pages/advogado.html",
+          "text": "Advogado",
+          "className": "project-shot",
+          "internal": true
+        },
+        {
+          "href": "/pages/academia.html",
+          "text": "Academia",
+          "className": "project-shot",
+          "internal": true
+        },
+        {
+          "href": "/pages/dentista.html",
+          "text": "Dentista",
+          "className": "project-shot",
+          "internal": true
+        },
+        {
+          "href": "/pages/nutricionista.html",
+          "text": "Nutricionista",
+          "className": "project-shot",
+          "internal": true
+        },
+        {
+          "href": "/pages/academia.html",
+          "text": "↗ Abrir case",
+          "className": "project-link",
+          "internal": true
+        },
+        {
+          "href": "/pages/dentista.html",
+          "text": "↗ Abrir case",
+          "className": "project-link",
+          "internal": true
+        },
+        {
+          "href": "/pages/advogado.html",
+          "text": "↗ Abrir case",
+          "className": "project-link",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaAdvogado.html",
+          "text": "⚖️ Advogado",
+          "className": "nicho-btn",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaAcademia.html",
+          "text": "🏋️ Academia",
+          "className": "nicho-btn",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaPersonal.html",
+          "text": "📋 Personal",
+          "className": "nicho-btn",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaNutricionista.html",
+          "text": "🥗 Nutrição",
+          "className": "nicho-btn",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaDentista.html",
+          "text": "🦷 Dentista",
+          "className": "nicho-btn",
+          "internal": true
+        },
+        {
+          "href": "/pages/siteParaEmpresa.html",
+          "text": "🏢 Outro segmento",
+          "className": "nicho-btn",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#about",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#skills",
+          "text": "Serviços",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#projects",
+          "text": "Projetos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#contact",
+          "text": "Contato",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero meu site agora",
+          "className": "mobile-menu-cta",
+          "internal": true
+        },
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#about",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#skills",
+          "text": "Serviços",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#projects",
+          "text": "Projetos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#contact",
+          "text": "Contato",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero meu site agora",
+          "className": "nav-cta-link",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero meu site agora",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "#about",
+          "text": "Ver como funciona",
+          "className": "btn btn-ghost",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Ver opções e preços",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Ver opções e preços",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Ver opções e preços",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Ver opções e preços",
+          "className": "social-link",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1318,
+      "modifiedAt": "2026-03-31T02:09:11.955Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/academia.html",
+      "fileName": "academia.html",
+      "slug": "pages-academia",
+      "title": "Iron House Academia | Treino, Aulas e Matrícula no WhatsApp",
+      "description": "Academia com musculação, aulas coletivas e planos mensais para quem quer treinar com estrutura, acompanhamento e matrícula rápida pelo WhatsApp.",
+      "canonical": "",
+      "h1": "FORGE YOUR BODY",
+      "bodyClass": "",
+      "pageType": "demo-de-cliente",
+      "niche": "academia",
+      "goal": "Servir como demonstracao visual/comercial de um site para o nicho academia.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "",
+          "title": "FORGE YOUR BODY"
+        },
+        {
+          "id": "sobre",
+          "title": "UMA ACADEMIA DE VERDADE"
+        },
+        {
+          "id": "modalidades",
+          "title": "MODALIDADES"
+        },
+        {
+          "id": "planos",
+          "title": "PLANOS & VALORES"
+        },
+        {
+          "id": "endereco",
+          "title": "VENHA NOS VISITAR"
+        }
+      ],
+      "stylesheets": [],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver planos e valores",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Conhecer a estrutura",
+          "href": "#sobre",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero começar",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero esse plano",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero treinar com suporte",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "📷",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "👍",
+          "href": "#",
+          "kind": "acao"
+        },
+        {
+          "text": "💬",
+          "href": "#",
+          "kind": "acao"
+        }
+      ],
+      "internalHtmlLinks": [],
+      "anchorLinks": [
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#modalidades",
+          "text": "Modalidades",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#endereco",
+          "text": "Endereço",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver planos e valores",
+          "className": "btn-primary",
+          "internal": true
+        },
+        {
+          "href": "#sobre",
+          "text": "Conhecer a estrutura",
+          "className": "btn-ghost",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero começar",
+          "className": "btn-plano",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero esse plano",
+          "className": "btn-plano",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "Quero treinar com suporte",
+          "className": "btn-plano",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "📷",
+          "className": "social-btn",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "👍",
+          "className": "social-btn",
+          "internal": true
+        },
+        {
+          "href": "#",
+          "text": "💬",
+          "className": "social-btn",
+          "internal": true
+        }
+      ],
+      "warnings": ["Pagina sem canonical."],
+      "wordCount": 496,
+      "modifiedAt": "2026-03-31T02:23:59.847Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/advogado.html",
+      "fileName": "advogado.html",
+      "slug": "pages-advogado",
+      "title": "Dr. Rafael Monteiro — Advogado para Direito Civil, Trabalhista e Previdenciário",
+      "description": "Atendimento jurídico em direito civil, trabalhista e previdenciário com orientação clara e resposta rápida no WhatsApp. Solicite sua primeira análise.",
+      "canonical": "",
+      "h1": "Entenda seu caso e saiba como agir com segurança",
+      "bodyClass": "",
+      "pageType": "demo-de-cliente",
+      "niche": "advogado",
+      "goal": "Servir como demonstracao visual/comercial de um site para o nicho advogado.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "",
+          "title": "Entenda seu caso e saiba como agir com segurança"
+        },
+        {
+          "id": "areas",
+          "title": "Especialidades que protegem você em cada fase da vida"
+        },
+        {
+          "id": "",
+          "title": "Da consulta à solução em 4 passos simples"
+        },
+        {
+          "id": "",
+          "title": "O que dizem nossos clientes"
+        },
+        {
+          "id": "",
+          "title": "Fale agora e entenda o melhor próximo passo para o seu caso"
+        },
+        {
+          "id": "",
+          "title": "Perguntas que recebemos todo dia"
+        }
+      ],
+      "stylesheets": [],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-57VS8P14FH",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Consulta Gratuita",
+          "href": "https://wa.me/5551999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20gratuita.",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir análise no WhatsApp",
+          "href": "https://wa.me/5551999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20gratuita.",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver especialidades",
+          "href": "#areas",
+          "kind": "acao"
+        },
+        {
+          "text": "Pedir orientação no WhatsApp",
+          "href": "https://wa.me/5551999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20gratuita.",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20gratuita.",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "",
+          "href": "https://wa.me/5551999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20gratuita.",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [],
+      "anchorLinks": [
+        {
+          "href": "#",
+          "text": "Dr. Rafael Monteiro",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#areas",
+          "text": "Ver especialidades",
+          "className": "btn-outline",
+          "internal": true
+        }
+      ],
+      "warnings": ["Pagina sem canonical."],
+      "wordCount": 547,
+      "modifiedAt": "2026-03-31T02:23:27.998Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/dentista.html",
+      "fileName": "dentista.html",
+      "slug": "pages-dentista",
+      "title": "Dr. Eduardo Vasques — Implantes, Estética Dental e Avaliação no WhatsApp",
+      "description": "Clínica odontológica para implantes, estética dental e ortodontia com avaliação, plano de tratamento claro e agendamento rápido pelo WhatsApp.",
+      "canonical": "",
+      "h1": "O tratamento certo para o seu sorriso começa aqui.",
+      "bodyClass": "",
+      "pageType": "demo-de-cliente",
+      "niche": "dentista",
+      "goal": "Servir como demonstracao visual/comercial de um site para o nicho dentista.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "O tratamento certo para o seu sorriso começa aqui."
+        },
+        {
+          "id": "sobre",
+          "title": "Excelência técnica com toque humano."
+        },
+        {
+          "id": "servicos",
+          "title": "Tudo que seu sorriso precisa."
+        },
+        {
+          "id": "processo",
+          "title": "Da primeira consulta ao sorriso ideal."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Sorrisos que falam por si."
+        },
+        {
+          "id": "planos",
+          "title": "Cuide do seu sorriso. Invista no seu futuro."
+        },
+        {
+          "id": "faq",
+          "title": "Perguntas frequentes."
+        },
+        {
+          "id": "cta",
+          "title": "Receba uma avaliação e entenda o melhor tratamento."
+        }
+      ],
+      "stylesheets": [],
+      "scripts": ["/assets/js/transitions.js", "/assets/js/mobile-fix.js"],
+      "ctas": [
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Agendar consulta",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar avaliação",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Conhecer serviços",
+          "href": "#servicos",
+          "kind": "acao"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Agendar avaliação gratuita",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar agora — Grátis",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero saber mais",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20tratamento%20de%20est%C3%A9tica%20completa!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar avaliação",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20implante!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar avaliação gratuita",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver todos os serviços",
+          "href": "#servicos",
+          "kind": "acao"
+        },
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        }
+      ],
+      "internalHtmlLinks": [],
+      "anchorLinks": [
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#servicos",
+          "text": "Serviços",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#processo",
+          "text": "Como funciona",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#depoimentos",
+          "text": "Depoimentos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#hero",
+          "text": "Dr. Eduardo Vasques",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#servicos",
+          "text": "Serviços",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#processo",
+          "text": "Como funciona",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#depoimentos",
+          "text": "Depoimentos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#servicos",
+          "text": "Conhecer serviços",
+          "className": "btn-outline",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "serv-link",
+          "internal": true
+        },
+        {
+          "href": "#servicos",
+          "text": "Ver todos os serviços",
+          "className": "btn-outline",
+          "internal": true
+        },
+        {
+          "href": "#hero",
+          "text": "Dr. Eduardo Vasques",
+          "className": "footer-logo",
+          "internal": true
+        },
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#servicos",
+          "text": "Serviços",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "warnings": ["Pagina sem canonical."],
+      "wordCount": 1154,
+      "modifiedAt": "2026-03-31T02:24:00.173Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/nutricionista.html",
+      "fileName": "nutricionista.html",
+      "slug": "pages-nutricionista",
+      "title": "Dra. Isabela Nunes — Nutricionista para Emagrecimento, Saúde e Performance",
+      "description": "Nutricionista para emagrecimento, saúde e performance com plano alimentar personalizado e agendamento rápido pelo WhatsApp.",
+      "canonical": "",
+      "h1": "Um plano alimentar que funciona na sua rotina e no seu objetivo.",
+      "bodyClass": "",
+      "pageType": "demo-de-cliente",
+      "niche": "nutricionista",
+      "goal": "Servir como demonstracao visual/comercial de um site para o nicho nutricionista.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Um plano alimentar que funciona na sua rotina e no seu objetivo."
+        },
+        {
+          "id": "sobre",
+          "title": "Ciência, cuidado e resultados reais."
+        },
+        {
+          "id": "especialidades",
+          "title": "O que posso fazer por você."
+        },
+        {
+          "id": "processo",
+          "title": "Simples do início ao resultado."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Resultados que falam por si."
+        },
+        {
+          "id": "planos",
+          "title": "Invista na sua saúde."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas frequentes."
+        },
+        {
+          "id": "cta",
+          "title": "Comece com um plano alimentar mais possível."
+        }
+      ],
+      "stylesheets": [],
+      "scripts": ["/assets/js/transitions.js", "/assets/js/mobile-fix.js"],
+      "ctas": [
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Agendar consulta",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar avaliação nutricional",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver especialidades",
+          "href": "#especialidades",
+          "kind": "acao"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Saiba mais →",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Começar agora",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Agendar consulta",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20consulta%20avulsa!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Começar agora",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20acompanhamento%20mensal!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Saber mais",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Pacote%20Transforma%C3%A7%C3%A3o!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir avaliação no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20gratuita!",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Planos",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "",
+          "href": "https://wa.me/5551980335252?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [],
+      "anchorLinks": [
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#especialidades",
+          "text": "Especialidades",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#processo",
+          "text": "Como funciona",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#depoimentos",
+          "text": "Depoimentos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#hero",
+          "text": "Dra. Isabela Nunes",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#especialidades",
+          "text": "Especialidades",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#processo",
+          "text": "Como funciona",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#depoimentos",
+          "text": "Depoimentos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#especialidades",
+          "text": "Ver especialidades",
+          "className": "btn-outline",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Saiba mais →",
+          "className": "espec-link",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver planos",
+          "className": "btn-outline",
+          "internal": true
+        },
+        {
+          "href": "#hero",
+          "text": "Dra. Isabela Nunes",
+          "className": "footer-logo",
+          "internal": true
+        },
+        {
+          "href": "#sobre",
+          "text": "Sobre",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#especialidades",
+          "text": "Especialidades",
+          "className": "",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Planos",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "warnings": ["Pagina sem canonical."],
+      "wordCount": 993,
+      "modifiedAt": "2026-03-31T02:23:28.002Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaAcademia.html",
+      "fileName": "siteParaAcademia.html",
+      "slug": "pages-siteparaacademia",
+      "title": "Site para Academia e Personal Trainer que Gera Alunos — Rosso Labs",
+      "description": "Criação de sites para academias e personal trainers com foco em captação de alunos, Google e WhatsApp. Layout premium, entrega rápida e estrutura pensada para converter.",
+      "canonical": "https://roxouw.github.io/pages/siteParaAcademia.html",
+      "h1": "Site para academia transformar interesse em visita e matrícula.",
+      "bodyClass": "niche-page niche-academia",
+      "pageType": "landing-de-nicho",
+      "niche": "academia",
+      "goal": "Captar pedidos de orcamento para o nicho academia.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site para academia transformar interesse em visita e matrícula."
+        },
+        {
+          "id": "problema",
+          "title": "Quem procura academia decide rápido no Google."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Da ideia ao site em 4 passos."
+        },
+        {
+          "id": "",
+          "title": "Se a sua academia já tem oferta, falta uma página que transforme interesse em visita."
+        },
+        {
+          "id": "exemplos",
+          "title": "Modelos pensados para matrícula e recorrência."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando a página organiza plano, estrutura e prova."
+        },
+        {
+          "id": "projeto-real",
+          "title": "Um case que mostra como a matrícula ganha força."
+        },
+        {
+          "id": "prova",
+          "title": "Feito para vender plano, aula e matrícula."
+        },
+        {
+          "id": "planos",
+          "title": "Planos para entrar no jogo ou acelerar matrículas."
+        },
+        {
+          "id": "addons",
+          "title": "Recursos extras e manutenção estratégica."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Sua academia precisa vender antes do aluno visitar."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/academia.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20minha%20academia%20que%20me%20ajude%20a%20gerar%20mais%20visitas%20e%20matr%C3%ADculas",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre minha academia",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20academia%20gerar%20mais%20visitas%20e%20matr%C3%ADculas",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre minha academia",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20para%20academia%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20neg%C3%B3cio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver projeto publicado →",
+          "href": "/pages/academia.html",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero algo nesse nível",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20da%20Iron%20House%20e%20quero%20um%20parecido%20para%20minha%20academia",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero começar a captar",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20tenho%20interesse%20no%20plano%20Start%20para%20academia",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais matrículas",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Business%20para%20minha%20academia",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero escalar captação",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Authority%20%C3%A9%20o%20mais%20certo%20para%20minha%20academia",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20um%20or%C3%A7amento%20para%20um%20site%20da%20minha%20academia",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20academia%20que%20gere%20mais%20visitas%20e%20matr%C3%ADculas",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        },
+        {
+          "href": "/pages/academia.html",
+          "text": "Ver projeto publicado →",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "/pages/academia.html",
+          "text": "Abrir site completo →",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1894,
+      "modifiedAt": "2026-03-31T02:18:42.548Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaAdvogado.html",
+      "fileName": "siteParaAdvogado.html",
+      "slug": "pages-siteparaadvogado",
+      "title": "Site para Advogado que Gera Consultas — Rosso Labs",
+      "description": "Criação de site para advogado e escritório com foco em autoridade, Google e pedido de consulta pelo WhatsApp. Estrutura jurídica pronta em até 7 dias.",
+      "canonical": "https://roxouw.github.io/pages/siteParaAdvogado.html",
+      "h1": "Site jurídico para transformar busca em pedido de consulta.",
+      "bodyClass": "niche-page niche-advogado",
+      "pageType": "landing-de-nicho",
+      "niche": "advogado",
+      "goal": "Captar pedidos de orcamento para o nicho advogado.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site jurídico para transformar busca em pedido de consulta."
+        },
+        {
+          "id": "problema",
+          "title": "Seus futuros clientes estão pesquisando agora."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Do primeiro contato ao site publicado."
+        },
+        {
+          "id": "",
+          "title": "Se o seu escritório já atende bem, falta parecer forte no digital."
+        },
+        {
+          "id": "exemplos",
+          "title": "Posicionamento certo para a área certa."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando o site transmite a seriedade certa."
+        },
+        {
+          "id": "projeto-real",
+          "title": "Um case que mostra o posicionamento jurídico certo."
+        },
+        {
+          "id": "prova",
+          "title": "Seriedade jurídica com CTA certo."
+        },
+        {
+          "id": "planos",
+          "title": "Escolha o nível de presença que o seu escritório precisa."
+        },
+        {
+          "id": "addons",
+          "title": "Seu site no ar é só o começo."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Seu escritório precisa parecer forte antes da primeira consulta."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/advogado.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20meu%20escrit%C3%B3rio%20que%20transmita%20mais%20autoridade%20e%20gere%20mais%20consultas",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu escritório",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu escritório",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20jur%C3%ADdico%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver site completo →",
+          "href": "/pages/advogado.html",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero um parecido para o meu escritório",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Dr.%20Rafael%20e%20quero%20um%20parecido%20para%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero presença jurídica",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20o%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais consultas",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20o%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero liderar no Google",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20fortalecer%20a%20presen%C3%A7a%20digital%20do%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20do%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20falar%20sobre%20um%20site%20para%20meu%20escrit%C3%B3rio",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        },
+        {
+          "href": "/pages/advogado.html",
+          "text": "Ver site completo →",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "/pages/advogado.html",
+          "text": "Abrir site completo →",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1857,
+      "modifiedAt": "2026-03-31T02:18:42.547Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaDentista.html",
+      "fileName": "siteParaDentista.html",
+      "slug": "pages-siteparadentista",
+      "title": "Site para Dentista que Gera Avaliações — Rosso Labs",
+      "description": "Criação de site para dentista e clínica odontológica com foco em confiança, Google e agendamento pelo WhatsApp. Estrutura pronta em até 7 dias.",
+      "canonical": "https://roxouw.github.io/pages/siteParaDentista.html",
+      "h1": "Site odontológico para transformar visita em avaliação e agendamento.",
+      "bodyClass": "niche-page niche-dentista",
+      "pageType": "landing-de-nicho",
+      "niche": "dentista",
+      "goal": "Captar pedidos de orcamento para o nicho dentista.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site odontológico para transformar visita em avaliação e agendamento."
+        },
+        {
+          "id": "problema",
+          "title": "Seus futuros pacientes estão pesquisando no Google agora."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Do pedido ao ar em 4 passos."
+        },
+        {
+          "id": "",
+          "title": "Se a sua clínica já atende bem, falta um site que passe confiança antes da avaliação."
+        },
+        {
+          "id": "exemplos",
+          "title": "Modelos para clínica, implante e estética."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando o site passa confiança clínica."
+        },
+        {
+          "id": "projeto-real",
+          "title": "Um case que mostra a agenda mais pronta."
+        },
+        {
+          "id": "prova",
+          "title": "Confiança antes da cadeira."
+        },
+        {
+          "id": "planos",
+          "title": "Planos para agenda mais cheia."
+        },
+        {
+          "id": "addons",
+          "title": "Upgrades e manutenção mensal."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Sua clínica precisa transmitir confiança antes da avaliação."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/dentista.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica%20que%20me%20ajude%20a%20transmitir%20mais%20confian%C3%A7a%20e%20gerar%20mais%20agendamentos",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre minha clínica",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica%20gerar%20mais%20avalia%C3%A7%C3%B5es%20e%20agendamentos",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre minha clínica",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20odontol%C3%B3gico%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20a%20minha%20cl%C3%ADnica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver site completo →",
+          "href": "/pages/dentista.html",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero um parecido",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Dr.%20Eduardo%20e%20quero%20um%20parecido%20para%20minha%20cl%C3%ADnica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero presença profissional",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20%C3%A9%20o%20mais%20certo%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais avaliações",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Business%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero dominar busca local",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Authority%20%C3%A9%20o%20mais%20certo%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20um%20or%C3%A7amento%20para%20um%20site%20da%20minha%20cl%C3%ADnica%20odontol%C3%B3gica",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica%20que%20gere%20mais%20agendamentos",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        },
+        {
+          "href": "/pages/dentista.html",
+          "text": "Ver site completo →",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "/pages/dentista.html",
+          "text": "Abrir site completo →",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1801,
+      "modifiedAt": "2026-03-31T02:18:42.549Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaEmpresa.html",
+      "fileName": "siteParaEmpresa.html",
+      "slug": "pages-siteparaempresa",
+      "title": "Site para Empresa que Gera Orçamentos — Rosso Labs",
+      "description": "Criação de site para empresa com foco em oferta clara, confiança e pedido de orçamento pelo WhatsApp. Estrutura comercial e SEO para vender melhor.",
+      "canonical": "https://roxouw.github.io/pages/siteParaEmpresa.html",
+      "h1": "Site profissional para transformar visita em pedido de orçamento.",
+      "bodyClass": "niche-page niche-empresa",
+      "pageType": "landing-de-nicho",
+      "niche": "empresa",
+      "goal": "Captar pedidos de orcamento para o nicho empresa.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site profissional para transformar visita em pedido de orçamento."
+        },
+        {
+          "id": "problema",
+          "title": "Seu negócio precisa aparecer no Google."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Do pedido ao ar em 4 passos."
+        },
+        {
+          "id": "",
+          "title": "Se o seu negócio já vende, falta um site que organize isso melhor."
+        },
+        {
+          "id": "exemplos",
+          "title": "Estruturas para serviço, indústria e operação local."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando a empresa parece maior e mais clara."
+        },
+        {
+          "id": "prova",
+          "title": "Sua apresentação comercial começa no site."
+        },
+        {
+          "id": "planos",
+          "title": "Planos para sair do improviso ou profissionalizar de vez."
+        },
+        {
+          "id": "addons",
+          "title": "Upgrades e manutenção mensal."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Sua empresa precisa parecer tão boa quanto o serviço que entrega."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/empresa.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20empresa%20que%20me%20ajude%20a%20gerar%20mais%20or%C3%A7amentos",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu negócio",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre minha empresa",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20comercial%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20a%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Quero presença comercial",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais orçamentos",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero estrutura completa",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20uma%20estrutura%20mais%20completa%20na%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20da%20minha%20empresa",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20falar%20sobre%20um%20site%20para%20minha%20empresa",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1691,
+      "modifiedAt": "2026-03-31T02:18:42.550Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaNutricionista.html",
+      "fileName": "siteParaNutricionista.html",
+      "slug": "pages-siteparanutricionista",
+      "title": "Site para Nutricionista que Gera Consultas — Rosso Labs",
+      "description": "Criação de site para nutricionista com foco em autoridade, método claro e pedido de consulta pelo WhatsApp. Estrutura pronta em até 7 dias.",
+      "canonical": "https://roxouw.github.io/pages/siteParaNutricionista.html",
+      "h1": "Site para nutricionista transformar visita em pedido de consulta.",
+      "bodyClass": "niche-page niche-nutricionista",
+      "pageType": "landing-de-nicho",
+      "niche": "nutricionista",
+      "goal": "Captar pedidos de orcamento para o nicho nutricionista.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site para nutricionista transformar visita em pedido de consulta."
+        },
+        {
+          "id": "problema",
+          "title": "Seus futuros pacientes estão pesquisando no Google agora."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Do pedido ao ar em 4 passos."
+        },
+        {
+          "id": "",
+          "title": "Se o seu consultório já entrega resultado, falta uma página que venda seu método com clareza."
+        },
+        {
+          "id": "exemplos",
+          "title": "Modelos para consultório, esportiva e emagrecimento."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando cuidado e método ficam claros."
+        },
+        {
+          "id": "projeto-real",
+          "title": "Um case que mostra consulta mais fácil de vender."
+        },
+        {
+          "id": "prova",
+          "title": "Confiança antes da primeira conversa."
+        },
+        {
+          "id": "planos",
+          "title": "Planos para transformar busca em consulta."
+        },
+        {
+          "id": "addons",
+          "title": "Upgrades e manutenção mensal."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Seu consultório precisa mostrar cuidado e autoridade antes da consulta."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/nutricionista.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o%20que%20me%20ajude%20a%20gerar%20mais%20consultas",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu consultório",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu consultório",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20para%20nutricionista%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20consult%C3%B3rio",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver site completo →",
+          "href": "/pages/nutricionista.html",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero um parecido",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero presença profissional",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais consultas",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Business%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero crescer no Google",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Authority%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20um%20or%C3%A7amento%20para%20um%20site%20do%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o%20que%20gere%20mais%20consultas",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        },
+        {
+          "href": "/pages/nutricionista.html",
+          "text": "Ver site completo →",
+          "className": "btn btn-primary",
+          "internal": true
+        },
+        {
+          "href": "/pages/nutricionista.html",
+          "text": "Abrir site completo →",
+          "className": "",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1811,
+      "modifiedAt": "2026-03-31T02:18:42.551Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    },
+    {
+      "path": "pages/siteParaPersonal.html",
+      "fileName": "siteParaPersonal.html",
+      "slug": "pages-siteparapersonal",
+      "title": "Site para Personal Trainer que Gera Alunos — Rosso Labs",
+      "description": "Criação de site para personal trainer com foco em método claro, prova de resultado e captação de alunos pelo WhatsApp. Estrutura pronta em até 7 dias.",
+      "canonical": "https://roxouw.github.io/pages/siteParaPersonal.html",
+      "h1": "Site para personal transformar visita em pedido de aula.",
+      "bodyClass": "niche-page niche-personal",
+      "pageType": "landing-de-nicho",
+      "niche": "personal",
+      "goal": "Captar pedidos de orcamento para o nicho personal.",
+      "hasSchema": false,
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Site para personal transformar visita em pedido de aula."
+        },
+        {
+          "id": "problema",
+          "title": "Pessoas estão buscando personal trainer agora na sua cidade."
+        },
+        {
+          "id": "como-funciona",
+          "title": "Do pedido ao ar em 4 passos."
+        },
+        {
+          "id": "",
+          "title": "Se o seu trabalho já entrega resultado, falta uma página que converta isso em aluno."
+        },
+        {
+          "id": "exemplos",
+          "title": "Modelos para presencial, online e assessoria."
+        },
+        {
+          "id": "depoimentos",
+          "title": "Quando método e prova aparecem rápido."
+        },
+        {
+          "id": "projeto-real",
+          "title": "Um case que mostra autoridade que converte."
+        },
+        {
+          "id": "prova",
+          "title": "Seu método precisa parecer premium."
+        },
+        {
+          "id": "planos",
+          "title": "Planos para captar aluno sem depender só do direct."
+        },
+        {
+          "id": "addons",
+          "title": "Upgrades e manutenção mensal."
+        },
+        {
+          "id": "faq",
+          "title": "Dúvidas antes de pedir orçamento."
+        },
+        {
+          "id": "cta-final",
+          "title": "Seu posicionamento precisa vender antes da conversa no direct."
+        }
+      ],
+      "stylesheets": [
+        "/assets/css/fonts.css",
+        "/assets/css/main.css",
+        "/assets/css/nichos/personal.css"
+      ],
+      "scripts": [
+        "/assets/js/analytics.js",
+        "/assets/js/main.js",
+        "/assets/js/transitions.js",
+        "/assets/js/mobile-fix.js"
+      ],
+      "ctas": [
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20minha%20carreira%20de%20personal%20trainer%20que%20me%20ajude%20a%20fechar%20mais%20alunos",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu posicionamento",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20carreira%20de%20personal",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar sobre meu posicionamento",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20para%20personal%20trainer%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20trabalho",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Ver site completo →",
+          "href": "https://roxouw.github.io/consultoria-gabriel/",
+          "kind": "acao"
+        },
+        {
+          "text": "Quero um parecido",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Gabriel%20e%20quero%20um%20parecido%20para%20minha%20carreira%20de%20personal",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero começar a captar",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20minha%20fase%20como%20personal",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero mais alunos",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20captar%20mais%20alunos",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Quero escalar meu nome",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20fortalecer%20meu%20posicionamento%20como%20personal",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Pedir orçamento no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20da%20minha%20carreira%20de%20personal",
+          "kind": "whatsapp"
+        },
+        {
+          "text": "Ver opções e preços",
+          "href": "#planos",
+          "kind": "precos"
+        },
+        {
+          "text": "Falar no WhatsApp",
+          "href": "https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20falar%20sobre%20um%20site%20para%20minha%20carreira%20de%20personal",
+          "kind": "whatsapp"
+        }
+      ],
+      "internalHtmlLinks": [
+        {
+          "href": "/",
+          "text": "← Voltar",
+          "className": "nav-back",
+          "internal": true
+        }
+      ],
+      "anchorLinks": [
+        {
+          "href": "#hero",
+          "text": "ROSSO LABS",
+          "className": "nav-logo",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        },
+        {
+          "href": "#planos",
+          "text": "Ver opções e preços",
+          "className": "btn btn-ghost btn-lg",
+          "internal": true
+        }
+      ],
+      "warnings": [],
+      "wordCount": 1836,
+      "modifiedAt": "2026-03-31T02:18:42.552Z",
+      "generatedAt": "2026-03-31T02:30:26.345Z"
+    }
+  ]
+}

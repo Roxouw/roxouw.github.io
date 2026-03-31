@@ -9,6 +9,7 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "report:pages": "node scripts/generate-obsidian-pages-report.js",
     "prepare": "husky"
   },
   "repository": {

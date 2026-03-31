@@ -114,6 +114,113 @@ window.closeMobile = function closeMobile() {
   document.body.style.overflow = "";
 };
 
+// ── Analytics tracking ────────────────────────────────────────
+function normalizeAnalyticsText(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function toAnalyticsSlug(value) {
+  return normalizeAnalyticsText(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function getAnalyticsLocation(element) {
+  if (!element) return "unknown";
+  if (element.closest("#nichoModal")) return "nicho_modal";
+  if (element.closest("#mobileMenu")) return "mobile_menu";
+  if (element.closest("#navbar")) return "navbar";
+
+  const section = element.closest("section[id], footer[id], nav[id], div[id]");
+  if (section?.id) return section.id;
+
+  return "unknown";
+}
+
+function getAnalyticsCtaType(element, href) {
+  if (element.classList.contains("btn-whatsapp") || href.startsWith("https://wa.me/")) {
+    return "whatsapp";
+  }
+  if (href.startsWith("mailto:")) return "email";
+  if (/openNichoModal/.test(element.getAttribute("onclick") || "")) return "modal";
+  if (href.startsWith("#")) return "internal";
+  if (href.startsWith("/pages/")) return "niche_page";
+  return "link";
+}
+
+function trackAnalyticsEvent(eventName, params) {
+  if (typeof window.gtag !== "function") return;
+
+  window.gtag("event", eventName, {
+    page_type: "marketing_home",
+    page_path: window.location.pathname,
+    ...params,
+  });
+}
+
+const analyticsState = {
+  lastModalTrigger: null,
+};
+
+document.addEventListener(
+  "click",
+  (event) => {
+    const trigger = event.target.closest("a, button");
+    if (!trigger) return;
+
+    const href = trigger.getAttribute("href") || "";
+    const text = normalizeAnalyticsText(trigger.textContent);
+    const location = getAnalyticsLocation(trigger);
+    const ctaType = getAnalyticsCtaType(trigger, href);
+
+    if (/openNichoModal/.test(trigger.getAttribute("onclick") || "")) {
+      analyticsState.lastModalTrigger = {
+        location,
+        text,
+      };
+    }
+
+    const shouldTrackClick =
+      trigger.matches(".btn, .social-link, .nav-cta-link, .mobile-menu-cta, .nicho-btn") ||
+      ctaType === "whatsapp" ||
+      ctaType === "email";
+
+    if (!shouldTrackClick) return;
+
+    trackAnalyticsEvent("cta_clicked", {
+      cta_text: text || "sem_texto",
+      cta_location: location,
+      cta_type: ctaType,
+      destination: href || "none",
+    });
+
+    if (trigger.classList.contains("nicho-btn")) {
+      trackAnalyticsEvent("niche_selected", {
+        niche: toAnalyticsSlug(text) || "unknown",
+        destination_page: href || "none",
+        modal_location: location,
+      });
+    }
+  },
+  { capture: true }
+);
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (!item.open) return;
+
+    trackAnalyticsEvent("faq_opened", {
+      faq_question: normalizeAnalyticsText(item.querySelector(".faq-question")?.textContent),
+      faq_location: getAnalyticsLocation(item),
+    });
+  });
+});
+
 // ── Intro cinematic sequence ───────────────────────────────────
 (function () {
   const intro = document.getElementById("intro");
@@ -308,22 +415,37 @@ const nichoCloseBtn = document.getElementById("nichoCloseBtn");
 
 window.openNichoModal = function openNichoModal() {
   if (!nichoModal) return;
+  const trigger = analyticsState.lastModalTrigger;
+
   nichoModal.classList.add("open");
   document.body.style.overflow = "hidden";
+
+  trackAnalyticsEvent("niche_modal_opened", {
+    trigger_location: trigger?.location || "unknown",
+    trigger_text: trigger?.text || "unknown",
+  });
+
+  analyticsState.lastModalTrigger = null;
 };
-function closeNichoModal() {
+function closeNichoModal(reason = "dismissed") {
   if (!nichoModal) return;
+  if (!nichoModal.classList.contains("open")) return;
+
   nichoModal.classList.remove("open");
   document.body.style.overflow = "";
+
+  trackAnalyticsEvent("niche_modal_closed", {
+    close_reason: reason,
+  });
 }
 
 if (nichoCloseBtn && nichoModal) {
-  nichoCloseBtn.addEventListener("click", closeNichoModal);
+  nichoCloseBtn.addEventListener("click", () => closeNichoModal("close_button"));
   nichoModal.addEventListener("click", (e) => {
-    if (e.target === nichoModal) closeNichoModal();
+    if (e.target === nichoModal) closeNichoModal("backdrop");
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeNichoModal();
+    if (e.key === "Escape") closeNichoModal("escape_key");
   });
 }
 
@@ -573,10 +695,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function goTo(idx, manual = false) {
+    const previous = current;
     if (transitioning && !manual) return;
     transitioning = true;
     current = ((idx % n) + n) % n;
     applyStates();
+
+    if (manual && previous !== current) {
+      trackAnalyticsEvent("showcase_navigation_used", {
+        from_project: normalizeAnalyticsText(
+          cards[previous]?.querySelector(".shot-caption")?.textContent
+        ),
+        to_project: normalizeAnalyticsText(
+          cards[current]?.querySelector(".shot-caption")?.textContent
+        ),
+        device_view: wrap?.classList.contains("device-desktop") ? "desktop" : "mobile",
+      });
+    }
+
     setTimeout(
       () => {
         transitioning = false;
@@ -615,9 +751,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Events
-  toggle
-    ?.querySelectorAll(".device-option")
-    .forEach((btn) => btn.addEventListener("click", () => applyDevice(btn.dataset.device)));
+  toggle?.querySelectorAll(".device-option").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      applyDevice(btn.dataset.device);
+      trackAnalyticsEvent("showcase_device_selected", {
+        device_view: btn.dataset.device || "unknown",
+      });
+    })
+  );
 
   nextBtn?.addEventListener("click", () => goTo(current + 1, true));
   prevBtn?.addEventListener("click", () => goTo(current - 1, true));
@@ -677,7 +818,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (card.dataset.state !== "active") {
         e.preventDefault();
         goTo(i, true);
+        return;
       }
+
+      trackAnalyticsEvent("showcase_project_clicked", {
+        project_name: normalizeAnalyticsText(card.querySelector(".shot-caption")?.textContent),
+        project_destination: card.getAttribute("href") || "none",
+        device_view: wrap?.classList.contains("device-desktop") ? "desktop" : "mobile",
+      });
     })
   );
 
