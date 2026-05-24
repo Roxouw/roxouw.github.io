@@ -1,3 +1,6 @@
+// Mark JS as running — reveals content hidden by .reveal before IntersectionObserver fires
+document.documentElement.classList.add("js-ready");
+
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
@@ -98,8 +101,14 @@ document.querySelectorAll(".faq-q").forEach((q) => {
   q.addEventListener("click", () => {
     const item = q.parentElement;
     const isOpen = item.classList.contains("open");
-    document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
-    if (!isOpen) item.classList.add("open");
+    document.querySelectorAll(".faq-item").forEach((i) => {
+      i.classList.remove("open");
+      i.querySelector(".faq-q")?.setAttribute("aria-expanded", "false");
+    });
+    if (!isOpen) {
+      item.classList.add("open");
+      q.setAttribute("aria-expanded", "true");
+    }
   });
 });
 

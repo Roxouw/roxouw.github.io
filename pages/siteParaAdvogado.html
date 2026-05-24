@@ -164,8 +164,10 @@
     </script>
   </head>
   <body class="framer-v2 niche-page niche-advogado">
+    <a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
     <canvas
       id="inkCanvas"
+      aria-hidden="true"
       style="
         position: fixed;
         inset: 0;
@@ -175,8 +177,8 @@
         height: 100%;
       "></canvas>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- NAV -->
     <nav id="navbar">
@@ -259,1091 +261,1110 @@
     </nav>
 
     <!-- ══ HERO ════════════════════════════════════════ -->
-    <section id="hero">
-      <div class="hero-glow"></div>
-      <div class="hero-grid"></div>
+    <main id="main-content">
+      <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
 
-      <div class="hero-badge">Site para advogados e escritórios · Cachoeirinha, RS</div>
-      <div class="hero-eyebrow">
-        Autoridade jurídica, prova visual e contato fácil para gerar consulta
-      </div>
-      <h1 class="hero-title">
-        Site jurídico para
-        <br />
-        transformar busca
-        <br />
-        <span class="accent">em pedido de consulta.</span>
-      </h1>
-      <div class="hero-checklist">
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Visual jurídico sóbrio e profissional
+        <div class="hero-badge">Site para advogados e escritórios · Cachoeirinha, RS</div>
+        <div class="hero-eyebrow">
+          Autoridade jurídica, prova visual e contato fácil para gerar consulta
         </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          SEO local para busca por advogado na sua cidade
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          WhatsApp direto para triagem e consulta
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Atendimento direto com quem estrutura e publica
-        </div>
-      </div>
-      <div class="hero-cta">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20meu%20escrit%C3%B3rio%20que%20transmita%20mais%20autoridade%20e%20gere%20mais%20consultas"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <div class="hero-trust">
-        <span class="trust-item trust-count">10+ escritórios atendidos</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Entrega em 7 dias</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Presença jurídica profissional</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">SEO local</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">WhatsApp integrado</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Atendimento direto com Rosso Labs</span>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PROBLEMA ══════════════════════════════════ -->
-    <section id="problema" class="sec-accent">
-      <p class="eyebrow reveal" data-num="01">O problema</p>
-      <h2 class="sec-title reveal">
-        Seus futuros clientes estão
-        <br />
-        <span class="accent-dark">pesquisando agora.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Quem precisa de advogado pesquisa, compara e decide rápido. Se o seu escritório não passa
-        segurança logo no primeiro contato, esse cliente segue para outro.
-      </p>
-
-      <div class="searches-grid reveal">
-        <div class="search-item">
-          <span class="search-icon">⚖️</span>
-          <div class="search-query">"advogado trabalhista [cidade]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">🏠</span>
-          <div class="search-query">"advogado imobiliário perto"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">👨‍👩‍👧</span>
-          <div class="search-query">"advogado família divórcio"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">💼</span>
-          <div class="search-query">"escritório advocacia [cidade]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-      </div>
-
-      <div class="problema-alert reveal">
-        <strong>Antes da consulta, o cliente julga confiança.</strong>
-        Um site jurídico bem posicionado transmite seriedade, organiza sua atuação e leva pedidos de
-        contato mais qualificados para o WhatsApp.
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
-    <section id="como-funciona" class="sec-dark">
-      <p class="eyebrow reveal" data-num="02">Como funciona</p>
-      <h2 class="sec-title reveal">
-        Do primeiro contato
-        <br />
-        <span class="accent">ao site publicado.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você continua atendendo. Eu cuido da parte técnica e entrego o site pronto para captar.
-      </p>
-
-      <div class="steps-grid">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <div class="step-title">Escolha seu plano</div>
-          <div class="step-desc">
-            Analise os pacotes e identifique o que faz sentido para o tamanho e o momento do seu
-            escritório.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <div class="step-title">Me envie as informações</div>
-          <div class="step-desc">
-            Nome, OAB, áreas de atuação, foto profissional e contato — tudo via WhatsApp. Sem
-            formulários, sem reuniões longas.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <div class="step-title">Desenvolvo e apresento</div>
-          <div class="step-desc">
-            Crio o site com design jurídico personalizado, SEO configurado e WhatsApp integrado.
-            Você aprova cada detalhe antes de publicar.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <div class="step-title">No ar e captando</div>
-          <div class="step-desc">
-            Site publicado, indexado no Google e pronto para receber clientes. Em até 7 dias úteis.
-          </div>
-        </div>
-      </div>
-      <p class="steps-footer reveal">
-        Tempo médio de entrega:
-        <span>3 a 7 dias úteis.</span>
-      </p>
-    </section>
-
-    <section class="cta-inline sec-dark">
-      <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Se o seu escritório já atende bem,
-        <br />
-        <span class="accent">falta parecer forte no digital.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você me chama no WhatsApp, eu entendo sua área de atuação e indico o formato mais certo para
-        transmitir autoridade e facilitar o pedido de consulta.
-      </p>
-      <div class="cta-inline-actions reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          Falar sobre meu escritório
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-inline-note reveal">
-        Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ EXEMPLOS ══════════════════════════════════ -->
-    <section id="exemplos" class="sec-accent">
-      <p class="eyebrow reveal" data-num="03">Modelos</p>
-      <h2 class="sec-title reveal">
-        Posicionamento certo
-        <br />
-        <span class="accent-dark">para a área certa.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Trabalhista, família, imobiliário ou empresarial: a estrutura muda para refletir sua atuação
-        e a forma como você quer ser percebido.
-      </p>
-
-      <div class="examples-grid">
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv1">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 40%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Advocacia Trabalhista</div>
-            <div class="example-name">Escritório Trabalhista</div>
-            <div class="example-desc">
-              Áreas de atuação claras, perfil com OAB e contato objetivo para transformar busca em
-              pedido de consulta.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Áreas de atuação</span>
-              <span class="example-tag">Perfil OAB</span>
-              <span class="example-tag">WhatsApp</span>
-              <span class="example-tag">SEO local</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv2">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 55%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Advocacia de Família</div>
-            <div class="example-name">Escritório Família & Sucessões</div>
-            <div class="example-desc">
-              Linguagem acolhedora e estrutura clara para que quem está em um momento delicado sinta
-              segurança antes mesmo de ligar.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Especialidades</span>
-              <span class="example-tag">FAQ jurídico</span>
-              <span class="example-tag">Consulta online</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv3">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 45%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Advocacia Empresarial</div>
-            <div class="example-name">Escritório Empresarial</div>
-            <div class="example-desc">
-              Posicionamento premium para atrair cliente corporativo com percepção de solidez,
-              organização e domínio técnico.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Posicionamento</span>
-              <span class="example-tag">Serviços</span>
-              <span class="example-tag">Contato direto</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv4">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 35%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Advogado Solo</div>
-            <div class="example-name">Perfil Individual</div>
-            <div class="example-desc">
-              Sua trajetória, formação e especialidades em uma página feita para fortalecer seu nome
-              antes da primeira consulta.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Perfil pessoal</span>
-              <span class="example-tag">Formação</span>
-              <span class="example-tag">Agenda</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-inline examples-inline-cta">
-        <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
-        <h2 class="sec-title reveal">
-          Viu o tipo de estrutura
+        <h1 class="hero-title">
+          Site jurídico para
           <br />
-          <span class="accent-dark">que transmite seriedade.</span>
+          transformar busca
+          <br />
+          <span class="accent">em pedido de consulta.</span>
+        </h1>
+        <div class="hero-checklist">
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Visual jurídico sóbrio e profissional
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            SEO local para busca por advogado na sua cidade
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            WhatsApp direto para triagem e consulta
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Atendimento direto com quem estrutura e publica
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20um%20site%20para%20meu%20escrit%C3%B3rio%20que%20transmita%20mais%20autoridade%20e%20gere%20mais%20consultas"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item trust-count">10+ escritórios atendidos</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Entrega em 7 dias</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Presença jurídica profissional</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">SEO local</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">WhatsApp integrado</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Atendimento direto com Rosso Labs</span>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROBLEMA ══════════════════════════════════ -->
+      <section id="problema" class="sec-accent">
+        <p class="eyebrow reveal" data-num="01">O problema</p>
+        <h2 class="sec-title reveal">
+          Seus futuros clientes estão
+          <br />
+          <span class="accent-dark">pesquisando agora.</span>
         </h2>
         <p class="sec-sub reveal">
-          Agora eu adapto isso para a sua área de atuação, sua forma de atendimento e o tipo de
-          consulta que você quer receber.
+          Quem precisa de advogado pesquisa, compara e decide rápido. Se o seu escritório não passa
+          segurança logo no primeiro contato, esse cliente segue para outro.
+        </p>
+
+        <div class="searches-grid reveal">
+          <div class="search-item">
+            <span class="search-icon">⚖️</span>
+            <div class="search-query">"advogado trabalhista [cidade]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">🏠</span>
+            <div class="search-query">"advogado imobiliário perto"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">👨‍👩‍👧</span>
+            <div class="search-query">"advogado família divórcio"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">💼</span>
+            <div class="search-query">"escritório advocacia [cidade]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+        </div>
+
+        <div class="problema-alert reveal">
+          <strong>Antes da consulta, o cliente julga confiança.</strong>
+          Um site jurídico bem posicionado transmite seriedade, organiza sua atuação e leva pedidos
+          de contato mais qualificados para o WhatsApp.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
+      <section id="como-funciona" class="sec-dark">
+        <p class="eyebrow reveal" data-num="02">Como funciona</p>
+        <h2 class="sec-title reveal">
+          Do primeiro contato
+          <br />
+          <span class="accent">ao site publicado.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você continua atendendo. Eu cuido da parte técnica e entrego o site pronto para captar.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <div class="step-title">Escolha seu plano</div>
+            <div class="step-desc">
+              Analise os pacotes e identifique o que faz sentido para o tamanho e o momento do seu
+              escritório.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <div class="step-title">Me envie as informações</div>
+            <div class="step-desc">
+              Nome, OAB, áreas de atuação, foto profissional e contato — tudo via WhatsApp. Sem
+              formulários, sem reuniões longas.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <div class="step-title">Desenvolvo e apresento</div>
+            <div class="step-desc">
+              Crio o site com design jurídico personalizado, SEO configurado e WhatsApp integrado.
+              Você aprova cada detalhe antes de publicar.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <div class="step-title">No ar e captando</div>
+            <div class="step-desc">
+              Site publicado, indexado no Google e pronto para receber clientes. Em até 7 dias
+              úteis.
+            </div>
+          </div>
+        </div>
+        <p class="steps-footer reveal">
+          Tempo médio de entrega:
+          <span>3 a 7 dias úteis.</span>
+        </p>
+      </section>
+
+      <section class="cta-inline sec-dark">
+        <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Se o seu escritório já atende bem,
+          <br />
+          <span class="accent">falta parecer forte no digital.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você me chama no WhatsApp, eu entendo sua área de atuação e indico o formato mais certo
+          para transmitir autoridade e facilitar o pedido de consulta.
         </p>
         <div class="cta-inline-actions reveal">
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20jur%C3%ADdico%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe,%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-whatsapp btn-lg">
             Falar sobre meu escritório
           </a>
           <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
         </div>
         <p class="cta-inline-note reveal">
-          Área de atuação clara · Proposta objetiva · Direto com Rosso Labs
+          Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
         </p>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
-    <section id="depoimentos" class="sec-dark">
-      <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
-      <h2 class="sec-title reveal">
-        Quando o site transmite
-        <br />
-        <span class="accent">a seriedade certa.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        O contato muda quando o escritório transmite segurança antes da primeira conversa.
-      </p>
+      <!-- ══ EXEMPLOS ══════════════════════════════════ -->
+      <section id="exemplos" class="sec-accent">
+        <p class="eyebrow reveal" data-num="03">Modelos</p>
+        <h2 class="sec-title reveal">
+          Posicionamento certo
+          <br />
+          <span class="accent-dark">para a área certa.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Trabalhista, família, imobiliário ou empresarial: a estrutura muda para refletir sua
+          atuação e a forma como você quer ser percebido.
+        </p>
 
-      <div class="dep-grid">
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Antes eu dependia quase só de indicação. Depois do site, comecei a receber consultas de
-            pessoas que me encontraram no Google.
-            <strong>Em 45 dias o site já havia se pago.</strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Dr. Marcelo T.</span>
-            <span class="dep-role">Advogado Trabalhista · Porto Alegre, RS</span>
+        <div class="examples-grid">
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv1">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 40%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Advocacia Trabalhista</div>
+              <div class="example-name">Escritório Trabalhista</div>
+              <div class="example-desc">
+                Áreas de atuação claras, perfil com OAB e contato objetivo para transformar busca em
+                pedido de consulta.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Áreas de atuação</span>
+                <span class="example-tag">Perfil OAB</span>
+                <span class="example-tag">WhatsApp</span>
+                <span class="example-tag">SEO local</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv2">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 55%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Advocacia de Família</div>
+              <div class="example-name">Escritório Família & Sucessões</div>
+              <div class="example-desc">
+                Linguagem acolhedora e estrutura clara para que quem está em um momento delicado
+                sinta segurança antes mesmo de ligar.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Especialidades</span>
+                <span class="example-tag">FAQ jurídico</span>
+                <span class="example-tag">Consulta online</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv3">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 45%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Advocacia Empresarial</div>
+              <div class="example-name">Escritório Empresarial</div>
+              <div class="example-desc">
+                Posicionamento premium para atrair cliente corporativo com percepção de solidez,
+                organização e domínio técnico.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Posicionamento</span>
+                <span class="example-tag">Serviços</span>
+                <span class="example-tag">Contato direto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv4">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 35%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Advogado Solo</div>
+              <div class="example-name">Perfil Individual</div>
+              <div class="example-desc">
+                Sua trajetória, formação e especialidades em uma página feita para fortalecer seu
+                nome antes da primeira consulta.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Perfil pessoal</span>
+                <span class="example-tag">Formação</span>
+                <span class="example-tag">Agenda</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            A Rosso Labs entendeu que site jurídico precisa transmitir seriedade. O resultado ficou
-            limpo, profissional e alinhado com a minha atuação.
-            <strong>Meus clientes elogiam a apresentação antes mesmo da consulta.</strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Dra. Fernanda L.</span>
-            <span class="dep-role">Advogada de Família · Cachoeirinha, RS</span>
-          </div>
-        </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Processo simples, entrega rápida e resultado acima do esperado.
-            <strong>
-              Hoje meu escritório aparece melhor quando alguém pesquisa advogado na minha cidade.
-            </strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Dr. Ricardo A.</span>
-            <span class="dep-role">Advogado Empresarial · Canoas, RS</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <hr class="divider" />
-
-    <!-- ══ PROJETO REAL ══════════════════════════════ -->
-    <section id="projeto-real" class="sec-accent">
-      <p class="eyebrow reveal" data-num="05">Projeto entregue</p>
-      <div class="projeto-inner">
-        <!-- Info -->
-        <div class="reveal">
-          <div class="projeto-badge">Site real · Dr. Rafael Monteiro</div>
-          <h2 class="projeto-title">
-            Um case que mostra
+        <div class="cta-inline examples-inline-cta">
+          <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
+          <h2 class="sec-title reveal">
+            Viu o tipo de estrutura
             <br />
-            <span class="accent-dark">o posicionamento jurídico certo.</span>
+            <span class="accent-dark">que transmite seriedade.</span>
           </h2>
-          <p class="projeto-desc">
-            Site desenvolvido para escritório especializado em Direito Civil, Trabalhista e
-            Previdenciário. O foco foi organizar a atuação, reforçar seriedade e fazer o cliente
-            perceber autoridade antes do primeiro contato.
+          <p class="sec-sub reveal">
+            Agora eu adapto isso para a sua área de atuação, sua forma de atendimento e o tipo de
+            consulta que você quer receber.
           </p>
-          <div class="projeto-tags">
-            <span class="projeto-tag">Cormorant Garamond</span>
-            <span class="projeto-tag">Paleta bege & dourado</span>
-            <span class="projeto-tag">Áreas de atuação</span>
-            <span class="projeto-tag">WhatsApp integrado</span>
-            <span class="projeto-tag">SEO</span>
-            <span class="projeto-tag">Mobile-first</span>
-          </div>
-          <div class="projeto-links">
-            <a href="/pages/advogado.html" target="_blank" class="btn btn-primary">
-              Ver site completo →
-            </a>
+          <div class="cta-inline-actions reveal">
             <a
-              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Dr.%20Rafael%20e%20quero%20um%20parecido%20para%20meu%20escrit%C3%B3rio"
+              href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20jur%C3%ADdico%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
               target="_blank"
-              class="btn btn-ghost">
-              Quero um parecido para o meu escritório
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp btn-lg">
+              Falar sobre meu escritório
+            </a>
+            <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+          </div>
+          <p class="cta-inline-note reveal">
+            Área de atuação clara · Proposta objetiva · Direto com Rosso Labs
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
+      <section id="depoimentos" class="sec-dark">
+        <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
+        <h2 class="sec-title reveal">
+          Quando o site transmite
+          <br />
+          <span class="accent">a seriedade certa.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          O contato muda quando o escritório transmite segurança antes da primeira conversa.
+        </p>
+
+        <div class="dep-grid">
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Antes eu dependia quase só de indicação. Depois do site, comecei a receber consultas
+              de pessoas que me encontraram no Google.
+              <strong>Em 45 dias o site já havia se pago.</strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Dr. Marcelo T.</span>
+              <span class="dep-role">Advogado Trabalhista · Porto Alegre, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              A Rosso Labs entendeu que site jurídico precisa transmitir seriedade. O resultado
+              ficou limpo, profissional e alinhado com a minha atuação.
+              <strong>Meus clientes elogiam a apresentação antes mesmo da consulta.</strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Dra. Fernanda L.</span>
+              <span class="dep-role">Advogada de Família · Cachoeirinha, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Processo simples, entrega rápida e resultado acima do esperado.
+              <strong>
+                Hoje meu escritório aparece melhor quando alguém pesquisa advogado na minha cidade.
+              </strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Dr. Ricardo A.</span>
+              <span class="dep-role">Advogado Empresarial · Canoas, RS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROJETO REAL ══════════════════════════════ -->
+      <section id="projeto-real" class="sec-accent">
+        <p class="eyebrow reveal" data-num="05">Projeto entregue</p>
+        <div class="projeto-inner">
+          <!-- Info -->
+          <div class="reveal">
+            <div class="projeto-badge">Site real · Dr. Rafael Monteiro</div>
+            <h2 class="projeto-title">
+              Um case que mostra
+              <br />
+              <span class="accent-dark">o posicionamento jurídico certo.</span>
+            </h2>
+            <p class="projeto-desc">
+              Site desenvolvido para escritório especializado em Direito Civil, Trabalhista e
+              Previdenciário. O foco foi organizar a atuação, reforçar seriedade e fazer o cliente
+              perceber autoridade antes do primeiro contato.
+            </p>
+            <div class="projeto-tags">
+              <span class="projeto-tag">Cormorant Garamond</span>
+              <span class="projeto-tag">Paleta bege & dourado</span>
+              <span class="projeto-tag">Áreas de atuação</span>
+              <span class="projeto-tag">WhatsApp integrado</span>
+              <span class="projeto-tag">SEO</span>
+              <span class="projeto-tag">Mobile-first</span>
+            </div>
+            <div class="projeto-links">
+              <a
+                href="/pages/advogado.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary">
+                Ver site completo →
+              </a>
+              <a
+                href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20o%20site%20do%20Dr.%20Rafael%20e%20quero%20um%20parecido%20para%20meu%20escrit%C3%B3rio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-ghost">
+                Quero um parecido para o meu escritório
+              </a>
+            </div>
+          </div>
+
+          <!-- Browser preview -->
+          <div class="reveal" style="position: relative">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                </div>
+                <div class="browser-url">roxouw.github.io/advogado.html</div>
+              </div>
+              <div class="browser-viewport">
+                <img
+                  loading="lazy"
+                  src="/assets/images/prints/desktop/advogado.webp"
+                  alt="Preview site Advogado"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    display: block;
+                  " />
+                <div class="browser-overlay">
+                  <a href="/pages/advogado.html" target="_blank" rel="noopener noreferrer">
+                    Abrir site completo →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
+      <section id="prova" class="sec-dark">
+        <p class="eyebrow reveal" data-num="06">Por que escolher</p>
+        <h2 class="sec-title reveal">
+          Seriedade jurídica
+          <br />
+          <span class="accent">com CTA certo.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Design, copy e estrutura pensados para passar credibilidade e gerar consulta.
+        </p>
+
+        <div class="proof-grid">
+          <div class="proof-item reveal">
+            <span class="proof-num">7</span>
+            <div class="proof-label">Dias para entregar</div>
+            <div class="proof-desc">
+              Do briefing ao site publicado. Sem esperar meses para ter presença digital.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">100%</span>
+            <div class="proof-label">Mobile-first</div>
+            <div class="proof-desc">
+              A maioria dos clientes pesquisa pelo celular. Seu site funciona perfeitamente em
+              qualquer tela.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">+10</span>
+            <div class="proof-label">Projetos entregues</div>
+            <div class="proof-desc">
+              Sites publicados com foco em autoridade, clareza de atuação e busca local.
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-features">
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">⚖️</span>
+            <div>
+              <div class="proof-feat-title">Visual que transmite autoridade</div>
+              <div class="proof-feat-desc">
+                Design sóbrio e linguagem visual para o cliente perceber profissionalismo logo no
+                primeiro olhar.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🔍</span>
+            <div>
+              <div class="proof-feat-title">Apareça quando seu cliente busca</div>
+              <div class="proof-feat-desc">
+                Seu escritório aparece melhor quando o cliente pesquisa exatamente a área em que
+                você atua.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">💬</span>
+            <div>
+              <div class="proof-feat-title">Cliente chega pronto para marcar consulta</div>
+              <div class="proof-feat-desc">
+                O WhatsApp ajuda na triagem e leva o cliente para o pedido de consulta sem atrito.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">📋</span>
+            <div>
+              <div class="proof-feat-title">Suas especialidades com clareza</div>
+              <div class="proof-feat-desc">
+                Cada área de atuação fica clara em linguagem que o cliente leigo entende antes do
+                primeiro contato.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">⚡</span>
+            <div>
+              <div class="proof-feat-title">Rápido em qualquer conexão</div>
+              <div class="proof-feat-desc">
+                Site otimizado para carregar rápido e não perder o cliente para o próximo resultado.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🛡️</span>
+            <div>
+              <div class="proof-feat-title">Dentro das normas da OAB</div>
+              <div class="proof-feat-desc">
+                Estrutura pensada para informar, gerar credibilidade e facilitar o contato dentro
+                das diretrizes da OAB.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PLANOS ════════════════════════════════════ -->
+      <section id="planos" class="sec-accent">
+        <p class="eyebrow reveal" data-num="07">Planos</p>
+        <h2 class="sec-title reveal">
+          Escolha o nível de presença
+          <br />
+          <span class="accent-dark">que o seu escritório precisa.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Escopo claro e o plano certo para o momento do seu escritório, sem surpresa no caminho.
+        </p>
+
+        <div class="packages-grid">
+          <div class="pkg reveal">
+            <div class="pkg-name">Start</div>
+            <div class="pkg-desc">
+              Presença jurídica profissional para aparecer no Google com agilidade e passar mais
+              confiança.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>1 página (landing page jurídica)</li>
+              <li>Seção de áreas de atuação</li>
+              <li>Perfil do advogado com OAB</li>
+              <li>Botão WhatsApp integrado</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Até 2 revisões</li>
+              <li class="no">Domínio personalizado</li>
+              <li class="no">SEO avançado</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero presença jurídica
+            </a>
+          </div>
+
+          <div class="pkg featured reveal">
+            <div class="pkg-badge">Mais popular</div>
+            <div class="pkg-name">Business</div>
+            <div class="pkg-desc">
+              Mais autoridade no Google e mais consultas com uma estrutura mais completa.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">1.997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Até 4 páginas (Home, Sobre, Áreas, Contato)</li>
+              <li>Design jurídico personalizado</li>
+              <li>WhatsApp com mensagem de consulta</li>
+              <li>SEO básico (indexado no Google)</li>
+              <li>Domínio personalizado (.adv.br ou .com.br)</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Preview no WhatsApp e LinkedIn</li>
+              <li>Até 3 revisões</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20o%20meu%20escrit%C3%B3rio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero mais consultas
+            </a>
+          </div>
+
+          <div class="pkg reveal">
+            <div class="pkg-name">Authority</div>
+            <div class="pkg-desc">
+              Para liderar buscas locais e virar referência digital na sua área.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">3.997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Páginas ilimitadas por especialidade</li>
+              <li>Design exclusivo e premium</li>
+              <li>SEO completo + Google Analytics</li>
+              <li>Domínio personalizado (.adv.br)</li>
+              <li>Blog jurídico (artigos que atraem clientes)</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Painel para atualizar conteúdo</li>
+              <li>Revisões ilimitadas até aprovação</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20fortalecer%20a%20presen%C3%A7a%20digital%20do%20meu%20escrit%C3%B3rio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero liderar no Google
             </a>
           </div>
         </div>
-
-        <!-- Browser preview -->
-        <div class="reveal" style="position: relative">
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <div class="browser-dots">
-                <div class="browser-dot"></div>
-                <div class="browser-dot"></div>
-                <div class="browser-dot"></div>
-              </div>
-              <div class="browser-url">roxouw.github.io/advogado.html</div>
-            </div>
-            <div class="browser-viewport">
-              <img
-                loading="lazy"
-                src="/assets/images/prints/desktop/advogado.webp"
-                alt="Preview site Advogado"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  object-position: top;
-                  display: block;
-                " />
-              <div class="browser-overlay">
-                <a href="/pages/advogado.html" target="_blank">Abrir site completo →</a>
-              </div>
-            </div>
-          </div>
+        <div class="plans-helper reveal">
+          <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
+          <p class="plans-helper-text">
+            Start para sair do zero com presença profissional. Business para a maioria dos
+            escritórios que querem explicar melhor a atuação e receber consultas mais prontas.
+            Authority para quem disputa várias áreas e quer crescer com mais força no Google.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
-    <section id="prova" class="sec-dark">
-      <p class="eyebrow reveal" data-num="06">Por que escolher</p>
-      <h2 class="sec-title reveal">
-        Seriedade jurídica
-        <br />
-        <span class="accent">com CTA certo.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Design, copy e estrutura pensados para passar credibilidade e gerar consulta.
-      </p>
-
-      <div class="proof-grid">
-        <div class="proof-item reveal">
-          <span class="proof-num">7</span>
-          <div class="proof-label">Dias para entregar</div>
-          <div class="proof-desc">
-            Do briefing ao site publicado. Sem esperar meses para ter presença digital.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">100%</span>
-          <div class="proof-label">Mobile-first</div>
-          <div class="proof-desc">
-            A maioria dos clientes pesquisa pelo celular. Seu site funciona perfeitamente em
-            qualquer tela.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">+10</span>
-          <div class="proof-label">Projetos entregues</div>
-          <div class="proof-desc">
-            Sites publicados com foco em autoridade, clareza de atuação e busca local.
-          </div>
-        </div>
-      </div>
-
-      <div class="proof-features">
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">⚖️</span>
-          <div>
-            <div class="proof-feat-title">Visual que transmite autoridade</div>
-            <div class="proof-feat-desc">
-              Design sóbrio e linguagem visual para o cliente perceber profissionalismo logo no
-              primeiro olhar.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🔍</span>
-          <div>
-            <div class="proof-feat-title">Apareça quando seu cliente busca</div>
-            <div class="proof-feat-desc">
-              Seu escritório aparece melhor quando o cliente pesquisa exatamente a área em que você
-              atua.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">💬</span>
-          <div>
-            <div class="proof-feat-title">Cliente chega pronto para marcar consulta</div>
-            <div class="proof-feat-desc">
-              O WhatsApp ajuda na triagem e leva o cliente para o pedido de consulta sem atrito.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">📋</span>
-          <div>
-            <div class="proof-feat-title">Suas especialidades com clareza</div>
-            <div class="proof-feat-desc">
-              Cada área de atuação fica clara em linguagem que o cliente leigo entende antes do
-              primeiro contato.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">⚡</span>
-          <div>
-            <div class="proof-feat-title">Rápido em qualquer conexão</div>
-            <div class="proof-feat-desc">
-              Site otimizado para carregar rápido e não perder o cliente para o próximo resultado.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🛡️</span>
-          <div>
-            <div class="proof-feat-title">Dentro das normas da OAB</div>
-            <div class="proof-feat-desc">
-              Estrutura pensada para informar, gerar credibilidade e facilitar o contato dentro das
-              diretrizes da OAB.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PLANOS ════════════════════════════════════ -->
-    <section id="planos" class="sec-accent">
-      <p class="eyebrow reveal" data-num="07">Planos</p>
-      <h2 class="sec-title reveal">
-        Escolha o nível de presença
-        <br />
-        <span class="accent-dark">que o seu escritório precisa.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Escopo claro e o plano certo para o momento do seu escritório, sem surpresa no caminho.
-      </p>
-
-      <div class="packages-grid">
-        <div class="pkg reveal">
-          <div class="pkg-name">Start</div>
-          <div class="pkg-desc">
-            Presença jurídica profissional para aparecer no Google com agilidade e passar mais
-            confiança.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>1 página (landing page jurídica)</li>
-            <li>Seção de áreas de atuação</li>
-            <li>Perfil do advogado com OAB</li>
-            <li>Botão WhatsApp integrado</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Até 2 revisões</li>
-            <li class="no">Domínio personalizado</li>
-            <li class="no">SEO avançado</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20o%20meu%20escrit%C3%B3rio"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero presença jurídica
-          </a>
-        </div>
-
-        <div class="pkg featured reveal">
-          <div class="pkg-badge">Mais popular</div>
-          <div class="pkg-name">Business</div>
-          <div class="pkg-desc">
-            Mais autoridade no Google e mais consultas com uma estrutura mais completa.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">1.997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Até 4 páginas (Home, Sobre, Áreas, Contato)</li>
-            <li>Design jurídico personalizado</li>
-            <li>WhatsApp com mensagem de consulta</li>
-            <li>SEO básico (indexado no Google)</li>
-            <li>Domínio personalizado (.adv.br ou .com.br)</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Preview no WhatsApp e LinkedIn</li>
-            <li>Até 3 revisões</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20o%20meu%20escrit%C3%B3rio"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero mais consultas
-          </a>
-        </div>
-
-        <div class="pkg reveal">
-          <div class="pkg-name">Authority</div>
-          <div class="pkg-desc">
-            Para liderar buscas locais e virar referência digital na sua área.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">3.997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Páginas ilimitadas por especialidade</li>
-            <li>Design exclusivo e premium</li>
-            <li>SEO completo + Google Analytics</li>
-            <li>Domínio personalizado (.adv.br)</li>
-            <li>Blog jurídico (artigos que atraem clientes)</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Painel para atualizar conteúdo</li>
-            <li>Revisões ilimitadas até aprovação</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20fortalecer%20a%20presen%C3%A7a%20digital%20do%20meu%20escrit%C3%B3rio"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero liderar no Google
-          </a>
-        </div>
-      </div>
-      <div class="plans-helper reveal">
-        <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
-        <p class="plans-helper-text">
-          Start para sair do zero com presença profissional. Business para a maioria dos escritórios
-          que querem explicar melhor a atuação e receber consultas mais prontas. Authority para quem
-          disputa várias áreas e quer crescer com mais força no Google.
+        <p class="sec-sub reveal">
+          Uma consulta fechada pode pagar o investimento. O site continua captando depois.
         </p>
-      </div>
-      <p class="sec-sub reveal">
-        Uma consulta fechada pode pagar o investimento. O site continua captando depois.
-      </p>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- UPGRADES & MANUTENÇÃO -->
-    <section id="addons" class="sec-dark">
-      <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
-      <h2 class="sec-title reveal">
-        Seu site no ar
-        <br />
-        <span class="accent">é só o começo.</span>
-      </h2>
-      <p class="sec-sub reveal">Adicione só o que fizer sentido para o seu escritório.</p>
+      <!-- UPGRADES & MANUTENÇÃO -->
+      <section id="addons" class="sec-dark">
+        <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
+        <h2 class="sec-title reveal">
+          Seu site no ar
+          <br />
+          <span class="accent">é só o começo.</span>
+        </h2>
+        <p class="sec-sub reveal">Adicione só o que fizer sentido para o seu escritório.</p>
 
-      <div class="addons-grid">
-        <div>
-          <div class="addons-col-title reveal">
-            Upgrades
-            <span>adicional único</span>
+        <div class="addons-grid">
+          <div>
+            <div class="addons-col-title reveal">
+              Upgrades
+              <span>adicional único</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Página por especialidade</div>
+                  <div class="addon-desc">
+                    Página dedicada à sua área — Trabalhista, Família, Imobiliário — com SEO
+                    específico para aparecer em mais buscas relevantes.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 200
+                  <small>por página</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Domínio .adv.br</div>
+                  <div class="addon-desc">
+                    Endereço exclusivo para advogados. Transmite ainda mais credibilidade e facilita
+                    ser encontrado.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 120
+                  <small>por ano</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Botão WhatsApp flutuante</div>
+                  <div class="addon-desc">
+                    Ícone fixo na tela com mensagem pré-preenchida. O cliente clica e já chega com
+                    intenção de marcar consulta.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 150
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Blog jurídico</div>
+                  <div class="addon-desc">
+                    Artigos que atraem clientes via Google — "como funciona o divórcio", "direitos
+                    do trabalhador demitido" — e posicionam você como referência.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 300
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Google Analytics</div>
+                  <div class="addon-desc">
+                    Veja quantas pessoas visitam seu site, de onde vêm e o que mais acessam. Dados
+                    para decisões estratégicas.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 100
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Formulário de consulta</div>
+                  <div class="addon-desc">
+                    O potencial cliente preenche nome, telefone e caso — e a mensagem chega direto
+                    no seu WhatsApp ou e-mail.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 180
+                  <small>único</small>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Página por especialidade</div>
-                <div class="addon-desc">
-                  Página dedicada à sua área — Trabalhista, Família, Imobiliário — com SEO
-                  específico para aparecer em mais buscas relevantes.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 200
-                <small>por página</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Domínio .adv.br</div>
-                <div class="addon-desc">
-                  Endereço exclusivo para advogados. Transmite ainda mais credibilidade e facilita
-                  ser encontrado.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 120
-                <small>por ano</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Botão WhatsApp flutuante</div>
-                <div class="addon-desc">
-                  Ícone fixo na tela com mensagem pré-preenchida. O cliente clica e já chega com
-                  intenção de marcar consulta.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 150
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Blog jurídico</div>
-                <div class="addon-desc">
-                  Artigos que atraem clientes via Google — "como funciona o divórcio", "direitos do
-                  trabalhador demitido" — e posicionam você como referência.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 300
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Google Analytics</div>
-                <div class="addon-desc">
-                  Veja quantas pessoas visitam seu site, de onde vêm e o que mais acessam. Dados
-                  para decisões estratégicas.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 100
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Formulário de consulta</div>
-                <div class="addon-desc">
-                  O potencial cliente preenche nome, telefone e caso — e a mensagem chega direto no
-                  seu WhatsApp ou e-mail.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 180
-                <small>único</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div>
-          <div class="addons-col-title reveal">
-            Manutenção
-            <span>recorrente</span>
-          </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Essencial</div>
-                <div class="addon-desc">
-                  Até 2 alterações/mês — textos, telefone, endereço, áreas de atuação
+          <div>
+            <div class="addons-col-title reveal">
+              Manutenção
+              <span>recorrente</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Essencial</div>
+                  <div class="addon-desc">
+                    Até 2 alterações/mês — textos, telefone, endereço, áreas de atuação
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 99
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
                 </div>
               </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 99
-                  <small>/mês</small>
+              <div class="addon-item popular">
+                <div class="addon-info">
+                  <div class="addon-popular-badge">⭐ Mais escolhido</div>
+                  <div class="addon-name">Plano Plus</div>
+                  <div class="addon-desc">
+                    Até 5 alterações/mês + monitoramento de desempenho + backup mensal
+                  </div>
+                  <div class="addon-tag-list">
+                    <span class="addon-tag">troca de textos</span>
+                    <span class="addon-tag">atualização de especialidades</span>
+                    <span class="addon-tag">publicação de artigos</span>
+                    <span class="addon-tag">ajuste de SEO</span>
+                  </div>
                 </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 189
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 1.890/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Full</div>
+                  <div class="addon-desc">
+                    Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 299
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 2.990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Por que contratar manutenção?</div>
+                  <div class="addon-desc">
+                    Sites sem atualização perdem relevância no Google. Com manutenção, seu
+                    escritório continua aparecendo — e você não precisa me acionar toda vez que
+                    mudar uma especialidade, adicionar um artigo ou atualizar seus dados.
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="addon-item popular">
-              <div class="addon-info">
-                <div class="addon-popular-badge">⭐ Mais escolhido</div>
-                <div class="addon-name">Plano Plus</div>
-                <div class="addon-desc">
-                  Até 5 alterações/mês + monitoramento de desempenho + backup mensal
-                </div>
-                <div class="addon-tag-list">
-                  <span class="addon-tag">troca de textos</span>
-                  <span class="addon-tag">atualização de especialidades</span>
-                  <span class="addon-tag">publicação de artigos</span>
-                  <span class="addon-tag">ajuste de SEO</span>
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 189
-                  <small>/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 1.890/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
+            <div class="maint-tagline">
+              <strong>Site entregue é ativo. Manutenção é consistência.</strong>
+              <br />
+              Mantemos tudo atualizado, seguro e funcionando para você captar clientes todos os
+              meses.
             </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Full</div>
-                <div class="addon-desc">
-                  Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 299
-                  <small>/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 2.990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Por que contratar manutenção?</div>
-                <div class="addon-desc">
-                  Sites sem atualização perdem relevância no Google. Com manutenção, seu escritório
-                  continua aparecendo — e você não precisa me acionar toda vez que mudar uma
-                  especialidade, adicionar um artigo ou atualizar seus dados.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="maint-tagline">
-            <strong>Site entregue é ativo. Manutenção é consistência.</strong>
-            <br />
-            Mantemos tudo atualizado, seguro e funcionando para você captar clientes todos os meses.
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ FAQ ═══════════════════════════════════════ -->
-    <section id="faq" class="sec-accent">
-      <p class="eyebrow reveal" data-num="09">Dúvidas</p>
-      <h2 class="sec-title reveal">
-        Dúvidas antes
-        <br />
-        <span class="accent-dark">de pedir orçamento.</span>
-      </h2>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">O site segue as normas de publicidade da OAB?</span>
-            <span class="faq-q-icon">+</span>
+      <!-- ══ FAQ ═══════════════════════════════════════ -->
+      <section id="faq" class="sec-accent">
+        <p class="eyebrow reveal" data-num="09">Dúvidas</p>
+        <h2 class="sec-title reveal">
+          Dúvidas antes
+          <br />
+          <span class="accent-dark">de pedir orçamento.</span>
+        </h2>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-1">
+              <span class="faq-q-text">O site segue as normas de publicidade da OAB?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-1">
+              <div class="faq-a-inner">
+                Sim. A estrutura respeita as diretrizes do Código de Ética da OAB, sem promessa de
+                resultado, sem linguagem apelativa e com foco em informação, autoridade e contato.
+              </div>
+            </div>
           </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. A estrutura respeita as diretrizes do Código de Ética da OAB, sem promessa de
-              resultado, sem linguagem apelativa e com foco em informação, autoridade e contato.
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-2">
+              <span class="faq-q-text">Qual plano faz mais sentido para o meu escritório?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-2">
+              <div class="faq-a-inner">
+                Se você precisa começar com presença profissional e captação básica, o Start
+                resolve. Se quer explicar melhor sua atuação e fortalecer a busca local, o Business
+                costuma ser o ponto mais equilibrado. Se sua estratégia envolve várias áreas, blog
+                jurídico e mais disputa no Google, o Authority faz mais sentido.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-3">
+              <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-3">
+              <div class="faq-a-inner">
+                Start: até 7 dias. Business: até 14 dias. Authority: até 30 dias. O prazo começa
+                depois do envio das informações do escritório e da confirmação da direção da página.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-4">
+              <span class="faq-q-text">Meu site vai aparecer no Google?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-4">
+              <div class="faq-a-inner">
+                Sim. Todos os planos incluem estrutura básica para indexação. Nos planos mais
+                completos, a estratégia pode ser aprofundada para disputar buscas locais com mais
+                força e mais contexto por área de atuação.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-5">
+              <span class="faq-q-text">Preciso saber de tecnologia?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-5">
+              <div class="faq-a-inner">
+                Não. Você me envia nome, OAB, áreas de atuação, foto e contato por WhatsApp. Eu
+                cuido de design, programação, publicação e SEO sem complicar sua rotina.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-6">
+              <span class="faq-q-text">Posso atualizar o conteúdo depois?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-6">
+              <div class="faq-a-inner">
+                Sim. O plano Authority inclui painel de edição. Nos demais, você pode contratar
+                manutenção mensal para atualizar áreas, textos, artigos, contatos e dados do
+                escritório com agilidade.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-advogado-7">
+              <span class="faq-q-text">Como funciona o pagamento?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-advogado-7">
+              <div class="faq-a-inner">
+                50% na contratação e 50% na entrega do site aprovado. Aceito Pix, transferência ou
+                cartão. O escopo fica alinhado antes do início, sem custo escondido no meio do
+                projeto.
+              </div>
             </div>
           </div>
         </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Qual plano faz mais sentido para o meu escritório?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Se você precisa começar com presença profissional e captação básica, o Start resolve.
-              Se quer explicar melhor sua atuação e fortalecer a busca local, o Business costuma ser
-              o ponto mais equilibrado. Se sua estratégia envolve várias áreas, blog jurídico e mais
-              disputa no Google, o Authority faz mais sentido.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Start: até 7 dias. Business: até 14 dias. Authority: até 30 dias. O prazo começa
-              depois do envio das informações do escritório e da confirmação da direção da página.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Meu site vai aparecer no Google?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. Todos os planos incluem estrutura básica para indexação. Nos planos mais
-              completos, a estratégia pode ser aprofundada para disputar buscas locais com mais
-              força e mais contexto por área de atuação.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Preciso saber de tecnologia?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Não. Você me envia nome, OAB, áreas de atuação, foto e contato por WhatsApp. Eu cuido
-              de design, programação, publicação e SEO sem complicar sua rotina.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Posso atualizar o conteúdo depois?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. O plano Authority inclui painel de edição. Nos demais, você pode contratar
-              manutenção mensal para atualizar áreas, textos, artigos, contatos e dados do
-              escritório com agilidade.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Como funciona o pagamento?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              50% na contratação e 50% na entrega do site aprovado. Aceito Pix, transferência ou
-              cartão. O escopo fica alinhado antes do início, sem custo escondido no meio do
-              projeto.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ CTA FINAL ═════════════════════════════════ -->
-    <section id="cta-final" class="sec-dark">
-      <p class="eyebrow reveal">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Seu escritório precisa parecer
-        <br />
-        <span class="accent">forte antes da primeira consulta.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Quando autoridade, clareza e confiança aparecem rápido, o cliente chega mais pronto para
-        pedir consulta.
-      </p>
-      <div class="cta-ctas reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20do%20meu%20escrit%C3%B3rio"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
-    </section>
+      <!-- ══ CTA FINAL ═════════════════════════════════ -->
+      <section id="cta-final" class="sec-dark">
+        <p class="eyebrow reveal">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Seu escritório precisa parecer
+          <br />
+          <span class="accent">forte antes da primeira consulta.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Quando autoridade, clareza e confiança aparecem rápido, o cliente chega mais pronto para
+          pedir consulta.
+        </p>
+        <div class="cta-ctas reveal">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20do%20meu%20escrit%C3%B3rio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+        </div>
+        <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
+      </section>
+    </main>
+    <!-- /#main-content -->
 
     <!-- FOOTER -->
     <footer>
@@ -1352,7 +1373,7 @@
         sem autorização.
       </span>
       <span class="footer-note">
-        <span class="footer-dot"></span>
+        <span class="footer-dot" aria-hidden="true"></span>
         Disponível para novos projetos
       </span>
     </footer>
@@ -1361,6 +1382,7 @@
     <a
       href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20falar%20sobre%20um%20site%20para%20meu%20escrit%C3%B3rio"
       target="_blank"
+      rel="noopener noreferrer"
       class="wa-float">
       <svg
         xmlns="http://www.w3.org/2000/svg"

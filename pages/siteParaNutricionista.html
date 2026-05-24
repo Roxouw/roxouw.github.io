@@ -166,8 +166,10 @@
     </script>
   </head>
   <body class="framer-v2 niche-page niche-nutricionista">
+    <a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
     <canvas
       id="inkCanvas"
+      aria-hidden="true"
       style="
         position: fixed;
         inset: 0;
@@ -177,8 +179,8 @@
         height: 100%;
       "></canvas>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- NAV -->
     <nav id="navbar">
@@ -261,1090 +263,1108 @@
     </nav>
 
     <!-- ══ HERO ════════════════════════════════════════ -->
-    <section id="hero">
-      <div class="hero-glow"></div>
-      <div class="hero-grid"></div>
+    <main id="main-content">
+      <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
 
-      <div class="hero-badge">Site para nutricionista — Cachoeirinha, RS</div>
-      <div class="hero-eyebrow">Cuidado, autoridade e contato fácil para gerar consulta</div>
-      <h1 class="hero-title">
-        Site para nutricionista
-        <br />
-        transformar visita
-        <span class="accent">em pedido de consulta.</span>
-      </h1>
-      <div class="hero-checklist">
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Visual profissional para transmitir cuidado e método
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Especialidades e abordagem explicadas sem enrolação
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          SEO local para buscas na sua cidade
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          WhatsApp direto para consulta e triagem inicial
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Atendimento direto com quem estrutura e publica
-        </div>
-      </div>
-      <div class="hero-cta">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o%20que%20me%20ajude%20a%20gerar%20mais%20consultas"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <div class="hero-trust">
-        <span class="trust-item trust-count">10+ profissionais de saúde atendidos</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Site em até 7 dias</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Design para saúde</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">SEO no Google</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">WhatsApp integrado</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Atendimento direto com Rosso Labs</span>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PROBLEMA ══════════════════════════════════ -->
-    <section id="problema" class="sec-accent">
-      <p class="eyebrow reveal" data-num="01">O problema</p>
-      <h2 class="sec-title reveal">
-        Seus futuros pacientes estão
-        <br />
-        <span class="accent-dark">pesquisando no Google agora.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Quem busca nutricionista pesquisa primeiro. Se o seu consultório não aparece bem, esse
-        paciente escolhe outro profissional.
-      </p>
-
-      <div class="searches-grid reveal">
-        <div class="search-item">
-          <span class="search-icon">🥗</span>
-          <div class="search-query">"nutricionista perto de mim"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">⚖️</span>
-          <div class="search-query">"nutricionista emagrecimento [cidade]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">🏥</span>
-          <div class="search-query">"consultório nutrição [bairro]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">🌿</span>
-          <div class="search-query">"dieta e reeducação alimentar"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-      </div>
-
-      <div class="problema-alert reveal">
-        <strong>Na nutrição, cuidado e método precisam aparecer antes da consulta.</strong>
-        Um site profissional transmite segurança, explica sua abordagem com clareza e faz o paciente
-        chegar no WhatsApp mais alinhado com o seu atendimento.
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
-    <section id="como-funciona" class="sec-dark">
-      <p class="eyebrow reveal" data-num="02">Como funciona</p>
-      <h2 class="sec-title reveal">
-        Do pedido ao ar
-        <br />
-        <span class="accent">em 4 passos.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você continua atendendo. Eu cuido da parte técnica e entrego o site pronto para captar.
-      </p>
-
-      <div class="steps-grid">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <div class="step-title">Escolha um plano</div>
-          <div class="step-desc">
-            Analise os pacotes e escolha o que melhor se encaixa no seu consultório e orçamento.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <div class="step-title">Envie as informações</div>
-          <div class="step-desc">
-            Nome, especialidades, foto profissional, CRN e contato. Tudo via WhatsApp, sem
-            formulários complicados.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <div class="step-title">Criamos seu site</div>
-          <div class="step-desc">
-            Design clean e acolhedor, SEO configurado, WhatsApp integrado. Você aprova antes de
-            publicar.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <div class="step-title">Site no ar</div>
-          <div class="step-desc">
-            Seu consultório publicado, indexado no Google e captando pacientes em até 7 dias.
-          </div>
-        </div>
-      </div>
-      <p class="steps-footer reveal">
-        Tempo médio de entrega:
-        <span>3 a 7 dias úteis.</span>
-      </p>
-    </section>
-
-    <section class="cta-inline sec-dark">
-      <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Se o seu consultório já entrega resultado,
-        <br />
-        <span class="accent">falta uma página que venda seu método com clareza.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você me chama no WhatsApp, eu entendo seu atendimento e te mostro o formato mais certo para
-        atrair pacientes mais alinhados com a sua consulta.
-      </p>
-      <div class="cta-inline-actions reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          Falar sobre meu consultório
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-inline-note reveal">
-        Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ EXEMPLOS ══════════════════════════════════ -->
-    <section id="exemplos" class="sec-accent">
-      <p class="eyebrow reveal" data-num="03">Modelos</p>
-      <h2 class="sec-title reveal">
-        Modelos para consultório,
-        <br />
-        <span class="accent-dark">esportiva e emagrecimento.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        A página precisa transmitir cuidado, método e clareza para a consulta.
-      </p>
-
-      <div class="examples-grid">
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv1">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 40%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Nutrição Clínica</div>
-            <div class="example-name">Consultório de Nutrição</div>
-            <div class="example-desc">
-              Estrutura para explicar especialidades, apresentar o método e gerar mais confiança
-              antes do pedido de consulta.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Especialidades</span>
-              <span class="example-tag">Perfil CRN</span>
-              <span class="example-tag">WhatsApp</span>
-              <span class="example-tag">SEO local</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv2">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 55%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Nutrição Esportiva</div>
-            <div class="example-name">Nutrição Esportiva & Performance</div>
-            <div class="example-desc">
-              Página para vender método, especialidade e resultado com mais clareza, reduzindo
-              objeção antes do primeiro contato.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Planos alimentares</span>
-              <span class="example-tag">Resultados</span>
-              <span class="example-tag">Agendamento online</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv3">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 45%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Nutrição & Emagrecimento</div>
-            <div class="example-name">Especialista em Emagrecimento</div>
-            <div class="example-desc">
-              Estrutura focada em emagrecimento com prova social, transformação e CTA que incentiva
-              o paciente a marcar a primeira conversa.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Transformações</span>
-              <span class="example-tag">Consulta grátis</span>
-              <span class="example-tag">Captação de leads</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-adv4">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 35%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Nutricionista Solo</div>
-            <div class="example-name">Perfil Individual</div>
-            <div class="example-desc">
-              Página pessoal para reforçar autoridade, acolhimento e clareza sobre o tipo de
-              atendimento oferecido.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Perfil pessoal</span>
-              <span class="example-tag">Formação</span>
-              <span class="example-tag">Agenda</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-inline examples-inline-cta">
-        <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
-        <h2 class="sec-title reveal">
-          Viu como a página
+        <div class="hero-badge">Site para nutricionista — Cachoeirinha, RS</div>
+        <div class="hero-eyebrow">Cuidado, autoridade e contato fácil para gerar consulta</div>
+        <h1 class="hero-title">
+          Site para nutricionista
           <br />
-          <span class="accent-dark">pode vender seu método.</span>
+          transformar visita
+          <span class="accent">em pedido de consulta.</span>
+        </h1>
+        <div class="hero-checklist">
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Visual profissional para transmitir cuidado e método
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Especialidades e abordagem explicadas sem enrolação
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            SEO local para buscas na sua cidade
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            WhatsApp direto para consulta e triagem inicial
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Atendimento direto com quem estrutura e publica
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o%20que%20me%20ajude%20a%20gerar%20mais%20consultas"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item trust-count">10+ profissionais de saúde atendidos</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Site em até 7 dias</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Design para saúde</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">SEO no Google</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">WhatsApp integrado</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Atendimento direto com Rosso Labs</span>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROBLEMA ══════════════════════════════════ -->
+      <section id="problema" class="sec-accent">
+        <p class="eyebrow reveal" data-num="01">O problema</p>
+        <h2 class="sec-title reveal">
+          Seus futuros pacientes estão
+          <br />
+          <span class="accent-dark">pesquisando no Google agora.</span>
         </h2>
         <p class="sec-sub reveal">
-          Agora eu adapto a estrutura para sua especialidade, seu posicionamento e o tipo de
-          consulta que você quer atrair.
+          Quem busca nutricionista pesquisa primeiro. Se o seu consultório não aparece bem, esse
+          paciente escolhe outro profissional.
+        </p>
+
+        <div class="searches-grid reveal">
+          <div class="search-item">
+            <span class="search-icon">🥗</span>
+            <div class="search-query">"nutricionista perto de mim"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">⚖️</span>
+            <div class="search-query">"nutricionista emagrecimento [cidade]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">🏥</span>
+            <div class="search-query">"consultório nutrição [bairro]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">🌿</span>
+            <div class="search-query">"dieta e reeducação alimentar"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+        </div>
+
+        <div class="problema-alert reveal">
+          <strong>Na nutrição, cuidado e método precisam aparecer antes da consulta.</strong>
+          Um site profissional transmite segurança, explica sua abordagem com clareza e faz o
+          paciente chegar no WhatsApp mais alinhado com o seu atendimento.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
+      <section id="como-funciona" class="sec-dark">
+        <p class="eyebrow reveal" data-num="02">Como funciona</p>
+        <h2 class="sec-title reveal">
+          Do pedido ao ar
+          <br />
+          <span class="accent">em 4 passos.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você continua atendendo. Eu cuido da parte técnica e entrego o site pronto para captar.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <div class="step-title">Escolha um plano</div>
+            <div class="step-desc">
+              Analise os pacotes e escolha o que melhor se encaixa no seu consultório e orçamento.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <div class="step-title">Envie as informações</div>
+            <div class="step-desc">
+              Nome, especialidades, foto profissional, CRN e contato. Tudo via WhatsApp, sem
+              formulários complicados.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <div class="step-title">Criamos seu site</div>
+            <div class="step-desc">
+              Design clean e acolhedor, SEO configurado, WhatsApp integrado. Você aprova antes de
+              publicar.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <div class="step-title">Site no ar</div>
+            <div class="step-desc">
+              Seu consultório publicado, indexado no Google e captando pacientes em até 7 dias.
+            </div>
+          </div>
+        </div>
+        <p class="steps-footer reveal">
+          Tempo médio de entrega:
+          <span>3 a 7 dias úteis.</span>
+        </p>
+      </section>
+
+      <section class="cta-inline sec-dark">
+        <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Se o seu consultório já entrega resultado,
+          <br />
+          <span class="accent">falta uma página que venda seu método com clareza.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você me chama no WhatsApp, eu entendo seu atendimento e te mostro o formato mais certo
+          para atrair pacientes mais alinhados com a sua consulta.
         </p>
         <div class="cta-inline-actions reveal">
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20para%20nutricionista%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20consult%C3%B3rio"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-whatsapp btn-lg">
             Falar sobre meu consultório
           </a>
           <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
         </div>
         <p class="cta-inline-note reveal">
-          Método mais claro · Mais confiança · Direto com Rosso Labs
+          Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
         </p>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
-    <section id="depoimentos" class="sec-dark">
-      <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
-      <h2 class="sec-title reveal">
-        Quando cuidado e método
-        <br />
-        <span class="accent">ficam claros.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        A consulta acontece com menos atrito quando a página transmite acolhimento e segurança.
-      </p>
+      <!-- ══ EXEMPLOS ══════════════════════════════════ -->
+      <section id="exemplos" class="sec-accent">
+        <p class="eyebrow reveal" data-num="03">Modelos</p>
+        <h2 class="sec-title reveal">
+          Modelos para consultório,
+          <br />
+          <span class="accent-dark">esportiva e emagrecimento.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          A página precisa transmitir cuidado, método e clareza para a consulta.
+        </p>
 
-      <div class="dep-grid">
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Antes dependia só do Instagram. Depois do site, comecei a receber mensagens de pessoas
-            que me encontraram no Google e já entenderam melhor o meu trabalho.
-            <strong>Em menos de 2 meses o investimento já havia se pago.</strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Ana Paula S.</span>
-            <span class="dep-role">Nutricionista Clínica · Porto Alegre, RS</span>
+        <div class="examples-grid">
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv1">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 40%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Nutrição Clínica</div>
+              <div class="example-name">Consultório de Nutrição</div>
+              <div class="example-desc">
+                Estrutura para explicar especialidades, apresentar o método e gerar mais confiança
+                antes do pedido de consulta.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Especialidades</span>
+                <span class="example-tag">Perfil CRN</span>
+                <span class="example-tag">WhatsApp</span>
+                <span class="example-tag">SEO local</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv2">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 55%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Nutrição Esportiva</div>
+              <div class="example-name">Nutrição Esportiva & Performance</div>
+              <div class="example-desc">
+                Página para vender método, especialidade e resultado com mais clareza, reduzindo
+                objeção antes do primeiro contato.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Planos alimentares</span>
+                <span class="example-tag">Resultados</span>
+                <span class="example-tag">Agendamento online</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv3">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 45%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Nutrição & Emagrecimento</div>
+              <div class="example-name">Especialista em Emagrecimento</div>
+              <div class="example-desc">
+                Estrutura focada em emagrecimento com prova social, transformação e CTA que
+                incentiva o paciente a marcar a primeira conversa.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Transformações</span>
+                <span class="example-tag">Consulta grátis</span>
+                <span class="example-tag">Captação de leads</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-adv4">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 35%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Nutricionista Solo</div>
+              <div class="example-name">Perfil Individual</div>
+              <div class="example-desc">
+                Página pessoal para reforçar autoridade, acolhimento e clareza sobre o tipo de
+                atendimento oferecido.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Perfil pessoal</span>
+                <span class="example-tag">Formação</span>
+                <span class="example-tag">Agenda</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            O site ficou com uma cara incrível — clean, acolhedor e profissional.
-            <strong>
-              Meus pacientes chegam mais seguros porque o site transmite cuidado e clareza antes da
-              primeira consulta.
-            </strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Camila R.</span>
-            <span class="dep-role">Nutricionista Esportiva · Cachoeirinha, RS</span>
-          </div>
-        </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Processo simples, entrega rápida e resultado acima do esperado.
-            <strong>
-              Hoje apareço melhor nas buscas e recebo contatos mais alinhados com a consulta que eu
-              vendo.
-            </strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Júlia M.</span>
-            <span class="dep-role">Nutricionista · Canoas, RS</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <hr class="divider" />
-
-    <!-- ══ PROJETO REAL ══════════════════════════════ -->
-    <section id="projeto-real" class="sec-accent">
-      <p class="eyebrow reveal" data-num="05">Projeto entregue</p>
-      <div class="projeto-inner">
-        <!-- Info -->
-        <div class="reveal">
-          <div class="projeto-badge">Site real · Dra. Camila — Nutrição</div>
-          <h2 class="projeto-title">
-            Um case que mostra
+        <div class="cta-inline examples-inline-cta">
+          <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
+          <h2 class="sec-title reveal">
+            Viu como a página
             <br />
-            <span class="accent-dark">consulta mais fácil de vender.</span>
+            <span class="accent-dark">pode vender seu método.</span>
           </h2>
-          <p class="projeto-desc">
-            Este é o modelo de site desenvolvido para nutricionistas com foco em consulta. A página
-            organiza especialidades, transmite cuidado e deixa o pedido de atendimento muito mais
-            simples para quem chega pelo Google ou indicação.
+          <p class="sec-sub reveal">
+            Agora eu adapto a estrutura para sua especialidade, seu posicionamento e o tipo de
+            consulta que você quer atrair.
           </p>
-          <div class="projeto-tags">
-            <span class="projeto-tag">Cormorant Garamond</span>
-            <span class="projeto-tag">Paleta bege & dourado</span>
-            <span class="projeto-tag">Áreas de atuação</span>
-            <span class="projeto-tag">WhatsApp integrado</span>
-            <span class="projeto-tag">SEO</span>
-            <span class="projeto-tag">Mobile-first</span>
-          </div>
-          <div class="projeto-links">
-            <a href="/pages/nutricionista.html" target="_blank" class="btn btn-primary">
-              Ver site completo →
-            </a>
+          <div class="cta-inline-actions reveal">
             <a
-              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+              href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20para%20nutricionista%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20o%20meu%20consult%C3%B3rio"
               target="_blank"
-              class="btn btn-ghost">
-              Quero um parecido
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp btn-lg">
+              Falar sobre meu consultório
+            </a>
+            <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+          </div>
+          <p class="cta-inline-note reveal">
+            Método mais claro · Mais confiança · Direto com Rosso Labs
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
+      <section id="depoimentos" class="sec-dark">
+        <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
+        <h2 class="sec-title reveal">
+          Quando cuidado e método
+          <br />
+          <span class="accent">ficam claros.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          A consulta acontece com menos atrito quando a página transmite acolhimento e segurança.
+        </p>
+
+        <div class="dep-grid">
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Antes dependia só do Instagram. Depois do site, comecei a receber mensagens de pessoas
+              que me encontraram no Google e já entenderam melhor o meu trabalho.
+              <strong>Em menos de 2 meses o investimento já havia se pago.</strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Ana Paula S.</span>
+              <span class="dep-role">Nutricionista Clínica · Porto Alegre, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              O site ficou com uma cara incrível — clean, acolhedor e profissional.
+              <strong>
+                Meus pacientes chegam mais seguros porque o site transmite cuidado e clareza antes
+                da primeira consulta.
+              </strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Camila R.</span>
+              <span class="dep-role">Nutricionista Esportiva · Cachoeirinha, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Processo simples, entrega rápida e resultado acima do esperado.
+              <strong>
+                Hoje apareço melhor nas buscas e recebo contatos mais alinhados com a consulta que
+                eu vendo.
+              </strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Júlia M.</span>
+              <span class="dep-role">Nutricionista · Canoas, RS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROJETO REAL ══════════════════════════════ -->
+      <section id="projeto-real" class="sec-accent">
+        <p class="eyebrow reveal" data-num="05">Projeto entregue</p>
+        <div class="projeto-inner">
+          <!-- Info -->
+          <div class="reveal">
+            <div class="projeto-badge">Site real · Dra. Camila — Nutrição</div>
+            <h2 class="projeto-title">
+              Um case que mostra
+              <br />
+              <span class="accent-dark">consulta mais fácil de vender.</span>
+            </h2>
+            <p class="projeto-desc">
+              Este é o modelo de site desenvolvido para nutricionistas com foco em consulta. A
+              página organiza especialidades, transmite cuidado e deixa o pedido de atendimento
+              muito mais simples para quem chega pelo Google ou indicação.
+            </p>
+            <div class="projeto-tags">
+              <span class="projeto-tag">Cormorant Garamond</span>
+              <span class="projeto-tag">Paleta bege & dourado</span>
+              <span class="projeto-tag">Áreas de atuação</span>
+              <span class="projeto-tag">WhatsApp integrado</span>
+              <span class="projeto-tag">SEO</span>
+              <span class="projeto-tag">Mobile-first</span>
+            </div>
+            <div class="projeto-links">
+              <a
+                href="/pages/nutricionista.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary">
+                Ver site completo →
+              </a>
+              <a
+                href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-ghost">
+                Quero um parecido
+              </a>
+            </div>
+          </div>
+
+          <!-- Browser preview -->
+          <div class="reveal" style="position: relative">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                </div>
+                <div class="browser-url">roxouw.github.io/nutricionista.html</div>
+              </div>
+              <div class="browser-viewport">
+                <img
+                  loading="lazy"
+                  src="/assets/images/prints/desktop/nutricionista.webp"
+                  alt="Preview site Nutricionista"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    display: block;
+                  " />
+                <div class="browser-overlay">
+                  <a href="/pages/nutricionista.html" target="_blank" rel="noopener noreferrer">
+                    Abrir site completo →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
+      <section id="prova" class="sec-dark">
+        <p class="eyebrow reveal" data-num="06">Por que escolher</p>
+        <h2 class="sec-title reveal">
+          Confiança antes
+          <br />
+          <span class="accent">da primeira conversa.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Cada detalhe é pensado para transmitir confiança e gerar consulta.
+        </p>
+
+        <div class="proof-grid">
+          <div class="proof-item reveal">
+            <span class="proof-num">7</span>
+            <div class="proof-label">Dias para entregar</div>
+            <div class="proof-desc">
+              Do briefing ao site publicado. Você coloca o consultório no ar rápido e começa a
+              captar com mais consistência.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">100%</span>
+            <div class="proof-label">Mobile-first</div>
+            <div class="proof-desc">
+              A maioria dos clientes pesquisa pelo celular. Seu site funciona perfeitamente em
+              qualquer tela.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">+10</span>
+            <div class="proof-label">Projetos entregues</div>
+            <div class="proof-desc">
+              Projetos publicados com foco em clareza, posicionamento e contato direto, inclusive na
+              área de saúde.
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-features">
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🥗</span>
+            <div>
+              <div class="proof-feat-title">Design para saúde profissional</div>
+              <div class="proof-feat-desc">
+                Visual limpo e acolhedor para reforçar método, cuidado e confiança antes da
+                consulta.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🔍</span>
+            <div>
+              <div class="proof-feat-title">SEO para nutricionistas</div>
+              <div class="proof-feat-desc">
+                Seu consultório aparece melhor quando o paciente pesquisa por nutricionista ou pela
+                especialidade que você atende.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">💬</span>
+            <div>
+              <div class="proof-feat-title">Captação pelo WhatsApp</div>
+              <div class="proof-feat-desc">
+                O CTA leva o paciente para uma conversa mais pronta, com menos fricção para marcar.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">📋</span>
+            <div>
+              <div class="proof-feat-title">Especialidades em destaque</div>
+              <div class="proof-feat-desc">
+                Emagrecimento, esportiva e clínica ficam claros em linguagem fácil para o paciente.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">⚡</span>
+            <div>
+              <div class="proof-feat-title">Carregamento rápido</div>
+              <div class="proof-feat-desc">
+                Site rápido evita perder consulta por espera ou fricção no mobile.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🛠️</span>
+            <div>
+              <div class="proof-feat-title">Suporte pós-entrega</div>
+              <div class="proof-feat-desc">
+                Mudou agenda, serviço ou posicionamento? Os ajustes continuam simples depois da
+                publicação.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PLANOS ════════════════════════════════════ -->
+      <section id="planos" class="sec-accent">
+        <p class="eyebrow reveal" data-num="07">Planos</p>
+        <h2 class="sec-title reveal">
+          Planos para transformar
+          <br />
+          <span class="accent-dark">busca em consulta.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Escopo claro e o plano certo para transformar busca em consulta com mais previsibilidade.
+        </p>
+
+        <div class="packages-grid">
+          <div class="pkg reveal">
+            <div class="pkg-name">Start</div>
+            <div class="pkg-desc">
+              Presença profissional para captar consultas com mais agilidade e clareza.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>1 página (landing page de nutrição)</li>
+              <li>Seção de especialidades</li>
+              <li>Perfil da nutricionista com CRN</li>
+              <li>Botão WhatsApp integrado</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Até 2 revisões</li>
+              <li class="no">Domínio personalizado</li>
+              <li class="no">SEO avançado</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero presença profissional
+            </a>
+          </div>
+
+          <div class="pkg featured reveal">
+            <div class="pkg-badge">Mais popular</div>
+            <div class="pkg-name">Business</div>
+            <div class="pkg-desc">
+              Mais visibilidade no Google e mais consultas com uma estrutura mais completa.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">1.997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Até 4 páginas (Home, Sobre, Áreas, Contato)</li>
+              <li>Design para saúde personalizado</li>
+              <li>WhatsApp com mensagem de consulta</li>
+              <li>SEO básico (indexado no Google)</li>
+              <li>Domínio personalizado (.com.br)</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Preview no WhatsApp e LinkedIn</li>
+              <li>Até 3 revisões</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Business%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero mais consultas
+            </a>
+          </div>
+
+          <div class="pkg reveal">
+            <div class="pkg-name">Authority</div>
+            <div class="pkg-desc">Para liderar buscas locais com um site premium e completo.</div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">2.997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Páginas ilimitadas por especialidade</li>
+              <li>Design exclusivo e premium</li>
+              <li>SEO completo + Google Analytics</li>
+              <li>Domínio personalizado (.com.br)</li>
+              <li>Blog de nutrição (artigos que atraem pacientes)</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Painel para atualizar conteúdo</li>
+              <li>Revisões ilimitadas até aprovação</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Authority%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero crescer no Google
             </a>
           </div>
         </div>
+        <div class="plans-helper reveal">
+          <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
+          <p class="plans-helper-text">
+            Start para sair do zero com presença profissional. Business para a maioria dos
+            consultórios que querem explicar método e aumentar consultas. Authority para quem quer
+            crescer por especialidade e disputar mais espaço no Google.
+          </p>
+        </div>
+      </section>
 
-        <!-- Browser preview -->
-        <div class="reveal" style="position: relative">
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <div class="browser-dots">
-                <div class="browser-dot"></div>
-                <div class="browser-dot"></div>
-                <div class="browser-dot"></div>
+      <hr class="divider" />
+
+      <!-- UPGRADES & MANUTENÇÃO -->
+      <section id="addons" class="sec-dark">
+        <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
+        <h2 class="sec-title reveal">
+          Upgrades e
+          <br />
+          <span class="accent">manutenção mensal.</span>
+        </h2>
+        <p class="sec-sub reveal">Adicione recursos específicos quando fizer sentido.</p>
+
+        <div class="addons-grid">
+          <div>
+            <div class="addons-col-title reveal">
+              Upgrades
+              <span>adicional único</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Página por especialidade</div>
+                  <div class="addon-desc">
+                    Página dedicada a cada especialidade — Emagrecimento, Esportiva, Infantil etc. —
+                    com SEO específico
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 200
+                  <small>por página</small>
+                </div>
               </div>
-              <div class="browser-url">roxouw.github.io/nutricionista.html</div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Domínio personalizado</div>
+                  <div class="addon-desc">
+                    Registro e configuração do .com.br do seu consultório — ex:
+                    dracamilanutricionista.com.br
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 120
+                  <small>por ano</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Botão WhatsApp flutuante</div>
+                  <div class="addon-desc">
+                    Ícone fixo na tela com mensagem: "Olá, gostaria de agendar uma consulta de
+                    nutrição!" — já preenchida
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 150
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Blog de nutrição</div>
+                  <div class="addon-desc">
+                    Seção de artigos que atrai pacientes via Google — "como emagrecer com saúde",
+                    "dieta para ganho de massa" etc.
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 300
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Google Analytics</div>
+                  <div class="addon-desc">
+                    Painel para ver quantas pessoas visitam seu site, de onde vêm e quais páginas
+                    mais acessam
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 100
+                  <small>único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Formulário de agendamento</div>
+                  <div class="addon-desc">
+                    Formulário que envia o nome, objetivo e disponibilidade do paciente direto para
+                    seu WhatsApp
+                  </div>
+                </div>
+                <div class="addon-price">
+                  + R$ 180
+                  <small>único</small>
+                </div>
+              </div>
             </div>
-            <div class="browser-viewport">
-              <img
-                loading="lazy"
-                src="/assets/images/prints/desktop/nutricionista.webp"
-                alt="Preview site Nutricionista"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  object-position: top;
-                  display: block;
-                " />
-              <div class="browser-overlay">
-                <a href="/pages/nutricionista.html" target="_blank">Abrir site completo →</a>
+          </div>
+
+          <div>
+            <div class="addons-col-title reveal">
+              Manutenção
+              <span>recorrente</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Essencial</div>
+                  <div class="addon-desc">
+                    Até 2 alterações/mês — textos, telefone, endereço, áreas de atuação
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 99
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item popular">
+                <div class="addon-info">
+                  <div class="addon-popular-badge">⭐ Mais escolhido</div>
+                  <div class="addon-name">Plano Plus</div>
+                  <div class="addon-desc">
+                    Até 5 alterações/mês + monitoramento de desempenho + backup mensal
+                  </div>
+                  <div class="addon-tag-list">
+                    <span class="addon-tag">troca de textos</span>
+                    <span class="addon-tag">novos serviços</span>
+                    <span class="addon-tag">publicação de artigos</span>
+                    <span class="addon-tag">ajuste de SEO</span>
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 189
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 1.890/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Full</div>
+                  <div class="addon-desc">
+                    Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 299
+                    <small>/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 2.990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Por que contratar manutenção?</div>
+                  <div class="addon-desc">
+                    Sites sem atualização perdem posição no Google. Com manutenção, seu consultório
+                    fica sempre relevante — e você não precisa me acionar toda vez que mudar um
+                    serviço ou atualizar seus horários.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="maint-tagline">
+              <strong>Seu site pronto é só o começo.</strong>
+              <br />
+              Mantemos ele atualizado, seguro e funcionando para você captar clientes todos os dias.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ FAQ ═══════════════════════════════════════ -->
+      <section id="faq" class="sec-accent">
+        <p class="eyebrow reveal" data-num="09">Dúvidas</p>
+        <h2 class="sec-title reveal">
+          Dúvidas antes
+          <br />
+          <span class="accent-dark">de pedir orçamento.</span>
+        </h2>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-1">
+              <span class="faq-q-text">Qual plano faz mais sentido para o meu consultório?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-1">
+              <div class="faq-a-inner">
+                O Start funciona bem para presença digital enxuta e captação simples. O Business é o
+                melhor ponto para nutricionistas que querem explicar método, especialidades e gerar
+                mais consultas com clareza. O Authority é ideal para quem quer crescer no Google,
+                ter páginas por especialidade e uma estrutura mais completa.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-2">
+              <span class="faq-q-text">O site segue as regras do CFN para nutricionistas?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-2">
+              <div class="faq-a-inner">
+                Sim. O site é desenvolvido dentro das diretrizes do Conselho Federal de
+                Nutricionistas (CFN), sem promessas de resultado específico ou linguagem proibida
+                pelo código de ética. O foco é informar, transmitir confiança e facilitar o contato
+                — dentro das normas.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-3">
+              <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-3">
+              <div class="faq-a-inner">
+                O prazo varia conforme o plano: Start em até 7 dias, Business em até 14 dias e
+                Authority em até 30 dias. O cronograma começa assim que você envia as informações do
+                consultório e aprovamos a direção inicial.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-4">
+              <span class="faq-q-text">Meu site vai aparecer no Google?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-4">
+              <div class="faq-a-inner">
+                Sim. Todos os planos incluem configuração básica de SEO para indexação no Google. O
+                plano Authority inclui SEO completo com palavras-chave específicas da nutrição e da
+                sua cidade — como "nutricionista perto de mim".
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-5">
+              <span class="faq-q-text">Preciso entender de tecnologia?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-5">
+              <div class="faq-a-inner">
+                Não. Você me passa as informações do seu consultório via WhatsApp — nome, CRN,
+                especialidades, foto — e eu cuido de todo o resto: design, programação, publicação e
+                SEO. Simples assim.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-6">
+              <span class="faq-q-text">Posso atualizar o conteúdo depois?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-6">
+              <div class="faq-a-inner">
+                Sim. O plano Authority inclui painel de edição. Nos demais, eu mesmo faço as
+                alterações por manutenção mensal, o que costuma ser a opção mais prática para
+                agenda, especialidades, textos e novos serviços.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-nutricionista-7">
+              <span class="faq-q-text">Como funciona o pagamento?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-nutricionista-7">
+              <div class="faq-a-inner">
+                50% na assinatura do contrato e 50% na entrega do site aprovado. Aceito Pix,
+                transferência ou cartão. Tudo fica claro antes do início, sem surpresa no valor.
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
-    <section id="prova" class="sec-dark">
-      <p class="eyebrow reveal" data-num="06">Por que escolher</p>
-      <h2 class="sec-title reveal">
-        Confiança antes
-        <br />
-        <span class="accent">da primeira conversa.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Cada detalhe é pensado para transmitir confiança e gerar consulta.
-      </p>
-
-      <div class="proof-grid">
-        <div class="proof-item reveal">
-          <span class="proof-num">7</span>
-          <div class="proof-label">Dias para entregar</div>
-          <div class="proof-desc">
-            Do briefing ao site publicado. Você coloca o consultório no ar rápido e começa a captar
-            com mais consistência.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">100%</span>
-          <div class="proof-label">Mobile-first</div>
-          <div class="proof-desc">
-            A maioria dos clientes pesquisa pelo celular. Seu site funciona perfeitamente em
-            qualquer tela.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">+10</span>
-          <div class="proof-label">Projetos entregues</div>
-          <div class="proof-desc">
-            Projetos publicados com foco em clareza, posicionamento e contato direto, inclusive na
-            área de saúde.
-          </div>
-        </div>
-      </div>
-
-      <div class="proof-features">
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🥗</span>
-          <div>
-            <div class="proof-feat-title">Design para saúde profissional</div>
-            <div class="proof-feat-desc">
-              Visual limpo e acolhedor para reforçar método, cuidado e confiança antes da consulta.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🔍</span>
-          <div>
-            <div class="proof-feat-title">SEO para nutricionistas</div>
-            <div class="proof-feat-desc">
-              Seu consultório aparece melhor quando o paciente pesquisa por nutricionista ou pela
-              especialidade que você atende.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">💬</span>
-          <div>
-            <div class="proof-feat-title">Captação pelo WhatsApp</div>
-            <div class="proof-feat-desc">
-              O CTA leva o paciente para uma conversa mais pronta, com menos fricção para marcar.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">📋</span>
-          <div>
-            <div class="proof-feat-title">Especialidades em destaque</div>
-            <div class="proof-feat-desc">
-              Emagrecimento, esportiva e clínica ficam claros em linguagem fácil para o paciente.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">⚡</span>
-          <div>
-            <div class="proof-feat-title">Carregamento rápido</div>
-            <div class="proof-feat-desc">
-              Site rápido evita perder consulta por espera ou fricção no mobile.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🛠️</span>
-          <div>
-            <div class="proof-feat-title">Suporte pós-entrega</div>
-            <div class="proof-feat-desc">
-              Mudou agenda, serviço ou posicionamento? Os ajustes continuam simples depois da
-              publicação.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PLANOS ════════════════════════════════════ -->
-    <section id="planos" class="sec-accent">
-      <p class="eyebrow reveal" data-num="07">Planos</p>
-      <h2 class="sec-title reveal">
-        Planos para transformar
-        <br />
-        <span class="accent-dark">busca em consulta.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Escopo claro e o plano certo para transformar busca em consulta com mais previsibilidade.
-      </p>
-
-      <div class="packages-grid">
-        <div class="pkg reveal">
-          <div class="pkg-name">Start</div>
-          <div class="pkg-desc">
-            Presença profissional para captar consultas com mais agilidade e clareza.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>1 página (landing page de nutrição)</li>
-            <li>Seção de especialidades</li>
-            <li>Perfil da nutricionista com CRN</li>
-            <li>Botão WhatsApp integrado</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Até 2 revisões</li>
-            <li class="no">Domínio personalizado</li>
-            <li class="no">SEO avançado</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero presença profissional
-          </a>
-        </div>
-
-        <div class="pkg featured reveal">
-          <div class="pkg-badge">Mais popular</div>
-          <div class="pkg-name">Business</div>
-          <div class="pkg-desc">
-            Mais visibilidade no Google e mais consultas com uma estrutura mais completa.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">1.997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Até 4 páginas (Home, Sobre, Áreas, Contato)</li>
-            <li>Design para saúde personalizado</li>
-            <li>WhatsApp com mensagem de consulta</li>
-            <li>SEO básico (indexado no Google)</li>
-            <li>Domínio personalizado (.com.br)</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Preview no WhatsApp e LinkedIn</li>
-            <li>Até 3 revisões</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Business%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero mais consultas
-          </a>
-        </div>
-
-        <div class="pkg reveal">
-          <div class="pkg-name">Authority</div>
-          <div class="pkg-desc">Para liderar buscas locais com um site premium e completo.</div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">2.997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Páginas ilimitadas por especialidade</li>
-            <li>Design exclusivo e premium</li>
-            <li>SEO completo + Google Analytics</li>
-            <li>Domínio personalizado (.com.br)</li>
-            <li>Blog de nutrição (artigos que atraem pacientes)</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Painel para atualizar conteúdo</li>
-            <li>Revisões ilimitadas até aprovação</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Authority%20%C3%A9%20o%20mais%20certo%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero crescer no Google
-          </a>
-        </div>
-      </div>
-      <div class="plans-helper reveal">
-        <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
-        <p class="plans-helper-text">
-          Start para sair do zero com presença profissional. Business para a maioria dos
-          consultórios que querem explicar método e aumentar consultas. Authority para quem quer
-          crescer por especialidade e disputar mais espaço no Google.
+      <!-- ══ CTA FINAL ═════════════════════════════════ -->
+      <section id="cta-final" class="sec-dark">
+        <p class="eyebrow reveal">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Seu consultório precisa mostrar
+          <br />
+          <span class="accent">cuidado e autoridade antes da consulta.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Quando cuidado, método e especialidade ficam claros, o paciente chega mais disposto a
+          pedir consulta.
         </p>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- UPGRADES & MANUTENÇÃO -->
-    <section id="addons" class="sec-dark">
-      <p class="eyebrow reveal" data-num="08">Extras & Recorrência</p>
-      <h2 class="sec-title reveal">
-        Upgrades e
-        <br />
-        <span class="accent">manutenção mensal.</span>
-      </h2>
-      <p class="sec-sub reveal">Adicione recursos específicos quando fizer sentido.</p>
-
-      <div class="addons-grid">
-        <div>
-          <div class="addons-col-title reveal">
-            Upgrades
-            <span>adicional único</span>
-          </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Página por especialidade</div>
-                <div class="addon-desc">
-                  Página dedicada a cada especialidade — Emagrecimento, Esportiva, Infantil etc. —
-                  com SEO específico
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 200
-                <small>por página</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Domínio personalizado</div>
-                <div class="addon-desc">
-                  Registro e configuração do .com.br do seu consultório — ex:
-                  dracamilanutricionista.com.br
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 120
-                <small>por ano</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Botão WhatsApp flutuante</div>
-                <div class="addon-desc">
-                  Ícone fixo na tela com mensagem: "Olá, gostaria de agendar uma consulta de
-                  nutrição!" — já preenchida
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 150
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Blog de nutrição</div>
-                <div class="addon-desc">
-                  Seção de artigos que atrai pacientes via Google — "como emagrecer com saúde",
-                  "dieta para ganho de massa" etc.
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 300
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Google Analytics</div>
-                <div class="addon-desc">
-                  Painel para ver quantas pessoas visitam seu site, de onde vêm e quais páginas mais
-                  acessam
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 100
-                <small>único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Formulário de agendamento</div>
-                <div class="addon-desc">
-                  Formulário que envia o nome, objetivo e disponibilidade do paciente direto para
-                  seu WhatsApp
-                </div>
-              </div>
-              <div class="addon-price">
-                + R$ 180
-                <small>único</small>
-              </div>
-            </div>
-          </div>
+        <div class="cta-ctas reveal">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20um%20or%C3%A7amento%20para%20um%20site%20do%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
         </div>
-
-        <div>
-          <div class="addons-col-title reveal">
-            Manutenção
-            <span>recorrente</span>
-          </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Essencial</div>
-                <div class="addon-desc">
-                  Até 2 alterações/mês — textos, telefone, endereço, áreas de atuação
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 99
-                  <small>/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item popular">
-              <div class="addon-info">
-                <div class="addon-popular-badge">⭐ Mais escolhido</div>
-                <div class="addon-name">Plano Plus</div>
-                <div class="addon-desc">
-                  Até 5 alterações/mês + monitoramento de desempenho + backup mensal
-                </div>
-                <div class="addon-tag-list">
-                  <span class="addon-tag">troca de textos</span>
-                  <span class="addon-tag">novos serviços</span>
-                  <span class="addon-tag">publicação de artigos</span>
-                  <span class="addon-tag">ajuste de SEO</span>
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 189
-                  <small>/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 1.890/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Full</div>
-                <div class="addon-desc">
-                  Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 299
-                  <small>/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 2.990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Por que contratar manutenção?</div>
-                <div class="addon-desc">
-                  Sites sem atualização perdem posição no Google. Com manutenção, seu consultório
-                  fica sempre relevante — e você não precisa me acionar toda vez que mudar um
-                  serviço ou atualizar seus horários.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="maint-tagline">
-            <strong>Seu site pronto é só o começo.</strong>
-            <br />
-            Mantemos ele atualizado, seguro e funcionando para você captar clientes todos os dias.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ FAQ ═══════════════════════════════════════ -->
-    <section id="faq" class="sec-accent">
-      <p class="eyebrow reveal" data-num="09">Dúvidas</p>
-      <h2 class="sec-title reveal">
-        Dúvidas antes
-        <br />
-        <span class="accent-dark">de pedir orçamento.</span>
-      </h2>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Qual plano faz mais sentido para o meu consultório?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              O Start funciona bem para presença digital enxuta e captação simples. O Business é o
-              melhor ponto para nutricionistas que querem explicar método, especialidades e gerar
-              mais consultas com clareza. O Authority é ideal para quem quer crescer no Google, ter
-              páginas por especialidade e uma estrutura mais completa.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">O site segue as regras do CFN para nutricionistas?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. O site é desenvolvido dentro das diretrizes do Conselho Federal de Nutricionistas
-              (CFN), sem promessas de resultado específico ou linguagem proibida pelo código de
-              ética. O foco é informar, transmitir confiança e facilitar o contato — dentro das
-              normas.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              O prazo varia conforme o plano: Start em até 7 dias, Business em até 14 dias e
-              Authority em até 30 dias. O cronograma começa assim que você envia as informações do
-              consultório e aprovamos a direção inicial.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Meu site vai aparecer no Google?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. Todos os planos incluem configuração básica de SEO para indexação no Google. O
-              plano Authority inclui SEO completo com palavras-chave específicas da nutrição e da
-              sua cidade — como "nutricionista perto de mim".
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Preciso entender de tecnologia?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Não. Você me passa as informações do seu consultório via WhatsApp — nome, CRN,
-              especialidades, foto — e eu cuido de todo o resto: design, programação, publicação e
-              SEO. Simples assim.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Posso atualizar o conteúdo depois?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. O plano Authority inclui painel de edição. Nos demais, eu mesmo faço as
-              alterações por manutenção mensal, o que costuma ser a opção mais prática para agenda,
-              especialidades, textos e novos serviços.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Como funciona o pagamento?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              50% na assinatura do contrato e 50% na entrega do site aprovado. Aceito Pix,
-              transferência ou cartão. Tudo fica claro antes do início, sem surpresa no valor.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ CTA FINAL ═════════════════════════════════ -->
-    <section id="cta-final" class="sec-dark">
-      <p class="eyebrow reveal">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Seu consultório precisa mostrar
-        <br />
-        <span class="accent">cuidado e autoridade antes da consulta.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Quando cuidado, método e especialidade ficam claros, o paciente chega mais disposto a pedir
-        consulta.
-      </p>
-      <div class="cta-ctas reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20um%20or%C3%A7amento%20para%20um%20site%20do%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
-    </section>
+        <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
+      </section>
+    </main>
+    <!-- /#main-content -->
 
     <!-- FOOTER -->
     <footer>
@@ -1353,7 +1373,7 @@
         sem autorização.
       </span>
       <span class="footer-note">
-        <span class="footer-dot"></span>
+        <span class="footer-dot" aria-hidden="true"></span>
         Disponível para novos projetos
       </span>
     </footer>
@@ -1362,6 +1382,7 @@
     <a
       href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20meu%20consult%C3%B3rio%20de%20nutri%C3%A7%C3%A3o%20que%20gere%20mais%20consultas"
       target="_blank"
+      rel="noopener noreferrer"
       class="wa-float">
       <svg
         xmlns="http://www.w3.org/2000/svg"

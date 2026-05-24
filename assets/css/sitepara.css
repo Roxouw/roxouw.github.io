@@ -648,6 +648,15 @@
   border-bottom: 1px solid var(--hairline-soft);
 }
 
+/* FAQ button reset (converted from div for a11y CRIT-03) */
+.framer-v2 button.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
 .framer-v2 .faq-q {
   display: flex;
   justify-content: space-between;

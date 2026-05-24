@@ -4,6 +4,9 @@
 //  Smooth scroll: CSS scroll-behavior nativo
 // ═══════════════════════════════════════════════════════════════
 
+// Mark JS as running — reveals content hidden by .reveal before IntersectionObserver fires
+document.documentElement.classList.add("js-ready");
+
 // ── Custom cursor — desktop only ──────────────────────────────
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -104,13 +107,18 @@ if (hamburger && mobileMenu) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("open");
-    document.body.style.overflow = mobileMenu.classList.contains("open") ? "hidden" : "";
+    const isOpen = mobileMenu.classList.contains("open");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    hamburger.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    document.body.style.overflow = isOpen ? "hidden" : "";
   });
 }
 window.closeMobile = function closeMobile() {
   if (!hamburger || !mobileMenu) return;
   hamburger.classList.remove("open");
   mobileMenu.classList.remove("open");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "Abrir menu");
   document.body.style.overflow = "";
 };
 

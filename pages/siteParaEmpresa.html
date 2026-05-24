@@ -158,8 +158,10 @@
     </script>
   </head>
   <body class="framer-v2 niche-page niche-empresa">
+    <a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
     <canvas
       id="inkCanvas"
+      aria-hidden="true"
       style="
         position: fixed;
         inset: 0;
@@ -169,8 +171,8 @@
         height: 100%;
       "></canvas>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- NAV -->
     <nav id="navbar">
@@ -253,1015 +255,1030 @@
     </nav>
 
     <!-- ══ HERO ════════════════════════════════════════ -->
-    <section id="hero">
-      <div class="hero-glow"></div>
-      <div class="hero-grid"></div>
+    <main id="main-content">
+      <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
 
-      <div class="hero-badge">Atendimento em todo Brasil</div>
-      <div class="hero-eyebrow">
-        Oferta clara, prova visual e contato fácil para gerar orçamento
-      </div>
-      <h1 class="hero-title">
-        Site profissional para
-        <br />
-        transformar visita
-        <span class="accent">em pedido de orçamento.</span>
-      </h1>
-      <div class="hero-checklist">
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Site comercial feito para gerar orçamento
+        <div class="hero-badge">Atendimento em todo Brasil</div>
+        <div class="hero-eyebrow">
+          Oferta clara, prova visual e contato fácil para gerar orçamento
         </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          WhatsApp direto para atendimento
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          SEO para aparecer no Google
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Atendimento direto com quem estrutura e publica
-        </div>
-        <div class="hero-check-item">
-          <span class="hero-check-icon">✓</span>
-          Estrutura clara para transformar visita em contato
-        </div>
-      </div>
-      <div class="hero-cta">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20empresa%20que%20me%20ajude%20a%20gerar%20mais%20or%C3%A7amentos"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <div class="hero-trust">
-        <span class="trust-item trust-count">10+ empresas atendidas</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Site em até 7 dias</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">WhatsApp integrado</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">SEO no Google</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Atendimento direto com Rosso Labs</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">Carregamento rápido no mobile</span>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PROBLEMA ══════════════════════════════════ -->
-    <section id="problema" class="sec-accent">
-      <p class="eyebrow reveal" data-num="01">O problema</p>
-      <h2 class="sec-title reveal">
-        Seu negócio precisa
-        <br />
-        <span class="accent-dark">aparecer no Google.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Se sua empresa não explica bem o que vende, o cliente escolhe quem parece mais confiável.
-      </p>
-
-      <div class="searches-grid reveal">
-        <div class="search-item">
-          <span class="search-icon">🏢</span>
-          <div class="search-query">"empresa de [serviço] [cidade]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">📍</span>
-          <div class="search-query">"[serviço] perto de mim"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">💼</span>
-          <div class="search-query">"orçamento [serviço] [cidade]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-        <div class="search-item">
-          <span class="search-icon">⭐</span>
-          <div class="search-query">"melhor empresa de [segmento]"</div>
-          <div class="search-volume">Alta busca</div>
-        </div>
-      </div>
-
-      <div class="problema-alert reveal">
-        <strong>Quem não entende sua empresa rápido, não pede orçamento.</strong>
-        Um site profissional deixa sua oferta mais clara, aumenta confiança e encurta o caminho até
-        o contato.
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
-    <section id="como-funciona" class="sec-dark">
-      <p class="eyebrow reveal" data-num="02">Como funciona</p>
-      <h2 class="sec-title reveal">
-        Do pedido ao ar
-        <br />
-        <span class="accent">em 4 passos.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você cuida do negócio. Eu cuido do site e entrego tudo pronto para captar.
-      </p>
-
-      <div class="steps-grid">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <div class="step-title">Escolha um plano</div>
-          <div class="step-desc">
-            Analise os pacotes e escolha o que melhor se encaixa no seu negócio e orçamento.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <div class="step-title">Envie as informações</div>
-          <div class="step-desc">
-            Nome da empresa, serviços, fotos, cores, contato. Um formulário simples via WhatsApp.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <div class="step-title">Criamos seu site</div>
-          <div class="step-desc">
-            Design personalizado, SEO configurado, WhatsApp integrado. Você acompanha o progresso.
-          </div>
-          <div class="step-connector"></div>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <div class="step-title">Site no ar</div>
-          <div class="step-desc">
-            Seu site publicado, indexado no Google e pronto para receber clientes em até 7 dias.
-          </div>
-        </div>
-      </div>
-      <p class="steps-footer reveal">
-        Tempo médio de entrega:
-        <span>3 a 7 dias úteis.</span>
-      </p>
-    </section>
-
-    <section class="cta-inline sec-dark">
-      <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Se o seu negócio já vende,
-        <br />
-        <span class="accent">falta um site que organize isso melhor.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Você me chama no WhatsApp, eu entendo sua oferta e indico o formato mais certo para deixar
-        sua empresa mais clara, mais confiável e mais fácil de contratar.
-      </p>
-      <div class="cta-inline-actions reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20empresa"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          Falar sobre meu negócio
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-inline-note reveal">
-        Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ EXEMPLOS ══════════════════════════════════ -->
-    <section id="exemplos" class="sec-accent">
-      <p class="eyebrow reveal" data-num="03">Exemplos</p>
-      <h2 class="sec-title reveal">
-        Estruturas para serviço,
-        <br />
-        <span class="accent-dark">indústria e operação local.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Cada negócio precisa de uma vitrine diferente, mas todos precisam explicar rápido e
-        facilitar o contato.
-      </p>
-
-      <div class="examples-grid">
-        <div class="example-card reveal">
-          <div class="example-preview ex-dental">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 35%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Serviços Locais</div>
-            <div class="example-name">Empresa de Serviços</div>
-            <div class="example-desc">
-              Estrutura para explicar serviço, transmitir confiança e levar o visitante do Google
-              para o pedido de orçamento.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Orçamento</span>
-              <span class="example-tag">SEO local</span>
-              <span class="example-tag">WhatsApp</span>
-              <span class="example-tag">Prova</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-gym">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 45%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Fitness</div>
-            <div class="example-name">Academia e Personal</div>
-            <div class="example-desc">
-              Página feita para valorizar planos, modalidades e horários e transformar interesse em
-              visita ou aula experimental.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Captação de leads</span>
-              <span class="example-tag">Horários</span>
-              <span class="example-tag">Planos</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-restaurant">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 55%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Alimentação</div>
-            <div class="example-name">Restaurante e Delivery</div>
-            <div class="example-desc">
-              Cardápio, horários e pedido rápido para reduzir dúvida e facilitar a decisão no
-              celular.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Cardápio</span>
-              <span class="example-tag">Delivery</span>
-              <span class="example-tag">Reservas</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-preview ex-clinic">
-            <div class="example-preview-inner">
-              <div class="mock-nav">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <div class="mock-hero">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 40%"></div>
-                <div class="mock-btn"></div>
-              </div>
-              <div class="mock-section">
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-                <div class="mock-chip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="example-body">
-            <div class="example-type">Saúde</div>
-            <div class="example-name">Clínica e Consultório</div>
-            <div class="example-desc">
-              Especialidades, convênios e equipe organizados para passar segurança e gerar contato
-              mais qualificado.
-            </div>
-            <div class="example-tags">
-              <span class="example-tag">Convênios</span>
-              <span class="example-tag">Equipe</span>
-              <span class="example-tag">Agendamento</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-inline examples-inline-cta">
-        <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
-        <h2 class="sec-title reveal">
-          Viu como a estrutura
+        <h1 class="hero-title">
+          Site profissional para
           <br />
-          <span class="accent-dark">ajuda a vender melhor.</span>
+          transformar visita
+          <span class="accent">em pedido de orçamento.</span>
+        </h1>
+        <div class="hero-checklist">
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Site comercial feito para gerar orçamento
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            WhatsApp direto para atendimento
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            SEO para aparecer no Google
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Atendimento direto com quem estrutura e publica
+          </div>
+          <div class="hero-check-item">
+            <span class="hero-check-icon">✓</span>
+            Estrutura clara para transformar visita em contato
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20para%20minha%20empresa%20que%20me%20ajude%20a%20gerar%20mais%20or%C3%A7amentos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item trust-count">10+ empresas atendidas</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Site em até 7 dias</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">WhatsApp integrado</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">SEO no Google</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Atendimento direto com Rosso Labs</span>
+          <span class="trust-divider"></span>
+          <span class="trust-item">Carregamento rápido no mobile</span>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PROBLEMA ══════════════════════════════════ -->
+      <section id="problema" class="sec-accent">
+        <p class="eyebrow reveal" data-num="01">O problema</p>
+        <h2 class="sec-title reveal">
+          Seu negócio precisa
+          <br />
+          <span class="accent-dark">aparecer no Google.</span>
         </h2>
         <p class="sec-sub reveal">
-          Agora eu adapto essa página para a sua oferta, seus diferenciais e o tipo de orçamento que
-          você quer receber.
+          Se sua empresa não explica bem o que vende, o cliente escolhe quem parece mais confiável.
+        </p>
+
+        <div class="searches-grid reveal">
+          <div class="search-item">
+            <span class="search-icon">🏢</span>
+            <div class="search-query">"empresa de [serviço] [cidade]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">📍</span>
+            <div class="search-query">"[serviço] perto de mim"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">💼</span>
+            <div class="search-query">"orçamento [serviço] [cidade]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+          <div class="search-item">
+            <span class="search-icon">⭐</span>
+            <div class="search-query">"melhor empresa de [segmento]"</div>
+            <div class="search-volume">Alta busca</div>
+          </div>
+        </div>
+
+        <div class="problema-alert reveal">
+          <strong>Quem não entende sua empresa rápido, não pede orçamento.</strong>
+          Um site profissional deixa sua oferta mais clara, aumenta confiança e encurta o caminho
+          até o contato.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ COMO FUNCIONA ═════════════════════════════ -->
+      <section id="como-funciona" class="sec-dark">
+        <p class="eyebrow reveal" data-num="02">Como funciona</p>
+        <h2 class="sec-title reveal">
+          Do pedido ao ar
+          <br />
+          <span class="accent">em 4 passos.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você cuida do negócio. Eu cuido do site e entrego tudo pronto para captar.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <div class="step-title">Escolha um plano</div>
+            <div class="step-desc">
+              Analise os pacotes e escolha o que melhor se encaixa no seu negócio e orçamento.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <div class="step-title">Envie as informações</div>
+            <div class="step-desc">
+              Nome da empresa, serviços, fotos, cores, contato. Um formulário simples via WhatsApp.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <div class="step-title">Criamos seu site</div>
+            <div class="step-desc">
+              Design personalizado, SEO configurado, WhatsApp integrado. Você acompanha o progresso.
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <div class="step-title">Site no ar</div>
+            <div class="step-desc">
+              Seu site publicado, indexado no Google e pronto para receber clientes em até 7 dias.
+            </div>
+          </div>
+        </div>
+        <p class="steps-footer reveal">
+          Tempo médio de entrega:
+          <span>3 a 7 dias úteis.</span>
+        </p>
+      </section>
+
+      <section class="cta-inline sec-dark">
+        <p class="eyebrow reveal" data-num="02.5">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Se o seu negócio já vende,
+          <br />
+          <span class="accent">falta um site que organize isso melhor.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você me chama no WhatsApp, eu entendo sua oferta e indico o formato mais certo para deixar
+          sua empresa mais clara, mais confiável e mais fácil de contratar.
         </p>
         <div class="cta-inline-actions reveal">
           <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20comercial%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20a%20minha%20empresa"
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20qual%20site%20faz%20mais%20sentido%20para%20minha%20empresa"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-whatsapp btn-lg">
-            Falar sobre minha empresa
+            Falar sobre meu negócio
           </a>
           <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
         </div>
         <p class="cta-inline-note reveal">
-          Oferta mais clara · Mais orçamento · Direto com Rosso Labs
+          Diagnóstico rápido · Proposta clara · Direto com Rosso Labs
         </p>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
-    <section id="depoimentos" class="sec-dark">
-      <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
-      <h2 class="sec-title reveal">
-        Quando a empresa parece
-        <br />
-        <span class="accent">maior e mais clara.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        O cliente entende mais rápido o que você vende e chega no WhatsApp com menos objeção.
-      </p>
-
-      <div class="dep-grid">
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Antes eu dependia quase só de indicação. Depois do site, comecei a receber mensagens
-            todos os dias pelo WhatsApp.
-            <strong>Em menos de 30 dias o investimento já tinha voltado.</strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Gabriel M.</span>
-            <span class="dep-role">Personal Trainer · Cachoeirinha, RS</span>
-          </div>
-        </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            O site ficou claro, rápido no celular e muito mais profissional do que eu tinha antes.
-            <strong>Hoje minha apresentação comercial passa outra confiança.</strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Camila R.</span>
-            <span class="dep-role">Nutricionista · Porto Alegre, RS</span>
-          </div>
-        </div>
-        <div class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">
-            Processo todo pelo WhatsApp, sem complicação e sem reunião desnecessária.
-            <strong>
-              O site ficou profissional e já ajuda minha empresa a aparecer melhor quando buscam o
-              serviço na cidade.
-            </strong>
-          </p>
-          <div class="dep-author">
-            <span class="dep-name">Anderson S.</span>
-            <span class="dep-role">Proprietário · INOVATA Móveis, Cachoeirinha</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
-    <section id="prova" class="sec-accent">
-      <p class="eyebrow reveal" data-num="05">Por que escolher</p>
-      <h2 class="sec-title reveal">
-        Sua apresentação comercial
-        <br />
-        <span class="accent-dark">começa no site.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Não é só presença digital. É uma peça comercial trabalhando por você todos os dias.
-      </p>
-
-      <div class="proof-grid">
-        <div class="proof-item reveal">
-          <span class="proof-num">7</span>
-          <div class="proof-label">Dias para entregar</div>
-          <div class="proof-desc">
-            Do briefing ao site publicado. Sem enrolação, sem espera de meses.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">100%</span>
-          <div class="proof-label">Mobile-first</div>
-          <div class="proof-desc">
-            Mais de 70% dos acessos vêm pelo celular. Seu site funciona perfeitamente em qualquer
-            tela.
-          </div>
-        </div>
-        <div class="proof-item reveal">
-          <span class="proof-num">+10</span>
-          <div class="proof-label">Projetos entregues</div>
-          <div class="proof-desc">
-            Sites publicados para negócios que precisam explicar melhor a oferta e converter visita
-            em contato.
-          </div>
-        </div>
-      </div>
-
-      <div class="proof-features">
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🔍</span>
-          <div>
-            <div class="proof-feat-title">SEO no Google</div>
-            <div class="proof-feat-desc">
-              Seu site entra melhor nas buscas locais quando o cliente procura exatamente o que você
-              vende.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">💬</span>
-          <div>
-            <div class="proof-feat-title">WhatsApp integrado</div>
-            <div class="proof-feat-desc">
-              O cliente sai da dúvida e entra em contato mais rápido, no momento em que decide
-              chamar.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">⚡</span>
-          <div>
-            <div class="proof-feat-title">Site rápido</div>
-            <div class="proof-feat-desc">
-              Site rápido segura a visita e evita perder contato, principalmente no mobile.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🎨</span>
-          <div>
-            <div class="proof-feat-title">Design personalizado</div>
-            <div class="proof-feat-desc">
-              Nada de página genérica. O visual acompanha sua marca e ajuda a sustentar a proposta
-              comercial.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🔒</span>
-          <div>
-            <div class="proof-feat-title">Seguro e estável</div>
-            <div class="proof-feat-desc">
-              HTTPS, hospedagem confiável e estrutura estável para sua empresa não perder contato
-              por problema técnico.
-            </div>
-          </div>
-        </div>
-        <div class="proof-feat reveal">
-          <span class="proof-feat-icon">🛠️</span>
-          <div>
-            <div class="proof-feat-title">Suporte pós-entrega</div>
-            <div class="proof-feat-desc">
-              Ajustes e acompanhamento depois do lançamento para sua operação continuar rodando sem
-              travar.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ══ PLANOS ════════════════════════════════════ -->
-    <section id="planos" class="sec-dark">
-      <p class="eyebrow reveal" data-num="06">Planos</p>
-      <h2 class="sec-title reveal">
-        Planos para sair do improviso
-        <br />
-        <span class="accent">ou profissionalizar de vez.</span>
-      </h2>
-      <p class="sec-sub reveal">Você entende o que recebe e escolhe o plano certo sem surpresa.</p>
-
-      <div class="packages-grid">
-        <div class="pkg reveal">
-          <div class="pkg-name">Start</div>
-          <div class="pkg-desc">
-            Presença digital rápida para anunciar melhor, captar contato e passar profissionalismo.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">897</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>1 página (landing page)</li>
-            <li>Design responsivo para celular</li>
-            <li>Botão WhatsApp integrado</li>
-            <li>Formulário de contato</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Até 2 revisões</li>
-            <li class="no">Domínio personalizado</li>
-            <li class="no">SEO avançado</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20minha%20empresa"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero presença comercial
-          </a>
-        </div>
-
-        <div class="pkg featured reveal">
-          <div class="pkg-badge">Mais popular</div>
-          <div class="pkg-name">Business</div>
-          <div class="pkg-desc">
-            Para ser encontrado no Google e converter visitas em clientes com mais consistência.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">1.697</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Até 4 páginas completas</li>
-            <li>Design responsivo premium</li>
-            <li>WhatsApp com mensagem personalizada</li>
-            <li>SEO básico (indexado no Google)</li>
-            <li>Domínio personalizado (.com.br)</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Preview no WhatsApp e Instagram</li>
-            <li>Até 3 revisões</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20minha%20empresa"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero mais orçamentos
-          </a>
-        </div>
-
-        <div class="pkg reveal">
-          <div class="pkg-name">Authority</div>
-          <div class="pkg-desc">
-            Estrutura completa para vender mais com presença forte e recursos sob medida.
-          </div>
-          <div class="pkg-price">
-            <span class="currency">a partir de R$</span>
-            <span class="value">2.997</span>
-          </div>
-          <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li>Páginas ilimitadas</li>
-            <li>Design exclusivo e personalizado</li>
-            <li>SEO completo + Google Analytics</li>
-            <li>Domínio personalizado (.com.br)</li>
-            <li>Sistema de agendamento ou catálogo</li>
-            <li>Hospedagem incluída (1 ano)</li>
-            <li>Painel para atualizar conteúdo</li>
-            <li>Revisões ilimitadas até aprovação</li>
-          </ul>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20uma%20estrutura%20mais%20completa%20na%20minha%20empresa"
-            target="_blank"
-            class="btn btn-whatsapp"
-            style="width: 100%; justify-content: center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Quero estrutura completa
-          </a>
-        </div>
-      </div>
-      <div class="plans-helper reveal">
-        <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
-        <p class="plans-helper-text">
-          Start para colocar sua empresa no ar com clareza. Business para a maioria dos negocios que
-          querem explicar melhor a oferta e gerar mais orçamento. Authority para operações que
-          precisam de páginas extras, recursos sob medida e presença mais robusta.
+      <!-- ══ EXEMPLOS ══════════════════════════════════ -->
+      <section id="exemplos" class="sec-accent">
+        <p class="eyebrow reveal" data-num="03">Exemplos</p>
+        <h2 class="sec-title reveal">
+          Estruturas para serviço,
+          <br />
+          <span class="accent-dark">indústria e operação local.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Cada negócio precisa de uma vitrine diferente, mas todos precisam explicar rápido e
+          facilitar o contato.
         </p>
-      </div>
-    </section>
 
-    <hr class="divider" />
-
-    <!-- UPGRADES & MANUTENÇÃO -->
-    <section id="addons" class="sec-accent">
-      <p class="eyebrow reveal" data-num="07">Extras & Recorrência</p>
-      <h2 class="sec-title reveal">
-        Upgrades e
-        <br />
-        <span class="accent-dark">manutenção mensal.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Adicione funcionalidades quando fizer sentido e mantenha tudo atualizado.
-      </p>
-
-      <div class="addons-grid">
-        <!-- UPGRADES -->
-        <div>
-          <div class="addons-col-title reveal">
-            Upgrades
-            <span>adicional único</span>
+        <div class="examples-grid">
+          <div class="example-card reveal">
+            <div class="example-preview ex-dental">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 35%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Serviços Locais</div>
+              <div class="example-name">Empresa de Serviços</div>
+              <div class="example-desc">
+                Estrutura para explicar serviço, transmitir confiança e levar o visitante do Google
+                para o pedido de orçamento.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Orçamento</span>
+                <span class="example-tag">SEO local</span>
+                <span class="example-tag">WhatsApp</span>
+                <span class="example-tag">Prova</span>
+              </div>
+            </div>
           </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Página adicional</div>
-                <div class="addon-desc">
-                  Adicione uma nova página ao seu site (Portfólio, Blog, FAQ, etc.)
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-gym">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 45%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
                 </div>
               </div>
-              <div class="addon-price-monthly">
-                + R$ 200
-                <small class="addon-price-monthly">por página</small>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Fitness</div>
+              <div class="example-name">Academia e Personal</div>
+              <div class="example-desc">
+                Página feita para valorizar planos, modalidades e horários e transformar interesse
+                em visita ou aula experimental.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Captação de leads</span>
+                <span class="example-tag">Horários</span>
+                <span class="example-tag">Planos</span>
               </div>
             </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Domínio personalizado</div>
-                <div class="addon-desc">Registro e configuração do .com.br do seu negócio</div>
-              </div>
-              <div class="addon-price-monthly">
-                + R$ 120
-                <small class="addon-price-monthly">por ano</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Botão WhatsApp flutuante</div>
-                <div class="addon-desc">
-                  Ícone verde fixo no canto da tela — ao clicar, abre o WhatsApp com mensagem
-                  pré-preenchida
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-restaurant">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 55%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
                 </div>
               </div>
-              <div class="addon-price-monthly">
-                + R$ 150
-                <small class="addon-price-monthly">único</small>
+            </div>
+            <div class="example-body">
+              <div class="example-type">Alimentação</div>
+              <div class="example-name">Restaurante e Delivery</div>
+              <div class="example-desc">
+                Cardápio, horários e pedido rápido para reduzir dúvida e facilitar a decisão no
+                celular.
+              </div>
+              <div class="example-tags">
+                <span class="example-tag">Cardápio</span>
+                <span class="example-tag">Delivery</span>
+                <span class="example-tag">Reservas</span>
               </div>
             </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Galeria de fotos/portfólio</div>
-                <div class="addon-desc">Seção de imagens com lightbox e categorias</div>
-              </div>
-              <div class="addon-price-monthly">
-                + R$ 200
-                <small class="addon-price-monthly">único</small>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Google Analytics</div>
-                <div class="addon-desc">
-                  Integração + painel configurado para ver visitas, origem e comportamento
+          </div>
+
+          <div class="example-card reveal">
+            <div class="example-preview ex-clinic">
+              <div class="example-preview-inner">
+                <div class="mock-nav">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-title"></div>
+                  <div class="mock-sub"></div>
+                  <div class="mock-sub" style="width: 40%"></div>
+                  <div class="mock-btn"></div>
+                </div>
+                <div class="mock-section">
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
+                  <div class="mock-chip"></div>
                 </div>
               </div>
-              <div class="addon-price-monthly">
-                + R$ 100
-                <small class="addon-price-monthly">único</small>
-              </div>
             </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Formulário de orçamento</div>
-                <div class="addon-desc">
-                  Formulário inteligente que envia respostas por e-mail ou WhatsApp
-                </div>
+            <div class="example-body">
+              <div class="example-type">Saúde</div>
+              <div class="example-name">Clínica e Consultório</div>
+              <div class="example-desc">
+                Especialidades, convênios e equipe organizados para passar segurança e gerar contato
+                mais qualificado.
               </div>
-              <div class="addon-price-monthly">
-                + R$ 180
-                <small class="addon-price-monthly">único</small>
+              <div class="example-tags">
+                <span class="example-tag">Convênios</span>
+                <span class="example-tag">Equipe</span>
+                <span class="example-tag">Agendamento</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- MANUTENÇÃO -->
-        <div>
-          <div class="addons-col-title reveal">
-            Manutenção
-            <span>recorrente</span>
-          </div>
-          <div class="addon-list">
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Essencial</div>
-                <div class="addon-desc">
-                  Até 2 alterações/mês — textos, fotos, horários, telefones
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 99
-                  <small class="addon-price-monthly">/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item popular">
-              <div class="addon-info">
-                <div class="addon-popular-badge">⭐ Mais escolhido</div>
-                <div class="addon-name">Plano Plus</div>
-                <div class="addon-desc">
-                  Até 5 alterações/mês + monitoramento de desempenho + backup mensal
-                </div>
-                <div class="addon-tag-list">
-                  <span class="addon-tag">troca de textos</span>
-                  <span class="addon-tag">troca de fotos</span>
-                  <span class="addon-tag">atualização de horários</span>
-                  <span class="addon-tag">inclusão de novos serviços</span>
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 189
-                  <small class="addon-price-monthly">/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 1.890/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Plano Full</div>
-                <div class="addon-desc">
-                  Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
-                </div>
-              </div>
-              <div class="addon-price-wrap">
-                <div class="addon-price-monthly">
-                  R$ 299
-                  <small class="addon-price-monthly">/mês</small>
-                </div>
-                <div class="addon-price-annual">
-                  ou
-                  <span class="annual-value">R$ 2.990/ano</span>
-                  <br />
-                  <span class="annual-badge">2 meses grátis</span>
-                </div>
-              </div>
-            </div>
-            <div class="addon-item">
-              <div class="addon-info">
-                <div class="addon-name">Por que contratar manutenção?</div>
-                <div class="addon-desc">
-                  Sites sem atualização perdem posição no Google. Com manutenção, seu site fica
-                  sempre relevante — e você não precisa me acionar toda vez que mudar um telefone ou
-                  adicionar uma foto.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="maint-tagline">
-            <strong>Seu site pronto é só o começo.</strong>
+        <div class="cta-inline examples-inline-cta">
+          <p class="eyebrow reveal" data-num="03.5">Próximo passo</p>
+          <h2 class="sec-title reveal">
+            Viu como a estrutura
             <br />
-            Mantemos ele atualizado, seguro e funcionando para você.
+            <span class="accent-dark">ajuda a vender melhor.</span>
+          </h2>
+          <p class="sec-sub reveal">
+            Agora eu adapto essa página para a sua oferta, seus diferenciais e o tipo de orçamento
+            que você quer receber.
+          </p>
+          <div class="cta-inline-actions reveal">
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe,%20vi%20os%20modelos%20de%20site%20comercial%20e%20quero%20entender%20qual%20estrutura%20faz%20mais%20sentido%20para%20a%20minha%20empresa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp btn-lg">
+              Falar sobre minha empresa
+            </a>
+            <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
           </div>
+          <p class="cta-inline-note reveal">
+            Oferta mais clara · Mais orçamento · Direto com Rosso Labs
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="divider" />
+      <hr class="divider" />
 
-    <!-- ══ FAQ ═══════════════════════════════════════ -->
-    <section id="faq" class="sec-dark">
-      <p class="eyebrow reveal" data-num="08">Dúvidas</p>
-      <h2 class="sec-title reveal">
-        Dúvidas antes
-        <br />
-        <span class="accent">de pedir orçamento.</span>
-      </h2>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Qual plano faz mais sentido para o meu tipo de empresa?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Se você precisa apresentar a empresa com clareza e colocar um CTA forte no ar rápido,
-              o Start costuma resolver. Se precisa explicar melhor serviços, diferenciais e gerar
-              mais orçamento, o Business tende a ser o melhor ponto de partida. Se o projeto precisa
-              de mais páginas, catálogo, agendamento ou estrutura mais robusta, o Authority faz mais
-              sentido.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              O prazo varia conforme o plano: Start em até 7 dias, Business em até 14 dias e
-              Authority em até 30 dias. O cronograma começa assim que você envia as informações do
-              negócio e aprovamos a direção da página.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">O site vai aparecer no Google?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. Todos os planos incluem configuração básica de SEO para indexação no Google. O
-              plano Authority inclui SEO completo com otimização por palavras-chave do seu nicho e
-              cidade.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Preciso entender de tecnologia para ter um site?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Não. Você me passa nome da empresa, serviços, fotos, contatos e referências, e eu
-              cuido de design, programação, publicação e SEO. O processo é direto e pensado para não
-              travar sua rotina.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">
-              Posso atualizar o conteúdo depois que o site estiver no ar?
-            </span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Sim. O plano Authority inclui painel de edição. Nos demais, você pode contratar
-              manutenção mensal e me pedir alterações com agilidade sempre que precisar atualizar
-              texto, serviço, foto, telefone ou horário.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">E se eu não gostar do design?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              Cada plano inclui rodadas de revisão. Eu apresento a direção visual antes de publicar,
-              ajusto o que for necessário dentro do escopo e o site só vai ao ar quando você
-              aprovar.
-            </div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">
-            <span class="faq-q-text">Como funciona o pagamento?</span>
-            <span class="faq-q-icon">+</span>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              50% na contratação e 50% na entrega do site aprovado. Aceito Pix, transferência ou
-              cartão. Você sabe o escopo e o investimento antes de começar, sem surpresa no meio do
-              projeto.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- ══ DEPOIMENTOS ══════════════════════════════ -->
+      <section id="depoimentos" class="sec-dark">
+        <p class="eyebrow reveal" data-num="04">Resultado percebido</p>
+        <h2 class="sec-title reveal">
+          Quando a empresa parece
+          <br />
+          <span class="accent">maior e mais clara.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          O cliente entende mais rápido o que você vende e chega no WhatsApp com menos objeção.
+        </p>
 
-    <hr class="divider" />
+        <div class="dep-grid">
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Antes eu dependia quase só de indicação. Depois do site, comecei a receber mensagens
+              todos os dias pelo WhatsApp.
+              <strong>Em menos de 30 dias o investimento já tinha voltado.</strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Gabriel M.</span>
+              <span class="dep-role">Personal Trainer · Cachoeirinha, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              O site ficou claro, rápido no celular e muito mais profissional do que eu tinha antes.
+              <strong>Hoje minha apresentação comercial passa outra confiança.</strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Camila R.</span>
+              <span class="dep-role">Nutricionista · Porto Alegre, RS</span>
+            </div>
+          </div>
+          <div class="dep-card reveal">
+            <div class="dep-stars">★★★★★</div>
+            <p class="dep-text">
+              Processo todo pelo WhatsApp, sem complicação e sem reunião desnecessária.
+              <strong>
+                O site ficou profissional e já ajuda minha empresa a aparecer melhor quando buscam o
+                serviço na cidade.
+              </strong>
+            </p>
+            <div class="dep-author">
+              <span class="dep-name">Anderson S.</span>
+              <span class="dep-role">Proprietário · INOVATA Móveis, Cachoeirinha</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- ══ CTA FINAL ═════════════════════════════════ -->
-    <section id="cta-final" class="sec-accent">
-      <p class="eyebrow reveal">Próximo passo</p>
-      <h2 class="sec-title reveal">
-        Sua empresa precisa parecer
-        <br />
-        <span class="accent-dark">tão boa quanto o serviço que entrega.</span>
-      </h2>
-      <p class="sec-sub reveal">
-        Quando o cliente entende rápido o que você faz e encontra um CTA claro, o comercial recebe
-        pedidos de orçamento melhores.
-      </p>
-      <div class="cta-ctas reveal">
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20da%20minha%20empresa"
-          target="_blank"
-          class="btn btn-whatsapp btn-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Pedir orçamento no WhatsApp
-        </a>
-        <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
-      </div>
-      <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
-    </section>
+      <hr class="divider" />
+
+      <!-- ══ PROVA SOCIAL ══════════════════════════════ -->
+      <section id="prova" class="sec-accent">
+        <p class="eyebrow reveal" data-num="05">Por que escolher</p>
+        <h2 class="sec-title reveal">
+          Sua apresentação comercial
+          <br />
+          <span class="accent-dark">começa no site.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Não é só presença digital. É uma peça comercial trabalhando por você todos os dias.
+        </p>
+
+        <div class="proof-grid">
+          <div class="proof-item reveal">
+            <span class="proof-num">7</span>
+            <div class="proof-label">Dias para entregar</div>
+            <div class="proof-desc">
+              Do briefing ao site publicado. Sem enrolação, sem espera de meses.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">100%</span>
+            <div class="proof-label">Mobile-first</div>
+            <div class="proof-desc">
+              Mais de 70% dos acessos vêm pelo celular. Seu site funciona perfeitamente em qualquer
+              tela.
+            </div>
+          </div>
+          <div class="proof-item reveal">
+            <span class="proof-num">+10</span>
+            <div class="proof-label">Projetos entregues</div>
+            <div class="proof-desc">
+              Sites publicados para negócios que precisam explicar melhor a oferta e converter
+              visita em contato.
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-features">
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🔍</span>
+            <div>
+              <div class="proof-feat-title">SEO no Google</div>
+              <div class="proof-feat-desc">
+                Seu site entra melhor nas buscas locais quando o cliente procura exatamente o que
+                você vende.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">💬</span>
+            <div>
+              <div class="proof-feat-title">WhatsApp integrado</div>
+              <div class="proof-feat-desc">
+                O cliente sai da dúvida e entra em contato mais rápido, no momento em que decide
+                chamar.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">⚡</span>
+            <div>
+              <div class="proof-feat-title">Site rápido</div>
+              <div class="proof-feat-desc">
+                Site rápido segura a visita e evita perder contato, principalmente no mobile.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🎨</span>
+            <div>
+              <div class="proof-feat-title">Design personalizado</div>
+              <div class="proof-feat-desc">
+                Nada de página genérica. O visual acompanha sua marca e ajuda a sustentar a proposta
+                comercial.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🔒</span>
+            <div>
+              <div class="proof-feat-title">Seguro e estável</div>
+              <div class="proof-feat-desc">
+                HTTPS, hospedagem confiável e estrutura estável para sua empresa não perder contato
+                por problema técnico.
+              </div>
+            </div>
+          </div>
+          <div class="proof-feat reveal">
+            <span class="proof-feat-icon">🛠️</span>
+            <div>
+              <div class="proof-feat-title">Suporte pós-entrega</div>
+              <div class="proof-feat-desc">
+                Ajustes e acompanhamento depois do lançamento para sua operação continuar rodando
+                sem travar.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ PLANOS ════════════════════════════════════ -->
+      <section id="planos" class="sec-dark">
+        <p class="eyebrow reveal" data-num="06">Planos</p>
+        <h2 class="sec-title reveal">
+          Planos para sair do improviso
+          <br />
+          <span class="accent">ou profissionalizar de vez.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Você entende o que recebe e escolhe o plano certo sem surpresa.
+        </p>
+
+        <div class="packages-grid">
+          <div class="pkg reveal">
+            <div class="pkg-name">Start</div>
+            <div class="pkg-desc">
+              Presença digital rápida para anunciar melhor, captar contato e passar
+              profissionalismo.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">897</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 7 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>1 página (landing page)</li>
+              <li>Design responsivo para celular</li>
+              <li>Botão WhatsApp integrado</li>
+              <li>Formulário de contato</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Até 2 revisões</li>
+              <li class="no">Domínio personalizado</li>
+              <li class="no">SEO avançado</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Start%20faz%20sentido%20para%20minha%20empresa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero presença comercial
+            </a>
+          </div>
+
+          <div class="pkg featured reveal">
+            <div class="pkg-badge">Mais popular</div>
+            <div class="pkg-name">Business</div>
+            <div class="pkg-desc">
+              Para ser encontrado no Google e converter visitas em clientes com mais consistência.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">1.697</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 14 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Até 4 páginas completas</li>
+              <li>Design responsivo premium</li>
+              <li>WhatsApp com mensagem personalizada</li>
+              <li>SEO básico (indexado no Google)</li>
+              <li>Domínio personalizado (.com.br)</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Preview no WhatsApp e Instagram</li>
+              <li>Até 3 revisões</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20se%20o%20plano%20Business%20%C3%A9%20o%20mais%20indicado%20para%20minha%20empresa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero mais orçamentos
+            </a>
+          </div>
+
+          <div class="pkg reveal">
+            <div class="pkg-name">Authority</div>
+            <div class="pkg-desc">
+              Estrutura completa para vender mais com presença forte e recursos sob medida.
+            </div>
+            <div class="pkg-price">
+              <span class="currency">a partir de R$</span>
+              <span class="value">2.997</span>
+            </div>
+            <div class="pkg-prazo">⏱ Entrega em até 30 dias</div>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-features">
+              <li>Páginas ilimitadas</li>
+              <li>Design exclusivo e personalizado</li>
+              <li>SEO completo + Google Analytics</li>
+              <li>Domínio personalizado (.com.br)</li>
+              <li>Sistema de agendamento ou catálogo</li>
+              <li>Hospedagem incluída (1 ano)</li>
+              <li>Painel para atualizar conteúdo</li>
+              <li>Revisões ilimitadas até aprovação</li>
+            </ul>
+            <a
+              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20avaliar%20o%20plano%20Authority%20para%20uma%20estrutura%20mais%20completa%20na%20minha%20empresa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              style="width: 100%; justify-content: center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Quero estrutura completa
+            </a>
+          </div>
+        </div>
+        <div class="plans-helper reveal">
+          <p class="plans-helper-title">Qual plano costuma fazer mais sentido?</p>
+          <p class="plans-helper-text">
+            Start para colocar sua empresa no ar com clareza. Business para a maioria dos negocios
+            que querem explicar melhor a oferta e gerar mais orçamento. Authority para operações que
+            precisam de páginas extras, recursos sob medida e presença mais robusta.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- UPGRADES & MANUTENÇÃO -->
+      <section id="addons" class="sec-accent">
+        <p class="eyebrow reveal" data-num="07">Extras & Recorrência</p>
+        <h2 class="sec-title reveal">
+          Upgrades e
+          <br />
+          <span class="accent-dark">manutenção mensal.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Adicione funcionalidades quando fizer sentido e mantenha tudo atualizado.
+        </p>
+
+        <div class="addons-grid">
+          <!-- UPGRADES -->
+          <div>
+            <div class="addons-col-title reveal">
+              Upgrades
+              <span>adicional único</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Página adicional</div>
+                  <div class="addon-desc">
+                    Adicione uma nova página ao seu site (Portfólio, Blog, FAQ, etc.)
+                  </div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 200
+                  <small class="addon-price-monthly">por página</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Domínio personalizado</div>
+                  <div class="addon-desc">Registro e configuração do .com.br do seu negócio</div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 120
+                  <small class="addon-price-monthly">por ano</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Botão WhatsApp flutuante</div>
+                  <div class="addon-desc">
+                    Ícone verde fixo no canto da tela — ao clicar, abre o WhatsApp com mensagem
+                    pré-preenchida
+                  </div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 150
+                  <small class="addon-price-monthly">único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Galeria de fotos/portfólio</div>
+                  <div class="addon-desc">Seção de imagens com lightbox e categorias</div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 200
+                  <small class="addon-price-monthly">único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Google Analytics</div>
+                  <div class="addon-desc">
+                    Integração + painel configurado para ver visitas, origem e comportamento
+                  </div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 100
+                  <small class="addon-price-monthly">único</small>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Formulário de orçamento</div>
+                  <div class="addon-desc">
+                    Formulário inteligente que envia respostas por e-mail ou WhatsApp
+                  </div>
+                </div>
+                <div class="addon-price-monthly">
+                  + R$ 180
+                  <small class="addon-price-monthly">único</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MANUTENÇÃO -->
+          <div>
+            <div class="addons-col-title reveal">
+              Manutenção
+              <span>recorrente</span>
+            </div>
+            <div class="addon-list">
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Essencial</div>
+                  <div class="addon-desc">
+                    Até 2 alterações/mês — textos, fotos, horários, telefones
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 99
+                    <small class="addon-price-monthly">/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item popular">
+                <div class="addon-info">
+                  <div class="addon-popular-badge">⭐ Mais escolhido</div>
+                  <div class="addon-name">Plano Plus</div>
+                  <div class="addon-desc">
+                    Até 5 alterações/mês + monitoramento de desempenho + backup mensal
+                  </div>
+                  <div class="addon-tag-list">
+                    <span class="addon-tag">troca de textos</span>
+                    <span class="addon-tag">troca de fotos</span>
+                    <span class="addon-tag">atualização de horários</span>
+                    <span class="addon-tag">inclusão de novos serviços</span>
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 189
+                    <small class="addon-price-monthly">/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 1.890/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Plano Full</div>
+                  <div class="addon-desc">
+                    Alterações ilimitadas + suporte prioritário + relatório mensal de acessos
+                  </div>
+                </div>
+                <div class="addon-price-wrap">
+                  <div class="addon-price-monthly">
+                    R$ 299
+                    <small class="addon-price-monthly">/mês</small>
+                  </div>
+                  <div class="addon-price-annual">
+                    ou
+                    <span class="annual-value">R$ 2.990/ano</span>
+                    <br />
+                    <span class="annual-badge">2 meses grátis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Por que contratar manutenção?</div>
+                  <div class="addon-desc">
+                    Sites sem atualização perdem posição no Google. Com manutenção, seu site fica
+                    sempre relevante — e você não precisa me acionar toda vez que mudar um telefone
+                    ou adicionar uma foto.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="maint-tagline">
+              <strong>Seu site pronto é só o começo.</strong>
+              <br />
+              Mantemos ele atualizado, seguro e funcionando para você.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ FAQ ═══════════════════════════════════════ -->
+      <section id="faq" class="sec-dark">
+        <p class="eyebrow reveal" data-num="08">Dúvidas</p>
+        <h2 class="sec-title reveal">
+          Dúvidas antes
+          <br />
+          <span class="accent">de pedir orçamento.</span>
+        </h2>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-1">
+              <span class="faq-q-text">
+                Qual plano faz mais sentido para o meu tipo de empresa?
+              </span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-1">
+              <div class="faq-a-inner">
+                Se você precisa apresentar a empresa com clareza e colocar um CTA forte no ar
+                rápido, o Start costuma resolver. Se precisa explicar melhor serviços, diferenciais
+                e gerar mais orçamento, o Business tende a ser o melhor ponto de partida. Se o
+                projeto precisa de mais páginas, catálogo, agendamento ou estrutura mais robusta, o
+                Authority faz mais sentido.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-2">
+              <span class="faq-q-text">Em quanto tempo meu site fica pronto?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-2">
+              <div class="faq-a-inner">
+                O prazo varia conforme o plano: Start em até 7 dias, Business em até 14 dias e
+                Authority em até 30 dias. O cronograma começa assim que você envia as informações do
+                negócio e aprovamos a direção da página.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-3">
+              <span class="faq-q-text">O site vai aparecer no Google?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-3">
+              <div class="faq-a-inner">
+                Sim. Todos os planos incluem configuração básica de SEO para indexação no Google. O
+                plano Authority inclui SEO completo com otimização por palavras-chave do seu nicho e
+                cidade.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-4">
+              <span class="faq-q-text">Preciso entender de tecnologia para ter um site?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-4">
+              <div class="faq-a-inner">
+                Não. Você me passa nome da empresa, serviços, fotos, contatos e referências, e eu
+                cuido de design, programação, publicação e SEO. O processo é direto e pensado para
+                não travar sua rotina.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-5">
+              <span class="faq-q-text">
+                Posso atualizar o conteúdo depois que o site estiver no ar?
+              </span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-5">
+              <div class="faq-a-inner">
+                Sim. O plano Authority inclui painel de edição. Nos demais, você pode contratar
+                manutenção mensal e me pedir alterações com agilidade sempre que precisar atualizar
+                texto, serviço, foto, telefone ou horário.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-6">
+              <span class="faq-q-text">E se eu não gostar do design?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-6">
+              <div class="faq-a-inner">
+                Cada plano inclui rodadas de revisão. Eu apresento a direção visual antes de
+                publicar, ajusto o que for necessário dentro do escopo e o site só vai ao ar quando
+                você aprovar.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-empresa-7">
+              <span class="faq-q-text">Como funciona o pagamento?</span>
+              <span class="faq-q-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-a-empresa-7">
+              <div class="faq-a-inner">
+                50% na contratação e 50% na entrega do site aprovado. Aceito Pix, transferência ou
+                cartão. Você sabe o escopo e o investimento antes de começar, sem surpresa no meio
+                do projeto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ══ CTA FINAL ═════════════════════════════════ -->
+      <section id="cta-final" class="sec-accent">
+        <p class="eyebrow reveal">Próximo passo</p>
+        <h2 class="sec-title reveal">
+          Sua empresa precisa parecer
+          <br />
+          <span class="accent-dark">tão boa quanto o serviço que entrega.</span>
+        </h2>
+        <p class="sec-sub reveal">
+          Quando o cliente entende rápido o que você faz e encontra um CTA claro, o comercial recebe
+          pedidos de orçamento melhores.
+        </p>
+        <div class="cta-ctas reveal">
+          <a
+            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20pedir%20or%C3%A7amento%20para%20o%20site%20da%20minha%20empresa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
+        </div>
+        <p class="cta-note reveal">Orçamento gratuito · Resposta rápida</p>
+      </section>
+    </main>
+    <!-- /#main-content -->
 
     <!-- FOOTER -->
     <footer>
@@ -1270,7 +1287,7 @@
         sem autorização.
       </span>
       <span class="footer-note">
-        <span class="footer-dot"></span>
+        <span class="footer-dot" aria-hidden="true"></span>
         Disponível para novos projetos
       </span>
     </footer>
@@ -1279,6 +1296,7 @@
     <a
       href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20falar%20sobre%20um%20site%20para%20minha%20empresa"
       target="_blank"
+      rel="noopener noreferrer"
       class="wa-float">
       <svg
         xmlns="http://www.w3.org/2000/svg"
