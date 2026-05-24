@@ -1,0 +1,9 @@
+.framer-v2.niche-personal {
+  --niche: #cf895b;
+  --niche-bright: #e5ae86;
+}
+
+.framer-v2.niche-personal .examples-grid > *:nth-child(2),
+.framer-v2.niche-personal .proof-grid > *:nth-child(2) {
+  background: linear-gradient(135deg, #cf895b, #ff7a3d);
+}

@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;700&family=Inter:ital,wght@0,400;0,500;0,700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/fonts.css" />
 
@@ -49,10 +49,10 @@
         document.documentElement.classList.add("light-mode");
     </script>
 
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/nichos/advogado.css" />
+    <link rel="stylesheet" href="/assets/css/sitepara.css" />
+    <link rel="stylesheet" href="/assets/css/nichos-v2/advogado.css" />
   </head>
-  <body class="niche-page niche-advogado">
+  <body class="framer-v2 niche-page niche-advogado">
     <canvas
       id="inkCanvas"
       style="
@@ -76,6 +76,8 @@
             LABS
             <img
               id="theme-logo"
+              loading="eager"
+              fetchpriority="high"
               src="/assets/images/logo/logo-dark.png"
               style="height: 1rem"
               alt="Labs" />
@@ -198,6 +200,8 @@
         <a href="#planos" class="btn btn-ghost btn-lg">Ver opções e preços</a>
       </div>
       <div class="hero-trust">
+        <span class="trust-item trust-count">10+ escritórios atendidos</span>
+        <span class="trust-divider"></span>
         <span class="trust-item">Entrega em 7 dias</span>
         <span class="trust-divider"></span>
         <span class="trust-item">Presença jurídica profissional</span>
@@ -214,7 +218,7 @@
 
     <!-- ══ PROBLEMA ══════════════════════════════════ -->
     <section id="problema" class="sec-accent">
-      <p class="eyebrow reveal" data-num="01" style="justify-content: center">O problema</p>
+      <p class="eyebrow reveal" data-num="01">O problema</p>
       <h2 class="sec-title reveal">
         Seus futuros clientes estão
         <br />
@@ -583,7 +587,7 @@
 
     <!-- ══ PROJETO REAL ══════════════════════════════ -->
     <section id="projeto-real" class="sec-accent">
-      <p class="eyebrow reveal" data-num="05" style="margin-bottom: 0.5rem">Projeto entregue</p>
+      <p class="eyebrow reveal" data-num="05">Projeto entregue</p>
       <div class="projeto-inner">
         <!-- Info -->
         <div class="reveal">
@@ -632,6 +636,7 @@
             </div>
             <div class="browser-viewport">
               <img
+                loading="lazy"
                 src="/assets/images/prints/desktop/advogado.webp"
                 alt="Preview site Advogado"
                 style="
@@ -1198,7 +1203,7 @@
 
     <!-- ══ CTA FINAL ═════════════════════════════════ -->
     <section id="cta-final" class="sec-dark">
-      <p class="eyebrow reveal" style="justify-content: center">Próximo passo</p>
+      <p class="eyebrow reveal">Próximo passo</p>
       <h2 class="sec-title reveal">
         Seu escritório precisa parecer
         <br />

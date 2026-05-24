@@ -87,10 +87,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;700&family=Inter:ital,wght@0,400;0,500;0,700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/fonts.css" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/index-v2.css" />
     <script>
       (function () {
         var t = localStorage.getItem("theme");
@@ -101,7 +101,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="framer-v2">
     <canvas
       id="inkCanvas"
       style="
@@ -142,7 +142,9 @@
               id="introLogoImg"
               src="assets/images/logo/logo-dark.png"
               alt="Rosso Labs"
-              class="intro-logo-img" />
+              class="intro-logo-img"
+              loading="eager"
+              fetchpriority="high" />
             <div class="intro-logo-glow"></div>
             <div class="intro-logo-ring r1"></div>
             <div class="intro-logo-ring r2"></div>
@@ -275,8 +277,7 @@
       <div class="hero-content">
         <div class="hero-layout">
           <div class="hero-main">
-            <div class="hero-badge">Sites e landing pages para empresas e profissionais</div>
-            <p class="hero-kicker">Mensagem clara, prova certa e CTA forte para gerar orçamento</p>
+            <div class="hero-badge">Sites e landing pages para PMEs brasileiras</div>
             <h1 class="hero-title">
               Seu site precisa
               <br />
@@ -287,8 +288,8 @@
 
             <p class="hero-desc">
               Eu crio sites e landing pages para o cliente entender sua oferta rápido, confiar no
-              seu trabalho e pedir orçamento pelo WhatsApp sem você depender só de indicação ou rede
-              social.
+              seu trabalho e pedir orçamento pelo WhatsApp — sem você depender só de indicação ou
+              rede social.
             </p>
             <div class="hero-cta">
               <a
@@ -306,13 +307,12 @@
                 class="btn btn-whatsapp">
                 Falar direto no WhatsApp
               </a>
-              <a href="#about" class="btn btn-ghost">Ver como funciona</a>
             </div>
 
             <div class="hero-proof">
-              <span class="hero-proof-item">Modelos publicados em 5 segmentos</span>
-              <span class="hero-proof-item">Página pronta em 7 dias</span>
-              <span class="hero-proof-item">CTA e WhatsApp visíveis</span>
+              <span class="hero-proof-item">Modelos prontos em 5 segmentos</span>
+              <span class="hero-proof-item">Página no ar em 7 dias</span>
+              <span class="hero-proof-item">Sites publicados em todo o Brasil</span>
               <span class="hero-proof-item">Atendimento direto comigo</span>
             </div>
             <p class="hero-microcopy">
@@ -484,7 +484,7 @@
       </h2>
       <div class="skills-grid">
         <div class="skill-card reveal">
-          <span class="skill-icon">◈</span>
+          <span class="skill-icon">◆</span>
           <div class="skill-name">Oferta clara</div>
           <p class="skill-desc">
             O visitante entende rápido o que você vende, para quem é e por que vale a pena pedir
@@ -498,7 +498,7 @@
           </div>
         </div>
         <div class="skill-card reveal">
-          <span class="skill-icon">⬡</span>
+          <span class="skill-icon">◇</span>
           <div class="skill-name">Confiança imediata</div>
           <p class="skill-desc">
             A página transmite profissionalismo, mostra prova certa e reduz dúvida antes da primeira
@@ -512,7 +512,7 @@
           </div>
         </div>
         <div class="skill-card reveal">
-          <span class="skill-icon">⬢</span>
+          <span class="skill-icon">◈</span>
           <div class="skill-name">Contato sem atrito</div>
           <p class="skill-desc">
             WhatsApp, formulário e CTA aparecem na hora certa para o cliente agir sem caçar o
@@ -534,11 +534,11 @@
     <section id="portfolio-fotos" class="sec-accent">
       <p class="section-eyebrow reveal" data-num="03">Visual que ajuda a vender</p>
       <h2 class="section-title reveal">
-        Exemplos do que
+        Veja como fica
         <br />
-        o seu site pode
+        uma página feita
         <br />
-        mostrar para converter.
+        <span class="teal-word">para gerar contato.</span>
       </h2>
 
       <div class="portfolio-topbar reveal">
@@ -724,15 +724,14 @@
     <section id="projects" class="sec-dark">
       <p class="section-eyebrow reveal" data-num="04">Cases que ajudam a vender</p>
       <h2 class="section-title reveal">
-        Projetos que
+        Sites entregues
         <br />
-        já ajudam
+        que já geram
         <br />
-        a gerar orçamento.
+        <span class="teal-word">pedido de orçamento.</span>
       </h2>
       <p class="section-eyebrow reveal">
-        Cada case mostra como clareza, prova e CTA forte ajudam o visitante a chegar mais pronto no
-        contato.
+        Cada projeto mostra como estrutura clara, prova e CTA certo reduzem o atrito até o contato.
       </p>
       <div class="projects-grid">
         <div class="project-card featured reveal">
@@ -834,8 +833,8 @@
           <div class="project-stack">
             <span class="stack-tag">Confiança</span>
             <span class="stack-tag">Áreas de atuação</span>
-            <span class="stack-tag">Contato fácil</span>
-            <span class="stack-tag">Contato</span>
+            <span class="stack-tag">Consultas qualificadas</span>
+            <span class="stack-tag">WhatsApp</span>
           </div>
           <div class="project-links">
             <a href="/pages/advogado.html" target="_blank" class="project-link">↗ Abrir case</a>
@@ -972,6 +971,15 @@
           <p class="faq-answer">
             O foco é conversão. O visual precisa passar profissionalismo, mas a prioridade é fazer o
             visitante entender a oferta e chegar no contato com menos atrito.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Qual é o valor investido?</summary>
+          <p class="faq-answer">
+            Depende da estrutura. Cada segmento tem uma proposta diferente — você vê os detalhes de
+            cada formato clicando em "Ver opções e preços". Nenhuma proposta sai sem alinhamento
+            prévio.
           </p>
         </details>
 

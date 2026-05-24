@@ -1,0 +1,9 @@
+.framer-v2.niche-empresa {
+  --niche: #5a8ec9;
+  --niche-bright: #86b2e1;
+}
+
+.framer-v2.niche-empresa .examples-grid > *:nth-child(2),
+.framer-v2.niche-empresa .proof-grid > *:nth-child(2) {
+  background: linear-gradient(135deg, #5a8ec9, #86b2e1);
+}

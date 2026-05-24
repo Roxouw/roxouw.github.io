@@ -1,0 +1,9 @@
+.framer-v2.niche-dentista {
+  --niche: #4ba8a2;
+  --niche-bright: #7ccdc8;
+}
+
+.framer-v2.niche-dentista .examples-grid > *:nth-child(2),
+.framer-v2.niche-dentista .proof-grid > *:nth-child(2) {
+  background: linear-gradient(135deg, #4ba8a2, #2dd4c8);
+}

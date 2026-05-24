@@ -1,0 +1,9 @@
+.framer-v2.niche-advogado {
+  --niche: #5f82d6;
+  --niche-bright: #8ca8ea;
+}
+
+.framer-v2.niche-advogado .examples-grid > *:nth-child(2),
+.framer-v2.niche-advogado .proof-grid > *:nth-child(2) {
+  background: linear-gradient(135deg, #5f82d6, #a5bdff);
+}

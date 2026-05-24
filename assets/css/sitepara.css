@@ -1,0 +1,874 @@
+/* siteParaX landing pages — DESIGN.md (Framer) applied.
+   Loads tokens then adds page-specific component rules. */
+
+@import url("./_framer-tokens.css");
+
+/* ── Example card mock color variants ──────────────── */
+/* ex-*1: niche accent (teal), ex-*2: spotlight (handled by nth-child gradient),
+   ex-*3: orange, ex-*4: violet */
+
+[class$="1"] .mock-title {
+  background: var(--niche-bright) !important;
+}
+[class$="1"] .mock-btn {
+  background: var(--niche-bright) !important;
+}
+[class$="1"] .mock-dot:first-child {
+  background: var(--niche-bright) !important;
+}
+
+[class$="3"] .mock-title {
+  background: var(--grad-orange) !important;
+}
+[class$="3"] .mock-btn {
+  background: var(--grad-orange) !important;
+}
+[class$="3"] .mock-dot:first-child {
+  background: var(--grad-orange) !important;
+}
+
+[class$="4"] .mock-title {
+  background: var(--grad-violet) !important;
+}
+[class$="4"] .mock-btn {
+  background: var(--grad-violet) !important;
+}
+[class$="4"] .mock-dot:first-child {
+  background: var(--grad-violet) !important;
+}
+
+/* ── Steps (como funciona) ──────────────────────────── */
+
+.framer-v2 .step {
+  background: var(--surface-1);
+  border-radius: var(--r-xl);
+  padding: 28px 24px;
+  position: relative;
+}
+
+.framer-v2 .step-num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-dim);
+  display: block;
+  margin-bottom: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.framer-v2 .step-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.framer-v2 .step-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.framer-v2 .step-connector {
+  display: none;
+}
+
+.framer-v2 .steps-footer {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 14px;
+}
+
+.framer-v2 .steps-footer span {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── Problema/Search items ──────────────────────────── */
+
+.framer-v2 .search-item {
+  background: var(--surface-1);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  text-align: center;
+}
+.framer-v2 .search-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+.framer-v2 .search-query {
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 6px;
+  letter-spacing: -0.14px;
+}
+.framer-v2 .search-volume {
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: -0.12px;
+}
+
+.framer-v2 .problema-alert {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 20px 24px;
+  background: var(--surface-1);
+  border-left: 2px solid var(--niche-bright);
+  border-radius: var(--r-md);
+  color: var(--ink-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.framer-v2 .problema-alert strong {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* ── Examples (showcase) ────────────────────────────── */
+
+.framer-v2 .example-card {
+  padding: 16px;
+}
+.framer-v2 .example-preview {
+  background: var(--surface-2);
+  border-radius: var(--r-lg);
+  aspect-ratio: 16 / 10;
+  padding: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.framer-v2 .example-preview-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--surface-3);
+  border-radius: var(--r-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.framer-v2 .mock-nav {
+  display: flex;
+  gap: 6px;
+}
+.framer-v2 .mock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+.framer-v2 .mock-hero,
+.framer-v2 .mock-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.framer-v2 .mock-section {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.framer-v2 .mock-title {
+  width: 60%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 3px;
+}
+.framer-v2 .mock-sub {
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.framer-v2 .mock-btn {
+  width: 40%;
+  height: 14px;
+  background: var(--niche-bright);
+  border-radius: var(--r-pill);
+  margin-top: 4px;
+}
+.framer-v2 .mock-chip {
+  width: 30%;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-pill);
+}
+
+.framer-v2 .example-body {
+  padding: 4px;
+}
+.framer-v2 .example-type {
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: -0.12px;
+  margin-bottom: 4px;
+}
+.framer-v2 .example-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+.framer-v2 .example-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.framer-v2 .example-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.framer-v2 .example-tag {
+  background: var(--surface-2);
+  color: var(--ink-muted);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  letter-spacing: -0.11px;
+}
+
+/* ── Depoimentos ────────────────────────────────────── */
+
+.framer-v2 .dep-stars {
+  color: var(--niche-bright);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.framer-v2 .dep-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+.framer-v2 .dep-text strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.framer-v2 .dep-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 12px;
+}
+.framer-v2 .dep-name {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.framer-v2 .dep-role {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+/* ── Projeto real ───────────────────────────────────── */
+
+.framer-v2 .projeto-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 810px) {
+  .framer-v2 .projeto-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.framer-v2 .projeto-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--surface-1);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+.framer-v2 .projeto-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.framer-v2 .projeto-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+}
+.framer-v2 .projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.framer-v2 .projeto-tag {
+  background: var(--surface-1);
+  color: var(--ink-muted);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+}
+.framer-v2 .projeto-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.framer-v2 .browser-viewport {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.framer-v2 .browser-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(9, 9, 9, 0.6);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.framer-v2 .browser-frame:hover .browser-overlay {
+  opacity: 1;
+}
+.framer-v2 .browser-overlay a {
+  background: var(--ink);
+  color: var(--canvas);
+  padding: 10px 16px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Prova ──────────────────────────────────────────── */
+
+.framer-v2 .proof-item {
+  text-align: left;
+}
+.framer-v2 .proof-num {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 10px;
+}
+.framer-v2 .proof-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+  letter-spacing: -0.15px;
+}
+.framer-v2 .proof-desc {
+  font-size: 14px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.framer-v2 .proof-feat {
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.framer-v2 .proof-feat-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.framer-v2 .proof-feat-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.15px;
+}
+.framer-v2 .proof-feat-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+/* ── Planos / Pricing ───────────────────────────────── */
+
+.framer-v2 .pkg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.framer-v2 .pkg-badge {
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  background: var(--niche-bright);
+  color: var(--canvas);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  letter-spacing: -0.11px;
+}
+.framer-v2 .pkg-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.framer-v2 .pkg-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  min-height: 40px;
+}
+.framer-v2 .pkg-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.framer-v2 .pkg-price .currency {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.framer-v2 .pkg-price .value {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.framer-v2 .pkg-prazo {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-bottom: 18px;
+}
+.framer-v2 .pkg-divider {
+  height: 1px;
+  background: var(--hairline);
+  margin: 0 -24px 18px;
+}
+.framer-v2 .pkg-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+.framer-v2 .pkg-features li {
+  font-size: 13px;
+  color: var(--ink);
+  padding: 6px 0 6px 22px;
+  position: relative;
+  letter-spacing: -0.13px;
+}
+.framer-v2 .pkg-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-size: 11px;
+}
+.framer-v2 .pkg-features li.no {
+  color: var(--ink-dim);
+}
+.framer-v2 .pkg-features li.no::before {
+  content: "×";
+  color: var(--ink-dim);
+}
+
+.framer-v2 .plans-helper {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 20px 24px;
+  background: var(--surface-1);
+  border-radius: var(--r-md);
+  text-align: center;
+}
+.framer-v2 .plans-helper-title {
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.framer-v2 .plans-helper-text {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+/* ── Addons ─────────────────────────────────────────── */
+
+.framer-v2 .addons-grid {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 810px) {
+  .framer-v2 .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.framer-v2 .addons-col-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.framer-v2 .addons-col-title span {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+.framer-v2 .addon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.framer-v2 .addon-item {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.framer-v2 .addon-name {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.framer-v2 .addon-desc {
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+.framer-v2 .addon-price {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Section content width cap ───────────────────────── */
+
+.framer-v2 section > .eyebrow,
+.framer-v2 section > .sec-title,
+.framer-v2 section > .sec-sub {
+  max-width: 1200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── CTA inline ─────────────────────────────────────── */
+
+.framer-v2 .cta-inline {
+  text-align: center;
+  padding: 48px 24px 80px;
+  margin-top: 40px;
+  border-top: 1px solid var(--hairline-soft);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.framer-v2 .cta-inline .sec-title {
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.framer-v2 .cta-inline .sec-sub {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.framer-v2 .cta-inline-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.framer-v2 .cta-inline-note {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+/* ── Maint tagline ──────────────────────────────────── */
+
+.framer-v2 .maint-tagline {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--surface-1);
+  border-radius: var(--r-md);
+  font-size: 14px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.framer-v2 .maint-tagline strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── FAQ ────────────────────────────────────────────── */
+
+.framer-v2 .faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.framer-v2 .faq-item {
+  border-bottom: 1px solid var(--hairline-soft);
+}
+
+.framer-v2 .faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  user-select: none;
+  padding: 20px 0;
+}
+
+.framer-v2 .faq-q-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.16px;
+  line-height: 1.3;
+}
+
+.framer-v2 .faq-q-icon {
+  font-size: 20px;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  transition:
+    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1;
+}
+
+.framer-v2 .faq-item.open .faq-q-icon {
+  transform: rotate(45deg);
+  color: var(--niche-bright);
+}
+
+.framer-v2 .faq-a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.framer-v2 .faq-item.open .faq-a {
+  max-height: 400px;
+}
+
+.framer-v2 .faq-a-inner {
+  padding: 0 0 20px;
+  font-size: 14px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* ── CTA containers ─────────────────────────────────── */
+
+.framer-v2 .cta-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .framer-v2 .cta-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .framer-v2 .cta-ctas .btn,
+  .framer-v2 .cta-ctas .btn-whatsapp,
+  .framer-v2 .cta-ctas .btn-ghost,
+  .framer-v2 .cta-ctas .btn-lg {
+    width: 100%;
+  }
+}
+
+.framer-v2 .cta-note {
+  font-size: 13px;
+  color: var(--ink-muted);
+  letter-spacing: -0.13px;
+}
+
+/* ── Addon extras ───────────────────────────────────── */
+
+.framer-v2 .addon-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.framer-v2 .addon-popular-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--niche-bright);
+  margin-bottom: 6px;
+  letter-spacing: -0.11px;
+}
+
+.framer-v2 .addon-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.framer-v2 .addon-tag {
+  background: var(--surface-2);
+  color: var(--ink-muted);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  letter-spacing: -0.11px;
+}
+
+.framer-v2 .addon-item.popular {
+  background: var(--surface-2);
+  border-radius: var(--r-xl);
+}
+
+.framer-v2 .addon-price-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.framer-v2 .addon-price-monthly {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.framer-v2 .addon-price-monthly small {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.framer-v2 .addon-price-annual {
+  font-size: 12px;
+  color: var(--ink-dim);
+  text-align: right;
+  line-height: 1.4;
+}
+
+.framer-v2 .annual-value {
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.framer-v2 .annual-badge {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--success);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  letter-spacing: -0.1px;
+}
+
+.framer-v2 .addon-price small {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  display: block;
+  letter-spacing: 0;
+}
+
+/* ── WhatsApp float ─────────────────────────────────── */
+
+.framer-v2 .wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.framer-v2 .wa-float:hover {
+  transform: scale(0.97);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+  color: #fff;
+}
+
+.framer-v2 .wa-label {
+  letter-spacing: -0.14px;
+}
+
+@media (max-width: 540px) {
+  .framer-v2 .wa-label {
+    display: none;
+  }
+  .framer-v2 .wa-float {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
+
+/* ── CTA final ──────────────────────────────────────── */
+
+.framer-v2 #cta-final {
+  text-align: center;
+  padding: 120px 24px;
+}
+.framer-v2 .cta-glow {
+  display: none;
+}

@@ -1,0 +1,9 @@
+.framer-v2.niche-academia {
+  --niche: #739f41;
+  --niche-bright: #9fc96d;
+}
+
+.framer-v2.niche-academia .examples-grid > *:nth-child(2),
+.framer-v2.niche-academia .proof-grid > *:nth-child(2) {
+  background: linear-gradient(135deg, #739f41, #b5e56b);
+}
