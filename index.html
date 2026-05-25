@@ -1,1187 +1,312 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
-        img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
-        connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
-        base-uri 'self';
-        form-action 'self';
-      " />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Rosso Labs | Sites e Landing Pages para Gerar Orçamentos</title>
+    <title>Portfólio · Rosso Labs</title>
     <meta
       name="description"
-      content="Criação de sites e landing pages para empresas e profissionais que querem explicar melhor a oferta, gerar confiança e receber mais pedidos de orçamento." />
-    <meta
-      name="keywords"
-      content="criação de sites, site para empresa, site para autônomo, site profissional, landing page, presença digital, WhatsApp, SEO, Cachoeirinha, Rio Grande do Sul" />
-    <meta name="author" content="Rosso Labs" />
-    <meta name="robots" content="index, follow" />
+      content="Demos de landing pages criadas pela Rosso Labs por nicho: advogado, academia, dentista, nutricionista, personal e empresa." />
     <link rel="canonical" href="https://sites.rossolabs.com.br/" />
+    <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sites.rossolabs.com.br/" />
-    <meta property="og:title" content="Rosso Labs | Sites e Landing Pages para Gerar Orçamentos" />
-
-    <meta
-      property="og:description"
-      content="Criação de sites e landing pages para empresas e profissionais que querem explicar melhor a oferta, gerar confiança e receber mais pedidos de orçamento." />
+    <meta property="og:title" content="Portfólio · Rosso Labs" />
+    <meta property="og:description" content="Demos de landing pages por nicho." />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Rosso Labs" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rosso Labs | Sites e Landing Pages para Gerar Orçamentos" />
-    <meta
-      name="twitter:description"
-      content="Criação de sites e landing pages para empresas e profissionais que querem explicar melhor a oferta, gerar confiança e receber mais pedidos de orçamento." />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Rosso Labs",
-        "url": "https://sites.rossolabs.com.br/",
-        "email": "filiperosso99@gmail.com",
-        "telephone": "+55-51-98033-5252",
-        "founder": {
-          "@type": "Person",
-          "name": "Filipe Rosso"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cachoeirinha",
-          "addressRegion": "RS",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://github.com/Roxouw",
-          "https://www.linkedin.com/in/filiperosso/"
-        ],
-        "description": "Rosso Labs cria sites profissionais para empresas e autônomos com foco em autoridade,
-        presença digital e conversão."
-      }
-    </script>
-
-    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link rel="icon" type="image/png" href="/assets/icons/favicon.ico" sizes="512x512" />
-    <link rel="apple-touch-icon" href="/assets/icons/favicon.ico" />
-
-    <meta
-      property="og:image"
-      content="https://sites.rossolabs.com.br/assets/images/logo/rossoLabs.png?v=2" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Rosso Labs — O próximo passo para sua empresa" />
-    <meta
-      name="twitter:image"
-      content="https://sites.rossolabs.com.br/assets/images/logo/rossoLabs.png?v=2" />
-    <meta name="twitter:image:alt" content="Rosso Labs — O próximo passo para sua empresa" />
-
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;700&family=Inter:ital,wght@0,400;0,500;0,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/fonts.css" />
-    <link rel="stylesheet" href="/assets/css/index-v2.css" />
-    <script>
-      (function () {
-        var t = localStorage.getItem("theme");
-        var sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        var isLight = t === "light" || (t !== "dark" && !sysDark);
-        if (isLight) document.documentElement.classList.add("light-mode");
-      })();
-    </script>
-  </head>
 
-  <body class="framer-v2">
-    <a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
-    <canvas
-      id="inkCanvas"
-      aria-hidden="true"
-      style="
-        position: fixed;
-        inset: 0;
-        z-index: 8999;
-        pointer-events: none;
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #090909;
+        --surface: #131313;
+        --surface-2: #1c1c1c;
+        --ink: #f5f5f5;
+        --ink-muted: #a3a3a3;
+        --border: rgba(255, 255, 255, 0.08);
+        --accent: #0099ff;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1199px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      header {
+        padding: 32px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        font-size: 18px;
+      }
+      .home-link {
+        font-size: 14px;
+        color: var(--ink-muted);
+        transition: color 0.2s;
+      }
+      .home-link:hover {
+        color: var(--ink);
+      }
+      .home-link::after {
+        content: " ↗";
+      }
+
+      .hero {
+        padding: 80px 0 48px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 1rem + 5vw, 4.5rem);
+        letter-spacing: -0.05em;
+        line-height: 1.05;
+        font-weight: 700;
+        max-width: 16ch;
+      }
+      .lead {
+        margin-top: 20px;
+        color: var(--ink-muted);
+        max-width: 56ch;
+        font-size: 17px;
+      }
+
+      .grid {
+        padding: 32px 0 96px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        transition:
+          background 0.2s,
+          transform 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .card:hover {
+        background: var(--surface-2);
+      }
+      .card:hover .thumb img {
+        transform: scale(1.03);
+      }
+      .thumb {
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: var(--surface-2);
+      }
+      .thumb img {
         width: 100%;
         height: 100%;
-      "></canvas>
+        object-fit: cover;
+        object-position: top;
+        transition: transform 0.5s ease;
+      }
+      .card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+      .card h2 {
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        color: var(--ink-muted);
+        font-size: 13px;
+      }
+      .card-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+      }
+      .card-actions a {
+        color: var(--ink-muted);
+        transition: color 0.2s;
+      }
+      .card-actions a:hover {
+        color: var(--ink);
+      }
+      .card-actions a.primary {
+        color: var(--accent);
+      }
 
-    <div id="intro" aria-hidden="true">
-      <div class="intro-layout">
-        <!-- Coluna esquerda: texto -->
-        <div class="intro-text-col">
-          <p class="intro-eyebrow" id="introEyebrow">
-            <span></span>
-            Sites para Empresas e Autônomos
-          </p>
-          <div class="intro-name" id="introName">
-            <div id="introWelcome" class="intro-welcome-line"></div>
-            <div class="intro-main-name">
-              <span id="introFirst"></span>
-              <span id="introLast"></span>
-            </div>
-          </div>
-          <div class="intro-bar" id="introBar">
-            <div class="intro-bar-fill" id="introBarFill"></div>
-            <div class="intro-bar-shine" id="introBarShine"></div>
-          </div>
-          <span class="intro-text" id="introText">Sites que geram contato.</span>
-        </div>
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px 0;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      footer p {
+        color: var(--ink-muted);
+        font-size: 13px;
+      }
 
-        <!-- Coluna direita: logo animada -->
-        <div class="intro-logo-col" id="introLogoCol">
-          <div class="intro-logo-wrap" id="introLogoWrap">
-            <img
-              id="introLogoImg"
-              src="assets/images/logo/logo-dark.png"
-              alt="Rosso Labs"
-              class="intro-logo-img"
-              loading="eager"
-              fetchpriority="high" />
-            <div class="intro-logo-glow"></div>
-            <div class="intro-logo-ring r1"></div>
-            <div class="intro-logo-ring r2"></div>
-          </div>
-        </div>
+      @media (max-width: 640px) {
+        .hero {
+          padding: 56px 0 32px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/">Rosso Labs · Portfólio</a>
+        <a class="home-link" href="https://rossolabs.com.br">rossolabs.com.br</a>
       </div>
-    </div>
+    </header>
 
-    <div class="cursor" id="cursor" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#about" onclick="closeMobile()">Sobre</a>
-      <a href="#skills" onclick="closeMobile()">Serviços</a>
-      <a href="#projects" onclick="closeMobile()">Projetos</a>
-      <a href="/historia.html">História</a>
-      <a href="#contact" onclick="closeMobile()">Contato</a>
-      <a
-        href="#"
-        onclick="
-          closeMobile();
-          openNichoModal();
-          return false;
-        "
-        class="mobile-menu-cta">
-        Quero meu site agora
-      </a>
-    </div>
-
-    <nav id="navbar">
-      <div class="nav-logo-group">
-        <a href="#hero" class="nav-logo">
-          ROSSO
-          <span class="logo-rosso">
-            LABS
-            <img
-              id="theme-logo2"
-              src="assets/images/logo/logo-dark.png"
-              style="height: 1rem"
-              alt="" />
-          </span>
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#skills">Serviços</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="/historia.html">História</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li>
-          <a
-            href="#"
-            onclick="
-              openNichoModal();
-              return false;
-            "
-            class="nav-cta-link">
-            Quero meu site agora
-          </a>
-        </li>
-      </ul>
-      <div style="display: flex; align-items: center; gap: 0.6rem">
-        <button
-          class="theme-toggle"
-          aria-hidden="true"
-          id="themeToggle"
-          aria-label="Alternar tema"
-          title="Claro / Escuro / Automático">
-          <svg
-            class="icon-moon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
-          </svg>
-          <svg
-            class="icon-sun"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-          </svg>
-          <svg
-            class="icon-auto"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <path d="M17 12a5 5 0 0 1-5 5V7a5 5 0 0 1 5 5z" fill="currentColor" stroke="none" />
-          </svg>
-        </button>
-        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <main id="main-content">
-      <!-- HERO -->
-      <section id="hero">
-        <div class="hero-glow"></div>
-        <div class="hero-glow-2"></div>
-        <div class="hero-grid"></div>
-
-        <div class="hero-content">
-          <div class="hero-layout">
-            <div class="hero-main">
-              <div class="hero-badge">Sites e landing pages para PMEs brasileiras</div>
-              <h1 class="hero-title">
-                Seu site precisa
-                <br />
-                explicar melhor
-                <br />
-                <span class="teal-word">e vender por você.</span>
-              </h1>
-
-              <p class="hero-desc">
-                Eu crio sites e landing pages para o cliente entender sua oferta rápido, confiar no
-                seu trabalho e pedir orçamento pelo WhatsApp — sem você depender só de indicação ou
-                rede social.
-              </p>
-              <div class="hero-cta">
-                <a
-                  href="#"
-                  onclick="
-                    openNichoModal();
-                    return false;
-                  "
-                  class="btn btn-primary">
-                  Quero meu site agora
-                </a>
-                <a
-                  href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20seu%20site%20e%20quero%20pedir%20um%20or%C3%A7amento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-whatsapp">
-                  Falar direto no WhatsApp
-                </a>
-              </div>
-
-              <div class="hero-proof">
-                <span class="hero-proof-item">Modelos prontos em 5 segmentos</span>
-                <span class="hero-proof-item">Página no ar em 7 dias</span>
-                <span class="hero-proof-item">Sites publicados em todo o Brasil</span>
-                <span class="hero-proof-item">Atendimento direto comigo</span>
-              </div>
-              <p class="hero-microcopy">
-                Você fala direto com quem escreve, estrutura e publica a página. Sem agência grande,
-                sem repasse e sem proposta enrolada.
-              </p>
-            </div>
-            <aside class="hero-panel">
-              <div class="hero-panel-top">
-                <p class="hero-panel-label">O que entra no projeto</p>
-                <p class="hero-panel-title">
-                  Página comercial feita para transformar visita em pedido de orçamento
-                </p>
-                <p class="hero-panel-text">
-                  Não é site para enfeite. É estrutura pensada para mostrar o que você vende,
-                  reduzir dúvida e facilitar o contato no momento certo.
-                </p>
-              </div>
-              <div class="hero-panel-grid">
-                <div class="hero-mini-card">
-                  <strong>Posicionamento claro</strong>
-                  <span>
-                    O cliente entende o que você faz, para quem atende e por que vale a pena
-                  </span>
-                </div>
-                <div class="hero-mini-card">
-                  <strong>Prova de resultado</strong>
-                  <span>
-                    Cases, contexto e sinais de confiança antes mesmo da primeira mensagem
-                  </span>
-                </div>
-                <div class="hero-mini-card">
-                  <strong>WhatsApp acessível</strong>
-                  <span>
-                    Contato fácil no celular e no desktop, sem o cliente precisar procurar
-                  </span>
-                </div>
-                <div class="hero-mini-card">
-                  <strong>Entrega em 7 dias</strong>
-                  <span>Direção clara, execução rápida e publicação incluída</span>
-                </div>
-              </div>
-              <div class="hero-steps">
-                <div class="hero-step">
-                  <span>01</span>
-                  Você explica seu negócio; eu organizo a mensagem e o melhor caminho para vender
-                </div>
-                <div class="hero-step">
-                  <span>02</span>
-                  Eu monto a página com copy, SEO, CTA e prova para gerar mais intenção de contato
-                </div>
-                <div class="hero-step">
-                  <span>03</span>
-                  Site publicado e pronto para captar pedidos de orçamento enquanto você trabalha
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>scroll</span>
-          </div>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- ABOUT -->
-      <section id="about" class="sec-dark">
-        <div class="about-left">
-          <p class="section-eyebrow" data-num="01">Por que o orçamento não chega</p>
-          <h2 class="section-title reveal">
-            Você pode entregar bem.
-            <br />
-            Se a página não vende,
-            <br />
-            o cliente não descobre.
-          </h2>
-          <p class="about-text reveal">
-            Muita empresa tem um serviço bom, mas a página não mostra isso com clareza. O visitante
-            entra, não entende o valor rápido e pede orçamento para quem parece mais confiável.
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Portfólio</p>
+          <h1>Demos de landing pages por nicho.</h1>
+          <p class="lead">
+            Exemplos reais de páginas de captura criadas pela Rosso Labs. Cada demo mostra
+            estrutura, hierarquia e CTA pensados para o segmento. Para o serviço novo, veja
+            <a style="color: var(--accent)" href="https://rossolabs.com.br">rossolabs.com.br</a>
+            .
           </p>
-          <p class="about-text reveal">
-            O problema não é só visual. Sem mensagem clara, prova e CTA fácil, até quem já tinha
-            interesse esfria antes de falar com você.
-          </p>
-          <p class="about-text reveal">
-            Uma página comercial boa faz três coisas: explica sua oferta, aumenta confiança e leva o
-            cliente para o próximo passo sem atrito.
-          </p>
-          <div class="about-stats reveal">
-            <div class="stat-box">
-              <span class="stat-num">3s</span>
-              <span class="stat-label">
-                é o tempo para o visitante decidir se continua ou volta ao Google
-              </span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">7 dias</span>
-              <span class="stat-label">é o prazo para colocar uma página comercial no ar</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">24h</span>
-              <span class="stat-label">é o tempo para um lead esfriar se o contato demora</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">+1 canal</span>
-              <span class="stat-label">
-                de captação reduz a dependência de rede social e indicação
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="about-right reveal">
-          <p class="stack-label">O que derruba a conversão antes da mensagem</p>
-          <div class="tech-grid">
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Oferta confusa que não explica o valor
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Página sem cases ou prova de resultado
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Visual que passa insegurança
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              CTA difícil de encontrar ou inexistente
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              WhatsApp escondido no rodapé
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Posicionamento genérico ("faço de tudo")
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Cliente preso ao Instagram para captar
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Dependência de indicação para crescer
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Contato por formulário que ninguém responde
-            </div>
-            <div class="tech-item">
-              <div class="tech-dot"></div>
-              Página que existe, mas não converte
-            </div>
-          </div>
         </div>
       </section>
 
-      <hr class="divider divider-accent" />
-
-      <!-- SKILLS -->
-      <section id="skills" class="sec-accent">
-        <p class="section-eyebrow reveal" data-num="02">O que muda na prática</p>
-        <h2 class="section-title reveal">
-          O que acontece
-          <br />
-          quando sua página
-          <br />
-          começa a trabalhar.
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <span class="skill-icon">◆</span>
-            <div class="skill-name">Oferta clara</div>
-            <p class="skill-desc">
-              O visitante entende rápido o que você vende, para quem é e por que vale a pena pedir
-              orçamento.
-            </p>
-            <div class="skill-tags">
-              <span class="skill-tag">Mensagem clara</span>
-              <span class="skill-tag">Leitura rápida</span>
-              <span class="skill-tag">Posicionamento</span>
-              <span class="skill-tag">Mais intenção</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <span class="skill-icon">◇</span>
-            <div class="skill-name">Confiança imediata</div>
-            <p class="skill-desc">
-              A página transmite profissionalismo, mostra prova certa e reduz dúvida antes da
-              primeira conversa.
-            </p>
-            <div class="skill-tags">
-              <span class="skill-tag">Autoridade</span>
-              <span class="skill-tag">Prova</span>
-              <span class="skill-tag">Visual profissional</span>
-              <span class="skill-tag">Mais confiança</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <span class="skill-icon">◈</span>
-            <div class="skill-name">Contato sem atrito</div>
-            <p class="skill-desc">
-              WhatsApp, formulário e CTA aparecem na hora certa para o cliente agir sem caçar o
-              próximo passo.
-            </p>
-            <div class="skill-tags">
-              <span class="skill-tag">WhatsApp</span>
-              <span class="skill-tag">CTA forte</span>
-              <span class="skill-tag">Pedido de orçamento</span>
-              <span class="skill-tag">Próximo passo</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- VITRINE VISUAL -->
-      <section id="portfolio-fotos" class="sec-accent">
-        <p class="section-eyebrow reveal" data-num="03">Visual que ajuda a vender</p>
-        <h2 class="section-title reveal">
-          Veja como fica
-          <br />
-          uma página feita
-          <br />
-          <span class="teal-word">para gerar contato.</span>
-        </h2>
-
-        <div class="portfolio-topbar reveal">
-          <p class="portfolio-subtitle">
-            Exemplos de páginas com visual profissional, leitura rápida e CTA visível para facilitar
-            o pedido de orçamento.
-          </p>
-          <div
-            class="device-toggle"
-            id="deviceToggle"
-            role="tablist"
-            aria-label="Escolher visualização">
-            <button
-              class="device-option active"
-              data-device="mobile"
-              type="button"
-              role="tab"
-              aria-selected="true">
-              Celular
-            </button>
-            <button
-              class="device-option"
-              data-device="desktop"
-              type="button"
-              role="tab"
-              aria-selected="false">
-              Monitor
-            </button>
-          </div>
-        </div>
-
-        <div
-          class="showcase-wrap reveal"
-          id="showcaseWrap"
-          aria-label="Vitrine de projetos"
-          role="region">
-          <button class="photo-nav prev" aria-label="Projeto anterior" type="button">
-            &#8249;
-          </button>
-          <div class="showcase-stage" id="showcaseStage">
-            <a
-              class="project-shot"
-              href="/pages/advogado.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-index="0"
-              tabindex="-1">
-              <div class="shot-frame shot-mobile">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/advogado.png"
-                  data-desktop="/assets/images/prints/desktop/advogado.webp"
-                  data-mobile="/assets/images/prints/mobile/advogado.png"
-                  alt="Projeto para advogado no celular"
-                  loading="lazy" />
-              </div>
-              <div class="shot-frame shot-desktop hidden">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/advogado.webp"
-                  data-desktop="/assets/images/prints/desktop/advogado.webp"
-                  data-mobile="/assets/images/prints/mobile/advogado.png"
-                  alt="Projeto para advogado"
-                  loading="lazy" />
-              </div>
-              <span class="shot-caption">Advogado</span>
+      <section class="wrap">
+        <div class="grid">
+          <article class="card">
+            <a class="thumb" href="/pages/advogado.html">
+              <img
+                src="/assets/images/prints/desktop/advogado.webp"
+                alt="Demo de landing para advogado"
+                loading="lazy" />
             </a>
+            <div class="card-body">
+              <h2>Escritório de Advocacia</h2>
+              <p>Landing · Jurídico</p>
+              <div class="card-actions">
+                <a class="primary" href="/pages/advogado.html">Ver demo →</a>
+                <a href="https://rossolabs.com.br/pt-BR/para/advogado">Página de serviço</a>
+              </div>
+            </div>
+          </article>
 
-            <a
-              class="project-shot"
-              href="/pages/academia.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-index="1"
-              tabindex="-1">
-              <div class="shot-frame shot-mobile">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/academia.png"
-                  data-desktop="/assets/images/prints/desktop/academia.webp"
-                  data-mobile="/assets/images/prints/mobile/academia.png"
-                  alt="Projeto para academia no celular"
-                  loading="lazy" />
-              </div>
-              <div class="shot-frame shot-desktop hidden">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/academia.webp"
-                  data-desktop="/assets/images/prints/desktop/academia.webp"
-                  data-mobile="/assets/images/prints/mobile/academia.png"
-                  alt="Projeto para academia"
-                  loading="lazy" />
-              </div>
-              <span class="shot-caption">Academia</span>
+          <article class="card">
+            <a class="thumb" href="/pages/academia.html">
+              <img
+                src="/assets/images/prints/desktop/academia.webp"
+                alt="Demo de landing para academia"
+                loading="lazy" />
             </a>
+            <div class="card-body">
+              <h2>Academia / Personal</h2>
+              <p>Landing + matrículas · Fitness</p>
+              <div class="card-actions">
+                <a class="primary" href="/pages/academia.html">Ver demo →</a>
+                <a href="https://rossolabs.com.br/pt-BR/para/academia">Página de serviço</a>
+              </div>
+            </div>
+          </article>
 
-            <a
-              class="project-shot"
-              href="/pages/dentista.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-index="2"
-              tabindex="-1">
-              <div class="shot-frame shot-mobile">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/dentista.png"
-                  data-desktop="/assets/images/prints/desktop/dentista.webp"
-                  data-mobile="/assets/images/prints/mobile/dentista.png"
-                  alt="Projeto para dentista no celular"
-                  loading="lazy" />
-              </div>
-              <div class="shot-frame shot-desktop hidden">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/dentista.webp"
-                  data-desktop="/assets/images/prints/desktop/dentista.webp"
-                  data-mobile="/assets/images/prints/mobile/dentista.webp"
-                  alt="Projeto para dentista"
-                  loading="lazy" />
-              </div>
-              <span class="shot-caption">Dentista</span>
+          <article class="card">
+            <a class="thumb" href="/pages/dentista.html">
+              <img
+                src="/assets/images/prints/desktop/dentista.webp"
+                alt="Demo de landing para clínica odontológica"
+                loading="lazy" />
             </a>
-
-            <a
-              class="project-shot"
-              href="/pages/nutricionista.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-index="3"
-              tabindex="-1">
-              <div class="shot-frame shot-mobile">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/mobile/nutricionista.png"
-                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
-                  data-mobile="/assets/images/prints/mobile/nutricionista.png"
-                  alt="Projeto para nutricionista no celular"
-                  loading="lazy" />
-              </div>
-              <div class="shot-frame shot-desktop hidden">
-                <img
-                  class="shot-image"
-                  src="/assets/images/prints/desktop/nutricionista.webp"
-                  data-desktop="/assets/images/prints/desktop/nutricionista.webp"
-                  data-mobile="/assets/images/prints/mobile/nutricionista.webp"
-                  alt="Projeto para nutricionista"
-                  loading="lazy" />
-              </div>
-              <span class="shot-caption">Nutricionista</span>
-            </a>
-          </div>
-          <button class="photo-nav next" aria-label="Próximo projeto" type="button">&#8250;</button>
-        </div>
-        <div
-          class="showcase-dots"
-          id="showcaseDots"
-          aria-label="Indicadores de slide"
-          role="tablist"></div>
-
-        <div class="showcase-cta reveal">
-          <p class="showcase-cta-copy">
-            Quer uma página assim para o seu negócio? Eu te mostro o formato mais certo para sua
-            oferta, o que entra no projeto e qual estrutura tende a converter melhor.
-          </p>
-          <div class="showcase-cta-actions">
-            <a
-              href="#"
-              onclick="
-                openNichoModal();
-                return false;
-              "
-              class="btn btn-primary">
-              Ver opções e preços
-            </a>
-            <a
-              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20vi%20os%20modelos%20do%20seu%20site%20e%20quero%20entender%20qual%20formato%20faz%20mais%20sentido%20para%20o%20meu%20neg%C3%B3cio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-whatsapp">
-              Falar no WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- PROJECTS -->
-      <section id="projects" class="sec-dark">
-        <p class="section-eyebrow reveal" data-num="04">Cases que ajudam a vender</p>
-        <h2 class="section-title reveal">
-          Sites entregues
-          <br />
-          que já geram
-          <br />
-          <span class="teal-word">pedido de orçamento.</span>
-        </h2>
-        <p class="section-eyebrow reveal">
-          Cada projeto mostra como estrutura clara, prova e CTA certo reduzem o atrito até o
-          contato.
-        </p>
-        <div class="projects-grid">
-          <div class="project-card featured reveal">
-            <div>
-              <p class="project-num">001 — Case em destaque</p>
-              <h3 class="project-title">Gabriel Consultoria — Funil de Captação</h3>
-              <p class="project-desc">
-                Página criada para qualificar melhor o lead, reduzir dúvida e levar o visitante mais
-                pronto para a conversa no WhatsApp.
-              </p>
-              <div class="project-stack">
-                <span class="stack-tag">Oferta clara</span>
-                <span class="stack-tag">Qualificação</span>
-                <span class="stack-tag">WhatsApp</span>
-                <span class="stack-tag">SEO</span>
-                <span class="stack-tag">Captação</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://sites.rossolabs.com.br/consultoria-gabriel/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link">
-                  <span aria-hidden="true">↗</span>
-                  Abrir case
-                </a>
+            <div class="card-body">
+              <h2>Clínica Odontológica</h2>
+              <p>Landing · Saúde</p>
+              <div class="card-actions">
+                <a class="primary" href="/pages/dentista.html">Ver demo →</a>
+                <a href="https://rossolabs.com.br/pt-BR/para/dentista">Página de serviço</a>
               </div>
             </div>
-            <div class="project-visual">
-              <div class="project-visual-text">
-                clareza · diagnóstico
-                <br />
-                whatsapp · lead capture
+          </article>
+
+          <article class="card">
+            <a class="thumb" href="/pages/nutricionista.html">
+              <img
+                src="/assets/images/prints/desktop/nutricionista.webp"
+                alt="Demo de landing para nutricionista"
+                loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h2>Nutricionista</h2>
+              <p>Landing · Saúde</p>
+              <div class="card-actions">
+                <a class="primary" href="/pages/nutricionista.html">Ver demo →</a>
+                <a href="https://rossolabs.com.br/pt-BR/para/nutricionista">Página de serviço</a>
               </div>
             </div>
-          </div>
-
-          <div class="project-card reveal">
-            <p class="project-num">002 — Case publicado</p>
-            <h3 class="project-title">INOVATA Móveis Sob Medida</h3>
-            <p class="project-desc">
-              Projeto pensado para mostrar acabamento, confiança e diferencial rápido antes do
-              pedido de orçamento.
-            </p>
-            <div class="project-stack">
-              <span class="stack-tag">Autoridade</span>
-              <span class="stack-tag">WhatsApp</span>
-              <span class="stack-tag">Oferta clara</span>
-              <span class="stack-tag">Open Graph</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://sites.rossolabs.com.br/SiteInovata/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link">
-                <span aria-hidden="true">↗</span>
-                Abrir case
-              </a>
-            </div>
-          </div>
-
-          <div class="project-card reveal">
-            <p class="project-num">003 — Case publicado</p>
-            <h3 class="project-title">Academia Iron House</h3>
-            <p class="project-desc">
-              Página com planos claros e CTA direto para facilitar matrícula e pedido de informação
-              de novos alunos.
-            </p>
-            <div class="project-stack">
-              <span class="stack-tag">Planos claros</span>
-              <span class="stack-tag">WhatsApp</span>
-              <span class="stack-tag">Matrícula</span>
-              <span class="stack-tag">Planos</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="/pages/academia.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link">
-                <span aria-hidden="true">↗</span>
-                Abrir case
-              </a>
-            </div>
-          </div>
-
-          <div class="project-card reveal">
-            <p class="project-num">004 — Case publicado</p>
-            <h3 class="project-title">Clínica Odontológica</h3>
-            <p class="project-desc">
-              Página feita para transmitir autoridade, explicar tratamentos e facilitar avaliação e
-              agendamento pelo WhatsApp.
-            </p>
-            <div class="project-stack">
-              <span class="stack-tag">Autoridade</span>
-              <span class="stack-tag">Tratamentos claros</span>
-              <span class="stack-tag">WhatsApp</span>
-              <span class="stack-tag">Agendamento</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="/pages/dentista.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link">
-                <span aria-hidden="true">↗</span>
-                Abrir case
-              </a>
-            </div>
-          </div>
-
-          <div class="project-card reveal">
-            <p class="project-num">005 — Case publicado</p>
-            <h3 class="project-title">Escritório de Advocacia</h3>
-            <p class="project-desc">
-              Estrutura sóbria para reforçar confiança, explicar áreas de atuação e gerar consultas
-              mais qualificadas.
-            </p>
-            <div class="project-stack">
-              <span class="stack-tag">Confiança</span>
-              <span class="stack-tag">Áreas de atuação</span>
-              <span class="stack-tag">Consultas qualificadas</span>
-              <span class="stack-tag">WhatsApp</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="/pages/advogado.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link">
-                <span aria-hidden="true">↗</span>
-                Abrir case
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FREELANCE BANNER -->
-      <section id="freelance" class="sec-accent">
-        <div class="freelance-inner">
-          <div class="freelance-copy reveal">
-            <div class="freelance-text">
-              <p class="section-eyebrow" data-num="05">Qual formato faz sentido</p>
-              <h2>
-                Escolha a estrutura
-                <br />
-                certa para receber
-                <br />
-                mais pedidos de orçamento.
-              </h2>
-              <p>
-                Site institucional, landing page ou estrutura personalizada para vender melhor sua
-                oferta, passar confiança e facilitar o contato.
-              </p>
-            </div>
-
-            <div class="offer-grid reveal">
-              <article class="offer-card">
-                <p class="offer-label">Melhor para explicar serviço e empresa</p>
-                <h3 class="offer-title">Site institucional</h3>
-                <p class="offer-desc">
-                  Para quem precisa apresentar melhor a empresa, os serviços e os diferenciais antes
-                  do orçamento.
-                </p>
-                <ul class="offer-points">
-                  <li>serviços explicados com clareza</li>
-                  <li>WhatsApp e formulário em destaque</li>
-                  <li>presença profissional para vender melhor</li>
-                </ul>
-              </article>
-
-              <article class="offer-card offer-card-featured">
-                <p class="offer-label">Melhor para vender uma oferta principal</p>
-                <h3 class="offer-title">Landing page</h3>
-                <p class="offer-desc">
-                  Para concentrar atenção em uma oferta, reduzir distração e aumentar a chance de
-                  pedido de orçamento.
-                </p>
-                <ul class="offer-points">
-                  <li>uma oferta principal por página</li>
-                  <li>CTA forte acima da dobra</li>
-                  <li>estrutura feita para gerar contato rápido</li>
-                </ul>
-              </article>
-
-              <article class="offer-card">
-                <p class="offer-label">Melhor para processos de venda mais complexos</p>
-                <h3 class="offer-title">Estrutura personalizada</h3>
-                <p class="offer-desc">
-                  Para negócios que precisam de quiz, funil, agendamento, páginas extras ou uma
-                  jornada mais alinhada ao jeito como fecham clientes.
-                </p>
-                <ul class="offer-points">
-                  <li>fluxo alinhado ao seu processo</li>
-                  <li>mais contexto antes do contato</li>
-                  <li>estrutura sob medida para o negócio</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <div class="freelance-actions reveal">
-            <a
-              href="#"
-              onclick="
-                openNichoModal();
-                return false;
-              "
-              class="btn btn-primary">
-              Ver opções e preços
-            </a>
-            <a
-              href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20entender%20o%20melhor%20site%20para%20o%20meu%20neg%C3%B3cio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-whatsapp">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                style="flex-shrink: 0">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              Falar no WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="sec-dark">
-        <p class="section-eyebrow reveal" data-num="06">Dúvidas antes do clique</p>
-        <h2 class="section-title reveal">
-          Respostas para
-          <br />
-          destravar o pedido de orçamento.
-        </h2>
-        <p class="faq-intro reveal">
-          Estas são as dúvidas mais comuns de quem quer avançar, mas ainda precisa entender escopo,
-          prazo e como o projeto funciona.
-        </p>
-
-        <div class="faq-list reveal">
-          <details class="faq-item">
-            <summary class="faq-question">Em quanto tempo o site pode entrar no ar?</summary>
-            <p class="faq-answer">
-              O prazo médio fica entre 7 e 10 dias. Se o projeto pedir mais páginas ou uma estrutura
-              personalizada, isso já fica alinhado na proposta antes de começar.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">O que normalmente já entra no projeto?</summary>
-            <p class="faq-answer">
-              Estrutura da página, copy mais clara, layout responsivo, CTA, WhatsApp, formulário,
-              SEO básico e publicação pronta para divulgar.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">É só visual ou também tem foco em conversão?</summary>
-            <p class="faq-answer">
-              O foco é conversão. O visual precisa passar profissionalismo, mas a prioridade é fazer
-              o visitante entender a oferta e chegar no contato com menos atrito.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Qual é o valor investido?</summary>
-            <p class="faq-answer">
-              Depende da estrutura. Cada segmento tem uma proposta diferente — você vê os detalhes
-              de cada formato clicando em "Ver opções e preços". Nenhuma proposta sai sem
-              alinhamento prévio.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Como funciona o primeiro atendimento?</summary>
-            <p class="faq-answer">
-              Você chama no WhatsApp ou pede orçamento. Eu entendo seu momento, indico o formato
-              mais certo e devolvo uma proposta clara, sem enrolação.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="sec-dark">
-        <p class="section-eyebrow reveal" style="justify-content: center" data-num="07">
-          Próximo passo
-        </p>
-        <h2 class="contact-title reveal">
-          Se o seu negócio
-          <span class="text-teal">já entrega bem,</span>
-          <br />
-          falta uma página
-          <span class="text-teal">que explique isso e gere orçamento.</span>
-        </h2>
-        <p class="contact-subtitle">
-          Me chama e eu te mostro qual estrutura faz mais sentido para sua oferta, o que entra no
-          projeto e como você pode começar sem complicação.
-        </p>
-        <div class="contact-actions reveal">
-          <a
-            href="#"
-            onclick="
-              openNichoModal();
-              return false;
-            "
-            class="btn btn-primary">
-            Ver opções e preços
-          </a>
-          <a
-            href="https://wa.me/5551980335252?text=Oi%20Filipe%2C%20quero%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp">
-            Falar no WhatsApp
-          </a>
-        </div>
-        <div class="social-links reveal">
-          <a
-            href="https://wa.me/5551980335252"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link">
-            Falar no WhatsApp
-          </a>
-          <div class="social-divider"></div>
-          <a
-            href="mailto:filiperosso99@gmail.com?subject=Quero%20um%20site%20profissional"
-            class="social-link">
-            Receber proposta por e-mail
-          </a>
-          <div class="social-divider"></div>
-          <a
-            href="#"
-            onclick="
-              openNichoModal();
-              return false;
-            "
-            class="social-link">
-            Ver opções e preços
-          </a>
+          </article>
         </div>
       </section>
     </main>
-    <!-- /#main-content -->
 
-    <!-- FOOTER -->
     <footer>
-      <span class="footer-copy">© 2026 Rosso Labs. Todos os direitos reservados.</span>
-      <span class="footer-note">
-        <span class="footer-dot" aria-hidden="true"></span>
-        Sites profissionais para empresas e autônomos — do RS para o Brasil.
-      </span>
-    </footer>
-
-    <!-- MODAL NICHO -->
-    <div
-      id="nichoModal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="nichoTitleEl"
-      aria-hidden="true">
-      <div class="nicho-card">
-        <button class="nicho-close" id="nichoCloseBtn" aria-label="Fechar">✕</button>
-        <p class="nicho-eyebrow">Ver opções e preços</p>
-        <h2 class="nicho-title" id="nichoTitleEl">Qual é o segmento do seu negócio?</h2>
-        <p class="nicho-sub">
-          Escolha abaixo e veja um modelo pensado para o seu mercado, com estrutura comercial e foco
-          em gerar contato.
-        </p>
-        <div class="nicho-grid">
-          <a href="/pages/siteParaAdvogado.html" class="nicho-btn">
-            <span class="nicho-icon">⚖️</span>
-            Advogado
-          </a>
-          <a href="/pages/siteParaAcademia.html" class="nicho-btn">
-            <span class="nicho-icon">🏋️</span>
-            Academia
-          </a>
-          <a href="/pages/siteParaPersonal.html" class="nicho-btn">
-            <span class="nicho-icon">📋</span>
-            Personal
-          </a>
-          <a href="/pages/siteParaNutricionista.html" class="nicho-btn">
-            <span class="nicho-icon">🥗</span>
-            Nutrição
-          </a>
-          <a href="/pages/siteParaDentista.html" class="nicho-btn">
-            <span class="nicho-icon">🦷</span>
-            Dentista
-          </a>
-          <a href="/pages/siteParaEmpresa.html" class="nicho-btn">
-            <span class="nicho-icon">🏢</span>
-            Outro segmento
-          </a>
-        </div>
-        <a
-          href="https://wa.me/5551980335252?text=Oi%20Filipe,%20acabei%20de%20ver%20seu%20site%20e%20quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio.%20Pode%20me%20explicar%20como%20funciona"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-whatsapp"
-          style="align-items: center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            style="flex-shrink: 0">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Prefiro falar no WhatsApp
-        </a>
-        <a
-          href="mailto:filiperosso99@gmail.com?subject=Quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio"
-          class="btn btn-ghost"
-          style="align-items: center; justify-content: center">
-          Prefiro falar por e-mail
-        </a>
+      <div class="wrap">
+        <p>© Rosso Labs</p>
+        <p><a href="https://rossolabs.com.br">Voltar para rossolabs.com.br</a></p>
       </div>
-    </div>
-
-    <script src="/assets/js/analytics.js"></script>
-    <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/transitions.js"></script>
-    <script src="/assets/js/mobile-fix.js"></script>
+    </footer>
   </body>
 </html>
