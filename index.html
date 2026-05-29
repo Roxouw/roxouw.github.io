@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio · Rosso Labs</title>
+    <title>Selected Work — Rosso Labs</title>
     <meta
       name="description"
-      content="Demos de landing pages criadas pela Rosso Labs por nicho: advogado, academia, dentista, nutricionista, personal e empresa." />
+      content="Selected work do estúdio Rosso Labs: landing pages para advogado, academia, dentista e nutricionista. Estrutura, hierarquia e CTA pensados para cada segmento." />
     <link rel="canonical" href="https://sites.rossolabs.com.br/" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sites.rossolabs.com.br/" />
-    <meta property="og:title" content="Portfólio · Rosso Labs" />
-    <meta property="og:description" content="Demos de landing pages por nicho." />
+    <meta property="og:title" content="Selected Work — Rosso Labs" />
+    <meta property="og:description" content="Selected work do estúdio Rosso Labs." />
     <meta property="og:locale" content="pt_BR" />
 
+    <meta name="theme-color" content="#090909" />
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;700&display=swap" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet" />
 
     <style>
@@ -31,177 +38,853 @@
         margin: 0;
         padding: 0;
       }
+
       :root {
-        --bg: #090909;
-        --surface: #131313;
+        --canvas: #090909;
+        --surface-1: #141414;
         --surface-2: #1c1c1c;
-        --ink: #f5f5f5;
-        --ink-muted: #a3a3a3;
-        --border: rgba(255, 255, 255, 0.08);
-        --accent: #0099ff;
+        --hairline: #262626;
+        --hairline-soft: #1a1a1a;
+        --ink: #ffffff;
+        --ink-muted: #999999;
+        --accent-blue: #0099ff;
+
+        --grad-magenta: #d44df0;
+        --grad-violet: #6a4cf5;
+        --grad-orange: #ff7a3d;
+        --grad-coral: #ff5577;
+
+        --display: "Mona Sans", system-ui, sans-serif;
+        --body: "Inter", system-ui, sans-serif;
+
+        --rounded-md: 10px;
+        --rounded-lg: 15px;
+        --rounded-xl: 20px;
+        --rounded-pill: 100px;
+
+        --section: 96px;
+        --header-h: 65px;
       }
+      @media (max-width: 520px) {
+        :root {
+          --header-h: 57px;
+        }
+      }
+
+      ::selection {
+        background: var(--accent-blue);
+        color: var(--ink);
+      }
+
       html {
         scroll-behavior: smooth;
+        overflow-x: clip;
       }
+
       body {
-        font-family: "Inter", system-ui, sans-serif;
-        background: var(--bg);
+        font-family: var(--body);
+        font-size: 15px;
+        line-height: 1.3;
+        letter-spacing: -0.15px;
         color: var(--ink);
-        line-height: 1.5;
+        background: var(--canvas);
         -webkit-font-smoothing: antialiased;
+        font-feature-settings: "cv11";
+        overflow-x: clip;
+        width: 100%;
+        min-width: 0;
       }
+
       a {
         color: inherit;
         text-decoration: none;
       }
+      :focus-visible {
+        outline: 2px solid var(--accent-blue);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      a.link {
+        color: var(--accent-blue);
+        transition: opacity 0.2s;
+      }
+      a.link:hover {
+        opacity: 0.75;
+      }
+
       .wrap {
         max-width: 1199px;
         margin: 0 auto;
         padding: 0 24px;
       }
 
+      /* ── HEADER ───────────────────────────────────────── */
       header {
-        padding: 32px 0;
-        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        padding: 20px 0;
+        background: color-mix(in srgb, var(--canvas), transparent 8%);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--hairline-soft);
       }
       header .wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
+        gap: 24px;
       }
       .brand {
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        font-size: 18px;
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 17px;
+        letter-spacing: -0.05em;
       }
-      .home-link {
-        font-size: 14px;
+      .brand sup {
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: 0.04em;
         color: var(--ink-muted);
+        margin-left: 8px;
+        vertical-align: middle;
+        text-transform: uppercase;
+      }
+      .nav {
+        display: flex;
+        gap: 28px;
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 13px;
+        color: var(--ink-muted);
+      }
+      .nav a {
         transition: color 0.2s;
       }
-      .home-link:hover {
+      .nav a:hover {
         color: var(--ink);
       }
-      .home-link::after {
+      .nav a[data-ext]::after {
         content: " ↗";
+        color: var(--ink-muted);
       }
 
-      .hero {
-        padding: 80px 0 48px;
-      }
-      .eyebrow {
+      /* ── HAMBURGER ────────────────────────────────────── */
+      .menu-toggle {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        border: 1px solid var(--hairline);
+        border-radius: var(--rounded-pill);
+        color: var(--ink);
+        cursor: pointer;
+        padding: 10px 16px 10px 14px;
+        font-family: var(--body);
+        font-weight: 500;
         font-size: 12px;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .menu-toggle:hover,
+      .menu-toggle[aria-expanded="true"] {
+        background: var(--surface-1);
+        border-color: var(--surface-2);
+      }
+      .menu-toggle .bars {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 16px;
+      }
+      .menu-toggle .bars span {
+        display: block;
+        height: 1.5px;
+        width: 100%;
+        background: var(--ink);
+        border-radius: 2px;
+        transition:
+          transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 0.2s,
+          width 0.3s;
+        transform-origin: center;
+      }
+      .menu-toggle .bars span:nth-child(2) {
+        width: 70%;
+        margin-left: auto;
+      }
+      .menu-toggle[aria-expanded="true"] .bars span:nth-child(1) {
+        transform: translateY(4.5px) rotate(45deg);
+      }
+      .menu-toggle[aria-expanded="true"] .bars span:nth-child(2) {
+        opacity: 0;
+        width: 100%;
+      }
+      .menu-toggle[aria-expanded="true"] .bars span:nth-child(3) {
+        transform: translateY(-4.5px) rotate(-45deg);
+      }
+      .menu-toggle .label-open {
+        display: inline;
+      }
+      .menu-toggle .label-close {
+        display: none;
+      }
+      .menu-toggle[aria-expanded="true"] .label-open {
+        display: none;
+      }
+      .menu-toggle[aria-expanded="true"] .label-close {
+        display: inline;
+      }
+
+      .menu-overlay {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        height: 100dvh;
+        width: 100vw;
+        max-width: 100%;
+        z-index: 60;
+        background: var(--canvas);
+        display: flex;
+        flex-direction: column;
+        padding: calc(var(--header-h) + 24px) 20px 24px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition:
+          opacity 0.3s,
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+      }
+      .menu-overlay[data-open="true"] {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .menu-overlay::before {
+        content: "";
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--hairline-soft);
+      }
+      .menu-section {
+        margin-top: 32px;
+      }
+      .menu-section:first-child {
+        margin-top: 0;
+      }
+      .menu-section h4 {
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
         color: var(--ink-muted);
         margin-bottom: 16px;
       }
-      h1 {
-        font-size: clamp(2.5rem, 1rem + 5vw, 4.5rem);
-        letter-spacing: -0.05em;
-        line-height: 1.05;
-        font-weight: 700;
-        max-width: 16ch;
+      .menu-section ul {
+        list-style: none;
+        display: grid;
+        gap: 4px;
       }
-      .lead {
-        margin-top: 20px;
+      .menu-section a {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--hairline-soft);
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(1.25rem, 5.6vw, 1.85rem);
+        line-height: 1.1;
+        letter-spacing: -0.035em;
+        color: var(--ink);
+        font-feature-settings: "ss02";
+        transition:
+          color 0.2s,
+          padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        word-break: break-word;
+      }
+      .menu-section a .label {
+        flex: 1;
+        min-width: 0;
+      }
+      .menu-section a .arr {
+        flex-shrink: 0;
+      }
+      .menu-section a .arr {
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 12px;
         color: var(--ink-muted);
-        max-width: 56ch;
-        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        transition:
+          color 0.2s,
+          transform 0.3s;
+      }
+      .menu-section a:hover {
+        color: var(--accent-blue);
+        padding-left: 8px;
+      }
+      .menu-section a:hover .arr {
+        color: var(--accent-blue);
+        transform: translateX(4px);
+      }
+      .menu-footer {
+        margin-top: auto;
+        padding-top: 32px;
+        border-top: 1px solid var(--hairline-soft);
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        letter-spacing: 0.04em;
+      }
+      body.menu-open {
+        overflow: hidden;
       }
 
-      .grid {
-        padding: 32px 0 96px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 20px;
+      /* ── HERO ─────────────────────────────────────────── */
+      .hero {
+        padding: clamp(80px, 12vw, 160px) 0 clamp(64px, 8vw, 112px);
+        border-bottom: 1px solid var(--hairline-soft);
+        overflow-x: clip;
       }
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        overflow: hidden;
-        transition:
-          background 0.2s,
-          transform 0.3s;
+      .hero-eyebrow {
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+        margin-bottom: 32px;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        align-items: center;
       }
-      .card:hover {
-        background: var(--surface-2);
+      .hero-eyebrow span:not(:last-child)::after {
+        content: "·";
+        margin-left: 16px;
+        color: var(--hairline);
       }
-      .card:hover .thumb img {
-        transform: scale(1.03);
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: end;
       }
-      .thumb {
-        aspect-ratio: 16 / 10;
+      .hero h1 {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(2.25rem, 9vw, 8.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+        font-feature-settings: "ss02";
+        overflow-wrap: break-word;
+      }
+      .hero h1 .word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(24px);
+        animation: rise 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .hero h1 .word:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      .hero h1 .word:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+      .hero h1 .word:nth-child(3) {
+        animation-delay: 0.31s;
+      }
+      .hero h1 .word:nth-child(4) {
+        animation-delay: 0.44s;
+      }
+      .hero h1 .accent {
+        color: transparent;
+        background: linear-gradient(
+          120deg,
+          var(--grad-violet),
+          var(--grad-magenta),
+          var(--grad-orange)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      @keyframes rise {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-lead {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: -0.18px;
+        color: var(--ink-muted);
+        max-width: 42ch;
+      }
+      .hero-lead .link {
+        font-weight: 500;
+      }
+
+      .hero-footer {
+        margin-top: 72px;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline-soft);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+      }
+      .hero-footer .count {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 56px;
+        text-transform: none;
+        letter-spacing: -0.05em;
+        color: var(--ink);
+        line-height: 1;
+      }
+
+      /* ── INDEX STRIP ──────────────────────────────────── */
+      .index-strip {
+        position: sticky;
+        top: var(--header-h);
+        z-index: 40;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--hairline-soft);
+        background: var(--canvas);
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+      }
+      .index-strip .wrap {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* ── WORK ─────────────────────────────────────────── */
+      .work {
+        padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 112px);
+        overflow-x: clip;
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: clamp(28px, 4vw, 64px);
+        padding: clamp(56px, 8vw, 96px) 0;
+        border-bottom: 1px solid var(--hairline-soft);
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .project.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .project:last-child {
+        border-bottom: none;
+      }
+
+      /* Numbered gradient card — DESIGN.md tile pattern */
+      .project-num {
+        position: sticky;
+        top: 132px;
+        align-self: start;
+      }
+      .project-num .tile {
+        width: 96px;
+        height: 96px;
+        border-radius: var(--rounded-xl);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 36px;
+        letter-spacing: -0.05em;
+        color: var(--ink);
+        position: relative;
         overflow: hidden;
-        background: var(--surface-2);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
       }
-      .thumb img {
+      .project-num .tile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.28), transparent 60%);
+        pointer-events: none;
+      }
+      .project[data-tile="violet"] .tile {
+        background: linear-gradient(135deg, var(--grad-violet), var(--grad-magenta));
+      }
+      .project[data-tile="magenta"] .tile {
+        background: linear-gradient(135deg, var(--grad-magenta), var(--grad-coral));
+      }
+      .project[data-tile="orange"] .tile {
+        background: linear-gradient(135deg, var(--grad-orange), var(--grad-coral));
+      }
+      .project[data-tile="coral"] .tile {
+        background: linear-gradient(135deg, var(--grad-coral), var(--grad-magenta));
+      }
+      .project-num small {
+        display: block;
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--ink-muted);
+        margin-top: 14px;
+        text-align: center;
+      }
+
+      .project-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+
+      .project-visual {
+        position: relative;
+        background: var(--surface-1);
+        border: 1px solid var(--hairline);
+        border-radius: var(--rounded-lg);
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        display: block;
+      }
+      .project-visual img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
-        transition: transform 0.5s ease;
+        transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .card-body {
-        padding: 20px;
+      .project-visual:hover img {
+        transform: scale(1.03);
+      }
+      .project-visual::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 70%, rgba(9, 9, 9, 0.4) 100%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .project-visual:hover::after {
+        opacity: 1;
+      }
+
+      .project-kicker {
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--ink-muted);
+        margin-bottom: 16px;
         display: flex;
-        flex-direction: column;
-        gap: 6px;
-        flex: 1;
+        gap: 10px;
+        align-items: center;
       }
-      .card h2 {
+      .project-kicker .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-blue);
+      }
+
+      .project-text h2 {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(2rem, 3.4vw, 3rem);
+        line-height: 1;
+        letter-spacing: -0.045em;
+        font-feature-settings: "ss02";
+      }
+
+      .project-desc {
         font-size: 17px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-      }
-      .card p {
+        line-height: 1.4;
+        letter-spacing: -0.18px;
         color: var(--ink-muted);
-        font-size: 13px;
+        margin-top: 20px;
+        max-width: 38ch;
       }
-      .card-actions {
-        display: flex;
-        gap: 12px;
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px solid var(--border);
-        font-size: 13px;
+
+      .project-meta {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 10px 24px;
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-top: 1px solid var(--hairline-soft);
+        padding-top: 20px;
       }
-      .card-actions a {
-        color: var(--ink-muted);
-        transition: color 0.2s;
-      }
-      .card-actions a:hover {
+      .project-meta dt {
         color: var(--ink);
       }
-      .card-actions a.primary {
-        color: var(--accent);
+      .project-meta dd {
+        color: var(--ink-muted);
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
 
-      footer {
-        border-top: 1px solid var(--border);
-        padding: 32px 0;
+      .project-cta {
+        margin-top: 28px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
       }
-      footer .wrap {
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1;
+        letter-spacing: -0.14px;
+        padding: 11px 18px;
+        border-radius: var(--rounded-pill);
+        transition:
+          transform 0.2s,
+          background 0.2s,
+          color 0.2s;
+      }
+      .btn-primary {
+        background: var(--ink);
+        color: var(--canvas);
+      }
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        background: #f0f0f0;
+      }
+      .btn-secondary {
+        background: var(--surface-1);
+        color: var(--ink);
+        border: 1px solid var(--hairline);
+      }
+      .btn-secondary:hover {
+        background: var(--surface-2);
+      }
+
+      /* ── FOOTER ───────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--hairline-soft);
+        padding: 96px 0 48px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: end;
+      }
+      .footer-mark {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(2.4rem, 6vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        font-feature-settings: "ss02";
+      }
+      .footer-mark .accent {
+        color: transparent;
+        background: linear-gradient(120deg, var(--grad-violet), var(--grad-orange));
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .footer-mark .cta-row {
+        margin-top: 28px;
+      }
+      .footer-col h3 {
+        font-family: var(--body);
+        font-weight: 500;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--ink-muted);
+        margin-bottom: 16px;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+      .footer-col a {
+        font-size: 14px;
+        color: var(--ink);
+        transition: color 0.2s;
+      }
+      .footer-col a:hover {
+        color: var(--accent-blue);
+      }
+      .footer-bottom {
+        margin-top: 64px;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline-soft);
         display: flex;
         justify-content: space-between;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      footer p {
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 500;
         color: var(--ink-muted);
-        font-size: 13px;
+        letter-spacing: -0.12px;
       }
 
-      @media (max-width: 640px) {
-        .hero {
-          padding: 56px 0 32px;
-        }
-        .grid {
+      /* ── RESPONSIVE ───────────────────────────────────── */
+      @media (max-width: 880px) {
+        .hero-grid {
           grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .project {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 24px;
+        }
+        .project-num {
+          position: static;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+        .project-num .tile {
+          width: 64px;
+          height: 64px;
+          font-size: 26px;
+        }
+        .project-num small {
+          margin-top: 0;
+          text-align: left;
+        }
+        .project-body {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 28px;
+        }
+        .footer-grid {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        header {
+          padding: 16px 0;
+        }
+        .brand sup {
+          display: none;
+        }
+        .nav {
+          display: none;
+        }
+        .menu-toggle {
+          display: inline-flex;
+        }
+        .hero {
+          padding: 56px 0 64px;
+        }
+        .hero-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          margin-top: 56px;
+        }
+        .hero-footer .count {
+          font-size: 40px;
+          order: -1;
+        }
+        .index-strip {
+          padding: 12px 0;
+          font-size: 11px;
+        }
+        .work {
+          padding: 32px 0 56px;
+        }
+        .project-num .tile {
+          width: 56px;
+          height: 56px;
+          font-size: 22px;
+          border-radius: var(--rounded-lg);
+        }
+        .project-text h2 {
+          font-size: clamp(1.6rem, 7vw, 2rem);
+        }
+        .project-desc {
+          font-size: 16px;
+        }
+        .btn {
+          padding: 13px 20px;
+          font-size: 14px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .hero h1 .word {
+          animation-duration: 0.6s;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero h1 .word {
+          opacity: 1;
+          transform: none;
+          animation: none;
+        }
+        .project {
+          opacity: 1;
+          transform: none;
+        }
+        .project-visual img {
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
         }
       }
     </style>
@@ -210,103 +893,453 @@
   <body>
     <header>
       <div class="wrap">
-        <a class="brand" href="/">Rosso Labs · Portfólio</a>
-        <a class="home-link" href="https://rossolabs.com.br">rossolabs.com.br</a>
+        <a class="brand" href="/">
+          Rosso Labs
+          <sup>Selected Work</sup>
+        </a>
+        <nav class="nav">
+          <a href="https://rossolabs.com.br" data-ext>Estúdio</a>
+          <a href="#trabalho">Index</a>
+          <a href="https://rossolabs.com.br/pt-BR/contato" data-ext>Contato</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menu de navegação">
+          <span class="bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="label-open">Menu</span>
+          <span class="label-close">Fechar</span>
+        </button>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="wrap">
-          <p class="eyebrow">Portfólio</p>
-          <h1>Demos de landing pages por nicho.</h1>
-          <p class="lead">
-            Exemplos reais de páginas de captura criadas pela Rosso Labs. Cada demo mostra
-            estrutura, hierarquia e CTA pensados para o segmento. Para o serviço novo, veja
-            <a style="color: var(--accent)" href="https://rossolabs.com.br">rossolabs.com.br</a>
+    <div class="menu-overlay" id="mobile-menu" data-open="false" aria-hidden="true">
+      <div class="menu-section">
+        <h4>Navegar</h4>
+        <ul>
+          <li>
+            <a href="#trabalho" data-menu-link>
+              <span class="label">Index</span>
+              <span class="arr">↓</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br">
+              <span class="label">Estúdio</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/sobre">
+              <span class="label">Sobre</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/contato">
+              <span class="label">Contato</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>Serviços por nicho</h4>
+        <ul>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/para/advogado">
+              <span class="label">Advogado</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/para/academia">
+              <span class="label">Academia</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/para/dentista">
+              <span class="label">Dentista</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://rossolabs.com.br/pt-BR/para/nutricionista">
+              <span class="label">Nutricionista</span>
+              <span class="arr">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-footer">
+        <span>© Rosso Labs</span>
+        <span>Vol. 01 / 2026</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-eyebrow">
+          <span>Vol. 01</span>
+          <span>2024 — 2026</span>
+          <span>Cachoeirinha · RS</span>
+        </div>
+
+        <div class="hero-grid">
+          <h1>
+            <span class="word">Páginas</span>
+            <span class="word">feitas</span>
+            <span class="word">para</span>
+            <span class="word accent">vender.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Quatro estudos de landing page, um por nicho. Estrutura, hierarquia e CTA pensados para
+            o que cada mercado pede. Estúdio completo em
+            <a class="link" href="https://rossolabs.com.br">rossolabs.com.br</a>
             .
           </p>
         </div>
-      </section>
 
-      <section class="wrap">
-        <div class="grid">
-          <article class="card">
-            <a class="thumb" href="/pages/advogado.html">
-              <img
-                src="/assets/images/prints/desktop/advogado.webp"
-                alt="Demo de landing para advogado"
-                loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h2>Escritório de Advocacia</h2>
-              <p>Landing · Jurídico</p>
-              <div class="card-actions">
-                <a class="primary" href="/pages/advogado.html">Ver demo →</a>
-                <a href="https://rossolabs.com.br/pt-BR/para/advogado">Página de serviço</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <a class="thumb" href="/pages/academia.html">
-              <img
-                src="/assets/images/prints/desktop/academia.webp"
-                alt="Demo de landing para academia"
-                loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h2>Academia / Personal</h2>
-              <p>Landing + matrículas · Fitness</p>
-              <div class="card-actions">
-                <a class="primary" href="/pages/academia.html">Ver demo →</a>
-                <a href="https://rossolabs.com.br/pt-BR/para/academia">Página de serviço</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <a class="thumb" href="/pages/dentista.html">
-              <img
-                src="/assets/images/prints/desktop/dentista.webp"
-                alt="Demo de landing para clínica odontológica"
-                loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h2>Clínica Odontológica</h2>
-              <p>Landing · Saúde</p>
-              <div class="card-actions">
-                <a class="primary" href="/pages/dentista.html">Ver demo →</a>
-                <a href="https://rossolabs.com.br/pt-BR/para/dentista">Página de serviço</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <a class="thumb" href="/pages/nutricionista.html">
-              <img
-                src="/assets/images/prints/desktop/nutricionista.webp"
-                alt="Demo de landing para nutricionista"
-                loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h2>Nutricionista</h2>
-              <p>Landing · Saúde</p>
-              <div class="card-actions">
-                <a class="primary" href="/pages/nutricionista.html">Ver demo →</a>
-                <a href="https://rossolabs.com.br/pt-BR/para/nutricionista">Página de serviço</a>
-              </div>
-            </div>
-          </article>
+        <div class="hero-footer">
+          <span>↓ Role para começar</span>
+          <span class="count">04</span>
+          <span>Casos selecionados</span>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <div class="index-strip">
+      <div class="wrap">
+        <span>Index — 2026/05</span>
+        <span>Selected Work</span>
+      </div>
+    </div>
+
+    <main class="work" id="trabalho">
+      <div class="wrap">
+        <!-- 01 ────────────────── -->
+        <article class="project" data-tile="violet">
+          <div class="project-num">
+            <div class="tile">01</div>
+            <small>Jurídico</small>
+          </div>
+          <div class="project-body">
+            <a class="project-visual" href="/pages/advogado.html">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="/assets/images/prints/mobile/advogado.png" />
+                <img
+                  src="/assets/images/prints/desktop/advogado.webp"
+                  alt="Landing page para escritório de advocacia"
+                  loading="lazy" />
+              </picture>
+            </a>
+            <div class="project-text">
+              <div class="project-kicker">
+                <span class="dot"></span>
+                <span>Landing · Confiança</span>
+              </div>
+              <h2>Escritório de Advocacia.</h2>
+              <p class="project-desc">
+                Hero sóbrio, prova social no topo, formulário curto. Tudo desenhado para reduzir
+                dúvida antes do primeiro contato.
+              </p>
+              <dl class="project-meta">
+                <dt>Foco</dt>
+                <dd>Autoridade + agendamento</dd>
+                <dt>CTA</dt>
+                <dd>WhatsApp direto</dd>
+                <dt>Estilo</dt>
+                <dd>Editorial clássico</dd>
+              </dl>
+              <div class="project-cta">
+                <a class="btn btn-primary" href="/pages/advogado.html">Ver demo →</a>
+                <a class="btn btn-secondary" href="https://rossolabs.com.br/pt-BR/para/advogado">
+                  Página de serviço ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 ────────────────── -->
+        <article class="project" data-tile="magenta">
+          <div class="project-num">
+            <div class="tile">02</div>
+            <small>Fitness</small>
+          </div>
+          <div class="project-body">
+            <a class="project-visual" href="/pages/academia.html">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="/assets/images/prints/mobile/academia.png" />
+                <img
+                  src="/assets/images/prints/desktop/academia.webp"
+                  alt="Landing page para academia"
+                  loading="lazy" />
+              </picture>
+            </a>
+            <div class="project-text">
+              <div class="project-kicker">
+                <span class="dot"></span>
+                <span>Landing · Matrícula</span>
+              </div>
+              <h2>Academia Iron House.</h2>
+              <p class="project-desc">
+                Energia visual, planos comparáveis no topo, formulário curto. Conversão pensada para
+                quem decide rápido e quer começar amanhã.
+              </p>
+              <dl class="project-meta">
+                <dt>Foco</dt>
+                <dd>Matrícula + tour grátis</dd>
+                <dt>CTA</dt>
+                <dd>Formulário 3 campos</dd>
+                <dt>Estilo</dt>
+                <dd>Performance / esportivo</dd>
+              </dl>
+              <div class="project-cta">
+                <a class="btn btn-primary" href="/pages/academia.html">Ver demo →</a>
+                <a class="btn btn-secondary" href="https://rossolabs.com.br/pt-BR/para/academia">
+                  Página de serviço ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 ────────────────── -->
+        <article class="project" data-tile="orange">
+          <div class="project-num">
+            <div class="tile">03</div>
+            <small>Saúde</small>
+          </div>
+          <div class="project-body">
+            <a class="project-visual" href="/pages/dentista.html">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="/assets/images/prints/mobile/dentista.png" />
+                <img
+                  src="/assets/images/prints/desktop/dentista.webp"
+                  alt="Landing page para clínica odontológica"
+                  loading="lazy" />
+              </picture>
+            </a>
+            <div class="project-text">
+              <div class="project-kicker">
+                <span class="dot"></span>
+                <span>Landing · Consulta</span>
+              </div>
+              <h2>Clínica Odontológica.</h2>
+              <p class="project-desc">
+                Atendimento humanizado em primeiro plano, antes e depois, agenda online. Toda
+                hesitação do paciente tratada com calma.
+              </p>
+              <dl class="project-meta">
+                <dt>Foco</dt>
+                <dd>Avaliação gratuita</dd>
+                <dt>CTA</dt>
+                <dd>WhatsApp + agenda</dd>
+                <dt>Estilo</dt>
+                <dd>Clínico acolhedor</dd>
+              </dl>
+              <div class="project-cta">
+                <a class="btn btn-primary" href="/pages/dentista.html">Ver demo →</a>
+                <a class="btn btn-secondary" href="https://rossolabs.com.br/pt-BR/para/dentista">
+                  Página de serviço ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 ────────────────── -->
+        <article class="project" data-tile="coral">
+          <div class="project-num">
+            <div class="tile">04</div>
+            <small>Saúde</small>
+          </div>
+          <div class="project-body">
+            <a class="project-visual" href="/pages/nutricionista.html">
+              <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="/assets/images/prints/mobile/nutricionista.png" />
+                <img
+                  src="/assets/images/prints/desktop/nutricionista.webp"
+                  alt="Landing page para nutricionista"
+                  loading="lazy" />
+              </picture>
+            </a>
+            <div class="project-text">
+              <div class="project-kicker">
+                <span class="dot"></span>
+                <span>Landing · Consulta</span>
+              </div>
+              <h2>Nutricionista independente.</h2>
+              <p class="project-desc">
+                Promessa clara, método em 3 passos, depoimentos antes do botão. Quem chega já sai
+                com horário marcado.
+              </p>
+              <dl class="project-meta">
+                <dt>Foco</dt>
+                <dd>Consulta inicial</dd>
+                <dt>CTA</dt>
+                <dd>WhatsApp + plano</dd>
+                <dt>Estilo</dt>
+                <dd>Natural / científico</dd>
+              </dl>
+              <div class="project-cta">
+                <a class="btn btn-primary" href="/pages/nutricionista.html">Ver demo →</a>
+                <a
+                  class="btn btn-secondary"
+                  href="https://rossolabs.com.br/pt-BR/para/nutricionista">
+                  Página de serviço ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </main>
 
     <footer>
       <div class="wrap">
-        <p>© Rosso Labs</p>
-        <p><a href="https://rossolabs.com.br">Voltar para rossolabs.com.br</a></p>
+        <div class="footer-grid">
+          <div>
+            <div class="footer-mark">
+              Próximo caso
+              <br />
+              <span class="accent">é o seu.</span>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://rossolabs.com.br/pt-BR/contato">
+                Falar com o estúdio →
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Estúdio</h3>
+            <ul>
+              <li><a href="https://rossolabs.com.br">rossolabs.com.br ↗</a></li>
+              <li><a href="https://rossolabs.com.br/pt-BR/sobre">Sobre</a></li>
+              <li><a href="https://rossolabs.com.br/pt-BR/contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Serviços</h3>
+            <ul>
+              <li><a href="https://rossolabs.com.br/pt-BR/para/advogado">Advogado</a></li>
+              <li><a href="https://rossolabs.com.br/pt-BR/para/academia">Academia</a></li>
+              <li><a href="https://rossolabs.com.br/pt-BR/para/dentista">Dentista</a></li>
+              <li><a href="https://rossolabs.com.br/pt-BR/para/nutricionista">Nutricionista</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© Rosso Labs · Cachoeirinha — RS</span>
+          <span>Vol. 01 / 2026</span>
+        </div>
       </div>
     </footer>
+
+    <script>
+      // Hamburger menu
+      const toggle = document.querySelector(".menu-toggle");
+      const overlay = document.getElementById("mobile-menu");
+      const body = document.body;
+      const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+      let lastFocused = null;
+
+      function getFocusable() {
+        return Array.from(overlay.querySelectorAll(focusableSelector));
+      }
+
+      function setMenu(open) {
+        toggle.setAttribute("aria-expanded", String(open));
+        overlay.setAttribute("data-open", String(open));
+        overlay.setAttribute("aria-hidden", String(!open));
+        body.classList.toggle("menu-open", open);
+        toggle.setAttribute(
+          "aria-label",
+          open ? "Fechar menu de navegação" : "Abrir menu de navegação"
+        );
+
+        if (open) {
+          lastFocused = document.activeElement;
+          const first = getFocusable()[0];
+          if (first) setTimeout(() => first.focus(), 80);
+        } else if (lastFocused) {
+          lastFocused.focus();
+          lastFocused = null;
+        }
+      }
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        setMenu(!isOpen);
+      });
+
+      overlay.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
+      });
+
+      document.addEventListener("keydown", (e) => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (!isOpen) return;
+
+        if (e.key === "Escape") {
+          setMenu(false);
+          return;
+        }
+
+        if (e.key === "Tab") {
+          const focusable = getFocusable();
+          if (focusable.length === 0) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          const active = document.activeElement;
+
+          if (e.shiftKey && active === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && active === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      // Close menu if viewport grows past mobile breakpoint
+      window.matchMedia("(min-width: 521px)").addEventListener("change", (e) => {
+        if (e.matches) setMenu(false);
+      });
+
+      // Project reveal on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -80px 0px" }
+      );
+      document.querySelectorAll(".project").forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
